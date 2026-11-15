@@ -361,7 +361,8 @@ public static class VampireUtility
 
     public static void TryInfect(Pawn pawn)
     {
-        if (pawn.RaceProps.Humanlike && pawn.RaceProps.IsFlesh && !IsVampire(pawn) && !pawn.health.hediffSet.HasHediff(VampireDefOf.ESCP_Hediff_SanguinareVampiris))
+        if (pawn.RaceProps.Humanlike && pawn.RaceProps.IsFlesh && !IsVampire(pawn) && !pawn.health.hediffSet.HasHediff(VampireDefOf.ESCP_Hediff_SanguinareVampiris)
+            && pawn.health.immunity.DiseaseContractChanceFactor(VampireDefOf.ESCP_Hediff_SanguinareVampiris) > 0f)
             pawn.health.AddHediff(VampireDefOf.ESCP_Hediff_SanguinareVampiris);
     }
 

@@ -4,7 +4,7 @@
     <packageId>Rick.ESCP.Core.Tools</packageId>
     <author>Rick, SirMashedPotato, Theo, ChubbyGummyBear, pphhyy</author>
     <name>ESCP - Tools</name>
-    <description>The Elder Scrolls Collaboration Project Presents: ESCP Tools! The core mod of the ESCP. Also carries the race framework, birthsigns and racial abilities from ESCP Race Tools by SirMashedPotato, Theo and ChubbyGummyBear, including MorrowRim Leather Thoughts by Razza. Race Tools no longer needs to be installed. Also carries reusable code from ESCP Trolls, Spriggan, Skyshards and Necromantic Thralls, with examples in the Examples folder.</description>
+    <description>The Elder Scrolls Collaboration Project Presents: ESCP Tools! The core mod of the ESCP. Also carries the race framework, birthsigns and racial abilities from ESCP Race Tools by SirMashedPotato, Theo and ChubbyGummyBear, including MorrowRim Leather Thoughts by Razza. Race Tools no longer needs to be installed. Also carries reusable code from ESCP Trolls, Spriggan and Necromantic Thralls, with examples in the Examples folder.</description>
     <url>https://github.com/ElderScrollsCollaborationProject</url>
     <supportedVersions>
         <li>1.6</li>

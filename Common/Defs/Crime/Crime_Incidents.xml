@@ -13,4 +13,19 @@
         <minRefireDays>10</minRefireDays>
     </IncidentDef>
 
+    <IncidentDef>
+        <defName>ESCP_Incident_BountyHunters</defName>
+        <label>bounty hunters</label>
+        <category>ThreatBig</category>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>ESCP.Core.IncidentWorker_BountyHunters</workerClass>
+        <letterLabel>Bounty hunters</letterLabel>
+        <letterText>Word of your colony's crimes has reached the wrong ears, and there is a price on your heads. A band of bounty hunters has come to collect it.</letterText>
+        <baseChance>1.0</baseChance>
+        <minRefireDays>20</minRefireDays>
+        <pointsScaleable>true</pointsScaleable>
+    </IncidentDef>
+
 </Defs>

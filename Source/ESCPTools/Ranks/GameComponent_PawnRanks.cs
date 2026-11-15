@@ -265,7 +265,7 @@ public class GameComponent_PawnRanks : GameComponent
     {
         base.ExposeData();
         if (Scribe.mode == LoadSaveMode.Saving)
-            ranks.RemoveAll(entry => entry.Key == null || entry.Key.Discarded || entry.Key.Dead && entry.Key.Corpse == null && !Find.WorldPawns.Contains(entry.Key));
+            ranks.RemoveAll(entry => entry.Key == null || entry.Key.Discarded || entry.Key.Dead && entry.Key.Corpse == null);
 
         Scribe_Collections.Look(ref ranks, "ranks", LookMode.Reference, LookMode.Deep, ref rankKeys, ref rankValues);
 
