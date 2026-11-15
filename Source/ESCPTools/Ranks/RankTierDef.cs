@@ -10,6 +10,11 @@ public class RankTierDef : Def
     public int minSquiresTrained;
     public int minMissionsCompleted;
     public int minGuildReputation;
+    public QuestScriptDef requiredQuest;
+    [MustTranslate]
+    public string requiredQuestLabel;
+    public int maxHolders;
+    public List<PawnKindDef> holderKinds;
     public HediffDef grantHediff;
     public List<SkillGain> trainingXpPerHour;
     public RankExpeditionDef expedition;

@@ -746,6 +746,19 @@ public class MainTabWindow_RankRoster : MainTabWindow
                 reputation >= option.minGuildReputation);
         }
 
+        if (option.requiredQuest != null)
+        {
+            allMet &= DrawRequirementLine(viewRect, ref curY, option.requiredQuestLabel ?? option.requiredQuest.defName,
+                RankTrackUtility.QuestCompleted(option.requiredQuest));
+        }
+
+        if (option.maxHolders > 0)
+        {
+            int holders = RankTrackUtility.HolderCount(option);
+            allMet &= DrawRequirementLine(viewRect, ref curY, "ESCP_Rank_Req_Holders".Translate(holders, option.maxHolders),
+                holders < option.maxHolders);
+        }
+
         bool devForce = !allMet && Prefs.DevMode;
 
         GUI.color = allMet ? Color.white : (devForce ? Color.red : Color.gray);

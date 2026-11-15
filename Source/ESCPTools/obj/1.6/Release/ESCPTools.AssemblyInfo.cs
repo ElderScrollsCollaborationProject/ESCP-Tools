@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ESCP_Tools")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e2a941a80444914818419240317de94792110548")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5cec5fb5c411433f775fb6e3b586e0fca26e342")]
 [assembly: System.Reflection.AssemblyProductAttribute("ESCP_Tools")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ESCP Tools")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

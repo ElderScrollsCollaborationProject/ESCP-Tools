@@ -55,7 +55,47 @@ public static class RankTrackUtility
         if (GuildReputation(data.track) < candidate.minGuildReputation)
             return false;
 
+        if (candidate.requiredQuest != null && !QuestCompleted(candidate.requiredQuest))
+            return false;
+
+        if (candidate.maxHolders > 0 && HolderCount(candidate) >= candidate.maxHolders)
+            return false;
+
         return true;
+    }
+
+    private static readonly Dictionary<RankTierDef, int> holderCounts = new Dictionary<RankTierDef, int>();
+    private static int holderCountTick = -1;
+
+    public static bool QuestCompleted(QuestScriptDef def)
+    {
+        List<Quest> quests = Find.QuestManager.QuestsListForReading;
+        for (int i = 0; i < quests.Count; i++)
+        {
+            if (quests[i].root == def && quests[i].State == QuestState.EndedSuccess)
+                return true;
+        }
+        return false;
+    }
+
+    public static int HolderCount(RankTierDef tier)
+    {
+        int tick = Find.TickManager.TicksGame;
+        if (tick < holderCountTick || tick >= holderCountTick + 250)
+        {
+            holderCounts.Clear();
+            holderCountTick = tick;
+        }
+        if (holderCounts.TryGetValue(tier, out int count))
+            return count;
+
+        GameComponent_PawnRanks comp = Current.Game.GetComponent<GameComponent_PawnRanks>();
+        if (comp != null)
+            count = comp.AllTracked.Count(e => e.Value.currentTier == tier && !e.Key.Dead);
+        if (!tier.holderKinds.NullOrEmpty())
+            count += PawnsFinder.AllMapsWorldAndTemporary_Alive.Count(p => tier.holderKinds.Contains(p.kindDef) && comp?.GetRankData(p)?.currentTier != tier);
+        holderCounts[tier] = count;
+        return count;
     }
 
     private static bool AlreadyHoldsVanillaRank(Pawn pawn, PawnRankData data, RankTierDef tier)
