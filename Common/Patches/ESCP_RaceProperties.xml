@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>/Defs/XenotypeDef[defName="ESCP_Xenotype_Nord"]</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.RaceProperties">
+                <hypothermiaResistant>true</hypothermiaResistant>
+                <frostbiteResistant>true</frostbiteResistant>
+                <hypothermiaDef>Hypothermia</hypothermiaDef>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>/Defs/XenotypeDef[defName="ESCP_Xenotype_Dunmer"]</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.RaceProperties">
+                <heatstrokeResistant>true</heatstrokeResistant>
+                <heatburnResistant>true</heatburnResistant>
+                <heatstrokeDef>Heatstroke</heatstrokeDef>
+                <leatherDef>ESCP_LeatherDunmer</leatherDef>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>/Defs/XenotypeDef[defName="ESCP_Xenotype_Orsimer"]</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.RaceProperties">
+                <modifiedExpectations>true</modifiedExpectations>
+                <expectationOffset>-1</expectationOffset>
+                <leatherDef>ESCP_LeatherOrsimer</leatherDef>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>/Defs/XenotypeDef[defName="ESCP_Xenotype_Bosmer"]</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.RaceProperties">
+                <modifiedExpectations>true</modifiedExpectations>
+                <expectationOffset>-1</expectationOffset>
+                <leatherDef>ESCP_LeatherBosmer</leatherDef>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>/Defs/XenotypeDef[defName="ESCP_Xenotype_Falmer"]</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.RaceProperties">
+                <modifiedExpectations>true</modifiedExpectations>
+                <expectationOffset>-1</expectationOffset>
+                <leatherDef>ESCP_LeatherFalmer</leatherDef>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>/Defs/XenotypeDef[defName="ESCP_Xenotype_Altmer"]</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.RaceProperties">
+                <modifiedExpectations>true</modifiedExpectations>
+                <expectationOffset>1</expectationOffset>
+                <leatherDef>ESCP_LeatherAltmer</leatherDef>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>/Defs/XenotypeDef[defName="ESCP_Xenotype_Ayleid"]</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.RaceProperties">
+                <modifiedExpectations>true</modifiedExpectations>
+                <expectationOffset>1</expectationOffset>
+                <leatherDef>ESCP_LeatherAyleid</leatherDef>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>/Defs/XenotypeDef[defName="ESCP_Xenotype_Dwemer"]</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.RaceProperties">
+                <leatherDef>ESCP_LeatherDwemer</leatherDef>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>/Defs/XenotypeDef[defName="ESCP_Xenotype_SnowElf"]</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.RaceProperties">
+                <leatherDef>ESCP_LeatherSnowElf</leatherDef>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>/Defs/XenotypeDef[defName="ESCP_Xenotype_Maormer"]</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.RaceProperties">
+                <leatherDef>ESCP_LeatherMaormer</leatherDef>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>/Defs/XenotypeDef[defName="ESCP_Xenotype_MaormerLeviathan"]</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.RaceProperties">
+                <leatherDef>ESCP_LeatherMaormer</leatherDef>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>/Defs/XenotypeDef[defName="ESCP_Xenotype_Khajiit"]</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.RaceProperties">
+                <leatherDef>ESCP_LeatherKhajiit</leatherDef>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>/Defs/XenotypeDef[defName="ESCP_Xenotype_Ohmes"]</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.RaceProperties">
+                <leatherDef>ESCP_LeatherKhajiit</leatherDef>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>/Defs/XenotypeDef[defName="ESCP_Xenotype_OhmesRaht"]</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.RaceProperties">
+                <leatherDef>ESCP_LeatherKhajiit</leatherDef>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>/Defs/XenotypeDef[defName="ESCP_Xenotype_Senche"]</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.RaceProperties">
+                <leatherDef>ESCP_LeatherKhajiit</leatherDef>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>/Defs/XenotypeDef[defName="ESCP_Xenotype_Alfiq"]</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.RaceProperties">
+                <leatherDef>ESCP_LeatherKhajiit</leatherDef>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>

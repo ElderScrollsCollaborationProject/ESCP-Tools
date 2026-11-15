@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="SellPriceFactor"]/parts</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="SellPriceFactor"]</xpath>
+            <value>
+                <parts />
+            </value>
+        </nomatch>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/StatDef[defName="SellPriceFactor"]/parts</xpath>
+        <value>
+            <li Class="ESCP.Currencies.StatPart_BullionBuyer">
+                <tradeTag>ESCP_Bullion</tradeTag>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>

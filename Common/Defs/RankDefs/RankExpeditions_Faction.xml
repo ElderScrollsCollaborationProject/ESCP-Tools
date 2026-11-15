@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ESCP.Ranks.RankExpeditionDef>
+        <defName>ESCP_Expedition_Faction_Novice</defName>
+        <label>errand</label>
+        <description>A short trip carrying messages, escorting goods or keeping watch on a road, close enough to home to come back from.</description>
+        <durationDays>2~4</durationDays>
+        <xpReward>
+            <Melee>500</Melee>
+            <Social>400</Social>
+        </xpReward>
+        <lootMaker>ESCP_GuildExpeditionLootMaker</lootMaker>
+        <lootMarketValueRange>60~200</lootMarketValueRange>
+        <failureChance>0.05</failureChance>
+        <returnFlavorKeys>
+            <li>ESCP_Expedition_Return_FactionErrand</li>
+        </returnFlavorKeys>
+    </ESCP.Ranks.RankExpeditionDef>
+
+    <ESCP.Ranks.RankExpeditionDef>
+        <defName>ESCP_Expedition_Faction_Veteran</defName>
+        <label>long campaign</label>
+        <description>Weeks away in the field on the faction's real business: border fights, sieges and dealings best not written down.</description>
+        <durationDays>5~9</durationDays>
+        <xpReward>
+            <Melee>1400</Melee>
+            <Shooting>600</Shooting>
+        </xpReward>
+        <lootMaker>ESCP_GuildExpeditionLootMaker</lootMaker>
+        <lootMarketValueRange>300~700</lootMarketValueRange>
+        <failureChance>0.12</failureChance>
+        <returnFlavorKeys>
+            <li>ESCP_Expedition_Return_FactionCampaign</li>
+        </returnFlavorKeys>
+    </ESCP.Ranks.RankExpeditionDef>
+
+</Defs>

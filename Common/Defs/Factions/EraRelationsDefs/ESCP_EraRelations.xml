@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ESCP.Factions.EraRelationsDef>
+        <defName>ESCP_Era_AlessianRevolt</defName>
+        <label>Alessian Revolt</label>
+        <description>The slave-queen Alessia and her allies rise against the Ayleid kings of Cyrodiil.</description>
+        <eras>
+            <li>1</li>
+        </eras>
+        <allies>
+            <li MayRequire="Rick.ESCP.Imperials">ESCP_Faction_Imperial</li>
+        </allies>
+        <enemies>
+            <li MayRequire="Rick.ESCP.Ayleids">ESCP_Faction_Ayleid_Flower_Kings</li>
+            <li MayRequire="Rick.ESCP.Ayleids">ESCP_Faction_Nenalata</li>
+        </enemies>
+    </ESCP.Factions.EraRelationsDef>
+
+    <ESCP.Factions.EraRelationsDef>
+        <defName>ESCP_Era_AtmoranWar</defName>
+        <label>war of the Snow Elves</label>
+        <description>Ysgramor's Nords fight the Snow Elves for the land of Skyrim.</description>
+        <eras>
+            <li>1</li>
+        </eras>
+        <allies>
+            <li MayRequire="Rick.ESCP.Nords">ESCP_Faction_Kingdom_of_Skyrim</li>
+        </allies>
+        <enemies>
+            <li MayRequire="Rick.ESCP.Falmer">ESCP_Faction_Snow_Elf_Empire</li>
+        </enemies>
+    </ESCP.Factions.EraRelationsDef>
+
+    <ESCP.Factions.EraRelationsDef>
+        <defName>ESCP_Era_SiegeOfOrsinium</defName>
+        <label>siege of Orsinium</label>
+        <description>Daggerfall and Sentinel besiege the Orc kingdom of Orsinium.</description>
+        <eras>
+            <li>1</li>
+        </eras>
+        <allies>
+            <li MayRequire="Rick.ESCP.Bretons">ESCP_Faction_Kingdom_of_Daggerfall</li>
+            <li MayRequire="Rick.ESCP.Redguards">ESCP_Faction_Crowns</li>
+        </allies>
+        <enemies>
+            <li MayRequire="Rick.ESCP.Orsimer">ESCP_Faction_Orsinium</li>
+        </enemies>
+    </ESCP.Factions.EraRelationsDef>
+
+    <ESCP.Factions.EraRelationsDef>
+        <defName>ESCP_Era_EbonheartPact</defName>
+        <label>Ebonheart Pact</label>
+        <description>Skyrim and Morrowind stand together in the Three Banners War for the empty Ruby Throne.</description>
+        <eras>
+            <li>2</li>
+        </eras>
+        <allies>
+            <li MayRequire="Rick.ESCP.Nords">ESCP_Faction_Kingdom_of_Skyrim</li>
+            <li MayRequire="Rick.ESCP.Dunmer">ESCP_Faction_House_Redoran</li>
+        </allies>
+        <enemies>
+            <li MayRequire="Rick.ESCP.Imperials">ESCP_Faction_Imperial</li>
+            <li MayRequire="Rick.ESCP.Bretons">ESCP_Faction_Kingdom_of_Daggerfall</li>
+            <li MayRequire="Rick.ESCP.Bretons">ESCP_Faction_Kingdom_of_Wayrest</li>
+            <li MayRequire="Rick.ESCP.Redguards">ESCP_Faction_Crowns</li>
+            <li MayRequire="Rick.ESCP.Redguards">ESCP_Faction_Forebears</li>
+            <li MayRequire="Rick.ESCP.Orsimer">ESCP_Faction_Orsinium</li>
+            <li MayRequire="Rick.ESCP.Altmer">ESCP_Faction_Aldmeri_Dominion</li>
+            <li MayRequire="Rick.ESCP.Altmer">ESCP_Faction_Thalmor</li>
+            <li MayRequire="Rick.ESCP.Bosmer">ESCP_Faction_Treethanes</li>
+            <li MayRequire="Rick.ESCP.Bosmer">ESCP_Faction_Court_Silvenar</li>
+            <li MayRequire="Rick.ESCP.Khajiit">ESCP_Faction_Elsweyr</li>
+        </enemies>
+    </ESCP.Factions.EraRelationsDef>
+
+    <ESCP.Factions.EraRelationsDef>
+        <defName>ESCP_Era_DaggerfallCovenant</defName>
+        <label>Daggerfall Covenant</label>
+        <description>High Rock, Hammerfell and Orsinium stand together in the Three Banners War.</description>
+        <eras>
+            <li>2</li>
+        </eras>
+        <allies>
+            <li MayRequire="Rick.ESCP.Bretons">ESCP_Faction_Kingdom_of_Daggerfall</li>
+            <li MayRequire="Rick.ESCP.Bretons">ESCP_Faction_Kingdom_of_Wayrest</li>
+            <li MayRequire="Rick.ESCP.Redguards">ESCP_Faction_Crowns</li>
+            <li MayRequire="Rick.ESCP.Redguards">ESCP_Faction_Forebears</li>
+            <li MayRequire="Rick.ESCP.Orsimer">ESCP_Faction_Orsinium</li>
+        </allies>
+        <enemies>
+            <li MayRequire="Rick.ESCP.Imperials">ESCP_Faction_Imperial</li>
+            <li MayRequire="Rick.ESCP.Nords">ESCP_Faction_Kingdom_of_Skyrim</li>
+            <li MayRequire="Rick.ESCP.Dunmer">ESCP_Faction_House_Redoran</li>
+            <li MayRequire="Rick.ESCP.Altmer">ESCP_Faction_Aldmeri_Dominion</li>
+            <li MayRequire="Rick.ESCP.Altmer">ESCP_Faction_Thalmor</li>
+            <li MayRequire="Rick.ESCP.Bosmer">ESCP_Faction_Treethanes</li>
+            <li MayRequire="Rick.ESCP.Bosmer">ESCP_Faction_Court_Silvenar</li>
+            <li MayRequire="Rick.ESCP.Khajiit">ESCP_Faction_Elsweyr</li>
+        </enemies>
+    </ESCP.Factions.EraRelationsDef>
+
+    <ESCP.Factions.EraRelationsDef>
+        <defName>ESCP_Era_AldmeriDominion</defName>
+        <label>First Aldmeri Dominion</label>
+        <description>Queen Ayrenn's Dominion of Altmer, Bosmer and Khajiit fights the Three Banners War.</description>
+        <eras>
+            <li>2</li>
+        </eras>
+        <allies>
+            <li MayRequire="Rick.ESCP.Altmer">ESCP_Faction_Aldmeri_Dominion</li>
+            <li MayRequire="Rick.ESCP.Altmer">ESCP_Faction_Thalmor</li>
+            <li MayRequire="Rick.ESCP.Bosmer">ESCP_Faction_Treethanes</li>
+            <li MayRequire="Rick.ESCP.Bosmer">ESCP_Faction_Court_Silvenar</li>
+            <li MayRequire="Rick.ESCP.Khajiit">ESCP_Faction_Elsweyr</li>
+        </allies>
+        <enemies>
+            <li MayRequire="Rick.ESCP.Imperials">ESCP_Faction_Imperial</li>
+            <li MayRequire="Rick.ESCP.Nords">ESCP_Faction_Kingdom_of_Skyrim</li>
+            <li MayRequire="Rick.ESCP.Dunmer">ESCP_Faction_House_Redoran</li>
+            <li MayRequire="Rick.ESCP.Bretons">ESCP_Faction_Kingdom_of_Daggerfall</li>
+            <li MayRequire="Rick.ESCP.Bretons">ESCP_Faction_Kingdom_of_Wayrest</li>
+            <li MayRequire="Rick.ESCP.Redguards">ESCP_Faction_Crowns</li>
+            <li MayRequire="Rick.ESCP.Redguards">ESCP_Faction_Forebears</li>
+            <li MayRequire="Rick.ESCP.Orsimer">ESCP_Faction_Orsinium</li>
+        </enemies>
+    </ESCP.Factions.EraRelationsDef>
+
+    <ESCP.Factions.EraRelationsDef>
+        <defName>ESCP_Era_SeptimEmpire</defName>
+        <label>Septim Empire</label>
+        <description>The provinces answer to the Ruby Throne under the Septim emperors.</description>
+        <eras>
+            <li>3</li>
+        </eras>
+        <allies>
+            <li MayRequire="Rick.ESCP.Imperials">ESCP_Faction_Imperial</li>
+            <li MayRequire="Rick.ESCP.Nords">ESCP_Faction_Kingdom_of_Skyrim</li>
+            <li MayRequire="Rick.ESCP.Dunmer">ESCP_Faction_House_Redoran</li>
+            <li MayRequire="Rick.ESCP.Bretons">ESCP_Faction_Kingdom_of_Daggerfall</li>
+            <li MayRequire="Rick.ESCP.Redguards">ESCP_Faction_Forebears</li>
+        </allies>
+    </ESCP.Factions.EraRelationsDef>
+
+    <ESCP.Factions.EraRelationsDef>
+        <defName>ESCP_Era_HammerfellDefiance</defName>
+        <label>Hammerfell against the Dominion</label>
+        <description>Hammerfell drove the Dominion out after the Great War and never accepted the White-Gold Concordat.</description>
+        <eras>
+            <li>4</li>
+        </eras>
+        <allies>
+            <li MayRequire="Rick.ESCP.Redguards">ESCP_Faction_Crowns</li>
+            <li MayRequire="Rick.ESCP.Redguards">ESCP_Faction_Forebears</li>
+        </allies>
+        <enemies>
+            <li MayRequire="Rick.ESCP.Altmer">ESCP_Faction_Aldmeri_Dominion</li>
+            <li MayRequire="Rick.ESCP.Altmer">ESCP_Faction_Thalmor</li>
+        </enemies>
+    </ESCP.Factions.EraRelationsDef>
+
+    <ESCP.Factions.EraRelationsDef>
+        <defName>ESCP_Era_TalosFaithful</defName>
+        <label>the Talos ban</label>
+        <description>Ulfric's rebels have sworn to drive the Thalmor out of Skyrim.</description>
+        <eras>
+            <li>4</li>
+        </eras>
+        <allies>
+            <li MayRequire="Rick.ESCP.Nords">ESCP_Faction_Stormcloaks</li>
+        </allies>
+        <enemies>
+            <li MayRequire="Rick.ESCP.Altmer">ESCP_Faction_Thalmor</li>
+        </enemies>
+    </ESCP.Factions.EraRelationsDef>
+
+</Defs>

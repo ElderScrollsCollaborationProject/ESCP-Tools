@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <IncidentDef>
+        <defName>ESCP_Incident_GuardsConfront</defName>
+        <label>guards confront</label>
+        <category>Misc</category>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>ESCP.Core.Crime.IncidentWorker_GuardsConfront</workerClass>
+        <baseChance>1.5</baseChance>
+        <minRefireDays>10</minRefireDays>
+    </IncidentDef>
+
+</Defs>

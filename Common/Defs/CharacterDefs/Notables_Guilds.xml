@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.FightersGuild,Rick.ESCP.Imperials">
+        <defName>ESCP_Character_VilenaDonton</defName>
+        <pawnKind>ESCP_Pawnkind_FightersGuild_Champion</pawnKind>
+        <faction>ESCP_Faction_FightersGuild</faction>
+        <eras>
+            <li>3</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Imperial</xenotype>
+        <roles>
+            <li Class="ESCP.Core.CharacterRole_FactionLeader">
+                <seniority>900</seniority>
+            </li>
+        </roles>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Vilena</firstName>
+                <lastName>Donton</lastName>
+                <nickname>the Guildmaster</nickname>
+                <gender>Female</gender>
+                <age>55</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(150, 150, 150)</hairColor>
+                <hairDef>Bob</hairDef>
+                <headTypeDef>Female_AverageNormal</headTypeDef>
+                <bodyTypeDef>Female</bodyTypeDef>
+            </li>
+            <li Class="ESCP.Core.CharacterTraitsDefinition">
+                <traits>
+                    <li>
+                        <key>Tough</key>
+                        <value>0</value>
+                    </li>
+                </traits>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Dunmer,Rick.ESCP.FightersGuild">
+        <defName>ESCP_Character_ModrynOreyn</defName>
+        <pawnKind>ESCP_Pawnkind_FightersGuild_Veteran</pawnKind>
+        <faction>ESCP_Faction_FightersGuild</faction>
+        <eras>
+            <li>3</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Dunmer</xenotype>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Modryn</firstName>
+                <lastName>Oreyn</lastName>
+                <gender>Male</gender>
+                <age>90</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(45, 40, 40)</hairColor>
+                <hairDef>ShortCut</hairDef>
+                <headTypeDef>ESCP_HeadMerColouredEyes_Male_Average_Normal</headTypeDef>
+                <bodyTypeDef>Male</bodyTypeDef>
+            </li>
+            <li Class="ESCP.Core.CharacterTraitsDefinition">
+                <traits>
+                    <li>
+                        <key>Tough</key>
+                        <value>0</value>
+                    </li>
+                </traits>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Imperials,Rick.ESCP.MagesGuild">
+        <defName>ESCP_Character_HannibalTraven</defName>
+        <pawnKind>ESCP_Pawnkind_MagesGuild_Wizard</pawnKind>
+        <faction>ESCP_Faction_MagesGuild</faction>
+        <eras>
+            <li>3</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Imperial</xenotype>
+        <roles>
+            <li Class="ESCP.Core.CharacterRole_FactionLeader">
+                <seniority>900</seniority>
+            </li>
+        </roles>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Hannibal</firstName>
+                <lastName>Traven</lastName>
+                <nickname>the Arch-Mage</nickname>
+                <gender>Male</gender>
+                <age>70</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(170, 170, 170)</hairColor>
+                <hairDef>Bald</hairDef>
+                <beardDef>Full</beardDef>
+                <headTypeDef>Male_AverageNormal</headTypeDef>
+                <bodyTypeDef>Thin</bodyTypeDef>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.FightersGuild,Rick.ESCP.Orsimer">
+        <defName>ESCP_Character_BurzGroKhash</defName>
+        <pawnKind>ESCP_Pawnkind_FightersGuild_Veteran</pawnKind>
+        <faction>ESCP_Faction_FightersGuild</faction>
+        <eras>
+            <li>3</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Orsimer</xenotype>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Burz</firstName>
+                <lastName>gro-Khash</lastName>
+                <gender>Male</gender>
+                <age>50</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(40, 35, 30)</hairColor>
+                <hairDef>Shaved</hairDef>
+                <headTypeDef>ESCP_HeadMerWideFace_Male_Average_Wide</headTypeDef>
+                <bodyTypeDef>Hulk</bodyTypeDef>
+            </li>
+            <li Class="ESCP.Core.CharacterTraitsDefinition">
+                <traits>
+                    <li>
+                        <key>Tough</key>
+                        <value>0</value>
+                    </li>
+                </traits>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Imperials,Rick.ESCP.MagesGuild">
+        <defName>ESCP_Character_RaminusPolus</defName>
+        <pawnKind>ESCP_Pawnkind_MagesGuild_Arcanist</pawnKind>
+        <faction>ESCP_Faction_MagesGuild</faction>
+        <eras>
+            <li>3</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Imperial</xenotype>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Raminus</firstName>
+                <lastName>Polus</lastName>
+                <gender>Male</gender>
+                <age>55</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(110, 100, 90)</hairColor>
+                <hairDef>ShortCut</hairDef>
+                <beardDef>Goatee</beardDef>
+                <headTypeDef>Male_AverageNormal</headTypeDef>
+                <bodyTypeDef>Male</bodyTypeDef>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Altmer,Rick.ESCP.MagesGuild">
+        <defName>ESCP_Character_VanusGalerion</defName>
+        <pawnKind>ESCP_Pawnkind_MagesGuild_Wizard</pawnKind>
+        <faction>ESCP_Faction_MagesGuild</faction>
+        <eras>
+            <li>2</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Altmer</xenotype>
+        <roles>
+            <li Class="ESCP.Core.CharacterRole_FactionLeader">
+                <seniority>800</seniority>
+            </li>
+        </roles>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Vanus</firstName>
+                <lastName>Galerion</lastName>
+                <nickname>the Founder</nickname>
+                <gender>Male</gender>
+                <age>250</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(225, 210, 160)</hairColor>
+                <hairDef>Long</hairDef>
+                <headTypeDef>ESCP_HeadMer_Male_Narrow_Normal</headTypeDef>
+                <bodyTypeDef>Thin</bodyTypeDef>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Imperials,Rick.ESCP.MagesGuild">
+        <defName>ESCP_Character_TreboniusArtorius</defName>
+        <pawnKind>ESCP_Pawnkind_MagesGuild_Warlock</pawnKind>
+        <faction>ESCP_Faction_MagesGuild</faction>
+        <eras>
+            <li>3</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Imperial</xenotype>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Trebonius</firstName>
+                <lastName>Artorius</lastName>
+                <nickname>Arch-Mage of Vvardenfell</nickname>
+                <gender>Male</gender>
+                <age>60</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(150, 150, 150)</hairColor>
+                <hairDef>Bald</hairDef>
+                <beardDef>Full</beardDef>
+                <headTypeDef>Male_AverageNormal</headTypeDef>
+                <bodyTypeDef>Thin</bodyTypeDef>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+</Defs>

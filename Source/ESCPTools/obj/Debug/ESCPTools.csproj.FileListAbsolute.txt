@@ -1,0 +1,7 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ESCP-Tools\Source\ESCPTools\obj\Debug\ESCPTools.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ESCP-Tools\Source\ESCPTools\obj\Debug\ESCPTools.GeneratedMSBuildEditorConfig.editorconfig
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ESCP-Tools\Source\ESCPTools\obj\Debug\ESCPTools.AssemblyInfoInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ESCP-Tools\Source\ESCPTools\obj\Debug\ESCPTools.AssemblyInfo.cs
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ESCP-Tools\Source\ESCPTools\obj\Debug\ESCPTools.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ESCP-Tools\1.6\Assemblies\ESCP_Tools.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ESCP-Tools\Source\ESCPTools\obj\Debug\ESCP_Tools.dll

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/WorldObjectDef[defName="Settlement"]/comps</xpath>
+        <value>
+            <li Class="ESCP.Core.Crime.WorldObjectCompProperties_Bounty" />
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>Defs/FactionDef[defName="ESCP_Faction_Imperial" or defName="ESCP_Faction_Kingdom_of_Skyrim" or defName="ESCP_Faction_Stormcloaks" or defName="ESCP_Faction_Skaal" or defName="ESCP_Faction_Kingdom_of_Daggerfall" or defName="ESCP_Faction_Kingdom_of_Wayrest" or defName="ESCP_Faction_Crowns" or defName="ESCP_Faction_Forebears"]</xpath>
+        <value>
+            <li Class="ESCP.Core.Crime.FactionExtension_Law" />
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>Defs/TraderKindDef[contains(defName,"MagesGuild") or contains(defName,"CollegeOfWinterhold")]/stockGenerators</xpath>
+        <value>
+            <li Class="StockGenerator_Tag">
+                <tradeTag>ESCP_SpellTome</tradeTag>
+                <thingDefCountRange>2~4</thingDefCountRange>
+                <countRange>1~1</countRange>
+            </li>
+            <li Class="StockGenerator_Tag">
+                <tradeTag>ESCP_SoulGem</tradeTag>
+                <thingDefCountRange>2~3</thingDefCountRange>
+                <countRange>2~5</countRange>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>

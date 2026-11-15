@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "SMZcCFnLNx4=",
+  "success": true,
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\ESCP-Mods\\ESCP-Tools\\Source\\ESCPTools\\ESCPTools.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Collin Farnsworth\\.nuget\\packages\\lib.harmony\\2.3.3\\lib.harmony.2.3.3.nupkg.sha512"
+  ],
+  "logs": []
+}

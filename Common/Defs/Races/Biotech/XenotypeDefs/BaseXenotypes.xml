@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<XenotypeDef Name="ESCP_BaseXenotype_Mer" Abstract="True">
+		<inheritable>true</inheritable>
+		<genes>
+			<li>ESCP_Gene_MerEars</li>
+			<li>ESCP_Gene_MerFrame</li>
+		</genes>
+	</XenotypeDef>
+	<XenotypeDef ParentName="ESCP_BaseXenotype_Mer" Name="ESCP_BaseXenotype_TrueMer" Abstract="True">
+		<genes>
+			<li>ESCP_Gene_MerLongevity</li>
+		</genes>
+	</XenotypeDef>
+	<XenotypeDef ParentName="ESCP_BaseXenotype_TrueMer" Name="ESCP_BaseXenotype_MerStandardHead" Abstract="True">
+		<genes>
+			<li>ESCP_Gene_MerHead_Mer</li>
+		</genes>
+	</XenotypeDef>
+	<XenotypeDef ParentName="ESCP_BaseXenotype_TrueMer" Name="ESCP_BaseXenotype_MerColouredEyes" Abstract="True">
+		<genes>
+			<li>ESCP_Gene_MerHead_ColouredEyes</li>
+		</genes>
+	</XenotypeDef>
+	<XenotypeDef ParentName="ESCP_BaseXenotype_TrueMer" Name="ESCP_BaseXenotype_MerScaled" Abstract="True">
+		<genes>
+			<li>ESCP_Gene_MerHead_Scaled</li>
+		</genes>
+	</XenotypeDef>
+	<XenotypeDef ParentName="ESCP_BaseXenotype_TrueMer" Name="ESCP_BaseXenotype_MerScaledColouredEyes" Abstract="True">
+		<genes>
+			<li>ESCP_Gene_MerHead_ScaledColouredEyes</li>
+		</genes>
+	</XenotypeDef>
+	<XenotypeDef ParentName="ESCP_BaseXenotype_Mer" Name="ESCP_BaseXenotype_MerWideFace" Abstract="True">
+		<genes>
+			<li>ESCP_Gene_MerHead_WideFace</li>
+		</genes>
+	</XenotypeDef>
+</Defs>

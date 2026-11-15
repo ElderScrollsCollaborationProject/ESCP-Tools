@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <DutyDef>
+        <defName>ESCP_Duty_Patrol</defName>
+        <thinkNode Class="ThinkNode_Priority">
+            <subNodes>
+                <li Class="JobGiver_AIFightEnemies">
+                    <targetAcquireRadius>30</targetAcquireRadius>
+                    <targetKeepRadius>40</targetKeepRadius>
+                </li>
+                <li Class="JobGiver_GotoTravelDestination" />
+                <li Class="JobGiver_ExitMapBest">
+                    <defaultLocomotion>Walk</defaultLocomotion>
+                </li>
+            </subNodes>
+        </thinkNode>
+    </DutyDef>
+
+</Defs>

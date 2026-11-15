@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <StorytellerDef ParentName="BaseStoryteller">
+        <defName>ESCP_Storyteller_Emporer_Rick</defName>
+        <label>Emperor Rick</label>
+        <description>An Emperor runs on steady pressure and good roads. Raids come at regular intervals with time to rebuild between them, and caravans, visitors and allies turn up often. Keep the provinces paying and he'll leave you alone for a while. Not for long.</description>
+        <portraitLarge>UI/HeroArt/Storytellers/ESCP_Emporer_Rick</portraitLarge>
+        <portraitTiny>UI/HeroArt/Storytellers/ESCP_Emporer_Rick_Tiny</portraitTiny>
+        <listOrder>10</listOrder>
+        <modExtensions>
+            <li Class="ESCP.Core.StorytellerExtension_WorldFactions">
+                <maxTechLevel>Medieval</maxTechLevel>
+                <disabledFactions>
+                    <li>Insect</li>
+                    <li>Mechanoid</li>
+                </disabledFactions>
+                <disabledGenSteps>
+                    <li>ScatterShrines</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">AncientExostriderRemains</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">AncientPollutionJunk</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">AncientFences</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">AncientJunkClusters</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">AncientLandingPad</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">AncientMechs</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">AncientPipelineSection</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">AncientTurret</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">AncientUtilityBuilding</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">MechanoidRemains</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">ScatterCaveDebris</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">ScatterRoadDebris</li>
+                    <li MayRequire="Ludeon.RimWorld.Odyssey">AncientDrillPlatform</li>
+                    <li MayRequire="Ludeon.RimWorld.Odyssey">AncientExcavator</li>
+                    <li MayRequire="Ludeon.RimWorld.Odyssey">AncientExplosivesCrate</li>
+                    <li MayRequire="Ludeon.RimWorld.Odyssey">AncientMiningCharge</li>
+                    <li MayRequire="Ludeon.RimWorld.Odyssey">AncientRuins_Scarlands</li>
+                    <li MayRequire="Ludeon.RimWorld.Odyssey">AncientRuins_Special</li>
+                    <li MayRequire="Ludeon.RimWorld.Odyssey">AncientStockpile</li>
+                    <li MayRequire="Ludeon.RimWorld.Odyssey">AncientTuneller</li>
+                    <li MayRequire="Ludeon.RimWorld.Odyssey">CrashedMechanoidPlatform</li>
+                    <li MayRequire="Ludeon.RimWorld.Odyssey">FrozenRuins</li>
+                    <li MayRequire="Ludeon.RimWorld.Odyssey">GravshipWreckage</li>
+                    <li MayRequire="Ludeon.RimWorld.Odyssey">ScarlandsJunkClusters</li>
+                    <li MayRequire="Ludeon.RimWorld.Odyssey">ScarlandsJunkPrefabs</li>
+                </disabledGenSteps>
+            </li>
+            <li Class="ESCP.Core.StorytellerExtension_Joiner" MayRequire="Rick.ESCP.Imperials">
+                <characterDef>ESCP_Character_Emperor_Rick</characterDef>
+            </li>
+            <li Class="ESCP.Core.StorytellerExtension_Letters">
+                <letters>
+                    <li>
+                        <key>FirstDecree</key>
+                        <label>Decree from Anvil</label>
+                        <text>Someone has nailed a parchment to your door, sealed in candle wax. His Imperial Majesty Rick, Emperor of Anvil, confirms your settlement as a loyal province and reminds you that taxes are due.\n\nNo amount is given, and no address for payment.</text>
+                        <minDays>15</minDays>
+                    </li>
+                    <li>
+                        <key>Census</key>
+                        <label>Imperial census</label>
+                        <text>A new decree from the Emperor of Anvil has turned up. He has counted your people and is pleased to report that your province now fields a full cohort.\n\nHe counted five of them. A cohort is several hundred. He has promoted the tallest one to Legate.</text>
+                        <minColonists>5</minColonists>
+                    </li>
+                    <li>
+                        <key>FirstYear</key>
+                        <label>A year of the reign</label>
+                        <text>The Emperor of Anvil proclaims a year of glorious rule and declares a holiday across the realm. All subjects are ordered to rejoice between breakfast and noon.\n\nThe realm, as far as anyone can tell, is this colony.</text>
+                        <minDays>60</minDays>
+                    </li>
+                    <li>
+                        <key>TaxAssessment</key>
+                        <label>Tax assessment</label>
+                        <text>By order of the Emperor of Anvil, your province has been assessed as prosperous and its tithe doubled. The previous tithe was never set, so nobody is sure what this comes to.\n\nThe decree closes with a sketch of a very large palace and the words &quot;coming along nicely.&quot;</text>
+                        <minWealth>50000</minWealth>
+                    </li>
+                    <li>
+                        <key>GrandCity</key>
+                        <label>Letters patent</label>
+                        <text>The Emperor of Anvil grants your colony the status of Imperial City and the right to mint its own coin, hold a market on Fredas, and fly any banner that does not outshine his.\n\nFor the first time, one of these decrees might be worth framing.</text>
+                        <minColonists>10</minColonists>
+                        <minWealth>200000</minWealth>
+                    </li>
+                    <li>
+                        <key>LongReign</key>
+                        <label>Five years on the throne</label>
+                        <text>Five years, by the Emperor of Anvil's own count. He notes that no rival has dared challenge him in all that time and credits this to his reputation.\n\nHe also asks whether anyone has seen his good boots.</text>
+                        <minDays>300</minDays>
+                    </li>
+                    <li MayRequire="Rick.ESCP.Nords">
+                        <key>CivilWar</key>
+                        <label>On the matter of Skyrim</label>
+                        <text>News of the war in Skyrim has reached the Emperor of Anvil. He has written to Solitude and to Windhelm, commanding both sides to stand down and await his judgment.\n\nHe has also declared war on both, in case they do not.</text>
+                        <requiredFaction>ESCP_Faction_Stormcloaks</requiredFaction>
+                    </li>
+                </letters>
+            </li>
+        </modExtensions>
+        <comps>
+            <li Class="StorytellerCompProperties_ClassicIntro"/>
+            <li Class="StorytellerCompProperties_OnOffCycle">
+                <category>ThreatBig</category>
+                <minDaysPassed>10.0</minDaysPassed>
+                <onDays>5.5</onDays>
+                <offDays>5.5</offDays>
+                <minSpacingDays>1.8</minSpacingDays>
+                <numIncidentsRange>1~2</numIncidentsRange>
+                <forceRaidEnemyBeforeDaysPassed>18</forceRaidEnemyBeforeDaysPassed>
+                <disallowedTargetTags>
+                    <li>Map_RaidBeacon</li>
+                </disallowedTargetTags>
+            </li>
+            <li Class="StorytellerCompProperties_ThreatsGenerator">
+                <allowedTargetTags>
+                    <li>Map_RaidBeacon</li>
+                </allowedTargetTags>
+                <parms>
+                    <allowedThreats>Raids</allowedThreats>
+                    <onDays>1.0</onDays>
+                    <offDays>0.5</offDays>
+                    <minSpacingDays>0.04</minSpacingDays>
+                    <numIncidentsRange>1~2</numIncidentsRange>
+                    <minThreatPoints>500</minThreatPoints>
+                </parms>
+            </li>
+            <li Class="StorytellerCompProperties_OnOffCycle">
+                <category>ThreatSmall</category>
+                <minDaysPassed>10.0</minDaysPassed>
+                <onDays>5.0</onDays>
+                <offDays>5.5</offDays>
+                <numIncidentsRange>0.5~1</numIncidentsRange>
+                <acceptPercentFactorPerThreatPointsCurve>
+                    <points>
+                        <li>(800, 1)</li>
+                        <li>(2800, 0)</li>
+                    </points>
+                </acceptPercentFactorPerThreatPointsCurve>
+            </li>
+            <li Class="StorytellerCompProperties_CategoryMTB">
+                <category>Misc</category>
+                <allowedTargetTags>
+                    <li>Map_PlayerHome</li>
+                </allowedTargetTags>
+                <minDaysPassed>5</minDaysPassed>
+                <mtbDays>4.5</mtbDays>
+            </li>
+            <li Class="StorytellerCompProperties_Disease">
+                <category>DiseaseHuman</category>
+                <minDaysPassed>9</minDaysPassed>
+            </li>
+            <li Class="StorytellerCompProperties_Disease">
+                <category>DiseaseAnimal</category>
+                <minDaysPassed>9</minDaysPassed>
+            </li>
+            <li Class="StorytellerCompProperties_FactionInteraction">
+                <incident>RaidFriendly</incident>
+                <baseIncidentsPerYear>20</baseIncidentsPerYear>
+                <minSpacingDays>0.3</minSpacingDays>
+                <fullAlliesOnly>true</fullAlliesOnly>
+                <minDanger>High</minDanger>
+            </li>
+            <li Class="StorytellerCompProperties_FactionInteraction">
+                <incident>TraderCaravanArrival</incident>
+                <minDaysPassed>4</minDaysPassed>
+                <baseIncidentsPerYear>8</baseIncidentsPerYear>
+                <minSpacingDays>4</minSpacingDays>
+                <allowedTargetTags>
+                    <li>Map_PlayerHome</li>
+                </allowedTargetTags>
+            </li>
+            <li Class="StorytellerCompProperties_FactionInteraction">
+                <incident>VisitorGroup</incident>
+                <minDaysPassed>2</minDaysPassed>
+                <baseIncidentsPerYear>7</baseIncidentsPerYear>
+                <minSpacingDays>3</minSpacingDays>
+                <allowedTargetTags>
+                    <li>Map_PlayerHome</li>
+                </allowedTargetTags>
+            </li>
+            <li Class="StorytellerCompProperties_FactionInteraction">
+                <incident>TravelerGroup</incident>
+                <minDaysPassed>1</minDaysPassed>
+                <baseIncidentsPerYear>10</baseIncidentsPerYear>
+                <minSpacingDays>0.8</minSpacingDays>
+                <allowedTargetTags>
+                    <li>Map_PlayerHome</li>
+                </allowedTargetTags>
+            </li>
+            <li Class="StorytellerCompProperties_CategoryIndividualMTBByBiome">
+                <category>Misc</category>
+                <allowedTargetTags>
+                    <li>Caravan</li>
+                    <li>Map_TempIncident</li>
+                </allowedTargetTags>
+            </li>
+            <li Class="StorytellerCompProperties_CategoryIndividualMTBByBiome">
+                <category>ThreatSmall</category>
+                <applyCaravanVisibility>true</applyCaravanVisibility>
+                <allowedTargetTags>
+                    <li>Caravan</li>
+                    <li>Map_TempIncident</li>
+                </allowedTargetTags>
+            </li>
+            <li Class="StorytellerCompProperties_CategoryIndividualMTBByBiome">
+                <category>ThreatBig</category>
+                <applyCaravanVisibility>true</applyCaravanVisibility>
+                <allowedTargetTags>
+                    <li>Caravan</li>
+                    <li>Map_TempIncident</li>
+                </allowedTargetTags>
+            </li>
+            <li Class="StorytellerCompProperties_RandomQuest">
+                <category>GiveQuest</category>
+                <allowedTargetTags>
+                    <li>World</li>
+                </allowedTargetTags>
+                <onDays>8</onDays>
+                <numIncidentsRange>1~2</numIncidentsRange>
+                <acceptFractionByDaysPassedCurve>
+                    <points>
+                        <li>(8, 0)</li>
+                        <li>(15, 1)</li>
+                    </points>
+                </acceptFractionByDaysPassedCurve>
+                <minSpacingDays>2.5</minSpacingDays>
+                <disableIfAnyModActive>
+                    <li>Ludeon.RimWorld.Royalty</li>
+                </disableIfAnyModActive>
+            </li>
+            <li Class="StorytellerCompProperties_RandomQuest">
+                <category>GiveQuest</category>
+                <allowedTargetTags>
+                    <li>World</li>
+                </allowedTargetTags>
+                <onDays>10</onDays>
+                <numIncidentsRange>2~3</numIncidentsRange>
+                <acceptFractionByDaysPassedCurve>
+                    <points>
+                        <li>(8, 0)</li>
+                        <li>(15, 1)</li>
+                    </points>
+                </acceptFractionByDaysPassedCurve>
+                <minSpacingDays>2.5</minSpacingDays>
+                <enableIfAnyModActive>
+                    <li>Ludeon.RimWorld.Royalty</li>
+                </enableIfAnyModActive>
+            </li>
+            <li Class="StorytellerCompProperties_CategoryMTB">
+                <category>Misc</category>
+                <allowedTargetTags>
+                    <li>World</li>
+                </allowedTargetTags>
+                <minDaysPassed>13</minDaysPassed>
+                <mtbDays>13</mtbDays>
+            </li>
+            <li Class="StorytellerCompProperties_Triggered">
+                <incident>StrangerInBlackJoin</incident>
+                <delayTicks>180</delayTicks>
+            </li>
+            <li Class="StorytellerCompProperties_SingleOnceFixed">
+                <fireAfterDaysPassed>4</fireAfterDaysPassed>
+                <incident>ESCP_GiveQuest_StorytellerJoiner</incident>
+                <minColonistCount>1</minColonistCount>
+                <allowedTargetTags>
+                    <li>World</li>
+                </allowedTargetTags>
+            </li>
+        </comps>
+    </StorytellerDef>
+
+</Defs>

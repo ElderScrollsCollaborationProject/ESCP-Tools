@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<AbilityDef ParentName="ESCP_BirthsignAbility_TargetedBase">
+		<defName>ESCP_BirthsignAbility_BlessedWord</defName>
+		<aiCanUse>true</aiCanUse>
+		<label>blessed word</label>
+		<description>Once a day, call upon the blessed words of The Ritual, making the targeted insectoid flee in terror for 30 seconds.</description>
+		<casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+		<groupDef>ESCP_Birthsigns_AbilityGroup_LesserPower</groupDef>
+		<iconPath>UI/Abilities/ESCP_BirthsignSpell_TheRitual</iconPath>
+		<warmupMoteSocialSymbol>UI/Abilities/ESCP_BirthsignSpell_TheRitual</warmupMoteSocialSymbol>
+		<warmupSound>AnimalCalm_Resolve</warmupSound>
+		<comps>
+			<li Class="CompProperties_AbilityGiveMentalState">
+				<compClass>CompAbilityEffect_GiveMentalState</compClass>
+				<stateDef>PanicFlee</stateDef>
+				<applyToSelf>false</applyToSelf>
+			</li>
+		</comps>
+		<verbProperties>
+			<verbClass>ESCP_Birthsigns_Abilities.Verb_CastAbility_OnInsectoid</verbClass>
+		</verbProperties>
+		<statBases>
+			<Ability_Duration>30</Ability_Duration>
+		</statBases>
+		<modExtensions>
+			<li Class="ESCP.Core.Magic.AbilityExtension_SpellAI"><role>Attack</role></li>
+		</modExtensions>
+	</AbilityDef>
+	
+	<AbilityDef ParentName="ESCP_BirthsignAbility_SelfBase">
+		<defName>ESCP_BirthsignAbility_MarasGift</defName>
+		<aiCanUse>true</aiCanUse>
+		<label>Mara's gift</label>
+		<description>Once every 15 days, call upon the power of Mara, instantly healing 100 points of damage across random wounds.</description>
+		<groupDef>ESCP_Birthsigns_AbilityGroup_GreaterPower</groupDef>
+		<iconPath>UI/Abilities/ESCP_BirthsignAbility_TheRitual</iconPath>
+		<warmupMoteSocialSymbol>UI/Abilities/ESCP_BirthsignAbility_TheRitual</warmupMoteSocialSymbol>
+		<comps>
+			<li Class="ESCP_Birthsigns_Abilities.CompProperties_AbilityHealWounds">
+				<compClass>ESCP_Birthsigns_Abilities.CompAbilityEffect_HealWounds</compClass>
+				<totalSeverityToHeal>100</totalSeverityToHeal>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="ESCP.Core.Magic.AbilityExtension_SpellAI"><role>HealSelf</role><healBelow>0.5</healBelow></li>
+		</modExtensions>
+	</AbilityDef>
+	<AbilityDef ParentName="ESCP_BirthsignAbility_TargetedBase">
+		<defName>ESCP_BirthsignAbility_LoversKiss</defName>
+		<aiCanUse>true</aiCanUse>
+		<label>lover's kiss</label>
+		<description>Once every 15 days, stun a target for a lengthy amount of time, slightly fatiguing the caster in the process.</description>
+		<casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+		<groupDef>ESCP_Birthsigns_AbilityGroup_GreaterPower</groupDef>
+		<iconPath>UI/Abilities/ESCP_BirthsignAbility_TheLover</iconPath>
+		<warmupMoteSocialSymbol>UI/Abilities/ESCP_BirthsignAbility_TheLover</warmupMoteSocialSymbol>
+		<warmupSound>AnimalCalm_Resolve</warmupSound>
+		<comps>
+			<li Class="ESCP_Birthsigns_Abilities.CompProperties_AbilityApplyDamage">
+				<compClass>ESCP_Birthsigns_Abilities.CompAbilityEffect_ApplyDamage</compClass>
+				<damageDef>Stun</damageDef>
+				<damageAmount>25</damageAmount>
+			</li>
+			<li Class="ESCP_Birthsigns_Abilities.CompProperties_AbilityFatigueSelf">
+				<compClass>ESCP_Birthsigns_Abilities.CompAbilityEffect_FatigueSelf</compClass>
+				<amount>0.2</amount>
+				<disableIfLow>True</disableIfLow>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="ESCP.Core.Magic.AbilityExtension_SpellAI"><role>Attack</role></li>
+		</modExtensions>
+	</AbilityDef>
+	<AbilityDef ParentName="ESCP_BirthsignAbility_SelfBase">
+		<defName>ESCP_BirthsignAbility_BloodOfTheNorth</defName>
+		<aiCanUse>true</aiCanUse>
+		<label>blood of the north</label>
+		<description>Once a day, call upon the power of The Lord, increasing the wound healing rate of the caster for 30 seconds.</description>
+		<groupDef>ESCP_Birthsigns_AbilityGroup_LesserPower</groupDef>
+		<iconPath>UI/Abilities/ESCP_BirthsignSpell_TheLord</iconPath>
+		<warmupMoteSocialSymbol>UI/Abilities/ESCP_BirthsignSpell_TheLord</warmupMoteSocialSymbol>
+		<comps>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>ESCP_Birthsign_BloodOfTheNorth</hediffDef>
+			</li>
+		</comps>
+		<statBases>
+			<Ability_Duration>30</Ability_Duration>
+		</statBases>
+		<modExtensions>
+			<li Class="ESCP.Core.Magic.AbilityExtension_SpellAI"><role>SelfBuff</role><buffHediff>ESCP_Birthsign_BloodOfTheNorth</buffHediff></li>
+		</modExtensions>
+	</AbilityDef>
+	<AbilityDef ParentName="ESCP_BirthsignAbility_SelfBase">
+		<defName>ESCP_BirthsignAbility_Moonshadow</defName>
+		<aiCanUse>true</aiCanUse>
+		<label>moonshadow</label>
+		<description>Once every 15 days, call upon the power of The Shadow, causing the caster to become invisible for 60 seconds.</description>
+		<groupDef>ESCP_Birthsigns_AbilityGroup_GreaterPower</groupDef>
+		<iconPath>UI/Abilities/ESCP_BirthsignAbility_TheShadow</iconPath>
+		<warmupMoteSocialSymbol>UI/Abilities/ESCP_BirthsignAbility_TheShadow</warmupMoteSocialSymbol>
+		<comps>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>PsychicInvisibility</hediffDef>
+			</li>
+		</comps>
+		<statBases>
+			<Ability_Duration>60</Ability_Duration>
+		</statBases>
+		<modExtensions>
+			<li Class="ESCP.Core.Magic.AbilityExtension_SpellAI"><role>SelfBuff</role><buffHediff>PsychicInvisibility</buffHediff></li>
+		</modExtensions>
+	</AbilityDef>
+	<AbilityDef ParentName="ESCP_BirthsignAbility_SelfBase">
+		<defName>ESCP_BirthsignAbility_TowerKey</defName>
+		<label>tower key</label>
+		<description>Once every 15 days, call upon the guidance of The Tower, gaining knowledge of the location of an item stash in the process.</description>
+		<groupDef>ESCP_Birthsigns_AbilityGroup_GreaterPower</groupDef>
+		<iconPath>UI/Abilities/ESCP_BirthsignAbility_TheTower</iconPath>
+		<warmupMoteSocialSymbol>UI/Abilities/ESCP_BirthsignAbility_TheTower</warmupMoteSocialSymbol>
+		<comps>
+			<li Class="ESCP_Birthsigns_Abilities.CompProperties_AbilityCreateQuest">
+				<compClass>ESCP_Birthsigns_Abilities.CompAbilityEffect_CreateQuest</compClass>
+				<questScript>OpportunitySite_ItemStash</questScript>
+			</li>
+		</comps>
+	</AbilityDef>
+	<AbilityDef ParentName="ESCP_BirthsignAbility_TargetedBase">
+		<defName>ESCP_BirthsignAbility_StarCurse</defName>
+		<aiCanUse>true</aiCanUse>
+		<label>star curse</label>
+		<description>Once a day, inflict strong poison onto a target, causing constant toxic buildup for 30 seconds to the target. The caster will also be poisoned, receiving constant toxic buildup for 10 seconds.</description>
+		<casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+		<groupDef>ESCP_Birthsigns_AbilityGroup_LesserPower</groupDef>
+		<iconPath>UI/Abilities/ESCP_BirthsignSpell_TheSerpent</iconPath>
+		<warmupMoteSocialSymbol>UI/Abilities/ESCP_BirthsignSpell_TheSerpent</warmupMoteSocialSymbol>
+		<comps>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>ESCP_Birthsigns_Abilities.CompAbilityEffect_GiveHediff_StarCurse</compClass>
+				<hediffDef>ESCP_Birthsign_StarCurse</hediffDef>
+				<applicableToMechs>false</applicableToMechs>
+			</li>
+		</comps>
+		<statBases>
+			<Ability_Duration>30</Ability_Duration>
+		</statBases>
+		<modExtensions>
+			<li Class="ESCP.Core.Magic.AbilityExtension_SpellAI"><role>Attack</role></li>
+		</modExtensions>
+	</AbilityDef>
+</Defs>

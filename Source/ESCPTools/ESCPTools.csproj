@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>ESCP.Core</RootNamespace>
+    <AssemblyName>ESCP_Tools</AssemblyName>
+    <AssemblyTitle>ESCP Tools</AssemblyTitle>
+    <LangVersion>latest</LangVersion>
+    <OutputPath>..\..\$(RimVersion)\Assemblies\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <NoWarn>$(NoWarn);CS0649;CS0169;CS0414;CS0618;CS0108;CS0162;CS0219;CS8632</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(RimVersion)' == '1.6'">
+    <TargetFramework>net472</TargetFramework>
+    <DefineConstants>$(DefineConstants);RW16</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(RimVersion)' == '1.7'">
+    <TargetFramework>net10.0</TargetFramework>
+    <DefineConstants>$(DefineConstants);RW17</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="**\*.cs" Exclude="obj\**;bin\**" />
+    <Using Include="Verse" />
+    <Using Include="RimWorld" />
+    <Using Include="System" />
+    <Using Include="System.Linq" />
+    <Using Include="System.Collections.Generic" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(RimVersion)' == '1.6'">
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4871" ExcludeAssets="runtime" />
+    <PackageReference Include="Lib.Harmony" Version="2.3.3" ExcludeAssets="runtime" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(RimVersion)' == '1.7'">
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.7.*-*" ExcludeAssets="runtime" />
+    <PackageReference Include="Lib.Harmony" Version="3.0.0-rc.2" ExcludeAssets="runtime" />
+  </ItemGroup>
+
+</Project>

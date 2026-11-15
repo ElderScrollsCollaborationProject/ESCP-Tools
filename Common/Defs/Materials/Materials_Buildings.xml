@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="RockBase">
+        <defName>ESCP_Mineable_Adamantite</defName>
+        <label>adamantite vein</label>
+        <description>Rock streaked with adamantite ore.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(122,92,63)</color>
+            <colorTwo>(171,178,126)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>ESCP_Raw_Adamantite_Ore</mineableThing>
+            <mineableYield>20</mineableYield>
+            <mineableScatterCommonality>0.04</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>2~6</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="RockBase">
+        <defName>ESCP_Mineable_Adamantium</defName>
+        <label>adamantium vein</label>
+        <description>Rock streaked with adamantium ore.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(122,92,63)</color>
+            <colorTwo>(172,174,183)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>ESCP_Raw_Adamantium_Ore</mineableThing>
+            <mineableYield>20</mineableYield>
+            <mineableScatterCommonality>0.03</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>2~6</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="RockBase">
+        <defName>ESCP_Mineable_Cobalt</defName>
+        <label>cobalt vein</label>
+        <description>Rock streaked with cobalt ore.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(122,92,63)</color>
+            <colorTwo>(61,150,197)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>ESCP_Raw_Cobalt_Ore</mineableThing>
+            <mineableYield>30</mineableYield>
+            <mineableScatterCommonality>0.1</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>2~6</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="RockBase">
+        <defName>ESCP_Mineable_Copper</defName>
+        <label>copper vein</label>
+        <description>Rock streaked with copper ore.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(122,92,63)</color>
+            <colorTwo>(171,80,45)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>ESCP_Raw_Copper_Ore</mineableThing>
+            <mineableYield>40</mineableYield>
+            <mineableScatterCommonality>0.4</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>4~12</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="RockBase">
+        <defName>ESCP_Mineable_Corundum</defName>
+        <label>corundum vein</label>
+        <description>Rock streaked with corundum ore.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(122,92,63)</color>
+            <colorTwo>(42,112,61)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>ESCP_Raw_Corundum_Ore</mineableThing>
+            <mineableYield>40</mineableYield>
+            <mineableScatterCommonality>0.6</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>4~12</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="RockBase">
+        <defName>ESCP_Mineable_Ebony</defName>
+        <label>ebony vein</label>
+        <description>Rock streaked with ebony ore.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(129,119,78)</color>
+            <colorTwo>(62,52,66)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>ESCP_Raw_Ebony_Ore</mineableThing>
+            <mineableYield>20</mineableYield>
+            <mineableScatterCommonality>0.025</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>2~6</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="RockBase">
+        <defName>ESCP_Mineable_Volcanic_Glass</defName>
+        <label>malachite vein</label>
+        <description>Rock streaked with malachite ore.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(129,119,78)</color>
+            <colorTwo>(158,244,156)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>ESCP_Raw_Volcanic_Glass_Ore</mineableThing>
+            <mineableYield>20</mineableYield>
+            <mineableScatterCommonality>0.05</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>2~6</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="RockBase">
+        <defName>ESCP_Mineable_Iron</defName>
+        <label>iron vein</label>
+        <description>Rock streaked with iron ore.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(122,98,75)</color>
+            <colorTwo>(61,60,51)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>ESCP_Raw_Iron_Ore</mineableThing>
+            <mineableYield>40</mineableYield>
+            <mineableScatterCommonality>1.0</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>4~12</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="RockBase">
+        <defName>ESCP_Mineable_Meteoric_Iron</defName>
+        <label>meteoric iron vein</label>
+        <description>Rock streaked with meteoric iron ore.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(85,67,63)</color>
+            <colorTwo>(185,173,166)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>ESCP_Raw_Meteoric_Iron_Ore</mineableThing>
+            <mineableYield>20</mineableYield>
+            <mineableScatterCommonality>0</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>2~6</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="RockBase">
+        <defName>ESCP_Mineable_Mithril</defName>
+        <label>mithril vein</label>
+        <description>Rock streaked with mithril ore.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(122,92,63)</color>
+            <colorTwo>(134,98,89)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>ESCP_Raw_Mithril_Ore</mineableThing>
+            <mineableYield>20</mineableYield>
+            <mineableScatterCommonality>0.04</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>2~6</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="RockBase">
+        <defName>ESCP_Mineable_Moonstone</defName>
+        <label>moonstone vein</label>
+        <description>Rock streaked with moonstone ore.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(122,92,63)</color>
+            <colorTwo>(237,210,140)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>ESCP_Raw_Moonstone_Ore</mineableThing>
+            <mineableYield>25</mineableYield>
+            <mineableScatterCommonality>0.06</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>2~6</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="RockBase">
+        <defName>ESCP_Mineable_Nickel</defName>
+        <label>nickel vein</label>
+        <description>Rock streaked with nickel ore.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(122,92,63)</color>
+            <colorTwo>(185,186,167)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>ESCP_Raw_Nickel_Ore</mineableThing>
+            <mineableYield>40</mineableYield>
+            <mineableScatterCommonality>0.15</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>2~6</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="RockBase">
+        <defName>ESCP_Mineable_Orgnium</defName>
+        <label>orgnium vein</label>
+        <description>Rock streaked with orgnium ore.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(122,92,63)</color>
+            <colorTwo>(90,100,137)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>ESCP_Raw_Orgnium_Ore</mineableThing>
+            <mineableYield>20</mineableYield>
+            <mineableScatterCommonality>0.04</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>2~6</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="RockBase">
+        <defName>ESCP_Mineable_Orichalcum</defName>
+        <label>orichalcum vein</label>
+        <description>Rock streaked with orichalcum ore.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(129,124,101)</color>
+            <colorTwo>(59,84,71)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>ESCP_Raw_Orichalcum_Ore</mineableThing>
+            <mineableYield>30</mineableYield>
+            <mineableScatterCommonality>0.1</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>2~6</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="RockBase">
+        <defName>ESCP_Mineable_Palladium</defName>
+        <label>palladium vein</label>
+        <description>Rock streaked with palladium ore.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(122,92,63)</color>
+            <colorTwo>(172,194,192)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>ESCP_Raw_Palladium_Ore</mineableThing>
+            <mineableYield>20</mineableYield>
+            <mineableScatterCommonality>0.05</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>2~6</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="RockBase">
+        <defName>ESCP_Mineable_Quicksilver</defName>
+        <label>quicksilver vein</label>
+        <description>Rock streaked with quicksilver ore.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(122,92,63)</color>
+            <colorTwo>(162,147,137)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>ESCP_Raw_Quicksilver_Ore</mineableThing>
+            <mineableYield>25</mineableYield>
+            <mineableScatterCommonality>0.06</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>2~6</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="RockBase">
+        <defName>ESCP_Mineable_Tin</defName>
+        <label>tin vein</label>
+        <description>Rock streaked with tin ore.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(122,92,63)</color>
+            <colorTwo>(190,185,192)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>ESCP_Raw_Tin_Ore</mineableThing>
+            <mineableYield>40</mineableYield>
+            <mineableScatterCommonality>0.25</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>4~12</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="RockBase">
+        <defName>ESCP_Mineable_Zinc</defName>
+        <label>zinc vein</label>
+        <description>Rock streaked with zinc ore.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(122,92,63)</color>
+            <colorTwo>(212,222,196)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>ESCP_Raw_Zinc_Ore</mineableThing>
+            <mineableYield>40</mineableYield>
+            <mineableScatterCommonality>0.25</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>4~12</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="RockBase">
+        <defName>ESCP_Mineable_Stalhrim</defName>
+        <label>stalhrim vein</label>
+        <description>A seam of stalhrim, enchanted ice that never melts. It only forms in the coldest lands.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(122,92,63)</color>
+            <colorTwo>(170,215,235)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>ESCP_Resource_Stalhrim</mineableThing>
+            <mineableYield>15</mineableYield>
+            <mineableScatterCommonality>0</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>2~5</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+        <modExtensions>
+            <li Class="ESCP.Materials.MineableExtension_Climate">
+                <maxAverageTemperature>-12</maxAverageTemperature>
+                <countPer10kCells>1.5~3</countPer10kCells>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <ThingDef ParentName="RockBase">
+        <defName>ESCP_Resource_MineableHeartStone</defName>
+        <label>heart stone vein</label>
+        <description>Rock holding a heart stone, a dark crystal that still pulses faintly with the power of the Heart of Lorkhan.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(43,29,27)</color>
+            <colorTwo>(102,30,17)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>ESCP_Resource_HeartStone</mineableThing>
+            <mineableYield>3</mineableYield>
+            <mineableScatterCommonality>0.04</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>1~3</mineableScatterLumpSizeRange>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="BuildingBase" Name="ESCP_IronLantern_Base" Abstract="True">
+        <category>Building</category>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <graphicData>
+            <texPath>Things/Building/Furniture/ESCP_IronLantern/ESCP_IronLantern</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawRotated>false</drawRotated>
+            <damageData>
+                <rect>(0.35,0.35,0.3,0.3)</rect>
+            </damageData>
+        </graphicData>
+        <thingCategories>
+            <li>BuildingsFurniture</li>
+        </thingCategories>
+        <uiIconScale>0.85</uiIconScale>
+        <rotatable>false</rotatable>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <pathCost>14</pathCost>
+        <constructEffect>ConstructMetal</constructEffect>
+        <tickerType>Normal</tickerType>
+        <drawerType>RealtimeOnly</drawerType>
+        <fillPercent>0.15</fillPercent>
+        <statBases>
+            <MaxHitPoints>75</MaxHitPoints>
+            <Mass>4</Mass>
+            <WorkToBuild>100</WorkToBuild>
+            <Flammability>0</Flammability>
+            <MeditationFocusStrength>0.0</MeditationFocusStrength>
+            <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
+        </statBases>
+        <selectable>true</selectable>
+        <costList>
+            <ESCP_Resource_Iron_Ingot>20</ESCP_Resource_Iron_Ingot>
+        </costList>
+        <building>
+            <artificialForMeditationPurposes>true</artificialForMeditationPurposes>
+        </building>
+        <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+        <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+        <placeWorkers>
+            <li>PlaceWorker_Heater</li>
+            <li>PlaceWorker_MeditationOffsetBuildingsNear</li>
+        </placeWorkers>
+        <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+        <comps>
+            <li Class="CompProperties_Styleable" />
+            <li Class="CompProperties_Refuelable">
+                <fuelConsumptionRate>1.0</fuelConsumptionRate>
+                <fuelCapacity>20.0</fuelCapacity>
+                <fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+                <fuelFilter>
+                    <thingDefs>
+                        <li>ESCP_Item_Fat</li>
+                    </thingDefs>
+                </fuelFilter>
+                <initialFuelPercent>0</initialFuelPercent>
+                <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+            </li>
+            <li Class="CompProperties_Glower">
+                <glowRadius>10</glowRadius>
+                <glowColor>(217,217,208,0)</glowColor>
+            </li>
+            <li Class="CompProperties_HeatPusher">
+                <compClass>CompHeatPusherPowered</compClass>
+                <heatPerSecond>3.5</heatPerSecond>
+                <heatPushMaxTemperature>23</heatPushMaxTemperature>
+            </li>
+            <li Class="CompProperties_MeditationFocus">
+                <statDef>MeditationFocusStrength</statDef>
+                <focusTypes>
+                    <li>Flame</li>
+                </focusTypes>
+                <offsets>
+                    <li Class="FocusStrengthOffset_Lit">
+                        <offset>0.1</offset>
+                    </li>
+                    <li Class="FocusStrengthOffset_BuildingDefsLit">
+                        <defs>
+                            <li>Campfire</li>
+                            <li>Campfire</li>
+                            <li>TorchLamp</li>
+                            <li MayRequire="Ludeon.RimWorld.Royalty">Brazier</li>
+                            <li MayRequire="Ludeon.RimWorld.Ideology">Darktorch</li>
+                            <li MayRequire="Ludeon.RimWorld.Ideology">DarktorchFungus</li>
+                            <li>ESCP_IronLantern</li>
+                            <li>ESCP_IronLantern_Blue</li>
+                            <li>ESCP_IronLantern_Green</li>
+                            <li>ESCP_IronLantern_Red</li>
+                            <li MayRequire="Ludeon.RimWorld.Ideology">ESCP_IronLantern_Dark</li>
+                        </defs>
+                        <offsetPerBuilding>0.01</offsetPerBuilding>
+                        <radius>9.9</radius>
+                        <maxBuildings>8</maxBuildings>
+                        <explanationKey>MeditationFocusPerFlame</explanationKey>
+                        <explanationKeyAbstract>MeditationFocusPerFlameAbstract</explanationKeyAbstract>
+                    </li>
+                </offsets>
+            </li>
+        </comps>
+        <designationCategory>Furniture</designationCategory>
+        <designatorDropdown>ESCP_IronLantern</designatorDropdown>
+        <researchPrerequisites>
+            <li>Smithing</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_IronLantern_Base" Name="ESCP_IronTableLantern_Base" Abstract="True">
+        <clearBuildingArea>false</clearBuildingArea>
+        <building>
+            <isEdifice>false</isEdifice>
+        </building>
+        <altitudeLayer>BuildingOnTop</altitudeLayer>
+        <modExtensions>
+            <li Class="ESCP.Buildings.BuildingExtension_NoStacking">
+				</li>
+        </modExtensions>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_IronTableLantern_Base">
+        <defName>ESCP_IronLantern</defName>
+        <label>iron lantern</label>
+        <description>An iron lantern. Can be automatically refueled with fat. Produces a small amount of heat.</description>
+        <graphicData>
+            <texPath>Things/Building/Furniture/ESCP_IronLantern/ESCP_IronLantern</texPath>
+        </graphicData>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>9.9</glowRadius>
+                <glowColor>(217,217,208,0)</glowColor>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_IronTableLantern_Base">
+        <defName>ESCP_IronLantern_Blue</defName>
+        <label>blue iron lantern</label>
+        <description>An iron lantern, with blue tinted glass. Can be automatically refueled with fat. Produces a small amount of heat.</description>
+        <graphicData>
+            <texPath>Things/Building/Furniture/ESCP_IronLantern/ESCP_IronLantern_Blue</texPath>
+        </graphicData>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>9.9</glowRadius>
+                <glowColor>(80,80,217,0)</glowColor>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_IronTableLantern_Base">
+        <defName>ESCP_IronLantern_Green</defName>
+        <label>green iron lantern</label>
+        <description>An iron lantern, with green tinted glass. Can be automatically refueled with fat. Produces a small amount of heat.</description>
+        <graphicData>
+            <texPath>Things/Building/Furniture/ESCP_IronLantern/ESCP_IronLantern_Green</texPath>
+        </graphicData>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>10</glowRadius>
+                <glowColor>(80,217,80,0)</glowColor>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_IronTableLantern_Base">
+        <defName>ESCP_IronLantern_Red</defName>
+        <label>red iron lantern</label>
+        <description>An iron lantern, with red tinted glass. Can be automatically refueled with fat. Produces a small amount of heat.</description>
+        <graphicData>
+            <texPath>Things/Building/Furniture/ESCP_IronLantern/ESCP_IronLantern_Red</texPath>
+        </graphicData>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>9.9</glowRadius>
+                <glowColor>(217,80,80,0)</glowColor>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef MayRequire="Ludeon.RimWorld.Ideology" ParentName="ESCP_IronTableLantern_Base">
+        <defName>ESCP_IronLantern_Dark</defName>
+        <label>darklight iron lantern</label>
+        <description>An iron lantern, with special tinted glass. Can be automatically refueled with fat. Produces a small amount of heat.</description>
+        <graphicData>
+            <texPath>Things/Building/Furniture/ESCP_IronLantern/ESCP_IronLantern_Dark</texPath>
+        </graphicData>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>9.9</glowRadius>
+                <glowColor>(78, 226, 229, 0)</glowColor>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="FurnitureWithQualityBase" Name="ESCP_Banner_Base" Abstract="True">
+        <description>A tall banner to show off a faction's colors and allegiance.</description>
+        <designationCategory>Furniture</designationCategory>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.25</fillPercent>
+        <pathCost>0</pathCost>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <WorkToBuild>750</WorkToBuild>
+            <Mass>10</Mass>
+            <Flammability>1.0</Flammability>
+            <Beauty>20</Beauty>
+        </statBases>
+        <holdsRoof>false</holdsRoof>
+        <canOverlapZones>false</canOverlapZones>
+        <rotatable>false</rotatable>
+        <fertility>0</fertility>
+        <graphicData>
+            <drawSize>(2,2)</drawSize>
+            <drawOffset>(0,0,0.5)</drawOffset>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <shadowData>
+                <volume>(0.3, 0.5, 0.3)</volume>
+                <offset>(0,0,-0.23)</offset>
+            </shadowData>
+            <damageData>
+                <rect>(0.2,0.2,0.6,0.6)</rect>
+            </damageData>
+        </graphicData>
+        <uiIconScale>0.5</uiIconScale>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_Banner_Base">
+        <defName>ESCP_Banner_Standard</defName>
+        <label>standard banner</label>
+        <graphicData>
+            <texPath>Things/Building/Furniture/ESCP_Banner/ESCP_Banner_Standard</texPath>
+        </graphicData>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Woody</li>
+            <li>Stony</li>
+        </stuffCategories>
+        <costStuffCount>20</costStuffCount>
+        <costList>
+            <Cloth>40</Cloth>
+        </costList>
+        <description>A tall banner on a pole, painted in a faction's colors.</description>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_Banner_Base">
+        <defName>ESCP_Banner_Dyeable</defName>
+        <label>cloth banner</label>
+        <graphicData>
+            <texPath>Things/Building/Furniture/ESCP_Banner/ESCP_Banner_Fabric</texPath>
+        </graphicData>
+        <stuffCategories>
+            <li>Fabric</li>
+        </stuffCategories>
+        <costStuffCount>40</costStuffCount>
+        <costList>
+            <WoodLog>20</WoodLog>
+        </costList>
+    </ThingDef>
+
+    <ThingDef ParentName="BenchBase">
+        <defName>ESCP_Smelter</defName>
+        <label>smelter</label>
+        <description>A stone smelting furnace fed with wood or fire salts. Melts ore down into usable ingots and alloys.</description>
+        <thingClass>Building_WorkTable_HeatPush</thingClass>
+        <graphicData>
+            <texPath>Things/Building/Production/Smelter/ESCP_Smelter</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(4,4)</drawSize>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <stuffCategories>
+            <li>Stony</li>
+        </stuffCategories>
+        <castEdgeShadows>false</castEdgeShadows>
+        <costStuffCount>200</costStuffCount>
+        <altitudeLayer>Building</altitudeLayer>
+        <fillPercent>0.5</fillPercent>
+        <useHitPoints>True</useHitPoints>
+        <statBases>
+            <WorkToBuild>3500</WorkToBuild>
+            <MaxHitPoints>200</MaxHitPoints>
+            <Flammability>0</Flammability>
+        </statBases>
+        <size>(3,3)</size>
+        <designationCategory>Production</designationCategory>
+        <passability>PassThroughOnly</passability>
+        <hasInteractionCell>True</hasInteractionCell>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <surfaceType>Item</surfaceType>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+        <inspectorTabs>
+            <li>ITab_Bills</li>
+        </inspectorTabs>
+        <comps>
+            <li Class="CompProperties_Refuelable">
+                <fuelConsumptionRate>55.0</fuelConsumptionRate>
+                <fuelCapacity>70.0</fuelCapacity>
+                <fuelFilter>
+                    <thingDefs>
+                        <li>WoodLog</li>
+                        <li>ESCP_Resource_FireSalts</li>
+                    </thingDefs>
+                </fuelFilter>
+                <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+                <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+            </li>
+            <li Class="CompProperties_Glower">
+                <glowRadius>6</glowRadius>
+                <glowColor>(217,112,33,0)</glowColor>
+            </li>
+            <li Class="CompProperties_HeatPusher">
+                <compClass>CompHeatPusherPowered</compClass>
+                <heatPerSecond>10</heatPerSecond>
+            </li>
+        </comps>
+        <building>
+            <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+            <heatPerTickWhileWorking>0.32</heatPerTickWhileWorking>
+        </building>
+        <tickerType>Normal</tickerType>
+        <placeWorkers>
+            <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+        </placeWorkers>
+        <researchPrerequisites>
+            <li>ESCP_Research_Smelting</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+</Defs>

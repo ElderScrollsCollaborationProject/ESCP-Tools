@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="XSD_FILE_PATH">
+	
+	<ESCP_RaceTools_ModName>ESCP - Race Tools</ESCP_RaceTools_ModName>
+	<ESCP_Reset>Reset all settings</ESCP_Reset>
+	<ESCP_RequiresRestart>Requires a restart to take effect.</ESCP_RequiresRestart>
+	
+	<ESCP_PageGeneral>General settings</ESCP_PageGeneral>
+	<ESCP_PageGeneralReset>Reset general settings</ESCP_PageGeneralReset>
+	
+	<ESCP_PageIdeology>Ideology settings</ESCP_PageIdeology>
+	<ESCP_PageIdeologyReset>Reset Ideology settings</ESCP_PageIdeologyReset>
+
+	<ESCP_PageLeather>Leather settings</ESCP_PageLeather>
+	<ESCP_PageLeatherReset>Reset leather settings</ESCP_PageLeatherReset>
+	
+	<ESCP_PageRace>Race settings</ESCP_PageRace>
+	<ESCP_PageRaceReset>Reset Race settings</ESCP_PageRaceReset>
+	
+	<ESCP_SubpageDunmer>Dunmer</ESCP_SubpageDunmer>
+	<ESCP_SubpageMaormer>Maormer</ESCP_SubpageMaormer>
+	
+	<ESCP_RaceTools_ElderScrollsQuadrums>Switch quadrum names to something more flavourful.</ESCP_RaceTools_ElderScrollsQuadrums>
+	<ESCP_RaceTools_ElderScrollsQuadrumsTooltip>This may not take affect immediately if switched mid-save.</ESCP_RaceTools_ElderScrollsQuadrumsTooltip>
+	
+	<ESCP_RaceTools_EnableArgoStomachFoodPoisoningResist>Enable Argonian stomachs preventing food poisoning.</ESCP_RaceTools_EnableArgoStomachFoodPoisoningResist>
+	
+	<ESCP_RaceTools_EnableHeatstrokeSwitch>Enable heatstroke resistance for certain races.</ESCP_RaceTools_EnableHeatstrokeSwitch>
+	<ESCP_RaceTools_EnableHeatstrokeSwitchTooltip>This will make certain races gain a different hediff instead of heatstroke, and may even prevent these races from being burnt by intense heat.\n\nThis affects:</ESCP_RaceTools_EnableHeatstrokeSwitchTooltip>
+	
+	<ESCP_RaceTools_EnableHypothermiaSwitch>Enable hypothermia resistance for certain races.</ESCP_RaceTools_EnableHypothermiaSwitch>
+	<ESCP_RaceTools_EnableHypothermiaSwitchTooltip>This will make certain races gain a different hediff instead of hypothermia, and may even prevent these races from being afflicted by frostbite.\n\nThis affects:</ESCP_RaceTools_EnableHypothermiaSwitchTooltip>
+	
+	<ESCP_RaceTools_EnableDecreasedExpecations>Enabled decreased expectations for certain races.</ESCP_RaceTools_EnableDecreasedExpecations>
+	<ESCP_RaceTools_EnableDecreasedExpecationsTooltip>This will cause pawns of specific races to have a lowered expectation level.\n\nThis affects:</ESCP_RaceTools_EnableDecreasedExpecationsTooltip>
+	
+	<ESCP_RaceTools_EnableIncreasedExpecations>Enabled increased expectations for certain races.</ESCP_RaceTools_EnableIncreasedExpecations>
+	<ESCP_RaceTools_EnableIncreasedExpecationsTooltip>This will cause pawns of specific races to have a raised expectation level.\n\nThis affects:</ESCP_RaceTools_EnableIncreasedExpecationsTooltip>
+	
+	<ESCP_RaceTools_EnableRestrictedApparel>Enabled restricted apparel for certain races.</ESCP_RaceTools_EnableRestrictedApparel>
+	<ESCP_RaceTools_EnableRestrictedApparelTooltip>This will prevent pawns of specific races equipping apparel that covers specific body part groups.\n\nThis affects:</ESCP_RaceTools_EnableRestrictedApparelTooltip>
+
+	<ESCP_RaceTools_EnableApparelThoughtProtection>Enable specific apparel preventing specific weather related thoughts.</ESCP_RaceTools_EnableApparelThoughtProtection>
+	<ESCP_RaceTools_EnableApparelThoughtProtection_Tooltip>While the apparel will prevent the wearer from gaining the thought(s), it will not remove the thought if it is already present.\n\nThis affects:</ESCP_RaceTools_EnableApparelThoughtProtection_Tooltip>
+	
+	<ESCP_RaceTools_StuffKnowledgeLogging>Enable log messages for stuff knowledge</ESCP_RaceTools_StuffKnowledgeLogging>
+	<ESCP_RaceTools_StuffKnowledgeLoggingTooltip>Enables a few log messages for the stuff knowledge Harmony patch. These will appear in the log during crafting, as well as an additional one on game start, and can help diagnose any issues that may be occuring.</ESCP_RaceTools_StuffKnowledgeLoggingTooltip>
+    <ESCP_RaceTools_EnableStuffKnowledge>Enable the stuff knowledge Harmony patch</ESCP_RaceTools_EnableStuffKnowledge>
+    <ESCP_RaceTools_EnableStuffKnowledgeTooltip>If enabled, allows races with stuff knowledge to craft gear that is one quality level higher than normal, assuming any prerequisites are met.\n\nChanging this setting will require a restart to take effect.\n\nThis affects:</ESCP_RaceTools_EnableStuffKnowledgeTooltip>
+
+	<ESCP_RaceTools_SettlementPreferenceLogging>Enable log messages for settlement preference</ESCP_RaceTools_SettlementPreferenceLogging>
+	<ESCP_RaceTools_SettlementPreferenceLoggingTooltip>Enables a few log messages for the settlement preference Harmony patch. These will appear during world creation, when factions are settling the world, and can help diagnose any issues that may be occuring.</ESCP_RaceTools_SettlementPreferenceLoggingTooltip>
+	<ESCP_RaceTools_SettlementPreferenceLoggingExtended>Enable additional log messages for settlement preference</ESCP_RaceTools_SettlementPreferenceLoggingExtended>
+	<ESCP_RaceTools_SettlementPreferenceLoggingExtendedTooltip>Enables additional log messages for the settlement preference Harmony patch. These will appear during world creation, when factions are settling the world, and can help diagnose any issues that may be occuring.\n\nThese messages will quickly fill up the log. It is recommended that only a single faction is enabled at a time when using this.</ESCP_RaceTools_SettlementPreferenceLoggingExtendedTooltip>
+	<ESCP_RaceTools_EnableSettlementPreference>Enable the settlement preference Harmony patch</ESCP_RaceTools_EnableSettlementPreference>
+	<ESCP_RaceTools_EnableSettlementPreferenceTooltip>If enabled, factions that have the settlement preference mod extension will be more likely to settle in specific locations.\n\nThis can be toggled at any time, but will obviously require a new world to take effect.\n\nThis affects:</ESCP_RaceTools_EnableSettlementPreferenceTooltip>
+	<ESCP_RaceTools_SettlementPreferenceIterations>Maximum number of iterations for settlement preference</ESCP_RaceTools_SettlementPreferenceIterations>
+	<ESCP_RaceTools_SettlementPreferenceIterationsTooltip>If settlement preference is unable to find a desirable tile within this number of iterations, it will revert control to RimWorld.\n\nDecreasing this may improve world generation times, while increasing it may allow for more desirable settlement locations.</ESCP_RaceTools_SettlementPreferenceIterationsTooltip>
+
+	<ESCP_RaceTools_BeastMasterLogging>Enable log messages for beast masters</ESCP_RaceTools_BeastMasterLogging>
+	<ESCP_RaceTools_BeastMasterLoggingTooltip>Enables a few log messages for the beast master mechanic. These will appear when a beast master pawn appears, and can help diagnose any issues that may be occurring.</ESCP_RaceTools_BeastMasterLoggingTooltip>
+    <ESCP_RaceTools_EnableBeastMaster>Enable the beast master mechanic</ESCP_RaceTools_EnableBeastMaster>
+    <ESCP_RaceTools_EnableBeastMasterTooltip>If enabled, allows certain pawn kinds to generate additional pawns when they are created.\n\nThis can be toggled at any time.\n\nThis affects:</ESCP_RaceTools_EnableBeastMasterTooltip>
+	
+	<ESCP_RaceTools_EnableBackstoryOpinions>Enable adulthood backstory based pawn opinions.</ESCP_RaceTools_EnableBackstoryOpinions>
+	<ESCP_RaceTools_EnableBackstoryOpinionsTooltip>Allows pawns to have opinions of other pawns based on their adulthood backstory. These opinions may be negative, or positive.\n\nThis affects:</ESCP_RaceTools_EnableBackstoryOpinionsTooltip>
+	
+	<ESCP_RaceTools_EnableTraitOpinions>Enable trait based pawn opinions.</ESCP_RaceTools_EnableTraitOpinions>
+	<ESCP_RaceTools_EnableTraitOpinionsTooltip>Allows pawns to have opinions of other pawns based on their traits. These opinions may be negative, or positive.\n\nThis affects:</ESCP_RaceTools_EnableTraitOpinionsTooltip>
+	
+	<ESCP_RaceTools_IdeologyOverrideRace>Override the race requirement for Ideo roles.</ESCP_RaceTools_IdeologyOverrideRace>
+	<ESCP_RaceTools_IdeologyOverrideTooltip>This can be changed at any time, however the requirement tooltip will remain unchanged until the game is restarted. This doesn't mean it hasn't worked.\n\nThis affects:</ESCP_RaceTools_IdeologyOverrideTooltip>
+	
+	<ESCP_RaceTools_DeityNameFix>Enable the deity name Harmony patch.</ESCP_RaceTools_DeityNameFix>
+	<ESCP_RaceTools_DeityNameFix_Tooltip>This will prevent deity names for specific Ideo origins from being randomly selected, avoiding duplicate names within the Ideo.\n\nThis affects:</ESCP_RaceTools_DeityNameFix_Tooltip>
+	
+	<ESCP_RaceTools_IdeologyDivinesNames>Enable specific cultures overriding deities from the Eight Divines origin.</ESCP_RaceTools_IdeologyDivinesNames>
+	<ESCP_RaceTools_IdeologyDivinesNamesTooltip>If enabled, specific cultures will use their version of the Divines. Does not require the deity name Harmony patch to be enabled.\n\nThis affects:</ESCP_RaceTools_IdeologyDivinesNamesTooltip>
+	
+	<ESCP_RaceTools_IdeologyOverridePsychSens>Override the minimum psychic sensitivity requirement for Ideo roles.</ESCP_RaceTools_IdeologyOverridePsychSens>
+	<ESCP_RaceTools_IdeologyOverridePsychSensValue>The required minimum psychic sensitivity for relevant Ideo roles.</ESCP_RaceTools_IdeologyOverridePsychSensValue>
+
+	<ESCP_RaceTools_IdeologyFactionGoodwill>Enable faction goodwill offset based on faction tags.</ESCP_RaceTools_IdeologyFactionGoodwill>
+	<ESCP_RaceTools_IdeologyFactionGoodwillTooltip>Allows goodwill between player and non-player factions to be offset based on faction tags. These offsets may be negative, or positive.\n\nThis affects:</ESCP_RaceTools_IdeologyFactionGoodwillTooltip>
+
+	<ESCP_RaceTools_LeatherThoughtTooltip>This is a consolidated thought that accounts for all appropriate leather.\n\nThis affects:</ESCP_RaceTools_LeatherThoughtTooltip>
+	
+	<ESCP_RaceTools_LeatherThoughtMer>Enable Mer leather thoughts</ESCP_RaceTools_LeatherThoughtMer>
+	
+	<ESCP_RaceTools_LeatherThoughtGoblinKen>Enable Goblin-ken leather thoughts</ESCP_RaceTools_LeatherThoughtGoblinKen>
+	
+	<ESCP_RaceTools_LeatherThoughtBeastfolk>Enable Beastfolk leather thoughts</ESCP_RaceTools_LeatherThoughtBeastfolk>
+
+	<ESCP_RaceTools_LeatherThoughtAkaviri>Enable Akaviri leather thoughts</ESCP_RaceTools_LeatherThoughtAkaviri>
+	
+	<ESCP_RaceTools_LeatherThought>Enable leather thoughts for {0}</ESCP_RaceTools_LeatherThought>
+	
+	<ESCP_RaceTools_OrsimerAreMer>Orsimer leather is counted as Mer leather, as opposed to Goblin-ken leather.</ESCP_RaceTools_OrsimerAreMer>
+	
+	<ESCP_RaceTools_DunmerGraveWhispering>Enable filled ash burial pit whispers.</ESCP_RaceTools_DunmerGraveWhispering>
+	<ESCP_RaceTools_SeancePsylinkChance>The chance a random pawn gains a psylink from an ancestral seance ritual.</ESCP_RaceTools_SeancePsylinkChance>
+	<ESCP_RaceTools_MaormerLeviathanChance>The chance a Maormer is a leviathan.</ESCP_RaceTools_MaormerLeviathanChance>
+	
+</LanguageData>

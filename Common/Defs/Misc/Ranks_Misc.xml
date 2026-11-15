@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <JoyGiverDef>
+        <defName>ESCP_JoyGiver_VisitMentor</defName>
+        <giverClass>ESCP.Ranks.Jobs.JoyGiver_VisitMentor</giverClass>
+        <baseChance>3</baseChance>
+        <jobDef>ESCP_Job_VisitMentor</jobDef>
+        <joyKind>Social</joyKind>
+    </JoyGiverDef>
+
+    <WorkGiverDef>
+        <defName>ESCP_WorkGiver_RankTraining</defName>
+        <label>train with mentor</label>
+        <giverClass>ESCP.Ranks.Jobs.WorkGiver_RankTraining</giverClass>
+        <workType>BasicWorker</workType>
+        <verb>train with</verb>
+        <gerund>training with</gerund>
+        <priorityInType>50</priorityInType>
+    </WorkGiverDef>
+
+    <MainButtonDef>
+        <defName>ESCP_MainButton_RankRoster</defName>
+        <label>guilds</label>
+        <description>Track your colonists' standing in the guilds they have joined.</description>
+        <tabWindowClass>ESCP.Ranks.MainTabWindow_RankRoster</tabWindowClass>
+        <order>150</order>
+        <closesWorldView>true</closesWorldView>
+    </MainButtonDef>
+
+    <ScenPartDef>
+        <defName>ESCP_StartEnlisted</defName>
+        <label>start as a guild member</label>
+        <category>Misc</category>
+        <scenPartClass>ESCP.Enlist.ScenPart_StartEnlisted</scenPartClass>
+        <summaryPriority>50</summaryPriority>
+    </ScenPartDef>
+
+</Defs>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- The state of being a thrall. This defName is what switches the thrall patches on. -->
+
+    <HediffDef>
+        <defName>ESCP_NecromanticThralls_Enthralled</defName>
+        <label>enthralled</label>
+        <description>This body was raised by a necromancer and obeys them.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <maxSeverity>1</maxSeverity>
+        <initialSeverity>1</initialSeverity>
+        <comps>
+            <li>
+                <compClass>ESCP_NecromanticThralls.HediffComp_Enthralled</compClass>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+        </comps>
+        <stages>
+            <li>
+                <painFactor>0</painFactor>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- Put this on a necromancer. It grants the raise ability and sets how many thralls they can hold. -->
+
+    <HediffDef>
+        <defName>ESCP_NecromanticThralls_ThrallStorage</defName>
+        <label>necromancer</label>
+        <description>Trained in binding the dead.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <comps>
+            <li Class="HediffCompProperties_GiveAbility">
+                <abilityDef>ESCP_Example_RaiseThrall</abilityDef>
+            </li>
+            <li Class="ESCP_NecromanticThralls.HediffCompProperties_ThrallStorage">
+                <skill>Intellectual</skill>
+                <levelRequirement>
+                    <li>0</li>
+                    <li>6</li>
+                    <li>12</li>
+                    <li>18</li>
+                </levelRequirement>
+                <thrallLimit>
+                    <li>0</li>
+                    <li>2</li>
+                    <li>4</li>
+                    <li>6</li>
+                </thrallLimit>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>ESCP_NecromanticThralls_ThrallLifespan</defName>
+        <label>fading thrall</label>
+        <description>The binding on this thrall is wearing thin.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>true</isBad>
+    </HediffDef>
+
+    <ThoughtDef>
+        <defName>ESCP_NecromanticThralls_ThrallThought</defName>
+        <workerClass>ESCP_NecromanticThralls.ThoughtWorker_ThrallThought</workerClass>
+        <stages>
+            <li>
+                <label>thrall</label>
+                <description>There is nothing here to think with.</description>
+                <baseMoodEffect>0</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <!-- The ability a necromancer uses on a corpse. -->
+
+    <AbilityDef>
+        <defName>ESCP_Example_RaiseThrall</defName>
+        <label>raise thrall</label>
+        <description>Bind a corpse to the caster's will.</description>
+        <iconPath>UI/Abilities/EntropyDump</iconPath>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <verbProperties>
+            <verbClass>ESCP_NecromanticThralls.Verb_CastAbilityTouch_ThrallCreate</verbClass>
+            <range>-1</range>
+            <warmupTime>10</warmupTime>
+            <drawAimPie>false</drawAimPie>
+            <targetParams>
+                <canTargetItems>true</canTargetItems>
+                <canTargetSelf>false</canTargetSelf>
+                <canTargetPawns>false</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="ESCP_NecromanticThralls.CompProperties_ThrallCreate">
+                <hediff>ESCP_NecromanticThralls_Enthralled</hediff>
+            </li>
+        </comps>
+    </AbilityDef>
+
+</Defs>

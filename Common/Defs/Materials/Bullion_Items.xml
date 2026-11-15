@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ESCP_Resource_Gold_Ingot</defName>
+        <label>gold ingot</label>
+        <description>A bar of refined gold, cast at the smelter from twenty measures of loose gold. Jewelers across Tamriel work it into rings, circlets and amulets, and the Imperial treasury keeps its reserves in bars like this rather than coin. It can be melted back down whenever the gold is needed.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/Ingots/Gold</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <stackLimit>25</stackLimit>
+        <statBases>
+            <MarketValue>210</MarketValue>
+            <Mass>0.2</Mass>
+            <Beauty>4</Beauty>
+        </statBases>
+        <useHitPoints>false</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <thingCategories>
+            <li>ESCP_Resources_Raw</li>
+        </thingCategories>
+        <tradeTags>
+            <li>ESCP_Bullion</li>
+        </tradeTags>
+        <burnableByRecipe>false</burnableByRecipe>
+        <smeltable>false</smeltable>
+        <allowedArchonexusCount>10</allowedArchonexusCount>
+    </ThingDef>
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ESCP_Resource_Silver_Ingot</defName>
+        <label>silver ingot</label>
+        <description>A bar of refined silver, cast at the smelter from fifty measures of loose silver. Silversmiths turn it into jewelry and fine tableware, and hunters of the undead have it worked into blades because the restless dead and the werewolf fear its touch. It can be melted back down whenever the silver is needed.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/Ingots/Silver</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <stackLimit>25</stackLimit>
+        <statBases>
+            <MarketValue>52</MarketValue>
+            <Mass>0.4</Mass>
+            <Beauty>2</Beauty>
+        </statBases>
+        <useHitPoints>false</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <thingCategories>
+            <li>ESCP_Resources_Raw</li>
+        </thingCategories>
+        <tradeTags>
+            <li>ESCP_Bullion</li>
+        </tradeTags>
+        <burnableByRecipe>false</burnableByRecipe>
+        <smeltable>false</smeltable>
+        <allowedArchonexusCount>10</allowedArchonexusCount>
+    </ThingDef>
+
+</Defs>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingSetMakerDef>
+        <defName>ESCP_ThingSetMaker_FightersGuildReward</defName>
+        <root Class="ThingSetMaker_MarketValue">
+            <fixedParams>
+                <filter>
+                    <thingDefs>
+                        <li>ESCP_EnchantScroll_Fiery</li>
+                        <li>ESCP_EnchantScroll_Shock</li>
+                        <li>ESCP_SoulGem_Lesser</li>
+                        <li>ESCP_Tome_Oakflesh</li>
+                        <li>ESCP_Tome_Healing</li>
+                    </thingDefs>
+                    <categories>
+                        <li>WeaponsMelee</li>
+                        <li>ApparelArmor</li>
+                    </categories>
+                </filter>
+                <totalMarketValueRange>150~600</totalMarketValueRange>
+            </fixedParams>
+        </root>
+    </ThingSetMakerDef>
+
+    <ThingSetMakerDef>
+        <defName>ESCP_ThingSetMaker_MagesGuildReward</defName>
+        <root Class="ThingSetMaker_MarketValue">
+            <fixedParams>
+                <filter>
+                    <thingDefs>
+                        <li>ESCP_EnchantScroll_Frost</li>
+                        <li>ESCP_EnchantScroll_AbsorbHealth</li>
+                        <li>ESCP_EnchantScroll_Paralyze</li>
+                        <li>ESCP_Tome_Firebolt</li>
+                        <li>ESCP_Tome_IceSpike</li>
+                        <li>ESCP_Tome_Fireball</li>
+                        <li>ESCP_Tome_Ward</li>
+                        <li>ESCP_Tome_Calm</li>
+                        <li>ESCP_Tome_SoulTrap</li>
+                        <li>ESCP_SoulGem_Common</li>
+                        <li>ESCP_SoulGem_Greater</li>
+                        <li>ESCP_EnchantScroll_SoulTrap</li>
+                    </thingDefs>
+                    <categories>
+                        <li>Medicine</li>
+                        <li>Manufactured</li>
+                    </categories>
+                </filter>
+                <totalMarketValueRange>150~600</totalMarketValueRange>
+            </fixedParams>
+        </root>
+    </ThingSetMakerDef>
+
+    <ThingSetMakerDef>
+        <defName>ESCP_ThingSetMaker_ThievesGuildReward</defName>
+        <root Class="ThingSetMaker_MarketValue">
+            <fixedParams>
+                <filter>
+                    <thingDefs>
+                        <li>ESCP_EnchantScroll_Poison</li>
+                        <li>ESCP_Tome_Invisibility</li>
+                        <li>ESCP_Tome_Fear</li>
+                        <li>ESCP_SoulGem_Lesser</li>
+                    </thingDefs>
+                    <categories>
+                        <li>WeaponsMelee</li>
+                        <li>Drugs</li>
+                    </categories>
+                </filter>
+                <totalMarketValueRange>100~450</totalMarketValueRange>
+            </fixedParams>
+        </root>
+    </ThingSetMakerDef>
+
+    <ThingSetMakerDef>
+        <defName>ESCP_ThingSetMaker_DarkBrotherhoodReward</defName>
+        <root Class="ThingSetMaker_MarketValue">
+            <fixedParams>
+                <filter>
+                    <thingDefs>
+                        <li>ESCP_SoulGem_Black</li>
+                        <li>ESCP_Tome_Paralyze</li>
+                        <li>ESCP_EnchantScroll_Poison</li>
+                        <li>ESCP_EnchantScroll_AbsorbHealth</li>
+                    </thingDefs>
+                    <categories>
+                        <li>WeaponsMelee</li>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <totalMarketValueRange>200~700</totalMarketValueRange>
+            </fixedParams>
+        </root>
+    </ThingSetMakerDef>
+
+</Defs>

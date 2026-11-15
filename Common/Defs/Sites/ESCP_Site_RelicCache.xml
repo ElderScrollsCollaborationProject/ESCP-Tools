@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <SitePartDef>
+        <defName>ESCP_Site_RelicCache</defName>
+        <label>looter camp</label>
+        <description>A looter camp sitting on a cache of Dwemer relics.</description>
+        <workerClass>ESCP.Core.RadiantQuests.SitePartWorker_RelicCache</workerClass>
+        <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+        <forceExitAndRemoveMapCountdownDurationDays>6</forceExitAndRemoveMapCountdownDurationDays>
+        <requiresFaction>true</requiresFaction>
+        <handlesWorldObjectTimeoutInspectString>true</handlesWorldObjectTimeoutInspectString>
+        <tags>
+            <li>ESCP_Site_RelicCache</li>
+        </tags>
+    </SitePartDef>
+
+    <GenStepDef>
+        <defName>ESCP_Site_RelicCache_Outpost</defName>
+        <linkWithSite>ESCP_Site_RelicCache</linkWithSite>
+        <order>450</order>
+        <genStep Class="GenStep_Outpost">
+            <pawnGroupKindDef>Combat</pawnGroupKindDef>
+        </genStep>
+    </GenStepDef>
+
+</Defs>

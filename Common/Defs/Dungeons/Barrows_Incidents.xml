@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <IncidentDef>
+        <defName>ESCP_Incident_DraugrCrypt</defName>
+        <label>draugr crypt</label>
+        <category>ThreatSmall</category>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>ESCP.Core.IncidentWorker_GautletSpawner</workerClass>
+        <letterLabel>Draugr crypt</letterLabel>
+        <letterText>The ground has split open over an old burial crypt, and the dead inside are stirring. Destroy the crypt before more of them climb out.</letterText>
+        <letterDef>ThreatSmall</letterDef>
+        <baseChance>0.4</baseChance>
+        <minRefireDays>30</minRefireDays>
+        <pointsScaleable>true</pointsScaleable>
+        <modExtensions>
+            <li Class="ESCP.Core.IncidentExtension_GautletSpawnCondition">
+                <factionDef>AncientsHostile</factionDef>
+                <thingDef>ESCP_Building_DraugrCrypt</thingDef>
+                <count>1</count>
+                <radius>3</radius>
+            </li>
+        </modExtensions>
+    </IncidentDef>
+
+    <IncidentDef>
+        <defName>ESCP_Incident_BarrowDiscovered</defName>
+        <label>barrow uncovered</label>
+        <category>Misc</category>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>ESCP.Core.IncidentWorker_GautletSpawner</workerClass>
+        <letterLabel>Barrow uncovered</letterLabel>
+        <letterText>A settling of the earth has exposed the door of an old Nordic barrow nearby. There will be treasure inside, and whatever was buried to guard it.</letterText>
+        <letterDef>NeutralEvent</letterDef>
+        <baseChance>0</baseChance>
+        <minRefireDays>60</minRefireDays>
+        <modExtensions>
+            <li Class="ESCP.Core.IncidentExtension_GautletSpawnCondition">
+                <factionDef>AncientsHostile</factionDef>
+                <thingDef>ESCP_Barrow_Entrance</thingDef>
+                <count>1</count>
+                <radius>2</radius>
+            </li>
+        </modExtensions>
+    </IncidentDef>
+
+    <IncidentDef>
+        <defName>ESCP_Incident_BountyHunters</defName>
+        <label>bounty hunters</label>
+        <category>ThreatBig</category>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>ESCP.Core.IncidentWorker_BountyHunters</workerClass>
+        <letterLabel>Bounty hunters</letterLabel>
+        <letterText>Word of your colony's crimes has reached the wrong ears, and there is a price on your heads. A band of bounty hunters has come to collect it.</letterText>
+        <baseChance>1.0</baseChance>
+        <minRefireDays>20</minRefireDays>
+        <pointsScaleable>true</pointsScaleable>
+    </IncidentDef>
+
+</Defs>

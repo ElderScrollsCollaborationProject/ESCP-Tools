@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef Name="ESCP_EnchantScrollBase" ParentName="ResourceBase" Abstract="True">
+        <graphicData>
+            <texPath>Things/Item/Book/Schematic/Schematic</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <stackLimit>5</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <statBases>
+            <MaxHitPoints>40</MaxHitPoints>
+            <MarketValue>500</MarketValue>
+            <Mass>0.1</Mass>
+            <Flammability>1</Flammability>
+        </statBases>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+        <tradeTags>
+            <li>ExoticMisc</li>
+        </tradeTags>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_EnchantScrollBase">
+        <defName>ESCP_EnchantScroll_Fiery</defName>
+        <label>scroll of fire damage</label>
+        <description>A prepared enchantment bound to parchment. Reading it fixes the effect permanently onto the weapon in the reader's hand. Sets its mark with a lick of flame, burning whoever it strikes.</description>
+        <comps>
+            <li Class="ESCP.Core.Enchantments.CompProperties_EnchantmentScroll">
+                <enchantment>ESCP_Enchantment_Fiery</enchantment>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_EnchantScrollBase">
+        <defName>ESCP_EnchantScroll_Shock</defName>
+        <label>scroll of shock damage</label>
+        <description>A prepared enchantment bound to parchment. Reading it fixes the effect permanently onto the weapon in the reader's hand. Discharges a jolt of lightning into whoever it strikes.</description>
+        <comps>
+            <li Class="ESCP.Core.Enchantments.CompProperties_EnchantmentScroll">
+                <enchantment>ESCP_Enchantment_Shock</enchantment>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_EnchantScrollBase">
+        <defName>ESCP_EnchantScroll_Frost</defName>
+        <label>scroll of frost</label>
+        <description>A prepared enchantment bound to parchment. Reading it fixes the effect permanently onto the weapon in the reader's hand. Chills the blood of whoever it strikes, slowing them badly.</description>
+        <comps>
+            <li Class="ESCP.Core.Enchantments.CompProperties_EnchantmentScroll">
+                <enchantment>ESCP_Enchantment_Frost</enchantment>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_EnchantScrollBase">
+        <defName>ESCP_EnchantScroll_Poison</defName>
+        <label>scroll of poison</label>
+        <description>A prepared enchantment bound to parchment. Reading it fixes the effect permanently onto the weapon in the reader's hand. Leaves a slow-acting toxin in every wound.</description>
+        <comps>
+            <li Class="ESCP.Core.Enchantments.CompProperties_EnchantmentScroll">
+                <enchantment>ESCP_Enchantment_Poison</enchantment>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_EnchantScrollBase">
+        <defName>ESCP_EnchantScroll_Paralyze</defName>
+        <label>scroll of paralysis</label>
+        <description>A prepared enchantment bound to parchment. Reading it fixes the effect permanently onto the weapon in the reader's hand. Sometimes locks the victim's limbs for a few moments.</description>
+        <comps>
+            <li Class="ESCP.Core.Enchantments.CompProperties_EnchantmentScroll">
+                <enchantment>ESCP_Enchantment_Paralyze</enchantment>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_EnchantScrollBase">
+        <defName>ESCP_EnchantScroll_AbsorbHealth</defName>
+        <label>scroll of absorb health</label>
+        <description>A prepared enchantment bound to parchment. Reading it fixes the effect permanently onto the weapon in the reader's hand. Closes the wielder's wounds with the life it takes.</description>
+        <comps>
+            <li Class="ESCP.Core.Enchantments.CompProperties_EnchantmentScroll">
+                <enchantment>ESCP_Enchantment_AbsorbHealth</enchantment>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

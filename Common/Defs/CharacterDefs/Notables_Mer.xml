@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Dunmer">
+        <defName>ESCP_Character_Gothren</defName>
+        <pawnKind>ESCP_Unique_Pawnkind_Dunmer_Master</pawnKind>
+        <faction>ESCP_Faction_House_Telvanni</faction>
+        <eras>
+            <li>3</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Dunmer</xenotype>
+        <roles>
+            <li Class="ESCP.Core.CharacterRole_FactionLeader">
+                <seniority>3000</seniority>
+            </li>
+        </roles>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Gothren</firstName>
+                <nickname>the Archmagister</nickname>
+                <gender>Male</gender>
+                <age>250</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(150, 150, 150)</hairColor>
+                <hairDef>Bald</hairDef>
+                <headTypeDef>ESCP_HeadMerColouredEyes_Male_Average_Normal</headTypeDef>
+                <bodyTypeDef>Thin</bodyTypeDef>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Dunmer">
+        <defName>ESCP_Character_DivaythFyr</defName>
+        <pawnKind>ESCP_Pawnkind_Dunmer_Mage</pawnKind>
+        <faction>ESCP_Faction_House_Telvanni</faction>
+        <eras>
+            <li>3</li>
+            <li>4</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Dunmer</xenotype>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Divayth</firstName>
+                <lastName>Fyr</lastName>
+                <gender>Male</gender>
+                <age>280</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(170, 170, 170)</hairColor>
+                <hairDef>Bald</hairDef>
+                <headTypeDef>ESCP_HeadMerColouredEyes_Male_Average_Normal</headTypeDef>
+                <bodyTypeDef>Thin</bodyTypeDef>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Dunmer">
+        <defName>ESCP_Character_LlerilMorvayn</defName>
+        <pawnKind>ESCP_Unique_Pawnkind_Dunmer_Archmaster</pawnKind>
+        <faction>ESCP_Faction_House_Redoran</faction>
+        <eras>
+            <li>4</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Dunmer</xenotype>
+        <roles>
+            <li Class="ESCP.Core.CharacterRole_FactionLeader">
+                <seniority>1500</seniority>
+            </li>
+        </roles>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Lleril</firstName>
+                <lastName>Morvayn</lastName>
+                <nickname>the Councilor</nickname>
+                <gender>Male</gender>
+                <age>70</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(60, 55, 55)</hairColor>
+                <hairDef>ShortCut</hairDef>
+                <headTypeDef>ESCP_HeadMerColouredEyes_Male_Average_Normal</headTypeDef>
+                <bodyTypeDef>Male</bodyTypeDef>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Dunmer">
+        <defName>ESCP_Character_AthynSarethi</defName>
+        <pawnKind>ESCP_Pawnkind_Dunmer_Noble</pawnKind>
+        <faction>ESCP_Faction_House_Redoran</faction>
+        <eras>
+            <li>3</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Dunmer</xenotype>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Athyn</firstName>
+                <lastName>Sarethi</lastName>
+                <gender>Male</gender>
+                <age>120</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(50, 45, 45)</hairColor>
+                <hairDef>ShortCut</hairDef>
+                <headTypeDef>ESCP_HeadMerColouredEyes_Male_Average_Normal</headTypeDef>
+                <bodyTypeDef>Male</bodyTypeDef>
+            </li>
+            <li Class="ESCP.Core.CharacterTraitsDefinition">
+                <traits>
+                    <li>
+                        <key>Kind</key>
+                        <value>0</value>
+                    </li>
+                </traits>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Bosmer">
+        <defName>ESCP_Character_GreenLady</defName>
+        <pawnKind>ESCP_Pawnkind_Bosmer_Elite</pawnKind>
+        <faction>ESCP_Faction_Court_Silvenar</faction>
+        <eras>
+            <li>2</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Bosmer</xenotype>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Gwenaneth</firstName>
+                <nickname>the Green Lady</nickname>
+                <gender>Female</gender>
+                <age>40</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(90, 60, 30)</hairColor>
+                <hairDef>Long</hairDef>
+                <headTypeDef>ESCP_HeadMer_Female_Average_Normal</headTypeDef>
+                <bodyTypeDef>Female</bodyTypeDef>
+            </li>
+            <li Class="ESCP.Core.CharacterTraitsDefinition">
+                <traits>
+                    <li>
+                        <key>Tough</key>
+                        <value>0</value>
+                    </li>
+                </traits>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Orsimer">
+        <defName>ESCP_Character_Larak</defName>
+        <pawnKind>ESCP_Pawnkind_Orsimer_Captain</pawnKind>
+        <faction>ESCP_Faction_Orsinium</faction>
+        <eras>
+            <li>4</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Orsimer</xenotype>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Larak</firstName>
+                <nickname>Chief of Mor Khazgur</nickname>
+                <gender>Male</gender>
+                <age>55</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(40, 35, 30)</hairColor>
+                <hairDef>Mohawk</hairDef>
+                <headTypeDef>ESCP_HeadMerWideFace_Male_Average_Wide</headTypeDef>
+                <bodyTypeDef>Hulk</bodyTypeDef>
+            </li>
+            <li Class="ESCP.Core.CharacterTraitsDefinition">
+                <traits>
+                    <li>
+                        <key>Tough</key>
+                        <value>0</value>
+                    </li>
+                </traits>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+</Defs>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <ESCP_Settings_CalendarEra>Calendar start era</ESCP_Settings_CalendarEra>
+    <ESCP_Settings_CalendarEraValue>{0}E</ESCP_Settings_CalendarEraValue>
+    <ESCP_Settings_CalendarYear>Calendar start year (3E 433 is the start of Oblivion)</ESCP_Settings_CalendarYear>
+    <ESCP_Settings_CharacterEra>Characters from</ESCP_Settings_CharacterEra>
+    <ESCP_Settings_CharacterEraAll>All eras</ESCP_Settings_CharacterEraAll>
+    <ESCP_Settings_CharacterEraDesc>Choosing an era limits named characters to the ones who lived in it, sets up the alliances and wars of that era, hides scenarios from other eras, and starts the calendar at year 1 of that era. Factions whose famous leader is from another era get an ordinary leader instead.</ESCP_Settings_CharacterEraDesc>
+    <ESCP_Settings_CalendarStart>Calendar starts in {0}E {1}</ESCP_Settings_CalendarStart>
+    <ESCP_Settings_WorldGenOnly>The era, calendar start and world events are fixed when a world is generated. Change them from the main menu before starting a new colony.</ESCP_Settings_WorldGenOnly>
+
+    <ESCP_Calendar_FullDate>{0}, {1}, {2}</ESCP_Calendar_FullDate>
+    <ESCP_Calendar_DayOfMonth>{0} of {1}</ESCP_Calendar_DayOfMonth>
+    <ESCP_Calendar_MonthYear>{0}, {1}</ESCP_Calendar_MonthYear>
+    <ESCP_Calendar_ShortDate>{0} {1}, {2}</ESCP_Calendar_ShortDate>
+
+    <ESCP_Month_MorningStar>Morning Star</ESCP_Month_MorningStar>
+    <ESCP_Month_SunsDawn>Sun's Dawn</ESCP_Month_SunsDawn>
+    <ESCP_Month_FirstSeed>First Seed</ESCP_Month_FirstSeed>
+    <ESCP_Month_RainsHand>Rain's Hand</ESCP_Month_RainsHand>
+    <ESCP_Month_SecondSeed>Second Seed</ESCP_Month_SecondSeed>
+    <ESCP_Month_Midyear>Midyear</ESCP_Month_Midyear>
+    <ESCP_Month_SunsHeight>Sun's Height</ESCP_Month_SunsHeight>
+    <ESCP_Month_LastSeed>Last Seed</ESCP_Month_LastSeed>
+    <ESCP_Month_Hearthfire>Hearthfire</ESCP_Month_Hearthfire>
+    <ESCP_Month_Frostfall>Frostfall</ESCP_Month_Frostfall>
+    <ESCP_Month_SunsDusk>Sun's Dusk</ESCP_Month_SunsDusk>
+    <ESCP_Month_EveningStar>Evening Star</ESCP_Month_EveningStar>
+
+    <ESCP_Weekday_Sundas>Sundas</ESCP_Weekday_Sundas>
+    <ESCP_Weekday_Morndas>Morndas</ESCP_Weekday_Morndas>
+    <ESCP_Weekday_Tirdas>Tirdas</ESCP_Weekday_Tirdas>
+    <ESCP_Weekday_Middas>Middas</ESCP_Weekday_Middas>
+    <ESCP_Weekday_Turdas>Turdas</ESCP_Weekday_Turdas>
+    <ESCP_Weekday_Fredas>Fredas</ESCP_Weekday_Fredas>
+    <ESCP_Weekday_Loredas>Loredas</ESCP_Weekday_Loredas>
+
+</LanguageData>

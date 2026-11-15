@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <JobDef>
+        <defName>ESCP_Job_RechargeWeapon</defName>
+        <driverClass>ESCP.Core.Enchantments.JobDriver_RechargeWeapon</driverClass>
+        <reportString>recharging a weapon with TargetA.</reportString>
+    </JobDef>
+
+</Defs>

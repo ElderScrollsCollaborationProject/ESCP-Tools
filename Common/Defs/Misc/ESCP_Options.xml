@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ESCP.Core.ModOptionDef>
+        <defName>ESCP_Option_TamrielicCalendar</defName>
+        <label>Tamrielic calendar</label>
+        <description>Shows dates with Tamriel's months and weekdays. Each month lasts 5 days, so the year stays 60 days and the seasons don't change.</description>
+        <defaultValue>true</defaultValue>
+    </ESCP.Core.ModOptionDef>
+
+    <ESCP.Core.ModOptionDef>
+        <defName>ESCP_Option_ButcherExtras</defName>
+        <label>bones, chitin and fat from butchering</label>
+        <description>Butchered animals also give bones and fat, and insects give chitin. Takes effect after a restart.</description>
+        <defaultValue>true</defaultValue>
+    </ESCP.Core.ModOptionDef>
+
+    <ESCP.Core.ModOptionDef>
+        <defName>ESCP_Option_FactionPatrols</defName>
+        <label>faction patrols</label>
+        <description>Soldiers from Tamriel's factions travel the roads between their settlements and can be seen on the world map. A hostile patrol that meets one of your caravans attacks it, and now and then a patrol's route takes it straight through your colony. Turning this off removes the patrols already on the road.</description>
+        <defaultValue>true</defaultValue>
+    </ESCP.Core.ModOptionDef>
+
+    <ESCP.Core.ModOptionDef>
+        <defName>ESCP_Option_LoreFactionPlacement</defName>
+        <label>lore accurate faction generation</label>
+        <description>Every faction founds all of its canon cities and places them where they sit on the map of Tamriel. Skyrim lies north of Cyrodiil, Morrowind to the east, High Rock and Hammerfell to the west, and Valenwood, Elsweyr and the Summerset Isles to the south. When this is off, each faction only gets a few of its cities, picked at random and grouped together somewhere on the planet. Only affects new worlds.</description>
+        <defaultValue>false</defaultValue>
+        <worldGenOnly>true</worldGenOnly>
+    </ESCP.Core.ModOptionDef>
+
+    <ESCP.Core.ModOptionDef>
+        <defName>ESCP_Option_NoIndustrialOres</defName>
+        <label>no compacted steel or machinery</label>
+        <description>Compacted steel and compacted machinery no longer appear on new maps, deep drills find Tamrielic ores instead of steel, and long-range scanners search for Tamrielic metals instead. Steel has to be smelted from iron ore and corundum. Maps already generated keep what they have. Takes effect after a restart.</description>
+        <defaultValue>true</defaultValue>
+    </ESCP.Core.ModOptionDef>
+
+</Defs>

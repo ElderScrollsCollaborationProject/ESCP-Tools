@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <QuestScriptDef>
+        <defName>ESCP_Quest_FightersGuild_CaravanRescue</defName>
+        <rootSelectionWeight>1.0</rootSelectionWeight>
+        <rootMinPoints>35</rootMinPoints>
+        <defaultChallengeRating>1</defaultChallengeRating>
+        <canGiveRoyalFavor>false</canGiveRoyalFavor>
+        <expireDaysRange>4~8</expireDaysRange>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName->Fighters Guild: Road Ambush</li>
+                <li>questName->Fighters Guild: The Trade Road</li>
+                <li>questName->Fighters Guild: Caravan Under Attack</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription->[asker_nameDef] of the Fighters Guild sends word that a contracted caravan has been ambushed on the road. Its guards are holding out, but not for much longer. Guild fighters will be waiting at the site. Clear the attackers and the contract pays out.</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_RandomizePointsChallengeRating</def>
+                    <parms>
+                        <pointsFactorTwoStar>1.5</pointsFactorTwoStar>
+                        <pointsFactorThreeStar>2</pointsFactorThreeStar>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_AdjustPointsForDistantFight</def>
+                </li>
+                <li Class="QuestNode_GetMap" />
+                <li Class="ESCP.Guilds.QuestNode_GetGuildFactionLeader">
+                    <factionDefName>ESCP_Faction_FightersGuild</factionDefName>
+                    <storeLeaderAs>asker</storeLeaderAs>
+                    <storeFactionAs>guildFaction</storeFactionAs>
+                </li>
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>true</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <storeFactionAs>siteFaction</storeFactionAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>ESCP_Site_CaravanRescue</tag>
+                        </li>
+                    </sitePartsTags>
+                    <mustBeHostileToFactionOf>$asker</mustBeHostileToFactionOf>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <faction>$siteFaction</faction>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="ESCP.Core.RadiantQuests.QuestNode_GetFactionPawnKind">
+                    <pawn>$asker</pawn>
+                    <storeAs>escortKind</storeAs>
+                </li>
+                <li Class="QuestNode_LoopCount">
+                    <loopCount>$(randInt(2,4))</loopCount>
+                    <node Class="QuestNode_GeneratePawn">
+                        <kindDef>$escortKind</kindDef>
+                        <faction>$asker.Faction</faction>
+                        <addToList>escorts</addToList>
+                        <allowAddictions>false</allowAddictions>
+                        <biocodeWeaponChance>1</biocodeWeaponChance>
+                        <biocodeApparelChance>1</biocodeApparelChance>
+                    </node>
+                </li>
+                <li Class="QuestNode_SetAllApparelLocked">
+                    <pawns>$escorts</pawns>
+                </li>
+                <li Class="QuestNode_JoinPlayer">
+                    <pawns>$escorts</pawns>
+                    <joinPlayer>true</joinPlayer>
+                </li>
+                <li Class="QuestNode_ExtraFaction">
+                    <factionOf>$asker</factionOf>
+                    <pawns>$escorts</pawns>
+                    <factionType>HomeFaction</factionType>
+                    <inSignalsRemovePawn>
+                        <li>escorts.RanWild</li>
+                    </inSignalsRemovePawn>
+                </li>
+                <li Class="ESCP.Core.RadiantQuests.QuestNode_SpawnPawns">
+                    <inSignal>site.MapGenerated</inSignal>
+                    <pawns>$escorts</pawns>
+                    <mapParent>$site</mapParent>
+                </li>
+                <li Class="QuestNode_LeaveOnCleanup">
+                    <pawns>$escorts</pawns>
+                    <sendStandardLetter>false</sendStandardLetter>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                    <defsToExcludeFromHyperlinks>Human</defsToExcludeFromHyperlinks>
+                </li>
+                <li Class="QuestNode_WorldObjectTimeout">
+                    <worldObject>$site</worldObject>
+                    <isQuestTimeout>true</isQuestTimeout>
+                    <delayTicks>$(randInt(10,20)*60000)</delayTicks>
+                    <inSignalDisable>site.MapGenerated</inSignalDisable>
+                    <node Class="QuestNode_End">
+                        <outcome>Fail</outcome>
+                        <sendStandardLetter>true</sendStandardLetter>
+                    </node>
+                </li>
+                <li Class="QuestNode_Signal">
+                    <inSignal>site.AllEnemiesDefeated</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <letterDef>PositiveEvent</letterDef>
+                                <label>Caravan rescued</label>
+                                <text>The bandits have been defeated and the [asker_faction_name] caravan is safe. The traders and their pack animals are secure.</text>
+                            </li>
+                            <li Class="QuestNode_Notify_PlayerRaidedSomeone">
+                                <getRaidersFromMapParent>$site</getRaidersFromMapParent>
+                            </li>
+                            <li Class="QuestNode_GiveRewards">
+                                <parms>
+                                    <allowGoodwill>true</allowGoodwill>
+                                    <allowRoyalFavor>false</allowRoyalFavor>
+                                    <chosenPawnSignal>ChosenPawnForReward</chosenPawnSignal>
+                                </parms>
+                                <addCampLootReward>true</addCampLootReward>
+                                <customLetterLabel TKey="LetterLabelPaymentArrived">Payment arrived</customLetterLabel>
+                                <customLetterText TKey="LetterTextPaymentArrived">The caravan has been rescued!\n\nPayment from [asker_faction_name] has arrived.</customLetterText>
+                                <nodeIfChosenPawnSignalUsed Class="QuestNode_Letter">
+                                    <letterDef>ChoosePawn</letterDef>
+                                    <label TKey="LetterLabelFavorReceiver">[asker_faction_royalFavorLabel]</label>
+                                    <text TKey="LetterTextFavorReceiver">These colonists participated in the victory for the quest [resolvedQuestName]. [asker_definite] wants to know who should receive the [royalFavorReward_amount] [asker_faction_royalFavorLabel] for this service.</text>
+                                    <useColonistsOnMap>$site</useColonistsOnMap>
+                                    <chosenPawnSignal>ChosenPawnForReward</chosenPawnSignal>
+                                </nodeIfChosenPawnSignalUsed>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+                <li Class="QuestNode_Signal">
+                    <inSignal>site.AllEnemiesDefeated</inSignal>
+                    <node Class="ESCP.Guilds.QuestNode_GuildReputation">
+                        <guild>FightersGuild</guild>
+                        <amount>10</amount>
+                        <rewardPool>ESCP_ThingSetMaker_FightersGuildReward</rewardPool>
+                    </node>
+                </li>
+                <li Class="QuestNode_End">
+                    <inSignal>site.AllEnemiesDefeated</inSignal>
+                    <outcome>Success</outcome>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End" />
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+
+</Defs>

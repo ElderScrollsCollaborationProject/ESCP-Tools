@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+    <ESCP_Recipe_FactionMissing>The faction "{0}" required to craft this item does not exist in this world.</ESCP_Recipe_FactionMissing>
+    <ESCP_Recipe_FactionDefeated>The faction "{0}" has been defeated. This item can no longer be crafted.</ESCP_Recipe_FactionDefeated>
+    <ESCP_Recipe_GoodwillUnmet>Your goodwill with {0} is too low to craft this item. {1} goodwill is required.</ESCP_Recipe_GoodwillUnmet>
+    <ESCP_Recipe_XenotypeRequired>No colonist of the "{0}" xenotype is available to craft this item.</ESCP_Recipe_XenotypeRequired>
+
+</LanguageData>

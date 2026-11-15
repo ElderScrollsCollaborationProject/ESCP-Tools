@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <ESCP_ThingProducer_Progress>Production: {0}</ESCP_ThingProducer_Progress>
+    <ESCP_ThingProducer_Paused>Production paused: {0}</ESCP_ThingProducer_Paused>
+    <ESCP_ThingProducer_Produced>{0} has produced something.</ESCP_ThingProducer_Produced>
+    <ESCP_ThingProducer_Roofed>under a roof</ESCP_ThingProducer_Roofed>
+    <ESCP_ThingProducer_Night>resting for the night</ESCP_ThingProducer_Night>
+    <ESCP_ThingProducer_Temperature>wrong temperature</ESCP_ThingProducer_Temperature>
+    <ESCP_ThingProducer_Weather>wrong weather</ESCP_ThingProducer_Weather>
+    <ESCP_ThingProducer_Fuel>out of fuel</ESCP_ThingProducer_Fuel>
+    <ESCP_ThingProducer_Power>no power</ESCP_ThingProducer_Power>
+    <ESCP_BullionBuyerPrice>Bullion bought by {0}</ESCP_BullionBuyerPrice>
+</LanguageData>

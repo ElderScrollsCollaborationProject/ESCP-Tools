@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+    <ESCP_Patrol_Label>{0} patrol</ESCP_Patrol_Label>
+    <ESCP_Patrol_BoundFor>Bound for {0}.</ESCP_Patrol_BoundFor>
+    <ESCP_Patrol_MapPeaceful>Soldiers of {0} are passing through on patrol.</ESCP_Patrol_MapPeaceful>
+    <ESCP_Patrol_MapHostileTitle>Patrol on the road</ESCP_Patrol_MapHostileTitle>
+    <ESCP_Patrol_MapHostile>Soldiers of {0} are marching through the area. They aren't here for the colony, but they will attack anyone they catch out in the open.\n\nKeep your people out of their way until they've gone, or meet them with steel.</ESCP_Patrol_MapHostile>
+    <ESCP_Patrol_RoadPeaceful>{0} met soldiers of {1} on the road and was waved through.</ESCP_Patrol_RoadPeaceful>
+    <ESCP_Patrol_RoadHostileTitle>Caught on the road</ESCP_Patrol_RoadHostileTitle>
+    <ESCP_Patrol_RoadHostile>{0} ran straight into a patrol from {1}. There's no slipping past them now.</ESCP_Patrol_RoadHostile>
+
+</LanguageData>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef Name="ESCP_RaceLeatherBase" ParentName="LeatherBase" Abstract="True">
+        <statBases>
+            <MarketValue>4.2</MarketValue>
+            <StuffPower_Armor_Sharp>0.64</StuffPower_Armor_Sharp>
+            <StuffPower_Insulation_Cold>12</StuffPower_Insulation_Cold>
+            <StuffPower_Insulation_Heat>12</StuffPower_Insulation_Heat>
+        </statBases>
+        <stuffProps>
+            <commonality>0</commonality>
+        </stuffProps>
+        <tradeability>Sellable</tradeability>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_RaceLeatherBase">
+        <defName>ESCP_LeatherAltmer</defName>
+        <label>Altmer leather</label>
+        <description>Tanned skin taken from a High Elf. It keeps a faint golden cast long after curing. Any Altmer who saw it would want the tanner hanged, and most other people would not argue.</description>
+        <graphicData>
+            <color>(214,186,118)</color>
+        </graphicData>
+        <stuffProps>
+            <color>(214,186,118)</color>
+        </stuffProps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_RaceLeatherBase">
+        <defName>ESCP_LeatherAyleid</defName>
+        <label>Ayleid leather</label>
+        <description>Pale, fine-grained skin from one of the Heartland High Elves. The Ayleids once flayed their slaves for sport. Seeing it done to them is a grim sort of balance.</description>
+        <graphicData>
+            <color>(228,222,204)</color>
+        </graphicData>
+        <stuffProps>
+            <color>(228,222,204)</color>
+        </stuffProps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_RaceLeatherBase">
+        <defName>ESCP_LeatherBosmer</defName>
+        <label>Bosmer leather</label>
+        <description>Thin brown skin from a Wood Elf. Under the Green Pact the Bosmer wear the hides of what they kill, which makes this one of the few things a Bosmer would find hard to argue against.</description>
+        <graphicData>
+            <color>(150,108,70)</color>
+        </graphicData>
+        <stuffProps>
+            <color>(150,108,70)</color>
+        </stuffProps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_RaceLeatherBase">
+        <defName>ESCP_LeatherDunmer</defName>
+        <label>Dunmer leather</label>
+        <description>Ash-gray skin from a Dark Elf. It cures tough and dark and smells faintly of smoke. A Dunmer family would sooner burn the whole house than let this be worn.</description>
+        <graphicData>
+            <color>(108,112,122)</color>
+        </graphicData>
+        <stuffProps>
+            <color>(108,112,122)</color>
+        </stuffProps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_RaceLeatherBase">
+        <defName>ESCP_LeatherDwemer</defName>
+        <label>Dwemer leather</label>
+        <description>Skin from one of the Deep Elves, ruddy and surprisingly thick. Scholars would pay a fortune to study it. Most of them would also be sick on the spot.</description>
+        <graphicData>
+            <color>(200,162,128)</color>
+        </graphicData>
+        <stuffProps>
+            <color>(200,162,128)</color>
+        </stuffProps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_RaceLeatherBase">
+        <defName>ESCP_LeatherFalmer</defName>
+        <label>Falmer leather</label>
+        <description>Clammy blue-white skin from one of the blind Falmer. It never quite loses the damp of the caves.</description>
+        <graphicData>
+            <color>(186,196,206)</color>
+        </graphicData>
+        <stuffProps>
+            <color>(186,196,206)</color>
+        </stuffProps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_RaceLeatherBase">
+        <defName>ESCP_LeatherSnowElf</defName>
+        <label>Snow Elf leather</label>
+        <description>Snow-white skin from one of the last true Snow Elves. There are so few of them left that every scrap of this is a small act of extinction.</description>
+        <graphicData>
+            <color>(236,236,240)</color>
+        </graphicData>
+        <stuffProps>
+            <color>(236,236,240)</color>
+        </stuffProps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_RaceLeatherBase">
+        <defName>ESCP_LeatherMaormer</defName>
+        <label>Maormer leather</label>
+        <description>Translucent, faintly blue skin from a Sea Elf of Pyandonea. It holds up well in salt water, which is about the only good thing anyone has said about it.</description>
+        <graphicData>
+            <color>(186,214,224)</color>
+        </graphicData>
+        <stuffProps>
+            <color>(186,214,224)</color>
+        </stuffProps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_RaceLeatherBase">
+        <defName>ESCP_LeatherOrsimer</defName>
+        <label>Orsimer leather</label>
+        <description>Thick green hide from an Orc. Wearing it near a stronghold is a quick way to start a blood feud that outlives everyone involved.</description>
+        <graphicData>
+            <color>(108,138,88)</color>
+        </graphicData>
+        <statBases>
+            <StuffPower_Armor_Sharp>0.72</StuffPower_Armor_Sharp>
+        </statBases>
+        <stuffProps>
+            <color>(108,138,88)</color>
+        </stuffProps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_RaceLeatherBase">
+        <defName>ESCP_LeatherKhajiit</defName>
+        <label>Khajiit pelt</label>
+        <description>A tanned Khajiit pelt with the fur left on. It is warm, soft and unmistakable. Every caravan between Elsweyr and Skyrim would know whose it was.</description>
+        <graphicData>
+            <color>(178,138,88)</color>
+        </graphicData>
+        <statBases>
+            <StuffPower_Insulation_Cold>18</StuffPower_Insulation_Cold>
+        </statBases>
+        <stuffProps>
+            <color>(178,138,88)</color>
+        </stuffProps>
+    </ThingDef>
+
+</Defs>

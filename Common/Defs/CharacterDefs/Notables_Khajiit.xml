@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Khajiit">
+        <defName>ESCP_Character_Risaad</defName>
+        <pawnKind>ESCP_Pawnkind_Khajiit_Merchant</pawnKind>
+        <faction>ESCP_Faction_Bandaari</faction>
+        <eras>
+            <li>4</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Khajiit</xenotype>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Ri'saad</firstName>
+                <nickname>the Caravan Master</nickname>
+                <gender>Male</gender>
+                <age>50</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(160, 120, 80)</hairColor>
+                <hairDef>Decent</hairDef>
+                <headTypeDef>ESCP_HeadKhajiit_Male_Average_Normal</headTypeDef>
+                <bodyTypeDef>Male</bodyTypeDef>
+            </li>
+            <li Class="ESCP.Core.CharacterTraitsDefinition">
+                <traits>
+                    <li>
+                        <key>Greedy</key>
+                        <value>0</value>
+                    </li>
+                </traits>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Khajiit">
+        <defName>ESCP_Character_Maiq</defName>
+        <pawnKind>ESCP_Pawnkind_Khajiit_Citizen</pawnKind>
+        <faction>ESCP_Faction_Bandaari</faction>
+        <xenotype>ESCP_Xenotype_Khajiit</xenotype>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>M'aiq</firstName>
+                <nickname>the Liar</nickname>
+                <gender>Male</gender>
+                <age>40</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(170, 130, 85)</hairColor>
+                <hairDef>Decent</hairDef>
+                <headTypeDef>ESCP_HeadKhajiit_Male_Average_Normal</headTypeDef>
+                <bodyTypeDef>Male</bodyTypeDef>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+</Defs>

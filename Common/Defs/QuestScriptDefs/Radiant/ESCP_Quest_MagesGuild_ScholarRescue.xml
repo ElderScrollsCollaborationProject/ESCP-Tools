@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <QuestScriptDef>
+        <defName>ESCP_Quest_MagesGuild_ScholarRescue</defName>
+        <rootSelectionWeight>1.0</rootSelectionWeight>
+        <rootMinPoints>50</rootMinPoints>
+        <defaultChallengeRating>1</defaultChallengeRating>
+        <canGiveRoyalFavor>false</canGiveRoyalFavor>
+        <expireDaysRange>4~8</expireDaysRange>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName->Mages Guild: The Missing Scholar</li>
+                <li>questName->Mages Guild: Rescue [prisoner_nameDef]</li>
+                <li>questName->Mages Guild: A Scholar in Chains</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription->[asker_nameDef] of the Mages Guild writes that [prisoner_nameDef], a traveling scholar under the Guild's protection, has been taken captive by bandits. Get into their camp and bring the prisoner out alive.</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="ESCP.Core.RadiantQuests.QuestNode_GetFactionFromList">
+                    <storeAs>askerFaction</storeAs>
+                    <factionDefs>
+                        <li>OutlanderCivil</li>
+                        <li MayRequire="Rick.ESCP.Imperials">ESCP_Faction_Imperial</li>
+                        <li MayRequire="Rick.ESCP.Nords">ESCP_Faction_Kingdom_of_Skyrim</li>
+                        <li MayRequire="Rick.ESCP.Bretons">ESCP_Faction_Kingdom_of_Daggerfall</li>
+                        <li MayRequire="Rick.ESCP.Bretons">ESCP_Faction_Kingdom_of_Wayrest</li>
+                        <li MayRequire="Rick.ESCP.Redguards">ESCP_Faction_Crowns</li>
+                    </factionDefs>
+                </li>
+                <li Class="ESCP.Guilds.QuestNode_GetGuildFactionLeader">
+                    <factionDefName>ESCP_Faction_MagesGuild</factionDefName>
+                    <storeLeaderAs>asker</storeLeaderAs>
+                    <storeFactionAs>guildFaction</storeFactionAs>
+                </li>
+                <li Class="ESCP.Core.RadiantQuests.QuestNode_GetFactionFromList">
+                    <storeAs>enemyFaction</storeAs>
+                    <mustBeNonHostile>false</mustBeNonHostile>
+                    <factionDefs>
+                        <li>Pirate</li>
+                        <li>PirateWaster</li>
+                        <li>PirateYttakin</li>
+                        <li>TribeRough</li>
+                        <li>TribeRoughNeanderthal</li>
+                        <li>TribeSavage</li>
+                        <li>TribeSavageImpid</li>
+                        <li>OutlanderRough</li>
+                        <li>OutlanderRoughPig</li>
+                    </factionDefs>
+                </li>
+                <li Class="ESCP.Core.RadiantQuests.QuestNode_GetFactionFromList">
+                    <storeAs>prisonerFaction</storeAs>
+                    <factionDefs>
+                        <li>OutlanderCivil</li>
+                        <li MayRequire="Rick.ESCP.Imperials">ESCP_Faction_Imperial</li>
+                        <li MayRequire="Rick.ESCP.Nords">ESCP_Faction_Kingdom_of_Skyrim</li>
+                        <li MayRequire="Rick.ESCP.Bretons">ESCP_Faction_Kingdom_of_Daggerfall</li>
+                        <li MayRequire="Rick.ESCP.Bretons">ESCP_Faction_Kingdom_of_Wayrest</li>
+                        <li MayRequire="Rick.ESCP.Redguards">ESCP_Faction_Crowns</li>
+                    </factionDefs>
+                </li>
+                <li Class="ESCP.Core.RadiantQuests.QuestNode_GetPawnKind">
+                    <storeAs>prisonerPawnKind</storeAs>
+                    <pawnKindDef>Villager</pawnKindDef>
+                </li>
+                <li Class="QuestNode_GetRandomInRangeFloat">
+                    <storeAs>chanceToJoinVal</storeAs>
+                    <range>0~1</range>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>chanceToJoin</name>
+                    <value>1</value>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_RandomizePointsChallengeRating</def>
+                    <parms>
+                        <pointsFactorTwoStar>1.5</pointsFactorTwoStar>
+                        <pointsFactorThreeStar>2</pointsFactorThreeStar>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_AdjustPointsForDistantFight</def>
+                </li>
+                <li Class="QuestNode_GetMap" />
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>true</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <storeFactionAs>siteFaction</storeFactionAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>ESCP_Site_PawnRescue</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <faction>$siteFaction</faction>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                    <defsToExcludeFromHyperlinks>Human</defsToExcludeFromHyperlinks>
+                </li>
+                <li Class="QuestNode_WorldObjectTimeout">
+                    <worldObject>$site</worldObject>
+                    <isQuestTimeout>true</isQuestTimeout>
+                    <delayTicks>$(randInt(12,28)*60000)</delayTicks>
+                    <inSignalDisable>site.MapGenerated</inSignalDisable>
+                    <node Class="QuestNode_End">
+                        <outcome>Fail</outcome>
+                        <sendStandardLetter>true</sendStandardLetter>
+                    </node>
+                </li>
+                <li Class="QuestNode_Signal">
+                    <inSignal>prisoner.RescuedFromPrison</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Notify_PlayerRaidedSomeone">
+                                <getRaidersFromMapParent>$site</getRaidersFromMapParent>
+                            </li>
+                            <li Class="QuestNode_GiveRewards">
+                                <parms>
+                                    <allowGoodwill>true</allowGoodwill>
+                                    <allowRoyalFavor>false</allowRoyalFavor>
+                                    <chosenPawnSignal>ChosenPawnForReward</chosenPawnSignal>
+                                </parms>
+                                <addCampLootReward>true</addCampLootReward>
+                                <customLetterLabel TKey="LetterLabelPaymentArrived">Payment arrived</customLetterLabel>
+                                <customLetterText TKey="LetterTextPaymentArrived">You have defeated the prisoner camp!\n\nThe payment from [asker_faction_name] has arrived.</customLetterText>
+                                <nodeIfChosenPawnSignalUsed Class="QuestNode_Letter">
+                                    <letterDef>ChoosePawn</letterDef>
+                                    <label TKey="LetterLabelFavorReceiver">[asker_faction_royalFavorLabel]</label>
+                                    <text TKey="LetterTextFavorReceiver">These colonists participated in the victory for the quest [resolvedQuestName]. [asker_definite] wants to know who should receive the [royalFavorReward_amount] [asker_faction_royalFavorLabel] for this service.</text>
+                                    <useColonistsOnMap>$site</useColonistsOnMap>
+                                    <chosenPawnSignal>ChosenPawnForReward</chosenPawnSignal>
+                                </nodeIfChosenPawnSignalUsed>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+                <li Class="QuestNode_Signal">
+                    <inSignal>prisoner.RescuedFromPrison</inSignal>
+                    <node Class="ESCP.Guilds.QuestNode_GuildReputation">
+                        <guild>MagesGuild</guild>
+                        <amount>10</amount>
+                        <rewardPool>ESCP_ThingSetMaker_MagesGuildReward</rewardPool>
+                    </node>
+                </li>
+                <li Class="QuestNode_End">
+                    <inSignal>prisoner.RescuedFromPrison</inSignal>
+                    <outcome>Success</outcome>
+                </li>
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End" />
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+
+</Defs>
+

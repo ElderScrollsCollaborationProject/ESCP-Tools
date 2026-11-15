@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <QuestScriptDef>
+        <defName>ESCP_Quest_FightersGuild_HoldTheVillage</defName>
+        <rootSelectionWeight>1.0</rootSelectionWeight>
+        <rootMinPoints>50</rootMinPoints>
+        <defaultChallengeRating>1</defaultChallengeRating>
+        <canGiveRoyalFavor>false</canGiveRoyalFavor>
+        <expireDaysRange>4~8</expireDaysRange>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName->Fighters Guild: Hold the Village</li>
+                <li>questName->Fighters Guild: Sellswords at the Gate</li>
+                <li>questName->Fighters Guild: A Village Besieged</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription->[asker_nameDef] of the Fighters Guild has an urgent contract. Bandits are closing on a village under Guild protection and there are no fighters nearby to send. Get there first and hold until the attack breaks.</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="ESCP.Core.RadiantQuests.QuestNode_GetFactionFromList">
+                    <storeAs>askerFaction</storeAs>
+                    <factionDefs>
+                        <li>OutlanderCivil</li>
+                        <li MayRequire="Rick.ESCP.Imperials">ESCP_Faction_Imperial</li>
+                        <li MayRequire="Rick.ESCP.Nords">ESCP_Faction_Kingdom_of_Skyrim</li>
+                        <li MayRequire="Rick.ESCP.Bretons">ESCP_Faction_Kingdom_of_Daggerfall</li>
+                        <li MayRequire="Rick.ESCP.Bretons">ESCP_Faction_Kingdom_of_Wayrest</li>
+                        <li MayRequire="Rick.ESCP.Redguards">ESCP_Faction_Crowns</li>
+                    </factionDefs>
+                </li>
+                <li Class="ESCP.Guilds.QuestNode_GetGuildFactionLeader">
+                    <factionDefName>ESCP_Faction_FightersGuild</factionDefName>
+                    <storeLeaderAs>asker</storeLeaderAs>
+                    <storeFactionAs>guildFaction</storeFactionAs>
+                </li>
+                <li Class="ESCP.Core.RadiantQuests.QuestNode_GetFactionFromList">
+                    <storeAs>enemyFaction</storeAs>
+                    <mustBeNonHostile>false</mustBeNonHostile>
+                    <factionDefs>
+                        <li>Pirate</li>
+                        <li>PirateWaster</li>
+                        <li>PirateYttakin</li>
+                        <li>TribeRough</li>
+                        <li>TribeRoughNeanderthal</li>
+                        <li>TribeSavage</li>
+                        <li>TribeSavageImpid</li>
+                        <li>OutlanderRough</li>
+                        <li>OutlanderRoughPig</li>
+                    </factionDefs>
+                </li>
+                <li Class="ESCP.Core.RadiantQuests.QuestNode_GetFactionFromList">
+                    <storeAs>settlementFaction</storeAs>
+                    <factionDefs>
+                        <li>OutlanderCivil</li>
+                        <li MayRequire="Rick.ESCP.Imperials">ESCP_Faction_Imperial</li>
+                        <li MayRequire="Rick.ESCP.Nords">ESCP_Faction_Kingdom_of_Skyrim</li>
+                        <li MayRequire="Rick.ESCP.Bretons">ESCP_Faction_Kingdom_of_Daggerfall</li>
+                        <li MayRequire="Rick.ESCP.Bretons">ESCP_Faction_Kingdom_of_Wayrest</li>
+                        <li MayRequire="Rick.ESCP.Redguards">ESCP_Faction_Crowns</li>
+                    </factionDefs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_RandomizePointsChallengeRating</def>
+                    <parms>
+                        <pointsFactorTwoStar>1.5</pointsFactorTwoStar>
+                        <pointsFactorThreeStar>2</pointsFactorThreeStar>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_AdjustPointsForDistantFight</def>
+                </li>
+                <li Class="QuestNode_GetMap" />
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>true</preferCloserTiles>
+                </li>
+                <li Class="ESCP.Core.RadiantQuests.QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <factionToUse>$settlementFaction</factionToUse>
+                    <storeAs>sitePartDefs</storeAs>
+                    <storeFactionAs>siteFaction</storeFactionAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>ESCP_Site_SettlementRaidInProgress</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <faction>$siteFaction</faction>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+
+                <li Class="QuestNode_GetSiteThreatPoints">
+                    <storeAs>sitePoints</storeAs>
+                    <sitePartsParams>$sitePartsParams</sitePartsParams>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GetDefaultRewardValueFromPoints</def>
+                    <parms>
+                        <points>$sitePoints</points>
+                    </parms>
+                </li>
+                <li Class="QuestNode_Multiply">
+                    <value1>$rewardValue</value1>
+                    <value2>1.75</value2>
+                    <storeAs>rewardValue</storeAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <sitePartsParams>$sitePartsParams</sitePartsParams>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+                <li Class="QuestNode_Signal">
+                    <inSignal>site.MapGenerated</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Set">
+                                <name>pointsForSettlers</name>
+                                <value>$($points * 0.5)</value>
+                            </li>
+                            <li Class="ESCP.Core.RadiantQuests.QuestNode_GeneratePawns">
+                                <storeAs>settlers</storeAs>
+                                <faction>$settlementFaction</faction>
+                                <pawnGroupKind>Peaceful</pawnGroupKind>
+                                <pointsToUse>$pointsForSettlers</pointsToUse>
+                            </li>
+                            <li Class="ESCP.Core.RadiantQuests.QuestNode_GeneratePawns">
+                                <storeAs>raiders</storeAs>
+                                <faction>$enemyFaction</faction>
+                                <pawnGroupKind>Combat</pawnGroupKind>
+                                <pointsToUse>$points</pointsToUse>
+                            </li>
+                            <li Class="ESCP.Core.RadiantQuests.QuestNode_SpawnSettlers">
+                                <inSignal>site.MapGenerated</inSignal>
+                                <pawns>$settlers</pawns>
+                                <radius>20</radius>
+                            </li>
+                            <li Class="QuestNode_GetRandomInRangeFloat">
+                                <storeAs>chanceForInstant</storeAs>
+                                <range>0~1</range>
+                            </li>
+                            <li Class="QuestNode_GreaterOrEqual">
+                                <value1>$chanceForInstant</value1>
+                                <value2>0.75</value2>
+                                <node Class="QuestNode_Sequence">
+                                    <nodes>
+                                        <li Class="ESCP.Core.RadiantQuests.QuestNode_SpawnRaiders">
+                                            <inSignal>site.MapGenerated</inSignal>
+                                            <spawnOnEdge>false</spawnOnEdge>
+                                            <pawns>$raiders</pawns>
+                                            <radius>20</radius>
+                                        </li>
+                                        <li Class="QuestNode_Letter">
+                                            <label TKey="LetterLabelSettlerAidRaidInProgress">Bandits attacking village!</label>
+                                            <text TKey="LetterTextSettlerAidRaidInProgress">The bandits have already begun their assault! The village's defenders are fighting for their lives - get in there and help them drive off these bandits!</text>
+                                            <letterDef>ThreatBig</letterDef>
+                                            <lookTargets>$raiders</lookTargets>
+                                            <filterDeadPawnsFromLookTargets>true</filterDeadPawnsFromLookTargets>
+                                        </li>
+                                    </nodes>
+                                </node>
+                                <elseNode Class="QuestNode_Delay">
+                                    <delayTicks>$(randInt(2500,30000))</delayTicks>
+                                    <node Class="QuestNode_Sequence">
+                                        <nodes>
+                                            <li Class="ESCP.Core.RadiantQuests.QuestNode_SpawnRaiders">
+                                                <spawnOnEdge>true</spawnOnEdge>
+                                                <pawns>$raiders</pawns>
+                                                <radius>20</radius>
+                                            </li>
+                                            <li Class="QuestNode_Letter">
+                                                <label TKey="LetterLabelSettlerAidRaidDelayed">Bandit assault incoming!</label>
+                                                <text TKey="LetterTextSettlerAidRaidDelayed">The bandit warband has arrived at the village perimeter! Shots fired - the attack has begun!</text>
+                                                <letterDef>ThreatBig</letterDef>
+                                                <lookTargets>$raiders</lookTargets>
+                                                <filterDeadPawnsFromLookTargets>true</filterDeadPawnsFromLookTargets>
+                                            </li>
+                                        </nodes>
+                                    </node>
+                                </elseNode>
+                            </li>
+                            <li Class="QuestNode_Delay">
+                                <delayTicks>60000</delayTicks>
+                                <isQuestTimeout>true</isQuestTimeout>
+                                <node Class="QuestNode_Sequence">
+                                    <nodes>
+                                        <li Class="QuestNode_AnyPawnAlive">
+                                            <pawns>$settlers</pawns>
+                                            <node Class="QuestNode_Sequence">
+                                                <nodes>
+                                                    <li Class="QuestNode_GiveRewards">
+                                                        <parms>
+                                                            <allowGoodwill>true</allowGoodwill>
+                                                            <allowRoyalFavor>false</allowRoyalFavor>
+                                                            <chosenPawnSignal>ChosenPawnForReward</chosenPawnSignal>
+                                                        </parms>
+                                                        <addCampLootReward>false</addCampLootReward>
+                                                        <customLetterLabel TKey="LetterLabelPaymentArrived">Village defense successful</customLetterLabel>
+                                                        <customLetterText TKey="LetterTextPaymentArrived">The bandits have been driven off and the village stands! The grateful survivors are pooling together what they can spare as payment for your heroic defense of their home.</customLetterText>
+                                                        <nodeIfChosenPawnSignalUsed Class="QuestNode_Letter">
+                                                            <letterDef>ChoosePawn</letterDef>
+                                                            <label TKey="LetterLabelFavorReceiver">[asker_faction_royalFavorLabel]</label>
+                                                            <text TKey="LetterTextFavorReceiver">These colonists participated in the victory for the quest [resolvedQuestName]. [asker_definite] wants to know who should receive the [royalFavorReward_amount] [asker_faction_royalFavorLabel] for this service.</text>
+                                                            <useColonistsOnMap>$site</useColonistsOnMap>
+                                                            <chosenPawnSignal>ChosenPawnForReward</chosenPawnSignal>
+                                                        </nodeIfChosenPawnSignalUsed>
+                                                    </li>
+                                                    <li Class="QuestNode_End">
+                                                        <outcome>Success</outcome>
+                                                    </li>
+                                                </nodes>
+                                            </node>
+                                        </li>
+                                        <li Class="QuestNode_Letter">
+                                            <label TKey="LetterLabelSettlerAidEndFailure">Village overrun</label>
+                                            <letterDef>NegativeEvent</letterDef>
+                                            <text TKey="LetterTextSettlerAidEndFailure">The bandits have overwhelmed the village's defenses. Smoke rises from the ruins as the survivors flee into the roadside. Your mission has failed.</text>
+                                        </li>
+                                        <li Class="QuestNode_End">
+                                            <outcome>Fail</outcome>
+                                            <goodwillChangeAmount>-5</goodwillChangeAmount>
+                                            <goodwillChangeFactionOf>$asker</goodwillChangeFactionOf>
+                                        </li>
+                                    </nodes>
+                                </node>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+                <li Class="QuestNode_WorldObjectTimeout">
+                    <worldObject>$site</worldObject>
+                    <isQuestTimeout>true</isQuestTimeout>
+                    <delayTicks>$(randInt(12,28)*60000)</delayTicks>
+                    <inSignalDisable>site.MapGenerated</inSignalDisable>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelSettlerAidExpired">Village lost to bandits</label>
+                                <text TKey="LetterTextSettlerAidExpired">Without assistance, the village fell to the bandit assault. Another light in the roadside has been extinguished. The quest [resolvedQuestName] has failed.</text>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Fail</outcome>
+                                <goodwillChangeAmount>-5</goodwillChangeAmount>
+                                <goodwillChangeFactionOf>$asker</goodwillChangeFactionOf>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+                <li Class="QuestNode_Signal">
+                    <inSignal>site.Destroyed</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelSettlerAidFailedLeft">Village abandoned to bandits</label>
+                                <text TKey="LetterTextSettlerAidFailedLeft">By leaving the village undefended, you've sealed its fate. The bandits have claimed another victory in the roadside.</text>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Fail</outcome>
+                                <goodwillChangeAmount>-5</goodwillChangeAmount>
+                                <goodwillChangeFactionOf>$asker</goodwillChangeFactionOf>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+
+</Defs>
+

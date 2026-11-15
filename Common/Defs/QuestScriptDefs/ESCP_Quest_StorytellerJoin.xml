@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <IncidentDef ParentName="GiveQuestBase">
+        <defName>ESCP_GiveQuest_StorytellerJoiner</defName>
+        <label>a storyteller</label>
+        <questScriptDef>ESCP_Quest_StorytellerJoins</questScriptDef>
+        <baseChance>0</baseChance>
+    </IncidentDef>
+
+    <QuestScriptDef>
+        <defName>ESCP_Quest_StorytellerJoins</defName>
+        <autoAccept>true</autoAccept>
+        <defaultHidden>true</defaultHidden>
+        <isRootSpecial>true</isRootSpecial>
+        <successHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">CharityFulfilled_WandererJoins</successHistoryEvent>
+        <failedOrExpiredHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">CharityRefused_WandererJoins</failedOrExpiredHistoryEvent>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName->A Wanderer named [pawn_nameIndef]</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription-></li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="ESCP.Core.QuestNode_Root_StorytellerJoin"/>
+    </QuestScriptDef>
+
+</Defs>

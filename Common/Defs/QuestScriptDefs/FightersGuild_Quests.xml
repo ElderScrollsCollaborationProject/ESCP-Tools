@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <QuestScriptDef>
+        <defName>ESCP_Quest_FightersGuild_BountyContract</defName>
+        <rootSelectionWeight>1.0</rootSelectionWeight>
+        <rootMinPoints>300</rootMinPoints>
+        <expireDaysRange>8~12</expireDaysRange>
+        <canGiveRoyalFavor>false</canGiveRoyalFavor>
+
+        <questNameRules>
+            <rulesStrings>
+                <li>questName->Fighters Guild: [contractName]</li>
+                <li>contractName->Hostile [target] Clearance</li>
+                <li>contractName->[target] [action] Contract</li>
+                <li>target->Camp</li>
+                <li>target->Outpost</li>
+                <li>target->Encampment</li>
+                <li>action->Clearance</li>
+                <li>action->Purge</li>
+                <li>action->Elimination</li>
+            </rulesStrings>
+        </questNameRules>
+
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription->[asker_nameDef], Guildmaster of the Fighters Guild, has posted a contract. A hostile group operating out of a camp in the region has been interfering with trade and threatening Guild-affiliated operations. The Guild requires the site cleared.\n\n[asker_nameDef] notes the enemies there are not to be underestimated. Payment is confirmed on clearance.\n\nPosted through the chapter house in [hostFaction_name].</li>
+            </rulesStrings>
+        </questDescriptionRules>
+
+        <root Class="QuestNode_Sequence">
+            <nodes>
+
+                <li Class="QuestNode_SubScript">
+                    <def>Util_RandomizePointsChallengeRating</def>
+                    <parms>
+                        <pointsFactorTwoStar>1.4</pointsFactorTwoStar>
+                        <pointsFactorThreeStar>1.8</pointsFactorThreeStar>
+                    </parms>
+                </li>
+
+                <li Class="QuestNode_SubScript">
+                    <def>Util_AdjustPointsForDistantFight</def>
+                </li>
+
+                <li Class="QuestNode_GetMap">
+                    <canBeSpace>false</canBeSpace>
+                </li>
+
+                <li Class="ESCP.Guilds.QuestNode_GetGuildFactionLeader">
+                    <factionDefName>ESCP_Faction_FightersGuild</factionDefName>
+                    <storeLeaderAs>asker</storeLeaderAs>
+                    <storeFactionAs>guildFaction</storeFactionAs>
+                </li>
+
+                <li Class="ESCP.Guilds.QuestNode_GetGuildBranchFaction">
+                    <guild>FightersGuild</guild>
+                    <storeAs>hostFaction</storeAs>
+                    <maxTechLevel>Medieval</maxTechLevel>
+                </li>
+
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>true</preferCloserTiles>
+                </li>
+
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <storeFactionAs>siteFaction</storeFactionAs>
+                    <sitePartsTags>
+                        <li><tag>BanditCamp</tag></li>
+                    </sitePartsTags>
+                    <mustBeHostileToFactionOf>$asker</mustBeHostileToFactionOf>
+                </li>
+
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <faction>$siteFaction</faction>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+
+                <li Class="QuestNode_GetSiteThreatPoints">
+                    <storeAs>sitePoints</storeAs>
+                    <sitePartsParams>$sitePartsParams</sitePartsParams>
+                </li>
+
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GetDefaultRewardValueFromPoints</def>
+                    <parms>
+                        <points>$sitePoints</points>
+                    </parms>
+                </li>
+
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                </li>
+
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+
+                <li Class="QuestNode_Letter">
+                    <label TKey="LetterLabelFightersGuildBounty">Fighters Guild Contract</label>
+                    <text TKey="LetterTextFightersGuildBounty">[asker_nameDef] has posted a bounty contract through the chapter house in [hostFaction_name]: clear a hostile encampment. Check the quest log for details.</text>
+                    <letterDef>PositiveEvent</letterDef>
+                </li>
+
+                <li Class="QuestNode_End">
+                    <inSignal>guildFaction.BecameHostileToPlayer</inSignal>
+                    <outcome>Fail</outcome>
+                    <sendStandardLetter>true</sendStandardLetter>
+                </li>
+
+                <li Class="QuestNode_WorldObjectTimeout">
+                    <worldObject>$site</worldObject>
+                    <isQuestTimeout>true</isQuestTimeout>
+                    <delayTicks>$(randInt(8,14) * 60000)</delayTicks>
+                    <inSignalDisable>site.MapGenerated</inSignalDisable>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelContractExpired">Contract Expired: [resolvedQuestName]</label>
+                                <text TKey="LetterTextContractExpired">The Fighters Guild has withdrawn the contract.</text>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Fail</outcome>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <li Class="QuestNode_Signal">
+                    <inSignal>site.AllEnemiesDefeated</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_GiveRewards">
+                                <parms>
+                                    <allowGoodwill>true</allowGoodwill>
+                                    <allowRoyalFavor>false</allowRoyalFavor>
+                                    <rewardValue>$(rewardValue * 1.2)</rewardValue>
+                                </parms>
+                            </li>
+                            <li Class="ESCP.Guilds.QuestNode_GuildReputation">
+                                <guild>FightersGuild</guild>
+                                <amount>10</amount>
+                                <rewardPool>ESCP_ThingSetMaker_FightersGuildReward</rewardPool>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <li Class="QuestNode_End">
+                    <inSignal>site.AllEnemiesDefeated</inSignal>
+                    <outcome>Success</outcome>
+                    <sendStandardLetter>true</sendStandardLetter>
+                </li>
+
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End" />
+                </li>
+
+            </nodes>
+        </root>
+    </QuestScriptDef>
+
+
+    <QuestScriptDef>
+        <defName>ESCP_Quest_FightersGuild_EscortContract</defName>
+        <rootSelectionWeight>0.8</rootSelectionWeight>
+        <rootMinPoints>200</rootMinPoints>
+        <expireDaysRange>3~5</expireDaysRange>
+
+        <questNameRules>
+            <rulesStrings>
+                <li>questName->Fighters Guild: Envoy Escort</li>
+                <li>questName->Fighters Guild: [envoyLabel] in Transit</li>
+                <li>envoyLabel->Trade Envoys</li>
+                <li>envoyLabel->Guild Delegation</li>
+                <li>envoyLabel->Guild Courier Party</li>
+            </rulesStrings>
+        </questNameRules>
+
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription->[asker_nameDef], Guildmaster of the Fighters Guild, has sent a request for temporary shelter. A Guild envoy party, two in total, needs a safe location to rest and resupply before continuing their journey. Their own escort was ambushed on the road.\n\nIf the envoys can shelter at [map_definite] for [stayDuration_duration], the Guild will compensate for the inconvenience. If either is harmed while under your care, the contract is forfeit.\n\nRequest forwarded through the chapter house in [hostFaction_name]. They will arrive on acceptance.</li>
+            </rulesStrings>
+        </questDescriptionRules>
+
+        <root Class="QuestNode_Sequence">
+            <nodes>
+
+                <li Class="QuestNode_GetMap">
+                    <canBeSpace>false</canBeSpace>
+                </li>
+
+                <li Class="ESCP.Guilds.QuestNode_GetGuildFactionLeader">
+                    <factionDefName>ESCP_Faction_FightersGuild</factionDefName>
+                    <storeLeaderAs>asker</storeLeaderAs>
+                    <storeFactionAs>guildFaction</storeFactionAs>
+                </li>
+
+                <li Class="ESCP.Guilds.QuestNode_GetGuildBranchFaction">
+                    <guild>FightersGuild</guild>
+                    <storeAs>hostFaction</storeAs>
+                    <maxTechLevel>Medieval</maxTechLevel>
+                </li>
+
+                <li Class="QuestNode_Set">
+                    <name>stayDuration</name>
+                    <value>$(randInt(5, 9) * 60000)</value>
+                </li>
+
+                <li Class="QuestNode_GeneratePawn">
+                    <storeAs>lodger1</storeAs>
+                    <kindDef>ESCP_Pawnkind_FightersGuild_Member</kindDef>
+                    <faction>$guildFaction</faction>
+                </li>
+
+                <li Class="QuestNode_GeneratePawn">
+                    <storeAs>lodger2</storeAs>
+                    <kindDef>ESCP_Pawnkind_FightersGuild_Member</kindDef>
+                    <faction>$guildFaction</faction>
+                </li>
+
+                <li Class="QuestNode_Letter">
+                    <label TKey="LetterLabelGuildEnvoyRequest">Fighters Guild: Envoy Shelter Request</label>
+                    <text TKey="LetterTextGuildEnvoyRequest">[asker_nameDef] has sent two envoys requesting temporary shelter at [map_definite]. Duration: [stayDuration_duration]. Accept to have them walk in immediately.</text>
+                    <letterDef>PositiveEvent</letterDef>
+                </li>
+
+                <li Class="QuestNode_Signal">
+                    <inSignal>$inSignal</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_PawnsArrive">
+                                <pawns>$lodger1</pawns>
+                                <joinPlayer>false</joinPlayer>
+                                <arrivalMode>EdgeWalkIn</arrivalMode>
+                            </li>
+                            <li Class="QuestNode_PawnsArrive">
+                                <pawns>$lodger2</pawns>
+                                <joinPlayer>false</joinPlayer>
+                                <arrivalMode>EdgeWalkIn</arrivalMode>
+                            </li>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelGuildEnvoysArrived">Guild Envoys Arrived</label>
+                                <text TKey="LetterTextGuildEnvoysArrived">The Fighters Guild envoys have arrived and will shelter with you. Keep them safe.</text>
+                                <letterDef>PositiveEvent</letterDef>
+                            </li>
+                            <li Class="QuestNode_Delay">
+                                <delayTicks>$stayDuration</delayTicks>
+                                <node Class="QuestNode_Sequence">
+                                    <nodes>
+                                        <li Class="QuestNode_GiveRewards">
+                                            <parms>
+                                                <allowGoodwill>true</allowGoodwill>
+                                                <allowRoyalFavor>false</allowRoyalFavor>
+                                                <rewardValue>$(points * 1.0)</rewardValue>
+                                            </parms>
+                                        </li>
+                                        <li Class="ESCP.Guilds.QuestNode_GuildReputation">
+                                            <guild>FightersGuild</guild>
+                                            <amount>8</amount>
+                                            <rewardPool>ESCP_ThingSetMaker_FightersGuildReward</rewardPool>
+                                        </li>
+                                        <li Class="QuestNode_Letter">
+                                            <label TKey="LetterLabelEnvoysDepart">Guild Envoys Depart</label>
+                                            <text TKey="LetterTextEnvoysDepart">The Fighters Guild envoys have completed their stay and are departing. The Guild is grateful for your hospitality.</text>
+                                            <letterDef>PositiveEvent</letterDef>
+                                        </li>
+                                        <li Class="QuestNode_End">
+                                            <outcome>Success</outcome>
+                                        </li>
+                                    </nodes>
+                                </node>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <li Class="QuestNode_Signal">
+                    <inSignal>lodger1.Killed</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelEnvoyKilled">Envoy Killed</label>
+                                <text TKey="LetterTextEnvoyKilled">One of the Fighters Guild envoys has been killed. The contract is forfeit.</text>
+                                <letterDef>NegativeEvent</letterDef>
+                            </li>
+                            <li Class="ESCP.Guilds.QuestNode_GuildReputation">
+                                <guild>FightersGuild</guild>
+                                <amount>-15</amount>
+                                <rewardPool>ESCP_ThingSetMaker_FightersGuildReward</rewardPool>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Fail</outcome>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <li Class="QuestNode_Signal">
+                    <inSignal>lodger2.Killed</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelEnvoyKilled2">Envoy Killed</label>
+                                <text TKey="LetterTextEnvoyKilled2">One of the Fighters Guild envoys has been killed. The contract is forfeit.</text>
+                                <letterDef>NegativeEvent</letterDef>
+                            </li>
+                            <li Class="ESCP.Guilds.QuestNode_GuildReputation">
+                                <guild>FightersGuild</guild>
+                                <amount>-15</amount>
+                                <rewardPool>ESCP_ThingSetMaker_FightersGuildReward</rewardPool>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Fail</outcome>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+            </nodes>
+        </root>
+    </QuestScriptDef>
+
+
+    <QuestScriptDef>
+        <defName>ESCP_Quest_FightersGuild_CacheRecovery</defName>
+        <rootSelectionWeight>0.9</rootSelectionWeight>
+        <rootMinPoints>150</rootMinPoints>
+        <expireDaysRange>10~16</expireDaysRange>
+
+        <questNameRules>
+            <rulesStrings>
+                <li>questName->Fighters Guild: [recoverLabel]</li>
+                <li>recoverLabel->Equipment Recovery</li>
+                <li>recoverLabel->Cache Retrieval</li>
+                <li>recoverLabel->Courier's [lost] Recovery</li>
+                <li>lost->Pack</li>
+                <li>lost->Cache</li>
+            </rulesStrings>
+        </questNameRules>
+
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription->[asker_nameDef], Guildmaster of the Fighters Guild, has requested assistance. A Guild courier was killed on the road and their pack, containing equipment and sealed documents, was left at the site. The location has since been occupied by enemies.\n\n[asker_nameDef] wants the cache found and returned. It is worth [itemStashContentsValue] in materials. The cache is described as: [itemStashContents].\n\nFiled through the chapter house in [hostFaction_name].</li>
+            </rulesStrings>
+        </questDescriptionRules>
+
+        <root Class="QuestNode_Sequence">
+            <nodes>
+
+                <li Class="QuestNode_SubScript">
+                    <def>Util_RandomizePointsChallengeRating</def>
+                    <parms>
+                        <pointsFactorTwoStar>1.3</pointsFactorTwoStar>
+                        <pointsFactorThreeStar>1.7</pointsFactorThreeStar>
+                    </parms>
+                </li>
+
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GetDefaultRewardValueFromPoints</def>
+                </li>
+
+                <li Class="QuestNode_SubScript">
+                    <def>Util_AdjustPointsForDistantFight</def>
+                </li>
+
+                <li Class="QuestNode_GetMap">
+                    <canBeSpace>false</canBeSpace>
+                </li>
+
+                <li Class="ESCP.Guilds.QuestNode_GetGuildFactionLeader">
+                    <factionDefName>ESCP_Faction_FightersGuild</factionDefName>
+                    <storeLeaderAs>asker</storeLeaderAs>
+                    <storeFactionAs>guildFaction</storeFactionAs>
+                </li>
+
+                <li Class="ESCP.Guilds.QuestNode_GetGuildBranchFaction">
+                    <guild>FightersGuild</guild>
+                    <storeAs>hostFaction</storeAs>
+                    <maxTechLevel>Medieval</maxTechLevel>
+                </li>
+
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>true</preferCloserTiles>
+                </li>
+
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <storeFactionAs>siteFaction</storeFactionAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>ItemStash</tag>
+                        </li>
+                        <li>
+                            <tag>ItemStashQuestThreat</tag>
+                            <chance>0.8</chance>
+                        </li>
+                    </sitePartsTags>
+                </li>
+
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <faction>$siteFaction</faction>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                </li>
+
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+
+                <li Class="QuestNode_Letter">
+                    <label TKey="LetterLabelFightersCacheRecovery">Fighters Guild: Cache Recovery</label>
+                    <text TKey="LetterTextFightersCacheRecovery">The Fighters Guild has marked the location of a courier's lost cache through the chapter house in [hostFaction_name].</text>
+                    <letterDef>PositiveEvent</letterDef>
+                </li>
+
+                <li Class="QuestNode_WorldObjectTimeout">
+                    <worldObject>$site</worldObject>
+                    <isQuestTimeout>true</isQuestTimeout>
+                    <delayTicks>$(randInt(14, 22) * 60000)</delayTicks>
+                    <inSignalDisable>site.MapGenerated</inSignalDisable>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelCacheContractExpired">Contract Expired: [resolvedQuestName]</label>
+                                <text TKey="LetterTextCacheContractExpired">The Fighters Guild has marked the cache as unrecoverable. The contract has lapsed.</text>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Fail</outcome>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <li Class="QuestNode_AddItemsReward">
+                    <items>$generatedItemStashThings</items>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <generateQuestParts>false</generateQuestParts>
+                </li>
+
+                <li Class="QuestNode_Signal">
+                    <inSignal>site.MapGenerated</inSignal>
+                    <node Class="ESCP.Guilds.QuestNode_GuildReputation">
+                        <guild>FightersGuild</guild>
+                        <amount>7</amount>
+                        <rewardPool>ESCP_ThingSetMaker_FightersGuildReward</rewardPool>
+                    </node>
+                </li>
+
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End" />
+                </li>
+
+            </nodes>
+        </root>
+    </QuestScriptDef>
+
+</Defs>

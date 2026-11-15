@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <JobDef>
+        <defName>ESCP_Job_TouchStone</defName>
+        <driverClass>ESCP.Core.StandingStones.JobDriver_TouchStone</driverClass>
+        <reportString>touching TargetA.</reportString>
+    </JobDef>
+
+</Defs>

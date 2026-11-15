@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/GenStepDef[defName="PreciousLump"]/genStep/mineables</xpath>
+        <value>
+            <li>ESCP_Resource_MineableHeartStone</li>
+            <li>ESCP_Mineable_Meteoric_Iron</li>
+            <li>ESCP_Mineable_Moonstone</li>
+            <li>ESCP_Mineable_Ebony</li>
+            <li>ESCP_Mineable_Orichalcum</li>
+            <li>ESCP_Mineable_Volcanic_Glass</li>
+            <li>ESCP_Mineable_Mithril</li>
+            <li>ESCP_Mineable_Adamantium</li>
+            <li>ESCP_Mineable_Quicksilver</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/TraderKindDef[starts-with(defName, "ESCP_")]/stockGenerators</xpath>
+        <value>
+            <li Class="StockGenerator_Category">
+                <categoryDef>ESCP_Resources_Raw</categoryDef>
+                <thingDefCountRange>2~4</thingDefCountRange>
+                <totalPriceRange>150~500</totalPriceRange>
+            </li>
+            <li Class="StockGenerator_Tag">
+                <tradeTag>ESCP_ElementalSalts</tradeTag>
+                <thingDefCountRange>1~2</thingDefCountRange>
+                <countRange>4~12</countRange>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>

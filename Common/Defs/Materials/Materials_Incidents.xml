@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <IncidentDef>
+        <defName>ESCP_Incident_MeteoricIron</defName>
+        <label>meteoric iron impact</label>
+        <category>Misc</category>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>ESCP.Materials.IncidentWorker_OreMeteorite</workerClass>
+        <baseChance>0.05</baseChance>
+        <minRefireDays>60</minRefireDays>
+        <letterLabel>Falling star</letterLabel>
+        <letterText>A falling star has struck the ground nearby. It left behind a lump of {0}, the sky-metal the Ayleids prized above all others.</letterText>
+        <tale>MeteoriteImpact</tale>
+        <modExtensions>
+            <li Class="ESCP.Materials.IncidentExtension_OreMeteorite">
+                <mineable>ESCP_Mineable_Meteoric_Iron</mineable>
+            </li>
+        </modExtensions>
+    </IncidentDef>
+
+</Defs>

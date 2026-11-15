@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <!--
+    On a tree's ThingDef:
+
+        <comps>
+            <li Class="ESCP_Spriggan.CompProperties_SpawnSprigganOnChop">
+                <overrideList>
+                    <li>
+                        <treeDefName>Plant_TreeOak</treeDefName>
+                        <kindDefName>Muffalo</kindDefName>
+                        <overrideChance>true</overrideChance>
+                        <overriddenChance>0.25</overriddenChance>
+                    </li>
+                </overrideList>
+            </li>
+        </comps>
+
+    A tree that grows a friendly creature on a timer:
+
+        <comps>
+            <li Class="ESCP_Spriggan.CompProperties_SprigganSpawner">
+                <pawnDef>Muffalo</pawnDef>
+                <timeRequired>1800000</timeRequired>
+            </li>
+        </comps>
+
+    Other pieces in the same namespace:
+        CompProperties_SprigganRegeneration   hediff that kicks in when pain is high (minPain, Severity, hediff)
+        HediffCompProperties_SprigganRegeneration   healing, with regenParts and fireDisables options
+        CompProperties_SprigganAnimalControl   turns nearby animals to its side (maxRange, maxNumberControlled, chance)
+    -->
+
+</Patch>

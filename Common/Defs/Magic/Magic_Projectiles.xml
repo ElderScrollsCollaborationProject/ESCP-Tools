@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>ESCP_Projectile_Firebolt</defName>
+        <label>firebolt</label>
+        <graphicData>
+            <texPath>Things/Projectile/FlamebowArrow</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Flame</damageDef>
+            <damageAmountBase>9</damageAmountBase>
+            <speed>40</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>ESCP_Projectile_IceSpike</defName>
+        <label>ice spike</label>
+        <thingClass>ESCP.Core.Magic.Projectile_SpellHediff</thingClass>
+        <graphicData>
+            <texPath>Things/Projectile/Needle</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Stab</damageDef>
+            <damageAmountBase>14</damageAmountBase>
+            <armorPenetrationBase>0.35</armorPenetrationBase>
+            <speed>45</speed>
+        </projectile>
+        <modExtensions>
+            <li Class="ESCP.Core.Magic.SpellProjectileExtension">
+                <hediff>ESCP_Hediff_Frostbound</hediff>
+                <severity>0.5</severity>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>ESCP_Projectile_Fireball</defName>
+        <label>fireball</label>
+        <thingClass>Projectile_Explosive</thingClass>
+        <graphicData>
+            <texPath>Things/Projectile/LauncherShot</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Flame</damageDef>
+            <damageAmountBase>14</damageAmountBase>
+            <explosionRadius>2.9</explosionRadius>
+            <speed>30</speed>
+            <ai_IsIncendiary>true</ai_IsIncendiary>
+        </projectile>
+    </ThingDef>
+
+</Defs>

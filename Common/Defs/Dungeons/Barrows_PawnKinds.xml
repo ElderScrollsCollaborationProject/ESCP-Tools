@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <PawnKindDef>
+        <defName>ESCP_Pawnkind_Draugr</defName>
+        <label>draugr</label>
+        <race>Human</race>
+        <combatPower>55</combatPower>
+        <initialWillRange>3~5</initialWillRange>
+        <initialResistanceRange>20~30</initialResistanceRange>
+        <defaultFactionDef>AncientsHostile</defaultFactionDef>
+        <minGenerationAge>30</minGenerationAge>
+        <maxGenerationAge>70</maxGenerationAge>
+        <isFighter>true</isFighter>
+        <chemicalAddictionChance>0</chemicalAddictionChance>
+        <apparelMoney>200~500</apparelMoney>
+        <apparelTags>
+            <li>Neolithic</li>
+            <li>Medieval</li>
+        </apparelTags>
+        <weaponMoney>150~400</weaponMoney>
+        <weaponTags>
+            <li>MedievalMeleeDecent</li>
+            <li>NeolithicMeleeBasic</li>
+        </weaponTags>
+        <skills>
+            <li>
+                <skill>Melee</skill>
+                <range>6~12</range>
+            </li>
+        </skills>
+    </PawnKindDef>
+
+</Defs>

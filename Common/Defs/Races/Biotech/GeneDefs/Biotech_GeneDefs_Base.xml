@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<GeneDef Name="ESCP_GeneBase" Abstract="True">
+		<modExtensions>
+		</modExtensions>
+	</GeneDef>
+</Defs>

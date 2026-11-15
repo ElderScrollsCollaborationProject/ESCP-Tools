@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/MeditationFocusDef[defName="Natural"]/requiredBackstoriesAny</xpath>
+				<success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/MeditationFocusDef[defName="Natural"]</xpath>
+				<value>
+					<requiredBackstoriesAny/>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/MeditationFocusDef[defName="Natural"]/requiredBackstoriesAny</xpath>
+		<value>
+			<li>
+				<categoryName>ESCP_GenericBackstory_ChildhoodTribal</categoryName>
+				<slot>Childhood</slot>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/MeditationFocusDef[defName="Artistic"]/incompatibleBackstoriesAny</xpath>
+				<success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/MeditationFocusDef[defName="Artistic"]</xpath>
+				<value>
+					<incompatibleBackstoriesAny/>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/MeditationFocusDef[defName="Artistic"]/incompatibleBackstoriesAny</xpath>
+		<value>
+			<li>
+				<categoryName>ESCP_GenericBackstory_ChildhoodTribal</categoryName>
+				<slot>Childhood</slot>
+			</li>
+		</value>
+	</Operation>
+</Patch>

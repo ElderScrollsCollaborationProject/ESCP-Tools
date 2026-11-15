@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<HediffDef Abstract="True" Name="ESCP_BirthsignBase">
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.4, 0.6, 0.8)</defaultLabelColor>
+		<minSeverity>0</minSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+	</HediffDef>
+</Defs>

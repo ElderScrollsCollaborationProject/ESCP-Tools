@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<GeneCategoryDef>
+		<defName>ESCP_InheritedRacialBonus</defName>
+		<label>ESCP inherited bonus</label>
+		<displayPriorityInXenotype>398</displayPriorityInXenotype>
+	</GeneCategoryDef>
+	<GeneDef ParentName="ESCP_GeneBase" Name="ESCP_InheritedRacialBonus_Base" Abstract="True">
+		<displayCategory>ESCP_InheritedRacialBonus</displayCategory>
+		<exclusionTags>
+			<li>ESCP_InheritedRacialBonus</li>
+		</exclusionTags>
+		<biostatMet>-1</biostatMet>
+		<selectionWeight>0</selectionWeight>
+	</GeneDef>
+	<GeneDef ParentName="ESCP_GeneBase">
+		<defName>ESCP_GeneInheritedBonus_Mer</defName>
+		<label>Mer blood</label>
+		<description>Carriers of this gene exhibit some of the bonuses typically displayed by the those of Mer blood, though at a comparatively weaker level.</description>
+		<iconPath>UI/Icons/Genes/ESCP_InheritedBonus/ESCP_GeneInheritedBonus_Mer</iconPath>
+		<displayCategory>ESCP_InheritedRacialBonus</displayCategory>
+		<statOffsets>
+			<PsychicSensitivity>0.1</PsychicSensitivity>
+			<LifespanFactor>0.5</LifespanFactor>
+			<Fertility>-0.25</Fertility>
+		</statOffsets>
+		<biostatMet>0</biostatMet>
+		<selectionWeight>0</selectionWeight>
+		<displayOrderInCategory>0</displayOrderInCategory>
+	</GeneDef>
+</Defs>

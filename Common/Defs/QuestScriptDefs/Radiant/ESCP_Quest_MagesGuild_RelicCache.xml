@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <QuestScriptDef>
+        <defName>ESCP_Quest_MagesGuild_RelicCache</defName>
+        <rootSelectionWeight>0.9</rootSelectionWeight>
+        <rootMinPoints>200</rootMinPoints>
+        <defaultChallengeRating>1</defaultChallengeRating>
+        <canGiveRoyalFavor>false</canGiveRoyalFavor>
+        <expireDaysRange>5~9</expireDaysRange>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName->Mages Guild: The Relic Cache</li>
+                <li>questName->Mages Guild: Dwemer Salvage</li>
+                <li>questName->Mages Guild: Before the Looters</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription->[asker_nameDef] of the Mages Guild has traced a cache of Dwemer relics to a camp held by looters. The Guild wants the relics out of careless hands. Take the camp and the cache is yours to secure.</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="ESCP.Core.RadiantQuests.QuestNode_GetFactionFromList">
+                    <storeAs>askerFaction</storeAs>
+                    <factionDefs>
+                        <li>OutlanderCivil</li>
+                        <li MayRequire="Rick.ESCP.Imperials">ESCP_Faction_Imperial</li>
+                        <li MayRequire="Rick.ESCP.Nords">ESCP_Faction_Kingdom_of_Skyrim</li>
+                        <li MayRequire="Rick.ESCP.Bretons">ESCP_Faction_Kingdom_of_Daggerfall</li>
+                        <li MayRequire="Rick.ESCP.Bretons">ESCP_Faction_Kingdom_of_Wayrest</li>
+                        <li MayRequire="Rick.ESCP.Redguards">ESCP_Faction_Crowns</li>
+                    </factionDefs>
+                </li>
+                <li Class="ESCP.Guilds.QuestNode_GetGuildFactionLeader">
+                    <factionDefName>ESCP_Faction_MagesGuild</factionDefName>
+                    <storeLeaderAs>asker</storeLeaderAs>
+                    <storeFactionAs>guildFaction</storeFactionAs>
+                </li>
+                <li Class="ESCP.Core.RadiantQuests.QuestNode_GetFactionFromList">
+                    <storeAs>enemyFaction</storeAs>
+                    <mustBeNonHostile>false</mustBeNonHostile>
+                    <factionDefs>
+                        <li>Pirate</li>
+                        <li>PirateWaster</li>
+                        <li>PirateYttakin</li>
+                        <li>TribeRough</li>
+                        <li>TribeRoughNeanderthal</li>
+                        <li>TribeSavage</li>
+                        <li>TribeSavageImpid</li>
+                        <li>OutlanderRough</li>
+                        <li>OutlanderRoughPig</li>
+                    </factionDefs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_RandomizePointsChallengeRating</def>
+                    <parms>
+                        <pointsFactorTwoStar>1.5</pointsFactorTwoStar>
+                        <pointsFactorThreeStar>2</pointsFactorThreeStar>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_AdjustPointsForDistantFight</def>
+                </li>
+                <li Class="QuestNode_GetMap" />
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>true</preferCloserTiles>
+                </li>
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <storeFactionAs>siteFaction</storeFactionAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>ESCP_Site_RelicCache</tag>
+                        </li>
+                    </sitePartsTags>
+                </li>
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <faction>$siteFaction</faction>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                    <parms>
+                        <hiddenSitePartsPossible>true</hiddenSitePartsPossible>
+                    </parms>
+                </li>
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                    <defsToExcludeFromHyperlinks>Human</defsToExcludeFromHyperlinks>
+                </li>
+                <li Class="QuestNode_Signal">
+                    <inSignal>site.MapGenerated</inSignal>
+                    <node Class="ESCP.Core.RadiantQuests.QuestNode_AddCacheSecuredPart">
+                        <mapTile>$siteTile</mapTile>
+                        <completeSignal>cacheSecured</completeSignal>
+                    </node>
+                </li>
+                <li Class="QuestNode_WorldObjectTimeout">
+                    <worldObject>$site</worldObject>
+                    <isQuestTimeout>true</isQuestTimeout>
+                    <delayTicks>$(randInt(20,35)*60000)</delayTicks>
+                    <inSignalDisable>site.MapGenerated</inSignalDisable>
+                    <node Class="QuestNode_End">
+                        <outcome>Fail</outcome>
+                        <sendStandardLetter>true</sendStandardLetter>
+                    </node>
+                </li>
+                <li Class="QuestNode_Signal">
+                    <inSignal>cacheSecured</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Notify_PlayerRaidedSomeone">
+                                <getRaidersFromMapParent>$site</getRaidersFromMapParent>
+                            </li>
+                            <li Class="QuestNode_GiveRewards">
+                                <parms>
+                                    <allowGoodwill>true</allowGoodwill>
+                                    <allowRoyalFavor>false</allowRoyalFavor>
+                                    <chosenPawnSignal>ChosenPawnForReward</chosenPawnSignal>
+                                </parms>
+                                <addCampLootReward>true</addCampLootReward>
+                                <customLetterLabel TKey="LetterLabelCacheSecured">Cache secured</customLetterLabel>
+                                <customLetterText TKey="LetterTextCacheSecured">The looters are gone and the relics are safe. [asker_faction_name] has sent your payment and a share of the find.</customLetterText>
+                                <nodeIfChosenPawnSignalUsed Class="QuestNode_Letter">
+                                    <letterDef>ChoosePawn</letterDef>
+                                    <label TKey="LetterLabelFavorReceiver">[asker_faction_royalFavorLabel]</label>
+                                    <text TKey="LetterTextFavorReceiver">These colonists participated in the victory for the quest [resolvedQuestName]. [asker_definite] wants to know who should receive the [royalFavorReward_amount] [asker_faction_royalFavorLabel] for this service.</text>
+                                    <useColonistsOnMap>$site</useColonistsOnMap>
+                                    <chosenPawnSignal>ChosenPawnForReward</chosenPawnSignal>
+                                </nodeIfChosenPawnSignalUsed>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+                <li Class="QuestNode_Signal">
+                    <inSignal>cacheSecured</inSignal>
+                    <node Class="ESCP.Guilds.QuestNode_GuildReputation">
+                        <guild>MagesGuild</guild>
+                        <amount>10</amount>
+                        <rewardPool>ESCP_ThingSetMaker_MagesGuildReward</rewardPool>
+                    </node>
+                </li>
+                <li Class="QuestNode_End">
+                    <inSignal>cacheSecured</inSignal>
+                    <outcome>Success</outcome>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+
+</Defs>

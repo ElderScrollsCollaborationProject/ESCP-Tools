@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <MemeDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_Meme_EightDivines</defName>
+        <label>Eight Divines</label>
+        <description>Our people revere the Eight Divines: Akatosh the Dragon God of Time, Arkay the God of the Cycle, Dibella the Goddess of Beauty, Julianos the God of Wisdom, Kynareth the Goddess of Nature, Mara the Goddess of Love, Stendarr the God of Mercy, and Zenithar the God of Work and Commerce. Their temples stand in every city of Tamriel and their teachings guide every act of our civilization.</description>
+        <iconPath>UI/Structures/ESCP_OriginDivinesEight</iconPath>
+        <groupDef>Misc</groupDef>
+        <impact>2</impact>
+        <randomizationSelectionWeightFactor>0</randomizationSelectionWeightFactor>
+        <hiddenInChooseMemes>true</hiddenInChooseMemes>
+        <requireOne>
+            <li><li>Cannibalism_Abhorrent</li></li>
+            <li><li>Charity_Worthwhile</li></li>
+            <li><li>NutrientPasteEating_DontMind</li></li>
+            <li><li>Slavery_Disapproved</li></li>
+            <li>
+                <li>Execution_HorribleIfInnocent</li>
+                <li>Execution_RespectedIfGuilty</li>
+            </li>
+            <li><li>Research_Normal</li></li>
+            <li><li>DrugUse_MedicalOrSocial</li></li>
+        </requireOne>
+    </MemeDef>
+
+    <MemeDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_Meme_NineDivines</defName>
+        <label>Nine Divines</label>
+        <description>Our people revere the Nine Divines: the Eight, and mighty Talos, the Dragonborn Hero made divine. Tiber Septim conquered all of Tamriel, ascended upon his death, and now stands as the patron of those who rule with honor, strength, and justice. His place among the divines is proof that mankind's destiny is to lead.</description>
+        <iconPath>UI/Structures/ESCP_OriginDivinesNine</iconPath>
+        <groupDef>Misc</groupDef>
+        <impact>2</impact>
+        <randomizationSelectionWeightFactor>0</randomizationSelectionWeightFactor>
+        <hiddenInChooseMemes>true</hiddenInChooseMemes>
+        <requireOne>
+            <li><li>Cannibalism_Abhorrent</li></li>
+            <li><li>Charity_Worthwhile</li></li>
+            <li><li>NutrientPasteEating_DontMind</li></li>
+            <li><li>Raiding_Respected</li></li>
+            <li><li>Slavery_Disapproved</li></li>
+            <li>
+                <li>Execution_RespectedIfGuilty</li>
+                <li>Execution_DontCare</li>
+            </li>
+            <li><li>Research_Normal</li></li>
+            <li><li>DrugUse_MedicalOrSocial</li></li>
+        </requireOne>
+        <modExtensions>
+            <li Class="ESCP.Core.XenotypeExtension">
+                <blacklistedXenotypes>
+                    <li MayRequire="Rick.ESCP.Altmer">ESCP_Xenotype_Altmer</li>
+                    <li MayRequire="Rick.ESCP.Bosmer">ESCP_Xenotype_Bosmer</li>
+                </blacklistedXenotypes>
+            </li>
+        </modExtensions>
+    </MemeDef>
+
+</Defs>

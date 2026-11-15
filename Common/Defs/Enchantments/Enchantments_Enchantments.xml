@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ESCP.Core.Enchantments.EnchantmentDef>
+        <defName>ESCP_Enchantment_Fiery</defName>
+        <label>fire damage</label>
+        <description>Sets its mark with a lick of flame, burning whoever it strikes.</description>
+        <adjective>Fiery</adjective>
+        <workerClass>ESCP.Core.Enchantments.EnchantmentWorker_ExtraDamage</workerClass>
+        <magnitude>4</magnitude>
+        <chance>1</chance>
+        <extraDamage>Burn</extraDamage>
+    </ESCP.Core.Enchantments.EnchantmentDef>
+
+    <ESCP.Core.Enchantments.EnchantmentDef>
+        <defName>ESCP_Enchantment_Shock</defName>
+        <label>shock damage</label>
+        <description>Discharges a jolt of lightning into whoever it strikes.</description>
+        <adjective>Shocking</adjective>
+        <workerClass>ESCP.Core.Enchantments.EnchantmentWorker_ExtraDamage</workerClass>
+        <magnitude>5</magnitude>
+        <chance>1</chance>
+        <extraDamage>Burn</extraDamage>
+    </ESCP.Core.Enchantments.EnchantmentDef>
+
+    <ESCP.Core.Enchantments.EnchantmentDef>
+        <defName>ESCP_Enchantment_Frost</defName>
+        <label>frost</label>
+        <description>Chills the blood of whoever it strikes, slowing them badly.</description>
+        <adjective>Frozen</adjective>
+        <workerClass>ESCP.Core.Enchantments.EnchantmentWorker_Hediff</workerClass>
+        <magnitude>0.35</magnitude>
+        <chance>1</chance>
+        <hediff>ESCP_Hediff_Frostbound</hediff>
+    </ESCP.Core.Enchantments.EnchantmentDef>
+
+    <ESCP.Core.Enchantments.EnchantmentDef>
+        <defName>ESCP_Enchantment_Poison</defName>
+        <label>poison</label>
+        <description>Leaves a slow-acting toxin in every wound.</description>
+        <adjective>Venomous</adjective>
+        <workerClass>ESCP.Core.Enchantments.EnchantmentWorker_Hediff</workerClass>
+        <magnitude>0.06</magnitude>
+        <chance>1</chance>
+        <hediff>ToxicBuildup</hediff>
+    </ESCP.Core.Enchantments.EnchantmentDef>
+
+    <ESCP.Core.Enchantments.EnchantmentDef>
+        <defName>ESCP_Enchantment_Paralyze</defName>
+        <label>paralysis</label>
+        <description>Sometimes locks the victim's limbs for a few moments.</description>
+        <adjective>Paralyzing</adjective>
+        <workerClass>ESCP.Core.Enchantments.EnchantmentWorker_Stun</workerClass>
+        <magnitude>120</magnitude>
+        <chance>0.15</chance>
+    </ESCP.Core.Enchantments.EnchantmentDef>
+
+    <ESCP.Core.Enchantments.EnchantmentDef>
+        <defName>ESCP_Enchantment_AbsorbHealth</defName>
+        <label>absorb health</label>
+        <description>Closes the wielder's wounds with the life it takes.</description>
+        <adjective>Life-Draining</adjective>
+        <workerClass>ESCP.Core.Enchantments.EnchantmentWorker_AbsorbHealth</workerClass>
+        <magnitude>0.25</magnitude>
+        <chance>1</chance>
+    </ESCP.Core.Enchantments.EnchantmentDef>
+
+</Defs>

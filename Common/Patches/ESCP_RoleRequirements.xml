@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>/Defs/PreceptDef[defName="ESCP_Dunmer_IdeoRole_AncestorSpeaker"]/roleRequirements</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.RoleRequirement_PsychicSensitivity">
+                <sensitivity>1.2</sensitivity>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>

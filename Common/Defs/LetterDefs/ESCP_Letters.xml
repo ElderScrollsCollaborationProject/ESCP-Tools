@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <LetterDef ParentName="CustomChoiceLetterBase">
+        <defName>ESCP_HereticDemand</defName>
+        <letterClass>ESCP.Factions.ChoiceLetter_HereticDemand</letterClass>
+        <color>(0.8, 0.35, 0.35)</color>
+        <flashColor>(0.8, 0.35, 0.35)</flashColor>
+        <arriveSound>LetterArrive_BadUrgentSmall</arriveSound>
+    </LetterDef>
+
+</Defs>

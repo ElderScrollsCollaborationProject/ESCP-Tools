@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <JobDef>
+        <defName>ESCP_Job_RankTraining</defName>
+        <driverClass>ESCP.Ranks.Jobs.JobDriver_RankTraining</driverClass>
+        <reportString>training with TargetA.</reportString>
+    </JobDef>
+
+    <JobDef>
+        <defName>ESCP_Job_RankDrilling</defName>
+        <driverClass>ESCP.Ranks.Jobs.JobDriver_RankDrilling</driverClass>
+        <reportString>drilling with TargetA.</reportString>
+        <alwaysShowWeapon>true</alwaysShowWeapon>
+    </JobDef>
+
+    <JobDef>
+        <defName>ESCP_Job_RankDrillingPartner</defName>
+        <driverClass>ESCP.Ranks.Jobs.JobDriver_RankSessionPartner</driverClass>
+        <reportString>drilling with TargetA.</reportString>
+        <alwaysShowWeapon>true</alwaysShowWeapon>
+    </JobDef>
+
+    <JobDef>
+        <defName>ESCP_Job_RankStudying</defName>
+        <driverClass>ESCP.Ranks.Jobs.JobDriver_RankStudying</driverClass>
+        <reportString>studying with TargetA.</reportString>
+    </JobDef>
+
+    <JobDef>
+        <defName>ESCP_Job_RankStudyingPartner</defName>
+        <driverClass>ESCP.Ranks.Jobs.JobDriver_RankSessionPartner</driverClass>
+        <reportString>studying with TargetA.</reportString>
+    </JobDef>
+
+    <JobDef>
+        <defName>ESCP_Job_RankInspection</defName>
+        <driverClass>ESCP.Ranks.Jobs.JobDriver_RankInspection</driverClass>
+        <reportString>inspecting TargetA.</reportString>
+    </JobDef>
+
+    <JobDef>
+        <defName>ESCP_Job_RankInspectionPartner</defName>
+        <driverClass>ESCP.Ranks.Jobs.JobDriver_RankSessionPartner</driverClass>
+        <reportString>standing inspection for TargetA.</reportString>
+        <alwaysShowWeapon>true</alwaysShowWeapon>
+    </JobDef>
+
+    <JobDef>
+        <defName>ESCP_Job_PunishmentDetail</defName>
+        <driverClass>ESCP.Ranks.Jobs.JobDriver_PunishmentDetail</driverClass>
+        <reportString>on punishment detail.</reportString>
+    </JobDef>
+
+    <JobDef>
+        <defName>ESCP_Job_FormUp</defName>
+        <driverClass>ESCP.Ranks.Jobs.JobDriver_FormUp</driverClass>
+        <reportString>formed up under TargetA.</reportString>
+        <alwaysShowWeapon>true</alwaysShowWeapon>
+        <neverFleeFromEnemies>true</neverFleeFromEnemies>
+    </JobDef>
+
+    <JobDef>
+        <defName>ESCP_Job_VisitMentor</defName>
+        <driverClass>ESCP.Ranks.Jobs.JobDriver_VisitMentor</driverClass>
+        <reportString>watching TargetA.</reportString>
+        <joyDuration>2000</joyDuration>
+        <joyKind>Social</joyKind>
+    </JobDef>
+
+</Defs>

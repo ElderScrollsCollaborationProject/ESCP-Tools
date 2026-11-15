@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+    <SitePartDef>
+        <defName>ESCP_Site_SettlementRaidInProgress</defName>
+        <label>settlement</label>
+        <description>A small settlement.</description>
+        <siteTexture>World/WorldObjects/Sites/Outpost</siteTexture>
+        <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+        <showFactionInInspectString>true</showFactionInInspectString>
+        <requiresFaction>true</requiresFaction>
+        <approachOrderString>Approach {0}</approachOrderString>
+        <approachingReportString>Approaching {0}</approachingReportString>
+        <arrivedLetter>Arrived to the settlement.</arrivedLetter>
+        <arrivedLetterDef>PositiveEvent</arrivedLetterDef>
+        <wantsThreatPoints>true</wantsThreatPoints>
+        <minThreatPoints>300</minThreatPoints>
+        <considerEnteringAsAttack>False</considerEnteringAsAttack>
+        <tags>
+            <li>ESCP_Site_SettlementRaidInProgress</li>
+        </tags>
+    </SitePartDef>
+
+    <GenStepDef>
+        <defName>ESCP_Site_SettlementRaidInProgress_Settlement</defName>
+        <linkWithSite>ESCP_Site_SettlementRaidInProgress</linkWithSite>
+        <order>450</order>
+        <genStep Class="ESCP.Core.RadiantQuests.GenStep_SettlementScaleable">
+            <settlementSizeMin>15</settlementSizeMin>
+            <settlementSizeMax>20</settlementSizeMax>
+            <generateLoot>false</generateLoot>
+            <count>1</count>
+            <nearMapCenter>true</nearMapCenter>
+            <generatePawns>false</generatePawns>
+            <clearBuildingFaction>true</clearBuildingFaction>
+        </genStep>
+    </GenStepDef>
+
+    <GenStepDef>
+        <defName>ESCP_Site_SettlementRaidInProgress_SettlementPower</defName>
+        <linkWithSite>ESCP_Site_SettlementRaidInProgress</linkWithSite>
+        <order>451</order>
+        <genStep Class="GenStep_Power"/>
+    </GenStepDef>
+
+</Defs>
+

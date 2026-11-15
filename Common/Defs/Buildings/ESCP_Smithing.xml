@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BenchBase">
+        <defName>ESCP_Forge</defName>
+        <label>forge</label>
+        <description>A stone forge with a hand-worked bellows, fed with wood or fire salts. Smiths weapons and armor. Work goes faster with an anvil and a quenching trough nearby.</description>
+        <thingClass>Building_WorkTable</thingClass>
+        <graphicData>
+            <texPath>Things/Buildings/Smithing/ESCP_smithy</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(3,2)</drawSize>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <costList>
+            <BlocksGranite>100</BlocksGranite>
+            <Steel>40</Steel>
+        </costList>
+        <constructEffect>ConstructMetal</constructEffect>
+        <altitudeLayer>Building</altitudeLayer>
+        <fillPercent>0.5</fillPercent>
+        <useHitPoints>True</useHitPoints>
+        <statBases>
+            <WorkToBuild>3500</WorkToBuild>
+            <MaxHitPoints>300</MaxHitPoints>
+            <Flammability>0.2</Flammability>
+            <Cleanliness>-3</Cleanliness>
+        </statBases>
+        <size>(3,2)</size>
+        <rotatable>false</rotatable>
+        <designationCategory>Production</designationCategory>
+        <uiOrder>2510</uiOrder>
+        <passability>PassThroughOnly</passability>
+        <pathCost>50</pathCost>
+        <hasInteractionCell>True</hasInteractionCell>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <surfaceType>Item</surfaceType>
+        <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+        <inspectorTabs>
+            <li>ITab_Bills</li>
+        </inspectorTabs>
+        <building>
+            <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+            <workTableRoomRole>Workshop</workTableRoomRole>
+            <workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>
+        </building>
+        <comps>
+            <li Class="CompProperties_Refuelable">
+                <fuelConsumptionRate>80.0</fuelConsumptionRate>
+                <fuelCapacity>50.0</fuelCapacity>
+                <fuelFilter>
+                    <thingDefs>
+                        <li>WoodLog</li>
+                        <li>ESCP_Resource_FireSalts</li>
+                    </thingDefs>
+                </fuelFilter>
+                <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+                <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+                <canEjectFuel>true</canEjectFuel>
+            </li>
+            <li Class="CompProperties_AffectedByFacilities">
+                <linkableFacilities>
+                    <li>ToolCabinet</li>
+                    <li>ESCP_Anvil</li>
+                    <li>ESCP_QuenchingTrough</li>
+                </linkableFacilities>
+            </li>
+        </comps>
+        <placeWorkers>
+            <li>PlaceWorker_ShowFacilitiesConnections</li>
+            <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+        </placeWorkers>
+        <researchPrerequisites>
+            <li>Smithing</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <ThingDef ParentName="BuildingBase">
+        <defName>ESCP_Anvil</defName>
+        <label>anvil</label>
+        <description>An iron anvil on a block of oak. Speeds up work at a nearby forge or smithy. One workbench can use one anvil.</description>
+        <graphicData>
+            <texPath>Things/Buildings/Smithing/ESCP_anvil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.4</fillPercent>
+        <pathCost>42</pathCost>
+        <rotatable>false</rotatable>
+        <canOverlapZones>false</canOverlapZones>
+        <statBases>
+            <MaxHitPoints>200</MaxHitPoints>
+            <WorkToBuild>1000</WorkToBuild>
+            <Mass>30</Mass>
+            <Flammability>0.2</Flammability>
+        </statBases>
+        <size>(1,1)</size>
+        <costList>
+            <Steel>60</Steel>
+            <WoodLog>10</WoodLog>
+        </costList>
+        <building>
+            <destroySound>BuildingDestroyed_Metal_Small</destroySound>
+        </building>
+        <researchPrerequisites>
+            <li>Smithing</li>
+        </researchPrerequisites>
+        <designationCategory>Production</designationCategory>
+        <uiOrder>2511</uiOrder>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <thingCategories>
+            <li>BuildingsProduction</li>
+        </thingCategories>
+        <comps>
+            <li Class="CompProperties_Facility">
+                <statOffsets>
+                    <WorkTableWorkSpeedFactor>0.1</WorkTableWorkSpeedFactor>
+                </statOffsets>
+                <maxSimultaneous>1</maxSimultaneous>
+                <maxDistance>6</maxDistance>
+            </li>
+        </comps>
+        <placeWorkers>
+            <li>PlaceWorker_ShowFacilitiesConnections</li>
+        </placeWorkers>
+    </ThingDef>
+
+    <ThingDef ParentName="BuildingBase">
+        <defName>ESCP_QuenchingTrough</defName>
+        <label>quenching trough</label>
+        <description>A wooden trough of water for cooling hot metal. Speeds up work at a nearby forge or smithy. One workbench can use one trough.</description>
+        <graphicData>
+            <texPath>Things/Buildings/Smithing/ESCP_trough</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,1)</drawSize>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.4</fillPercent>
+        <pathCost>42</pathCost>
+        <rotatable>false</rotatable>
+        <canOverlapZones>false</canOverlapZones>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <WorkToBuild>600</WorkToBuild>
+            <Mass>15</Mass>
+            <Flammability>1</Flammability>
+        </statBases>
+        <size>(2,1)</size>
+        <costList>
+            <WoodLog>40</WoodLog>
+        </costList>
+        <researchPrerequisites>
+            <li>Smithing</li>
+        </researchPrerequisites>
+        <designationCategory>Production</designationCategory>
+        <uiOrder>2512</uiOrder>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <thingCategories>
+            <li>BuildingsProduction</li>
+        </thingCategories>
+        <comps>
+            <li Class="CompProperties_Facility">
+                <statOffsets>
+                    <WorkTableWorkSpeedFactor>0.06</WorkTableWorkSpeedFactor>
+                </statOffsets>
+                <maxSimultaneous>1</maxSimultaneous>
+                <maxDistance>6</maxDistance>
+            </li>
+        </comps>
+        <placeWorkers>
+            <li>PlaceWorker_ShowFacilitiesConnections</li>
+        </placeWorkers>
+    </ThingDef>
+
+</Defs>

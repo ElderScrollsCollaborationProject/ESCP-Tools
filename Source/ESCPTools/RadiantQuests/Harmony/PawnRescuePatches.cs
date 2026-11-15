@@ -1,0 +1,69 @@
+using HarmonyLib;
+using System.Reflection;
+using Verse.AI;
+
+namespace ESCP.Core.RadiantQuests;
+
+[HarmonyPatch(typeof(FloatMenuOptionProvider_OfferHelp), "GetSingleOptionFor")]
+public static class FloatMenuOptionProvider_OfferHelp_GetSingleOptionFor_Patch
+{
+    public static bool Prefix(FloatMenuOptionProvider_OfferHelp __instance, Pawn clickedPawn, 
+        FloatMenuContext context, ref FloatMenuOption __result)
+    {
+        if (clickedPawn.Dead)
+        {
+            return false;
+        }
+        if (clickedPawn.IsPrisoner && !clickedPawn.IsPrisonerOfColony)
+        {
+            TaggedString taggedString = (clickedPawn.IsPrisoner ? "FreePrisoner".Translate() : "OfferHelp".Translate());
+            if (!context.FirstSelectedPawn.CanReach(clickedPawn, PathEndMode.Touch, Danger.Deadly))
+            {
+                __result = new FloatMenuOption(taggedString + ": " + "NoPath".Translate(), null);
+                return false;
+            }
+            __result = FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption(taggedString, delegate
+            {
+                context.FirstSelectedPawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(JobDefOf.OfferHelp, clickedPawn), JobTag.Misc);
+            }, MenuOptionPriority.RescueOrCapture, null, clickedPawn), context.FirstSelectedPawn, clickedPawn);
+            return false;
+        }
+        return false;
+    }
+}
+
+[HarmonyPatch]
+public static class JobDriver_OfferHelpPatch
+{
+    private static MethodBase TargetMethod()
+    {
+        return AccessTools.Method(typeof(JobDriver_OfferHelp), "MakeNewToils");
+    }
+    private static IEnumerable<Toil> Postfix(IEnumerable<Toil> toils, JobDriver_OfferHelp __instance)
+    {
+
+        __instance.globalFailConditions.Clear();
+        __instance.FailOnDespawnedOrNull(TargetIndex.A);
+        yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch);
+        yield return Toils_General.DoAtomic(delegate
+        {
+            if (__instance.OtherPawn.mindState.WillJoinColonyIfRescued || GameComponent_PawnRescue.Instance.IsWillingToJoin(__instance.OtherPawn))
+            {
+                InteractionWorker_RecruitAttempt.DoRecruit(__instance.pawn, __instance.OtherPawn, useAudiovisualEffects: false);
+                if (__instance.OtherPawn.needs != null && __instance.OtherPawn.needs.mood != null)
+                {
+                    __instance.OtherPawn.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOf.Rescued);
+                    __instance.OtherPawn.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOf.RescuedMeByOfferingHelp, __instance.pawn);
+                }
+                Find.LetterStack.ReceiveLetter("LetterLabelRescueQuestFinished".Translate(), "LetterRescueQuestFinished".Translate(__instance.OtherPawn.Named("PAWN")).AdjustedFor(__instance.OtherPawn).CapitalizeFirst(), LetterDefOf.PositiveEvent, __instance.OtherPawn);
+                GameComponent_PawnRescue.Instance.ClearWillingToJoin(__instance.OtherPawn);
+            }
+            else
+            {
+                __instance.OtherPawn.guest.SetGuestStatus(null);
+            }
+            QuestUtility.SendQuestTargetSignals(__instance.OtherPawn.questTags, "RescuedFromPrison", __instance.OtherPawn.Named("SUBJECT"));
+
+        });
+    }
+}

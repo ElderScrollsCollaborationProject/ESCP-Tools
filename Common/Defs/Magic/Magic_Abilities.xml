@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <AbilityCategoryDef>
+        <defName>ESCP_School_Destruction</defName>
+        <displayOrder>410</displayOrder>
+    </AbilityCategoryDef>
+
+    <AbilityCategoryDef>
+        <defName>ESCP_School_Restoration</defName>
+        <displayOrder>420</displayOrder>
+    </AbilityCategoryDef>
+
+    <AbilityCategoryDef>
+        <defName>ESCP_School_Alteration</defName>
+        <displayOrder>430</displayOrder>
+    </AbilityCategoryDef>
+
+    <AbilityCategoryDef>
+        <defName>ESCP_School_Illusion</defName>
+        <displayOrder>440</displayOrder>
+    </AbilityCategoryDef>
+
+    <AbilityCategoryDef>
+        <defName>ESCP_School_Conjuration</defName>
+        <displayOrder>450</displayOrder>
+    </AbilityCategoryDef>
+
+    <AbilityDef>
+        <defName>ESCP_Spell_Firebolt</defName>
+        <label>firebolt</label>
+        <description>A spitting bolt of flame. It rarely kills on its own, but it will set a man's cloak alight, and that tends to change his plans.</description>
+        <iconPath>UI/Abilities/FireSpew</iconPath>
+        <category>ESCP_School_Destruction</category>
+        <hostile>true</hostile>
+        <aiCanUse>true</aiCanUse>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>300</cooldownTicksRange>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <range>22</range>
+            <warmupTime>1</warmupTime>
+            <targetParams><canTargetPawns>true</canTargetPawns><canTargetBuildings>true</canTargetBuildings><canTargetLocations>true</canTargetLocations></targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityMagickaCost"><cost>15</cost></li>
+            <li Class="CompProperties_AbilityLaunchProjectile"><projectileDef>ESCP_Projectile_Firebolt</projectileDef></li>
+        </comps>
+        <modExtensions>
+            <li Class="ESCP.Core.Magic.AbilityExtension_SpellAI"><role>Attack</role></li>
+        </modExtensions>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Spell_IceSpike</defName>
+        <label>ice spike</label>
+        <description>A lance of hard ice that punches through and leaves the limbs slow with cold.</description>
+        <iconPath>UI/Abilities/Waterskip</iconPath>
+        <category>ESCP_School_Destruction</category>
+        <hostile>true</hostile>
+        <aiCanUse>true</aiCanUse>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>420</cooldownTicksRange>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <range>24</range>
+            <warmupTime>1.2</warmupTime>
+            <targetParams><canTargetPawns>true</canTargetPawns><canTargetBuildings>true</canTargetBuildings><canTargetLocations>true</canTargetLocations></targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityMagickaCost"><cost>20</cost></li>
+            <li Class="CompProperties_AbilityLaunchProjectile"><projectileDef>ESCP_Projectile_IceSpike</projectileDef></li>
+        </comps>
+        <modExtensions>
+            <li Class="ESCP.Core.Magic.AbilityExtension_SpellAI"><role>Attack</role></li>
+        </modExtensions>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Spell_Fireball</defName>
+        <label>fireball</label>
+        <description>Throw too hard and you will take your own eyebrows off. Bursts on impact and burns everything nearby.</description>
+        <iconPath>UI/Abilities/Flashstorm</iconPath>
+        <category>ESCP_School_Destruction</category>
+        <hostile>true</hostile>
+        <aiCanUse>true</aiCanUse>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>900</cooldownTicksRange>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <range>26</range>
+            <warmupTime>2</warmupTime>
+            <targetParams><canTargetPawns>true</canTargetPawns><canTargetBuildings>true</canTargetBuildings><canTargetLocations>true</canTargetLocations></targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityMagickaCost"><cost>40</cost></li>
+            <li Class="CompProperties_AbilityLaunchProjectile"><projectileDef>ESCP_Projectile_Fireball</projectileDef></li>
+        </comps>
+        <modExtensions>
+            <li Class="ESCP.Core.Magic.AbilityExtension_SpellAI"><role>Attack</role></li>
+        </modExtensions>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Spell_Healing</defName>
+        <label>healing</label>
+        <description>The first spell every Temple novice learns. Knits small wounds closed on the caster or anyone close by.</description>
+        <iconPath>UI/Abilities/WordOfJoy</iconPath>
+        <category>ESCP_School_Restoration</category>
+        <hostile>false</hostile>
+        <aiCanUse>true</aiCanUse>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>180</cooldownTicksRange>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <range>12</range>
+            <warmupTime>1</warmupTime>
+            <targetParams><canTargetSelf>true</canTargetSelf><canTargetPawns>true</canTargetPawns><canTargetBuildings>false</canTargetBuildings><canTargetLocations>false</canTargetLocations></targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityMagickaCost"><cost>15</cost></li>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityHeal"><amount>15</amount></li>
+        </comps>
+        <modExtensions>
+            <li Class="ESCP.Core.Magic.AbilityExtension_SpellAI"><role>HealAlly</role></li>
+        </modExtensions>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Spell_CloseWounds</defName>
+        <label>close wounds</label>
+        <description>A slow, careful working that closes wounds a field surgeon would give up on.</description>
+        <iconPath>UI/Abilities/WordOfLove</iconPath>
+        <category>ESCP_School_Restoration</category>
+        <hostile>false</hostile>
+        <aiCanUse>true</aiCanUse>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>600</cooldownTicksRange>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <range>8</range>
+            <warmupTime>2.5</warmupTime>
+            <targetParams><canTargetSelf>true</canTargetSelf><canTargetPawns>true</canTargetPawns><canTargetBuildings>false</canTargetBuildings><canTargetLocations>false</canTargetLocations></targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityMagickaCost"><cost>35</cost></li>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityHeal"><amount>40</amount></li>
+        </comps>
+        <modExtensions>
+            <li Class="ESCP.Core.Magic.AbilityExtension_SpellAI"><role>HealAlly</role><healBelow>0.8</healBelow></li>
+        </modExtensions>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Spell_Ward</defName>
+        <label>steadfast ward</label>
+        <description>Holds a shimmering barrier around the target for a short while. Blows land, but they land softer.</description>
+        <iconPath>UI/Abilities/BulletShield</iconPath>
+        <category>ESCP_School_Restoration</category>
+        <hostile>false</hostile>
+        <aiCanUse>true</aiCanUse>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>900</cooldownTicksRange>
+        <statBases><Ability_Duration>20</Ability_Duration></statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <range>12</range>
+            <warmupTime>0.8</warmupTime>
+            <targetParams><canTargetSelf>true</canTargetSelf><canTargetPawns>true</canTargetPawns><canTargetBuildings>false</canTargetBuildings><canTargetLocations>false</canTargetLocations></targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityMagickaCost"><cost>25</cost></li>
+            <li Class="CompProperties_AbilityGiveHediff"><compClass>CompAbilityEffect_GiveHediff</compClass><hediffDef>ESCP_Hediff_Ward</hediffDef></li>
+        </comps>
+        <modExtensions>
+            <li Class="ESCP.Core.Magic.AbilityExtension_SpellAI"><role>SelfBuff</role><buffHediff>ESCP_Hediff_Ward</buffHediff></li>
+        </modExtensions>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Spell_Oakflesh</defName>
+        <label>oakflesh</label>
+        <description>Toughens the skin until it turns a blade like old bark. Lasts about an hour, and itches the whole time.</description>
+        <iconPath>UI/Abilities/Burden</iconPath>
+        <category>ESCP_School_Alteration</category>
+        <hostile>false</hostile>
+        <aiCanUse>true</aiCanUse>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>1200</cooldownTicksRange>
+        <statBases><Ability_Duration>60</Ability_Duration></statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <range>10</range>
+            <warmupTime>1.5</warmupTime>
+            <targetParams><canTargetSelf>true</canTargetSelf><canTargetPawns>true</canTargetPawns><canTargetBuildings>false</canTargetBuildings><canTargetLocations>false</canTargetLocations></targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityMagickaCost"><cost>20</cost></li>
+            <li Class="CompProperties_AbilityGiveHediff"><compClass>CompAbilityEffect_GiveHediff</compClass><hediffDef>ESCP_Hediff_Oakflesh</hediffDef></li>
+        </comps>
+        <modExtensions>
+            <li Class="ESCP.Core.Magic.AbilityExtension_SpellAI"><role>SelfBuff</role><buffHediff>ESCP_Hediff_Oakflesh</buffHediff></li>
+        </modExtensions>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Spell_Telekinesis</defName>
+        <label>telekinesis</label>
+        <description>Plucks the weapon straight out of an enemy's hand and drops it at their feet.</description>
+        <iconPath>UI/Abilities/Beckon</iconPath>
+        <category>ESCP_School_Alteration</category>
+        <hostile>true</hostile>
+        <aiCanUse>true</aiCanUse>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>900</cooldownTicksRange>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <range>18</range>
+            <warmupTime>1</warmupTime>
+            <targetParams><canTargetPawns>true</canTargetPawns><canTargetBuildings>false</canTargetBuildings><canTargetAnimals>true</canTargetAnimals><canTargetMechs>false</canTargetMechs></targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityMagickaCost"><cost>25</cost></li>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityDisarm" />
+        </comps>
+        <modExtensions>
+            <li Class="ESCP.Core.Magic.AbilityExtension_SpellAI"><role>Attack</role></li>
+        </modExtensions>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Spell_Paralyze</defName>
+        <label>paralyze</label>
+        <description>Locks every muscle in the target's body. They stay aware for all of it, which is the unpleasant part.</description>
+        <iconPath>UI/Abilities/Stun</iconPath>
+        <category>ESCP_School_Alteration</category>
+        <hostile>true</hostile>
+        <aiCanUse>true</aiCanUse>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>1500</cooldownTicksRange>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <range>16</range>
+            <warmupTime>1.5</warmupTime>
+            <targetParams><canTargetPawns>true</canTargetPawns><canTargetBuildings>false</canTargetBuildings><canTargetAnimals>true</canTargetAnimals><canTargetMechs>false</canTargetMechs></targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityMagickaCost"><cost>40</cost></li>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityParalyze"><stunTicks>480</stunTicks></li>
+        </comps>
+        <modExtensions>
+            <li Class="ESCP.Core.Magic.AbilityExtension_SpellAI"><role>Attack</role></li>
+        </modExtensions>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Spell_Calm</defName>
+        <label>calm</label>
+        <description>Takes the anger out of a mind for a moment. Breaks most frenzies and leaves the target standing there confused.</description>
+        <iconPath>UI/Abilities/WordOfSerenity</iconPath>
+        <category>ESCP_School_Illusion</category>
+        <hostile>false</hostile>
+        <aiCanUse>false</aiCanUse>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>600</cooldownTicksRange>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <range>18</range>
+            <warmupTime>1</warmupTime>
+            <targetParams><canTargetPawns>true</canTargetPawns><canTargetBuildings>false</canTargetBuildings><canTargetAnimals>true</canTargetAnimals><canTargetMechs>false</canTargetMechs></targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityMagickaCost"><cost>20</cost></li>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityCalm"><stunTicks>300</stunTicks></li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Spell_Fear</defName>
+        <label>fear</label>
+        <description>Convinces the target that whatever is coming for them is far worse than whatever you are.</description>
+        <iconPath>UI/Abilities/NauseaPulse</iconPath>
+        <category>ESCP_School_Illusion</category>
+        <hostile>true</hostile>
+        <aiCanUse>true</aiCanUse>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>1200</cooldownTicksRange>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <range>18</range>
+            <warmupTime>1.2</warmupTime>
+            <targetParams><canTargetPawns>true</canTargetPawns><canTargetBuildings>false</canTargetBuildings><canTargetAnimals>true</canTargetAnimals><canTargetMechs>false</canTargetMechs></targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityMagickaCost"><cost>30</cost></li>
+            <li Class="CompProperties_AbilityGiveMentalState"><compClass>CompAbilityEffect_GiveMentalState</compClass><stateDef>PanicFlee</stateDef></li>
+        </comps>
+        <modExtensions>
+            <li Class="ESCP.Core.Magic.AbilityExtension_SpellAI"><role>Attack</role></li>
+        </modExtensions>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Spell_Invisibility</defName>
+        <label>invisibility</label>
+        <description>Bends the eye around the caster. The Thieves Guild pays well for anyone who can teach it.</description>
+        <iconPath>UI/Abilities/Invisibility</iconPath>
+        <category>ESCP_School_Illusion</category>
+        <hostile>false</hostile>
+        <aiCanUse>true</aiCanUse>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>1800</cooldownTicksRange>
+        <statBases><Ability_Duration>20</Ability_Duration></statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <range>6</range>
+            <warmupTime>1</warmupTime>
+            <targetParams><canTargetSelf>true</canTargetSelf><canTargetPawns>true</canTargetPawns><canTargetBuildings>false</canTargetBuildings><canTargetLocations>false</canTargetLocations></targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityMagickaCost"><cost>45</cost></li>
+            <li Class="CompProperties_AbilityGiveHediff"><compClass>CompAbilityEffect_GiveHediff</compClass><hediffDef>PsychicInvisibility</hediffDef></li>
+        </comps>
+        <modExtensions>
+            <li Class="ESCP.Core.Magic.AbilityExtension_SpellAI"><role>SelfBuff</role><buffHediff>PsychicInvisibility</buffHediff></li>
+        </modExtensions>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Spell_ConjureWolf</defName>
+        <label>conjure familiar</label>
+        <description>Calls a spectral wolf to the chosen spot. It fights for about a minute, then goes back to wherever it came from.</description>
+        <iconPath>UI/Abilities/Skip</iconPath>
+        <category>ESCP_School_Conjuration</category>
+        <hostile>false</hostile>
+        <aiCanUse>true</aiCanUse>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>1800</cooldownTicksRange>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <range>18</range>
+            <warmupTime>1.5</warmupTime>
+            <targetParams><canTargetPawns>false</canTargetPawns><canTargetBuildings>false</canTargetBuildings><canTargetLocations>true</canTargetLocations></targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityMagickaCost"><cost>25</cost></li>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityConjure"><pawnKind>Wolf_Timber</pawnKind><count>1</count></li>
+        </comps>
+        <modExtensions>
+            <li Class="ESCP.Core.Magic.AbilityExtension_SpellAI"><role>Summon</role></li>
+        </modExtensions>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Spell_SoulTrap</defName>
+        <label>soul trap</label>
+        <description>Marks a creature's soul for the next minute. If it dies in that time, the soul goes into the smallest empty gem nearby that can hold it. People need a black soul gem.</description>
+        <iconPath>UI/Abilities/EntropyLink</iconPath>
+        <category>ESCP_School_Conjuration</category>
+        <hostile>true</hostile>
+        <aiCanUse>true</aiCanUse>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>240</cooldownTicksRange>
+        <statBases><Ability_Duration>60</Ability_Duration></statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <range>20</range>
+            <warmupTime>0.8</warmupTime>
+            <targetParams><canTargetPawns>true</canTargetPawns><canTargetBuildings>false</canTargetBuildings><canTargetAnimals>true</canTargetAnimals><canTargetMechs>false</canTargetMechs></targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityMagickaCost"><cost>15</cost></li>
+            <li Class="CompProperties_AbilityGiveHediff"><compClass>CompAbilityEffect_GiveHediff</compClass><hediffDef>ESCP_Hediff_SoulTrap</hediffDef></li>
+        </comps>
+        <modExtensions>
+            <li Class="ESCP.Core.Magic.AbilityExtension_SpellAI"><role>Attack</role></li>
+        </modExtensions>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Spell_ConjureSpider</defName>
+        <label>conjure frostbite spider</label>
+        <description>Tears a spider the size of a cart out of Oblivion and points it at your problems.</description>
+        <iconPath>UI/Abilities/SkipChaos</iconPath>
+        <category>ESCP_School_Conjuration</category>
+        <hostile>false</hostile>
+        <aiCanUse>true</aiCanUse>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>3000</cooldownTicksRange>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <range>18</range>
+            <warmupTime>2.5</warmupTime>
+            <targetParams><canTargetPawns>false</canTargetPawns><canTargetBuildings>false</canTargetBuildings><canTargetLocations>true</canTargetLocations></targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityMagickaCost"><cost>50</cost></li>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityConjure"><pawnKind>Megaspider</pawnKind><count>1</count></li>
+        </comps>
+        <modExtensions>
+            <li Class="ESCP.Core.Magic.AbilityExtension_SpellAI"><role>Summon</role></li>
+        </modExtensions>
+    </AbilityDef>
+
+</Defs>

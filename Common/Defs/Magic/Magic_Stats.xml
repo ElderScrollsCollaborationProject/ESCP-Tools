@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <StatDef>
+        <defName>ESCP_MagickaMax</defName>
+        <label>maximum magicka</label>
+        <description>How much magicka this person can hold. Intellectual skill adds to it on top of this number.</description>
+        <category>BasicsPawn</category>
+        <defaultBaseValue>50</defaultBaseValue>
+        <minValue>0</minValue>
+        <toStringStyle>Integer</toStringStyle>
+        <showOnAnimals>false</showOnAnimals>
+        <showOnMechanoids>false</showOnMechanoids>
+        <displayPriorityInCategory>3000</displayPriorityInCategory>
+    </StatDef>
+
+    <StatDef>
+        <defName>ESCP_MagickaRegen</defName>
+        <label>magicka regeneration</label>
+        <description>How much magicka comes back each second of game time.</description>
+        <category>BasicsPawn</category>
+        <defaultBaseValue>0.25</defaultBaseValue>
+        <minValue>0</minValue>
+        <toStringStyle>FloatTwo</toStringStyle>
+        <showOnAnimals>false</showOnAnimals>
+        <showOnMechanoids>false</showOnMechanoids>
+        <displayPriorityInCategory>3001</displayPriorityInCategory>
+    </StatDef>
+
+</Defs>

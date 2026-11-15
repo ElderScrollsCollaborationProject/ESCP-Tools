@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "DbiRnE/sGGQ=",
+  "success": true,
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\ESCP-Tools\\Source\\ESCPTools\\ESCPTools.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Collin Farnsworth\\.nuget\\packages\\krafs.rimworld.ref\\1.6.4871\\krafs.rimworld.ref.1.6.4871.nupkg.sha512",
+    "C:\\Users\\Collin Farnsworth\\.nuget\\packages\\lib.harmony\\2.3.3\\lib.harmony.2.3.3.nupkg.sha512"
+  ],
+  "logs": []
+}

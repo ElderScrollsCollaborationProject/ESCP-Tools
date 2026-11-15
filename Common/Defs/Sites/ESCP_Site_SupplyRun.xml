@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+    <SitePartDef>
+        <defName>ESCP_Site_SupplyRun</defName>
+        <label>supply cache</label>
+        <description>A scavenging site with supplies to recover.</description>
+        <workerClass>SitePartWorker_Outpost</workerClass>
+        <siteTexture>World/WorldObjects/DefaultSettlement</siteTexture>
+        <forceExitAndRemoveMapCountdownDurationDays>6</forceExitAndRemoveMapCountdownDurationDays>
+        <requiresFaction>true</requiresFaction>
+        <wantsThreatPoints>true</wantsThreatPoints>
+        <tags>
+            <li>ESCP_Site_SupplyRun</li>
+        </tags>
+    </SitePartDef>
+
+    <GenStepDef>
+        <defName>ESCP_Site_SupplyRun_Outpost</defName>
+        <linkWithSite>ESCP_Site_SupplyRun</linkWithSite>
+        <order>450</order>
+        <genStep Class="GenStep_Outpost"/>
+    </GenStepDef>
+
+    <GenStepDef>
+        <defName>ESCP_Site_SupplyRun_OutpostPower</defName>
+        <linkWithSite>ESCP_Site_SupplyRun</linkWithSite>
+        <order>451</order>
+        <genStep Class="GenStep_Power"/>
+    </GenStepDef>
+
+</Defs>

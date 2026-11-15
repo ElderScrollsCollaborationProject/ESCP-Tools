@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ESCP.Factions.LoreMapDef>
+        <defName>ESCP_LoreMap_Tamriel</defName>
+        <width>66</width>
+        <factions>
+            <li MayRequire="Rick.ESCP.Nords">
+                <faction>ESCP_Faction_Kingdom_of_Skyrim</faction>
+                <settlements>
+                    <li><name>Whiterun</name><x>-2</x><z>17</z></li>
+                    <li><name>Riverwood</name><x>-1.5</x><z>14.5</z></li>
+                    <li><name>Rorikstead</name><x>-6</x><z>18</z></li>
+                    <li><name>Fort Greymoor</name><x>-4</x><z>17.5</z></li>
+                    <li><name>Solitude</name><x>-6.5</x><z>22</z></li>
+                    <li><name>Dragon Bridge</name><x>-7</x><z>20.5</z></li>
+                    <li><name>Fort Hraggstad</name><x>-8.5</x><z>22.5</z></li>
+                    <li><name>Morthal</name><x>-4</x><z>21</z></li>
+                    <li><name>Stonehills</name><x>-2.5</x><z>20.5</z></li>
+                    <li><name>Fort Snowhawk</name><x>-5.5</x><z>21</z></li>
+                    <li><name>Markarth</name><x>-10</x><z>17</z></li>
+                    <li><name>Karthwasten</name><x>-9</x><z>19</z></li>
+                    <li><name>Old Hroldan</name><x>-8.5</x><z>15.5</z></li>
+                    <li><name>Fort Sungard</name><x>-8.5</x><z>17</z></li>
+                    <li><name>Falkreath</name><x>-5</x><z>12.5</z></li>
+                    <li><name>Helgen</name><x>-2</x><z>12.5</z></li>
+                    <li><name>Fort Neugrad</name><x>-3.5</x><z>13</z></li>
+                    <li><name>Windhelm</name><x>3</x><z>21</z></li>
+                    <li><name>Kynesgrove</name><x>3</x><z>19.5</z></li>
+                    <li><name>Darkwater Crossing</name><x>2.5</x><z>17</z></li>
+                    <li><name>Fort Amol</name><x>1.5</x><z>18.5</z></li>
+                    <li><name>Riften</name><x>4</x><z>12.5</z></li>
+                    <li><name>Ivarstead</name><x>0.5</x><z>14</z></li>
+                    <li><name>Shor's Stone</name><x>3.5</x><z>15</z></li>
+                    <li><name>Fort Greenwall</name><x>3</x><z>13.5</z></li>
+                    <li><name>Dawnstar</name><x>-1</x><z>23</z></li>
+                    <li><name>Fort Dunstad</name><x>-0.5</x><z>21.5</z></li>
+                    <li><name>Winterhold</name><x>4.5</x><z>23</z></li>
+                    <li><name>Fort Kastav</name><x>4.5</x><z>21.5</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Greybeards">
+                <faction>ESCP_Faction_OrderOfTheGreybeards</faction>
+                <settlements>
+                    <li><name>High Hrothgar</name><x>-1</x><z>15.5</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Imperials">
+                <faction>ESCP_Faction_Imperial</faction>
+                <settlements>
+                    <li><name>Imperial City</name><x>0</x><z>0</z></li>
+                    <li><name>Chorrol</name><x>-7</x><z>4</z></li>
+                    <li><name>Bruma</name><x>1</x><z>8</z></li>
+                    <li><name>Anvil</name><x>-11</x><z>-7</z></li>
+                    <li><name>Skingrad</name><x>-6</x><z>-1</z></li>
+                    <li><name>Kvatch</name><x>-9</x><z>-5</z></li>
+                    <li><name>Cheydinhal</name><x>8</x><z>3</z></li>
+                    <li><name>Leyawiin</name><x>6</x><z>-9</z></li>
+                    <li><name>Bravil</name><x>3</x><z>-6</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Ayleids">
+                <faction>ESCP_Faction_Ayleid_Flower_Kings</faction>
+                <settlements>
+                    <li><name>White-Gold Tower</name><x>0</x><z>0</z></li>
+                    <li><name>Ceyatatar</name><x>-8</x><z>-3</z></li>
+                    <li><name>Sedor</name><x>-2</x><z>-4</z></li>
+                    <li><name>Vilverin</name><x>2</x><z>1</z></li>
+                    <li><name>Malada</name><x>-2</x><z>3</z></li>
+                    <li><name>Varsa Baalim</name><x>5</x><z>-3</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Ayleids">
+                <faction>ESCP_Faction_Nenalata</faction>
+                <settlements>
+                    <li><name>Nenalata</name><x>5</x><z>-7</z></li>
+                    <li><name>Bisnensel</name><x>-4</x><z>6</z></li>
+                    <li><name>Beldaburo</name><x>-9</x><z>-1</z></li>
+                    <li><name>Nenyond Twyll</name><x>2</x><z>-8</z></li>
+                    <li><name>Wendelbek</name><x>9</x><z>5</z></li>
+                    <li><name>Lindai</name><x>-5</x><z>2</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Falmer">
+                <faction>ESCP_Faction_Falmer_Hive</faction>
+                <settlements>
+                    <li><name>Blackreach</name><x>-3</x><z>19</z></li>
+                    <li><name>Alftand</name><x>4</x><z>21.5</z></li>
+                    <li><name>Irkngthand</name><x>4</x><z>19</z></li>
+                    <li><name>Forgotten Vale</name><x>-6</x><z>20</z></li>
+                    <li><name>Sightless Pit</name><x>0</x><z>20.5</z></li>
+                    <li><name>Frostflow Deep</name><x>-8</x><z>15</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Falmer">
+                <faction>ESCP_Faction_Snow_Elf_Empire</faction>
+                <settlements>
+                    <li><name>Chantry of Auri-El</name><x>-5</x><z>21</z></li>
+                    <li><name>Forgotten Vale</name><x>-6</x><z>20</z></li>
+                    <li><name>Inner Sanctum</name><x>-4</x><z>19.5</z></li>
+                    <li><name>Moesring</name><x>-9</x><z>18</z></li>
+                    <li><name>Winter's Rest</name><x>2</x><z>22</z></li>
+                    <li><name>Saarthal Reach</name><x>4.5</x><z>22.5</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Vampires">
+                <faction>ESCP_Faction_Volkihar</faction>
+                <settlements>
+                    <li><name>Castle Volkihar</name><x>-7.5</x><z>23.5</z></li>
+                    <li><name>Bloodlet Throne</name><x>-9</x><z>17</z></li>
+                    <li><name>Movarth's Lair</name><x>-4</x><z>20</z></li>
+                    <li><name>Haemar's Shame</name><x>-4</x><z>13.5</z></li>
+                    <li><name>Redwater Den</name><x>5</x><z>13</z></li>
+                    <li><name>Fellglow Keep</name><x>-4</x><z>17</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Altmer">
+                <faction>ESCP_Faction_Thalmor</faction>
+                <settlements>
+                    <li><name>Thalmor Embassy</name><x>-6</x><z>22</z></li>
+                    <li><name>Northwatch Keep</name><x>-9</x><z>21.5</z></li>
+                    <li><name>Firsthold</name><x>-34</x><z>-20</z></li>
+                    <li><name>Dusk</name><x>-30</x><z>-18</z></li>
+                    <li><name>Traitor's Tor</name><x>-27</x><z>-22</z></li>
+                    <li><name>Sil-Var-Woad</name><x>-31</x><z>-26</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Altmer">
+                <faction>ESCP_Faction_Aldmeri_Dominion</faction>
+                <settlements>
+                    <li><name>Alinor</name><x>-32</x><z>-24</z></li>
+                    <li><name>Cloudrest</name><x>-30</x><z>-21</z></li>
+                    <li><name>Skywatch</name><x>-24</x><z>-20</z></li>
+                    <li><name>Lillandril</name><x>-34</x><z>-27</z></li>
+                    <li><name>Shimmerene</name><x>-28</x><z>-26</z></li>
+                    <li><name>Sunhold</name><x>-36</x><z>-23</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Bosmer">
+                <faction>ESCP_Faction_Treethanes</faction>
+                <settlements>
+                    <li><name>Falinesti</name><x>-14</x><z>-18</z></li>
+                    <li><name>Elden Root</name><x>-13</x><z>-15</z></li>
+                    <li><name>Woodhearth</name><x>-18</x><z>-22</z></li>
+                    <li><name>Greenheart</name><x>-17</x><z>-12</z></li>
+                    <li><name>Arenthia</name><x>-8</x><z>-12</z></li>
+                    <li><name>Silvenar</name><x>-10</x><z>-20</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Bosmer">
+                <faction>ESCP_Faction_Court_Silvenar</faction>
+                <settlements>
+                    <li><name>Silvenar</name><x>-10</x><z>-20</z></li>
+                    <li><name>Greenheart</name><x>-17</x><z>-12</z></li>
+                    <li><name>Vulkwasten</name><x>-12</x><z>-12</z></li>
+                    <li><name>Moonmont</name><x>-5</x><z>-17</z></li>
+                    <li><name>Grahtwood Hollow</name><x>-12</x><z>-21</z></li>
+                    <li><name>Reaper's March</name><x>-6</x><z>-14</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Bretons">
+                <faction>ESCP_Faction_Kingdom_of_Daggerfall</faction>
+                <settlements>
+                    <li><name>Daggerfall</name><x>-30</x><z>14</z></li>
+                    <li><name>Glenpoint</name><x>-28</x><z>17</z></li>
+                    <li><name>Camlorn</name><x>-26</x><z>20</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Bretons">
+                <faction>ESCP_Faction_Kingdom_of_Wayrest</faction>
+                <settlements>
+                    <li><name>Wayrest</name><x>-19</x><z>13</z></li>
+                    <li><name>Evermore</name><x>-23</x><z>10</z></li>
+                    <li><name>Farrun</name><x>-19</x><z>19</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Orsimer">
+                <faction>ESCP_Faction_Orsinium</faction>
+                <settlements>
+                    <li><name>Orsinium</name><x>-16</x><z>10</z></li>
+                    <li><name>Morkul Stronghold</name><x>-15</x><z>12</z></li>
+                    <li><name>Fharun Stronghold</name><x>-20</x><z>7</z></li>
+                    <li><name>Stonetooth Fortress</name><x>-32</x><z>10</z></li>
+                    <li><name>Murtag Stronghold</name><x>-13</x><z>9</z></li>
+                    <li><name>Dushnikh Yal</name><x>-9</x><z>17.5</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Orsimer">
+                <faction>ESCP_Faction_Orsimer_Raiders</faction>
+                <settlements>
+                    <li><name>Malak's Maw</name><x>-14</x><z>14</z></li>
+                    <li><name>Cradlecrush</name><x>-18</x><z>12</z></li>
+                    <li><name>Bloodtoil Valley</name><x>-20</x><z>10</z></li>
+                    <li><name>Jathsogur</name><x>-15</x><z>7</z></li>
+                    <li><name>Reman's Bluff</name><x>-12</x><z>11</z></li>
+                    <li><name>Dra'bul</name><x>-17</x><z>6</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Redguards">
+                <faction>ESCP_Faction_Crowns</faction>
+                <settlements>
+                    <li><name>Sentinel</name><x>-30</x><z>0</z></li>
+                    <li><name>Rihad</name><x>-16</x><z>-4</z></li>
+                    <li><name>Taneth</name><x>-22</x><z>-5</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Redguards">
+                <faction>ESCP_Faction_Forebears</faction>
+                <settlements>
+                    <li><name>Dragonstar</name><x>-21</x><z>6</z></li>
+                    <li><name>Elinhir</name><x>-14</x><z>2</z></li>
+                    <li><name>Skaven</name><x>-26</x><z>3</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Dunmer">
+                <faction>ESCP_Faction_House_Redoran</faction>
+                <settlements>
+                    <li><name>Blacklight</name><x>20</x><z>19</z></li>
+                    <li><name>Ald'ruhn</name><x>16</x><z>16</z></li>
+                    <li><name>Maar Gan</name><x>17</x><z>19</z></li>
+                    <li><name>Ald Velothi</name><x>15</x><z>20</z></li>
+                    <li><name>Kragenmoor</name><x>16</x><z>6</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Dunmer">
+                <faction>ESCP_Faction_House_Telvanni</faction>
+                <settlements>
+                    <li><name>Sadrith Mora</name><x>25</x><z>15</z></li>
+                    <li><name>Tel Vos</name><x>23</x><z>19</z></li>
+                    <li><name>Tel Mora</name><x>25</x><z>18</z></li>
+                    <li><name>Tel Naga</name><x>21</x><z>13</z></li>
+                    <li><name>Tel Aruhn</name><x>23</x><z>14</z></li>
+                    <li><name>Tel Mithryn</name><x>17</x><z>25</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Dwemer">
+                <faction>ESCP_Faction_Clan_Rourken</faction>
+                <settlements>
+                    <li><name>Volenfell</name><x>-23</x><z>-2</z></li>
+                    <li><name>Nchuleft</name><x>20</x><z>17</z></li>
+                    <li><name>Mzulft</name><x>3</x><z>16</z></li>
+                    <li><name>Bthardamz</name><x>-9</x><z>19</z></li>
+                    <li><name>Arkngthand</name><x>18</x><z>13</z></li>
+                    <li><name>Raldbthar</name><x>3</x><z>19</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Khajiit">
+                <faction>ESCP_Faction_Elsweyr</faction>
+                <settlements>
+                    <li><name>Rimmen</name><x>4</x><z>-11</z></li>
+                    <li><name>Riverhold</name><x>8</x><z>-13</z></li>
+                    <li><name>Dune</name><x>6</x><z>-16</z></li>
+                    <li><name>Orcrest</name><x>1</x><z>-14</z></li>
+                    <li><name>Corinthe</name><x>-1</x><z>-17</z></li>
+                    <li><name>Senchal</name><x>8</x><z>-23</z></li>
+                    <li><name>Torval</name><x>5</x><z>-20</z></li>
+                    <li><name>Khuul</name><x>1</x><z>-21</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Khajiit">
+                <faction>ESCP_Faction_Renrijra</faction>
+                <settlements>
+                    <li><name>Scar's End</name><x>-2</x><z>-19</z></li>
+                    <li><name>Black Heights</name><x>11</x><z>-16</z></li>
+                    <li><name>Tideholm</name><x>12</x><z>-21</z></li>
+                    <li><name>Desolation's End</name><x>3</x><z>-24</z></li>
+                    <li><name>Valley of Scars</name><x>7</x><z>-18</z></li>
+                    <li><name>Tenmar Hollow</name><x>10</x><z>-20</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Khajiit">
+                <faction>ESCP_Faction_Bandaari</faction>
+                <settlements>
+                    <li><name>Bandaari Rest</name><x>4</x><z>-13</z></li>
+                    <li><name>Pedlar's Crossing</name><x>2</x><z>-9</z></li>
+                    <li><name>Last Wagon</name><x>-4</x><z>14</z></li>
+                    <li><name>Moon-Bargain</name><x>9</x><z>-18</z></li>
+                    <li><name>Cane Road Camp</name><x>6</x><z>-6</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Maormer">
+                <faction>ESCP_Faction_Maormer_Kingdom</faction>
+                <settlements>
+                    <li><name>Pyandonea</name><x>-22</x><z>-34</z></li>
+                    <li><name>Kings Cove</name><x>-20</x><z>-32</z></li>
+                    <li><name>Reef Citadel</name><x>-24</x><z>-36</z></li>
+                    <li><name>Serpent Bay</name><x>-18</x><z>-35</z></li>
+                    <li><name>Fog Harbor</name><x>-26</x><z>-33</z></li>
+                    <li><name>Storm Spire</name><x>-21</x><z>-37</z></li>
+                </settlements>
+            </li>
+            <li MayRequire="Rick.ESCP.Maormer">
+                <faction>ESCP_Faction_Maormer_Pirates</faction>
+                <settlements>
+                    <li><name>Blackwake</name><x>-38</x><z>6</z></li>
+                    <li><name>Keel Rock</name><x>-40</x><z>3</z></li>
+                    <li><name>Viper Cove</name><x>-37</x><z>1</z></li>
+                    <li><name>Dreadsail Anchorage</name><x>-39</x><z>9</z></li>
+                    <li><name>Wreck Point</name><x>-41</x><z>6</z></li>
+                    <li><name>Shark Fjord</name><x>-36</x><z>11</z></li>
+                </settlements>
+            </li>
+        </factions>
+    </ESCP.Factions.LoreMapDef>
+
+</Defs>

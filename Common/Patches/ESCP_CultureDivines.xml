@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>/Defs/CultureDef[defName="ESCP_Culture_Nord"]</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.IdeoCultureProperties">
+                <overrideDivines>true</overrideDivines>
+                <overrideNineDivines>true</overrideNineDivines>
+                <divinesList>
+                    <li>
+                        <name>Akatosh</name>
+                        <type>the Dragon God of Time</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityAkatosh</iconPath>
+                    </li>
+                    <li>
+                        <name>Arkay</name>
+                        <type>the God of Burials and Seasons</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityArkay</iconPath>
+                    </li>
+                    <li>
+                        <name>Dibella</name>
+                        <type>the Goddess of Beauty</type>
+                        <gender>Female</gender>
+                        <iconPath>UI/Deities/ESCP_DeityDibella</iconPath>
+                    </li>
+                    <li>
+                        <name>Jhunal</name>
+                        <type>the Rune Father</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityJulianos</iconPath>
+                    </li>
+                    <li>
+                        <name>Kyne</name>
+                        <type>the Warrior&apos;s Widow, Goddess of Storms</type>
+                        <gender>Female</gender>
+                        <iconPath>UI/Deities/ESCP_DeityKynareth</iconPath>
+                    </li>
+                    <li>
+                        <name>Mara</name>
+                        <type>the Mother Goddess</type>
+                        <gender>Female</gender>
+                        <iconPath>UI/Deities/ESCP_DeityMara</iconPath>
+                    </li>
+                    <li>
+                        <name>Stuhn</name>
+                        <type>the God of Ransom</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityStendarr</iconPath>
+                    </li>
+                    <li>
+                        <name>Zenithar</name>
+                        <type>the God of Work and Commerce</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityZenithar</iconPath>
+                    </li>
+                    <li>
+                        <name>Talos</name>
+                        <type>the Dragonborn, God of War and Rule</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityTalos</iconPath>
+                    </li>
+                </divinesList>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>/Defs/CultureDef[defName="ESCP_Culture_Redguard"]</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.IdeoCultureProperties">
+                <overrideDivines>true</overrideDivines>
+                <overrideNineDivines>true</overrideNineDivines>
+                <divinesList>
+                    <li>
+                        <name>Akatosh</name>
+                        <type>the Dragon God of Time</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityAkatosh</iconPath>
+                    </li>
+                    <li>
+                        <name>Tu&apos;whacca</name>
+                        <type>the God of Souls</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityArkay</iconPath>
+                    </li>
+                    <li>
+                        <name>Dibella</name>
+                        <type>the Goddess of Beauty</type>
+                        <gender>Female</gender>
+                        <iconPath>UI/Deities/ESCP_DeityDibella</iconPath>
+                    </li>
+                    <li>
+                        <name>Julianos</name>
+                        <type>the God of Wisdom and Logic</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityJulianos</iconPath>
+                    </li>
+                    <li>
+                        <name>Tava</name>
+                        <type>the Spirit of the Air</type>
+                        <gender>Female</gender>
+                        <iconPath>UI/Deities/ESCP_DeityKynareth</iconPath>
+                    </li>
+                    <li>
+                        <name>Morwha</name>
+                        <type>the Fertility Goddess of Yokuda</type>
+                        <gender>Female</gender>
+                        <iconPath>UI/Deities/ESCP_DeityMara</iconPath>
+                    </li>
+                    <li>
+                        <name>Stendarr</name>
+                        <type>the God of Mercy</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityStendarr</iconPath>
+                    </li>
+                    <li>
+                        <name>Zeht</name>
+                        <type>the God of Farms</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityZenithar</iconPath>
+                    </li>
+                    <li>
+                        <name>Talos</name>
+                        <type>the Dragonborn, God of War and Rule</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityTalos</iconPath>
+                    </li>
+                </divinesList>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>/Defs/CultureDef[defName="ESCP_Culture_Khajiit"]</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.IdeoCultureProperties">
+                <overrideDivines>true</overrideDivines>
+                <divinesList>
+                    <li>
+                        <name>Alkosh</name>
+                        <type>the Dragon King of Cats</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityAkatosh</iconPath>
+                    </li>
+                    <li>
+                        <name>Arkay</name>
+                        <type>the God of Burials and Seasons</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityArkay</iconPath>
+                    </li>
+                    <li>
+                        <name>Dibella</name>
+                        <type>the Goddess of Beauty</type>
+                        <gender>Female</gender>
+                        <iconPath>UI/Deities/ESCP_DeityDibella</iconPath>
+                    </li>
+                    <li>
+                        <name>Julianos</name>
+                        <type>the God of Wisdom and Logic</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityJulianos</iconPath>
+                    </li>
+                    <li>
+                        <name>Khenarthi</name>
+                        <type>the Goddess of the Winds</type>
+                        <gender>Female</gender>
+                        <iconPath>UI/Deities/ESCP_DeityKynareth</iconPath>
+                    </li>
+                    <li>
+                        <name>Mara</name>
+                        <type>the Mother Goddess</type>
+                        <gender>Female</gender>
+                        <iconPath>UI/Deities/ESCP_DeityMara</iconPath>
+                    </li>
+                    <li>
+                        <name>S&apos;rendarr</name>
+                        <type>the Runt God of Mercy</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityStendarr</iconPath>
+                    </li>
+                    <li>
+                        <name>Zenithar</name>
+                        <type>the God of Work and Commerce</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityZenithar</iconPath>
+                    </li>
+                </divinesList>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>/Defs/CultureDef[defName="ESCP_Culture_Altmer"]</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.IdeoCultureProperties">
+                <overrideDivines>true</overrideDivines>
+                <divinesList>
+                    <li>
+                        <name>Auri-El</name>
+                        <type>the King of the Aldmer</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityAuriEl</iconPath>
+                    </li>
+                    <li>
+                        <name>Arkay</name>
+                        <type>the God of Burials and Seasons</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityArkay</iconPath>
+                    </li>
+                    <li>
+                        <name>Dibella</name>
+                        <type>the Goddess of Beauty</type>
+                        <gender>Female</gender>
+                        <iconPath>UI/Deities/ESCP_DeityDibella</iconPath>
+                    </li>
+                    <li>
+                        <name>Julianos</name>
+                        <type>the God of Wisdom and Logic</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityJulianos</iconPath>
+                    </li>
+                    <li>
+                        <name>Kynareth</name>
+                        <type>the Goddess of the Heavens</type>
+                        <gender>Female</gender>
+                        <iconPath>UI/Deities/ESCP_DeityKynareth</iconPath>
+                    </li>
+                    <li>
+                        <name>Mara</name>
+                        <type>the Mother Goddess</type>
+                        <gender>Female</gender>
+                        <iconPath>UI/Deities/ESCP_DeityMara</iconPath>
+                    </li>
+                    <li>
+                        <name>Stendarr</name>
+                        <type>the God of Mercy</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityStendarr</iconPath>
+                    </li>
+                    <li>
+                        <name>Zenithar</name>
+                        <type>the God of Work and Commerce</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityZenithar</iconPath>
+                    </li>
+                </divinesList>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>/Defs/CultureDef[defName="ESCP_Culture_Bosmer"]</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.IdeoCultureProperties">
+                <overrideDivines>true</overrideDivines>
+                <divinesList>
+                    <li>
+                        <name>Auri-El</name>
+                        <type>the King of the Aldmer</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityAuriEl</iconPath>
+                    </li>
+                    <li>
+                        <name>Arkay</name>
+                        <type>the God of Burials and Seasons</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityArkay</iconPath>
+                    </li>
+                    <li>
+                        <name>Dibella</name>
+                        <type>the Goddess of Beauty</type>
+                        <gender>Female</gender>
+                        <iconPath>UI/Deities/ESCP_DeityDibella</iconPath>
+                    </li>
+                    <li>
+                        <name>Julianos</name>
+                        <type>the God of Wisdom and Logic</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityJulianos</iconPath>
+                    </li>
+                    <li>
+                        <name>Kynareth</name>
+                        <type>the Goddess of the Heavens</type>
+                        <gender>Female</gender>
+                        <iconPath>UI/Deities/ESCP_DeityKynareth</iconPath>
+                    </li>
+                    <li>
+                        <name>Mara</name>
+                        <type>the Mother Goddess</type>
+                        <gender>Female</gender>
+                        <iconPath>UI/Deities/ESCP_DeityMara</iconPath>
+                    </li>
+                    <li>
+                        <name>Stendarr</name>
+                        <type>the God of Mercy</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityStendarr</iconPath>
+                    </li>
+                    <li>
+                        <name>Z&apos;en</name>
+                        <type>the God of Toil and Payment</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityZenithar</iconPath>
+                    </li>
+                </divinesList>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>/Defs/CultureDef[defName="ESCP_Culture_Ayleid"]</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.IdeoCultureProperties">
+                <overrideDivines>true</overrideDivines>
+                <divinesList>
+                    <li>
+                        <name>Auri-El</name>
+                        <type>the King of the Aldmer</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityAuriEl</iconPath>
+                    </li>
+                    <li>
+                        <name>Arkay</name>
+                        <type>the God of Burials and Seasons</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityArkay</iconPath>
+                    </li>
+                    <li>
+                        <name>Dibella</name>
+                        <type>the Goddess of Beauty</type>
+                        <gender>Female</gender>
+                        <iconPath>UI/Deities/ESCP_DeityDibella</iconPath>
+                    </li>
+                    <li>
+                        <name>Julianos</name>
+                        <type>the God of Wisdom and Logic</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityJulianos</iconPath>
+                    </li>
+                    <li>
+                        <name>Kynareth</name>
+                        <type>the Goddess of the Heavens</type>
+                        <gender>Female</gender>
+                        <iconPath>UI/Deities/ESCP_DeityKynareth</iconPath>
+                    </li>
+                    <li>
+                        <name>Mara</name>
+                        <type>the Mother Goddess</type>
+                        <gender>Female</gender>
+                        <iconPath>UI/Deities/ESCP_DeityMara</iconPath>
+                    </li>
+                    <li>
+                        <name>Stendarr</name>
+                        <type>the God of Mercy</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityStendarr</iconPath>
+                    </li>
+                    <li>
+                        <name>Zenithar</name>
+                        <type>the God of Work and Commerce</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityZenithar</iconPath>
+                    </li>
+                </divinesList>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <success>Always</success>
+        <xpath>/Defs/CultureDef[defName="ESCP_Culture_SnowElf"]</xpath>
+        <value>
+            <li Class="ESCP_RaceTools.IdeoCultureProperties">
+                <overrideDivines>true</overrideDivines>
+                <divinesList>
+                    <li>
+                        <name>Auri-El</name>
+                        <type>the King of the Aldmer</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityAuriEl</iconPath>
+                    </li>
+                    <li>
+                        <name>Arkay</name>
+                        <type>the God of Burials and Seasons</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityArkay</iconPath>
+                    </li>
+                    <li>
+                        <name>Dibella</name>
+                        <type>the Goddess of Beauty</type>
+                        <gender>Female</gender>
+                        <iconPath>UI/Deities/ESCP_DeityDibella</iconPath>
+                    </li>
+                    <li>
+                        <name>Julianos</name>
+                        <type>the God of Wisdom and Logic</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityJulianos</iconPath>
+                    </li>
+                    <li>
+                        <name>Kynareth</name>
+                        <type>the Goddess of the Heavens</type>
+                        <gender>Female</gender>
+                        <iconPath>UI/Deities/ESCP_DeityKynareth</iconPath>
+                    </li>
+                    <li>
+                        <name>Mara</name>
+                        <type>the Mother Goddess</type>
+                        <gender>Female</gender>
+                        <iconPath>UI/Deities/ESCP_DeityMara</iconPath>
+                    </li>
+                    <li>
+                        <name>Stendarr</name>
+                        <type>the God of Mercy</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityStendarr</iconPath>
+                    </li>
+                    <li>
+                        <name>Zenithar</name>
+                        <type>the God of Work and Commerce</type>
+                        <gender>Male</gender>
+                        <iconPath>UI/Deities/ESCP_DeityZenithar</iconPath>
+                    </li>
+                </divinesList>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>

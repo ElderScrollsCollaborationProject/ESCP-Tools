@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <MemeDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_Meme_YokudanWay</defName>
+        <label>Yokudan Way</label>
+        <description>Our people hold to the ancient Yokudan ways carried across the ocean from a world that no longer exists. Tall Papa gave us endurance. Tu'whacca guards our dead on the road to the Far Shores. Leki's blade is perfect and we strive to perfect our own. HoonDing makes our way clear. The sword singers, the Ansei who learned to sing steel, showed us that the body and the blade are one instrument, and we have never stopped sharpening both. We do not yield the desert. We do not forget where we came from.</description>
+        <iconPath>UI/Structures/ESCP_OriginDivinesEight</iconPath>
+        <groupDef>Misc</groupDef>
+        <impact>2</impact>
+        <randomizationSelectionWeightFactor>0</randomizationSelectionWeightFactor>
+        <hiddenInChooseMemes>true</hiddenInChooseMemes>
+        <requireOne>
+            <li><li>Cannibalism_Abhorrent</li></li>
+            <li>
+                <li>Charity_Worthwhile</li>
+                <li>Charity_Essential</li>
+            </li>
+            <li><li>NutrientPasteEating_DontMind</li></li>
+            <li>
+                <li>Slavery_Acceptable</li>
+                <li>Slavery_Disapproved</li>
+            </li>
+            <li>
+                <li>Execution_RespectedIfGuilty</li>
+                <li>Execution_DontCare</li>
+            </li>
+            <li><li>Research_Normal</li></li>
+            <li><li>DrugUse_MedicalOrSocial</li></li>
+        </requireOne>
+    </MemeDef>
+
+</Defs>

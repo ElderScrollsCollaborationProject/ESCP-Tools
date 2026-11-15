@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Nords">
+        <defName>ESCP_Character_GalmarStoneFist</defName>
+        <pawnKind>ESCP_Pawnkind_Stormcloak_Commander</pawnKind>
+        <faction>ESCP_Faction_Stormcloaks</faction>
+        <eras>
+            <li>4</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Nord</xenotype>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Galmar</firstName>
+                <lastName>Stone-Fist</lastName>
+                <gender>Male</gender>
+                <age>55</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(130, 120, 110)</hairColor>
+                <hairDef>LongMess</hairDef>
+                <beardDef>Norse</beardDef>
+                <headTypeDef>Male_AverageNormal</headTypeDef>
+                <bodyTypeDef>Hulk</bodyTypeDef>
+            </li>
+            <li Class="ESCP.Core.CharacterTraitsDefinition">
+                <traits>
+                    <li>
+                        <key>Tough</key>
+                        <value>0</value>
+                    </li>
+                </traits>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Nords">
+        <defName>ESCP_Character_Ralof</defName>
+        <pawnKind>ESCP_Pawnkind_Stormcloak_Soldier</pawnKind>
+        <faction>ESCP_Faction_Stormcloaks</faction>
+        <eras>
+            <li>4</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Nord</xenotype>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Ralof</firstName>
+                <nickname>of Riverwood</nickname>
+                <gender>Male</gender>
+                <age>33</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(200, 170, 110)</hairColor>
+                <hairDef>Long</hairDef>
+                <beardDef>Full</beardDef>
+                <headTypeDef>Male_AverageNormal</headTypeDef>
+                <bodyTypeDef>Male</bodyTypeDef>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Dunmer,Rick.ESCP.Nords">
+        <defName>ESCP_Character_Irileth</defName>
+        <pawnKind>ESCP_Pawnkind_Nord_Huscarl</pawnKind>
+        <faction>ESCP_Faction_Kingdom_of_Skyrim</faction>
+        <eras>
+            <li>4</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Dunmer</xenotype>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Irileth</firstName>
+                <nickname>the Housecarl</nickname>
+                <gender>Female</gender>
+                <age>60</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(45, 35, 35)</hairColor>
+                <hairDef>Bob</hairDef>
+                <headTypeDef>ESCP_HeadMerColouredEyes_Female_Average_Normal</headTypeDef>
+                <bodyTypeDef>Female</bodyTypeDef>
+            </li>
+            <li Class="ESCP.Core.CharacterTraitsDefinition">
+                <traits>
+                    <li>
+                        <key>Tough</key>
+                        <value>0</value>
+                    </li>
+                </traits>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Nords">
+        <defName>ESCP_Character_TharstenHeartFang</defName>
+        <pawnKind>ESCP_Unique_Pawnkind_Fanari</pawnKind>
+        <faction>ESCP_Faction_Skaal</faction>
+        <eras>
+            <li>3</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Nord</xenotype>
+        <roles>
+            <li Class="ESCP.Core.CharacterRole_FactionLeader">
+                <seniority>1000</seniority>
+            </li>
+        </roles>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Tharsten</firstName>
+                <lastName>Heart-Fang</lastName>
+                <nickname>the Village Chief</nickname>
+                <gender>Male</gender>
+                <age>58</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(150, 140, 120)</hairColor>
+                <hairDef>Long</hairDef>
+                <beardDef>Full</beardDef>
+                <headTypeDef>Male_AverageNormal</headTypeDef>
+                <bodyTypeDef>Male</bodyTypeDef>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+</Defs>

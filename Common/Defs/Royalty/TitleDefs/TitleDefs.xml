@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <RoyalTitleDef Abstract="True" Name="ESCP_Base_Empire_Titles" MayRequire="Ludeon.RimWorld.Royalty">
+        <awardThought>GainedTitle</awardThought>
+        <lostThought>LostTitle</lostThought>
+    </RoyalTitleDef>
+
+</Defs>

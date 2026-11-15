@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+    <ESCP_Alert_Notoriety_Desc>Word has spread about what this colony has been doing to people. Bounty hunters may come looking for a payday.</ESCP_Alert_Notoriety_Desc>
+    <ESCP_Alert_Notoriety_Label>Province Notoriety</ESCP_Alert_Notoriety_Label>
+    <ESCP_Enemy_Of_Enlist_Faction>New Enemy</ESCP_Enemy_Of_Enlist_Faction>
+    <ESCP_Enemy_Of_Enlist_Faction_Desc>By enlisting with {ENLISTED_name}, you have become an enemy of {HOSTILE_name}. They are now hostile toward your colony.</ESCP_Enemy_Of_Enlist_Faction_Desc>
+    <ESCP_Enlist_AbilityTraining>Ability Training</ESCP_Enlist_AbilityTraining>
+    <ESCP_Enlist_BountyInProgress>in progress</ESCP_Enlist_BountyInProgress>
+    <ESCP_Enlist_DeliveryQuests>Delivery Board</ESCP_Enlist_DeliveryQuests>
+    <ESCP_Enlist_Goodwill>Standing: {0}</ESCP_Enlist_Goodwill>
+    <ESCP_Enlist_MechSerum>Field Repair</ESCP_Enlist_MechSerum>
+    <ESCP_Enlist_NoMissions>No missions on file right now.</ESCP_Enlist_NoMissions>
+    <ESCP_Enlist_NotAvailable>Not available.</ESCP_Enlist_NotAvailable>
+    <ESCP_Enlist_NotEnlisted>Not enlisted with {0}.</ESCP_Enlist_NotEnlisted>
+    <ESCP_Enlist_OpenTerminal>Open Ledger: {0}</ESCP_Enlist_OpenTerminal>
+    <ESCP_Enlist_OpenTerminalDesc>Open the {0} ledger to manage missions, salary, supplies, and standing.</ESCP_Enlist_OpenTerminalDesc>
+    <ESCP_Enlist_PromotedProvisions>Provisions (Promoted)</ESCP_Enlist_PromotedProvisions>
+    <ESCP_Enlist_Promotion>Promotion</ESCP_Enlist_Promotion>
+    <ESCP_Enlist_Provisions>Provisions</ESCP_Enlist_Provisions>
+    <ESCP_Enlist_Salary>Salary</ESCP_Enlist_Salary>
+    <ESCP_Enlist_Storage>Storage</ESCP_Enlist_Storage>
+    <ESCP_Enlist_Tab_Command>Command</ESCP_Enlist_Tab_Command>
+    <ESCP_Enlist_Tab_Missions>Missions</ESCP_Enlist_Tab_Missions>
+    <ESCP_Enlist_Tab_Overview>Overview</ESCP_Enlist_Tab_Overview>
+    <ESCP_Enlist_Tab_Trade>Trade &amp; Supply</ESCP_Enlist_Tab_Trade>
+    <ESCP_Enlist_Tab_Work>Work Detail</ESCP_Enlist_Tab_Work>
+    <ESCP_Enlist_TerminalTitle>{0} Ledger</ESCP_Enlist_TerminalTitle>
+    <ESCP_Enlist_Traders>Traders</ESCP_Enlist_Traders>
+    <ESCP_Enlist_WorkDetails>Work Details</ESCP_Enlist_WorkDetails>
+    <ESCP_NoDeliveryQuestsAvailable>No delivery contracts available at this outpost right now.</ESCP_NoDeliveryQuestsAvailable>
+    <ESCP_Rank_ChoosePath>Choose a path</ESCP_Rank_ChoosePath>
+    <ESCP_Rank_DaysInRank>Held this rank for {0} days</ESCP_Rank_DaysInRank>
+    <ESCP_Rank_Demoted_Expedition>{0} was reduced from {1} to {2} after a failed errand.</ESCP_Rank_Demoted_Expedition>
+    <ESCP_Rank_Demoted_KickedOut>{0} was reduced from {1} to {2} after the order turned its back on the colony.</ESCP_Rank_Demoted_KickedOut>
+    <ESCP_Rank_Demoted_Title>Demoted: {0}</ESCP_Rank_Demoted_Title>
+    <ESCP_Rank_DevForceEnroll>DEV: Force Enroll in {0}</ESCP_Rank_DevForceEnroll>
+    <ESCP_Rank_DevForcePromote>DEV: Force Promote</ESCP_Rank_DevForcePromote>
+    <ESCP_Rank_DevForceReturn>DEV: Force Return</ESCP_Rank_DevForceReturn>
+    <ESCP_Rank_DismissGizmo>Dismiss</ESCP_Rank_DismissGizmo>
+    <ESCP_Rank_DismissGizmoDesc>Dismiss {0} from formation, letting them return to what they were doing.</ESCP_Rank_DismissGizmoDesc>
+    <ESCP_Rank_Dismiss_Message>{0} dismisses {1}.</ESCP_Rank_Dismiss_Message>
+    <ESCP_Rank_DrillGizmo>Drill with...</ESCP_Rank_DrillGizmo>
+    <ESCP_Rank_DrillGizmoDesc>Drill with any colonist. Both stop and draw their weapons for the session. Both gain skill XP. Once per day.</ESCP_Rank_DrillGizmoDesc>
+    <ESCP_Rank_DrillingComplete>{0} and {1} finished drilling.</ESCP_Rank_DrillingComplete>
+    <ESCP_Rank_EnrollIn>Enroll: {0}</ESCP_Rank_EnrollIn>
+    <ESCP_Rank_ExpeditionReturnsIn>Back in {0} days</ESCP_Rank_ExpeditionReturnsIn>
+    <ESCP_Rank_Expedition_DepartureInterrupted>{0}'s departure was interrupted before they could leave.</ESCP_Rank_Expedition_DepartureInterrupted>
+    <ESCP_Rank_Expedition_FailText>{0}'s {1} went badly and cost them their rank.</ESCP_Rank_Expedition_FailText>
+    <ESCP_Rank_Expedition_FailTitle>Errand failed: {0}</ESCP_Rank_Expedition_FailTitle>
+    <ESCP_Rank_Expedition_GearLost>{0} lost their {1} out in the field.</ESCP_Rank_Expedition_GearLost>
+    <ESCP_Rank_Expedition_Injured>{0} came back from their mission injured.</ESCP_Rank_Expedition_Injured>
+    <ESCP_Rank_Expedition_NoExit>{0} can't find a way off the map to depart on the expedition.</ESCP_Rank_Expedition_NoExit>
+    <ESCP_Rank_Expedition_ReturnTitle>{0} has returned</ESCP_Rank_Expedition_ReturnTitle>
+    <ESCP_Rank_FormUpGizmo>Gather</ESCP_Rank_FormUpGizmo>
+    <ESCP_Rank_FormUpGizmoDesc>Order {0} to form up behind you in ranks, up to four deep, interrupting whatever they're doing. They'll hold formation until dismissed.</ESCP_Rank_FormUpGizmoDesc>
+    <ESCP_Rank_FormUp_Message>{0} calls {1} together.</ESCP_Rank_FormUp_Message>
+    <ESCP_Rank_History_Enrolled>Enrolled as {0}.</ESCP_Rank_History_Enrolled>
+    <ESCP_Rank_History_FormedUp>Called {0} together.</ESCP_Rank_History_FormedUp>
+    <ESCP_Rank_History_Inspected>Inspected {0}.</ESCP_Rank_History_Inspected>
+    <ESCP_Rank_History_MentorDied>Mentor {0} died in battle.</ESCP_Rank_History_MentorDied>
+    <ESCP_Rank_History_MentorDown>Mentor {0} went down in battle. Surged with a squire's duty.</ESCP_Rank_History_MentorDown>
+    <ESCP_Rank_History_Punished>Set {0} a penance.</ESCP_Rank_History_Punished>
+    <ESCP_Rank_History_Rallied>Rallied {0}.</ESCP_Rank_History_Rallied>
+    <ESCP_Rank_InspectGizmo>Inspect...</ESCP_Rank_InspectGizmo>
+    <ESCP_Rank_InspectGizmoDesc>Inspect a lower-ranked colonist's weapon and armor condition. They'll draw their weapon for the review. Well-kept gear earns a commendation, neglected gear earns a reprimand. Once per day per colonist.</ESCP_Rank_InspectGizmoDesc>
+    <ESCP_Rank_InspectionComplete_Commended>{0} commends {1} for keeping their gear in top condition.</ESCP_Rank_InspectionComplete_Commended>
+    <ESCP_Rank_InspectionComplete_NoGear>{0} looks {1} over, but there's no weapon or armor to inspect.</ESCP_Rank_InspectionComplete_NoGear>
+    <ESCP_Rank_InspectionComplete_Passed>{0} looks {1} over. Nothing to report either way.</ESCP_Rank_InspectionComplete_Passed>
+    <ESCP_Rank_InspectionComplete_Reprimanded>{0} reprimands {1} for the poor state of their gear.</ESCP_Rank_InspectionComplete_Reprimanded>
+    <ESCP_Rank_Lineage_Empty>No notable figures are known yet. Assign a mentor to start a line of teaching.</ESCP_Rank_Lineage_Empty>
+    <ESCP_Rank_Lineage_FolderCount>{0} notables, {1} of ours</ESCP_Rank_Lineage_FolderCount>
+    <ESCP_Rank_Lineage_Founder>{0}, {1}</ESCP_Rank_Lineage_Founder>
+    <ESCP_Rank_Lineage_Independent>Wanderers and loners</ESCP_Rank_Lineage_Independent>
+    <ESCP_Rank_Lineage_Leader>Leader</ESCP_Rank_Lineage_Leader>
+    <ESCP_Rank_Lineage_Trained>{0}, {1}, taught by {2}</ESCP_Rank_Lineage_Trained>
+    <ESCP_Rank_Mentor>Mentor:</ESCP_Rank_Mentor>
+    <ESCP_Rank_MentorDown_Message>{0}'s mentor, {1}, has fallen! {0} surges with a squire's duty.</ESCP_Rank_MentorDown_Message>
+    <ESCP_Rank_NextRank>Next rank</ESCP_Rank_NextRank>
+    <ESCP_Rank_NoMentor>None</ESCP_Rank_NoMentor>
+    <ESCP_Rank_NoPawnSelected>Choose a colonist to see their standing.</ESCP_Rank_NoPawnSelected>
+    <ESCP_Rank_NotEnrolled>Holds no rank in any guild or order.</ESCP_Rank_NotEnrolled>
+    <ESCP_Rank_OnExpedition>Away on expedition: {0}</ESCP_Rank_OnExpedition>
+    <ESCP_Rank_Promote>Promote</ESCP_Rank_Promote>
+    <ESCP_Rank_Promoted_Text>{0} has been promoted to {1}.</ESCP_Rank_Promoted_Text>
+    <ESCP_Rank_Promoted_Title>Promoted: {0}</ESCP_Rank_Promoted_Title>
+    <ESCP_Rank_PunishGizmo>Assign Penance...</ESCP_Rank_PunishGizmo>
+    <ESCP_Rank_PunishGizmoDesc>Sentence a lower-ranked colonist to a stretch of hard labor, souring their mood. Once per day per colonist.</ESCP_Rank_PunishGizmoDesc>
+    <ESCP_Rank_PunishmentAssigned>{0} sets {1} a penance.</ESCP_Rank_PunishmentAssigned>
+    <ESCP_Rank_PunishmentComplete>{0} finished their penance.</ESCP_Rank_PunishmentComplete>
+    <ESCP_Rank_RallyGizmo>Rally</ESCP_Rank_RallyGizmo>
+    <ESCP_Rank_RallyGizmoDesc>Rally every member of {0} on this map with a burst of speed and morale. Once every few days.</ESCP_Rank_RallyGizmoDesc>
+    <ESCP_Rank_Rally_Text>{0} raises a call to arms, and every member of {1} on the map feels its pull.</ESCP_Rank_Rally_Text>
+    <ESCP_Rank_Rally_Title>{0} rallies {1}</ESCP_Rank_Rally_Title>
+    <ESCP_Rank_Records_Empty>Nothing has been written in the chronicle yet.</ESCP_Rank_Records_Empty>
+    <ESCP_Rank_Records_Entry>{1}, {0} days ago: {2}</ESCP_Rank_Records_Entry>
+    <ESCP_Rank_Req_Days>Time in rank: {0}/{1} days</ESCP_Rank_Req_Days>
+    <ESCP_Rank_Req_MissionsCompleted>Missions completed: {0}/{1}</ESCP_Rank_Req_MissionsCompleted>
+    <ESCP_Rank_Req_SquiresTrained>Trainees mentored: {0}/{1}</ESCP_Rank_Req_SquiresTrained>
+    <ESCP_Rank_RequiresEnlistment>{0}: enlist with them first</ESCP_Rank_RequiresEnlistment>
+    <ESCP_Rank_SendOnExpedition>Send on expedition: {0}</ESCP_Rank_SendOnExpedition>
+    <ESCP_Rank_SessionOnCooldown>Already done today</ESCP_Rank_SessionOnCooldown>
+    <ESCP_Rank_StudyGizmo>Study with...</ESCP_Rank_StudyGizmo>
+    <ESCP_Rank_StudyGizmoDesc>Study with another scholarly-ranked colonist. Both gain skill XP. Once per day.</ESCP_Rank_StudyGizmoDesc>
+    <ESCP_Rank_StudyingComplete>{0} and {1} finished studying.</ESCP_Rank_StudyingComplete>
+    <ESCP_Rank_Suspended_Text>No longer enlisted with the faction that grants this rank. Standing benefits are suspended until you re-enlist with {0}. Progress is not lost.</ESCP_Rank_Suspended_Text>
+    <ESCP_Rank_Suspended_Title>Rank Suspended</ESCP_Rank_Suspended_Title>
+    <ESCP_Rank_Tab_Lineage>Notables</ESCP_Rank_Tab_Lineage>
+    <ESCP_Rank_Tab_Order>Members</ESCP_Rank_Tab_Order>
+    <ESCP_Rank_Tab_Records>Chronicle</ESCP_Rank_Tab_Records>
+    <ESCP_Rank_TerminalTitle>Guilds and Standing</ESCP_Rank_TerminalTitle>
+    <ESCP_Rank_TrainingComplete>{0} finished a training session with {1}.</ESCP_Rank_TrainingComplete>
+    <ESCP_Rank_Unranked>Unranked</ESCP_Rank_Unranked>
+    <ESCP_ScenPart_StartEnlisted>start already enlisted with {0}</ESCP_ScenPart_StartEnlisted>
+    <ESCP_TrainingAlreadyActive>Someone is already training here.</ESCP_TrainingAlreadyActive>
+    <ESCP_TrainingNotEnoughFunds>Not enough coin to pay for training.</ESCP_TrainingNotEnoughFunds>
+    <ESCP_Rank_Req_GuildReputation>Guild reputation: {0} / {1}</ESCP_Rank_Req_GuildReputation>
+    <ESCP_Settings_Tab_Options>World</ESCP_Settings_Tab_Options>
+    <ESCP_Settings_Tab_Enlistment>Enlistment</ESCP_Settings_Tab_Enlistment>
+    <ESCP_Settings_Tab_Races>Races</ESCP_Settings_Tab_Races>
+    <ESCP_Settings_Tab_Birthsigns>Birthsigns</ESCP_Settings_Tab_Birthsigns>
+    <ESCP_Settings_Category>ESCP Tools</ESCP_Settings_Category>
+    <ESCP_Settings_Enlistment_Intro>Your colonists can sign on with these guilds and factions by sending a caravan to one of their settlements. Members can draw pay, pick up provisions, keep goods in storage, take paid work or training, and accept jobs from the mission board. Hover over an entry to see what it offers. Untick one to stop it being offered. Anyone already enlisted keeps their place but can't use it until it's ticked again.</ESCP_Settings_Enlistment_Intro>
+    <ESCP_Settings_Enlistment_Guilds>Guilds</ESCP_Settings_Enlistment_Guilds>
+    <ESCP_Settings_Enlistment_Guilds_Desc>Joined at a guild hall in any town that hosts one.</ESCP_Settings_Enlistment_Guilds_Desc>
+    <ESCP_Settings_Enlistment_Factions>Kingdoms, houses and orders</ESCP_Settings_Enlistment_Factions>
+    <ESCP_Settings_Enlistment_Factions_Desc>Joined at the faction's own settlements, once they think well enough of you. Sworn enemies of everyone, like the Falmer hives and the Volkihar, never take recruits and aren't listed.</ESCP_Settings_Enlistment_Factions_Desc>
+    <ESCP_Settings_Enlistment_Pay>Pay: {0} to {1} {2} every {3} days</ESCP_Settings_Enlistment_Pay>
+    <ESCP_Settings_Enlistment_NoPay>No pay</ESCP_Settings_Enlistment_NoPay>
+    <ESCP_Settings_Enlistment_Provisions>Provisions every {0} days</ESCP_Settings_Enlistment_Provisions>
+    <ESCP_Settings_Enlistment_Storage>Storage for your goods</ESCP_Settings_Enlistment_Storage>
+    <ESCP_Settings_Enlistment_Work>Work: {0}</ESCP_Settings_Enlistment_Work>
+    <ESCP_Settings_Enlistment_Missions>Mission board</ESCP_Settings_Enlistment_Missions>
+    <ESCP_Enchantment_Inspect>Enchanted with {0}: {1}</ESCP_Enchantment_Inspect>
+    <ESCP_Enchantment_Apply>Enchant equipped weapon with {0}</ESCP_Enchantment_Apply>
+    <ESCP_Enchantment_NoWeapon>no weapon that can be enchanted</ESCP_Enchantment_NoWeapon>
+    <ESCP_Enchantment_AlreadyEnchanted>weapon is already enchanted</ESCP_Enchantment_AlreadyEnchanted>
+    <ESCP_Enchantment_Applied>{0} bound the enchantment to {1}.</ESCP_Enchantment_Applied>
+    <ESCP_Expedition_Return_Errand>{PAWN_labelShort} has returned from a guild errand, tired and a little richer.</ESCP_Expedition_Return_Errand>
+    <ESCP_Expedition_Return_FactionErrand>{PAWN_labelShort} is back from their errand with dust on their boots and a few coins in their purse.</ESCP_Expedition_Return_FactionErrand>
+    <ESCP_Expedition_Return_FactionCampaign>{PAWN_labelShort} has come home from a long campaign, thinner and quieter than when they left.</ESCP_Expedition_Return_FactionCampaign>
+    <ESCP_Expedition_Return_Contract>{PAWN_labelShort} has returned from a long contract with stories they are not allowed to tell.</ESCP_Expedition_Return_Contract>
+
+</LanguageData>

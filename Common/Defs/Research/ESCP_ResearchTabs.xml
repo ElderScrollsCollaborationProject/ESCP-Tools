@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ResearchTabDef>
+        <defName>ESCP_Research</defName>
+        <label>ESCP Research</label>
+        <generalTitle>Core Research</generalTitle>
+        <generalDescription>The crafts and lore shared across Tamriel: smelting its ores, alloying its metals, and working bone, chitin and stranger materials.</generalDescription>
+    </ResearchTabDef>
+
+    <ResearchTabDef>
+        <defName>ESCP_Faction_Research</defName>
+        <label>ESCP Faction Research</label>
+        <generalTitle>Factional Research</generalTitle>
+        <generalDescription>The arms, armor and crafts particular to the peoples and factions of Tamriel.</generalDescription>
+    </ResearchTabDef>
+
+</Defs>

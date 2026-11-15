@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Steel"]/label</xpath>
+        <value>
+            <label>steel ingot</label>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Steel"]/description</xpath>
+        <value>
+            <description>Steel is iron smelted together with corundum, the way the Nords and the Imperial smiths have done it for centuries. It is the backbone of every legion and guard post in Tamriel: harder than iron, cheaper than anything finer, and good for blades, plate, tools and building alike.</description>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Steel"]/graphicData/texPath</xpath>
+        <value>
+            <texPath>Things/Item/Resource/Ingots/Steel</texPath>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="Steel"]/stuffProps</xpath>
+        <value>
+            <stuffAdjective>steel</stuffAdjective>
+        </value>
+    </Operation>
+
+</Patch>

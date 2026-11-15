@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <QuestScriptDef>
+        <defName>ESCP_Quest_MagesGuild_OutpostRecovery</defName>
+        <rootSelectionWeight>1.0</rootSelectionWeight>
+        <rootMinPoints>250</rootMinPoints>
+        <expireDaysRange>8~12</expireDaysRange>
+        <canGiveRoyalFavor>false</canGiveRoyalFavor>
+
+        <questNameRules>
+            <rulesStrings>
+                <li>questName->Mages Guild: [outpostLabel]</li>
+                <li>outpostLabel->Outpost Recovery</li>
+                <li>outpostLabel->[siteLabel] Clearance</li>
+                <li>outpostLabel->Research Site Reclamation</li>
+                <li>siteLabel->Research Outpost</li>
+                <li>siteLabel->Field Camp</li>
+                <li>siteLabel->Arcane Site</li>
+            </rulesStrings>
+        </questNameRules>
+
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription->[asker_nameDef], Archmage of the Mages Guild, has issued a formal commission. A Guild research outpost has stopped responding. Initial reports suggest it was overrun by guards operating in the area.\n\nThe research there cannot be abandoned. [asker_label] requires the site cleared and secured so Guild researchers can return. The commission is paid on confirmation that the hostile presence has been removed.\n\nIssued through the chapter house in [hostFaction_name].</li>
+            </rulesStrings>
+        </questDescriptionRules>
+
+        <root Class="QuestNode_Sequence">
+            <nodes>
+
+                <li Class="QuestNode_SubScript">
+                    <def>Util_RandomizePointsChallengeRating</def>
+                    <parms>
+                        <pointsFactorTwoStar>1.4</pointsFactorTwoStar>
+                        <pointsFactorThreeStar>1.8</pointsFactorThreeStar>
+                    </parms>
+                </li>
+
+                <li Class="QuestNode_SubScript">
+                    <def>Util_AdjustPointsForDistantFight</def>
+                </li>
+
+                <li Class="QuestNode_GetMap">
+                    <canBeSpace>false</canBeSpace>
+                </li>
+
+                <li Class="ESCP.Guilds.QuestNode_GetGuildFactionLeader">
+                    <factionDefName>ESCP_Faction_MagesGuild</factionDefName>
+                    <storeLeaderAs>asker</storeLeaderAs>
+                    <storeFactionAs>guildFaction</storeFactionAs>
+                </li>
+
+                <li Class="ESCP.Guilds.QuestNode_GetGuildBranchFaction">
+                    <guild>MagesGuild</guild>
+                    <storeAs>hostFaction</storeAs>
+                    <maxTechLevel>Medieval</maxTechLevel>
+                </li>
+
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>true</preferCloserTiles>
+                </li>
+
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <storeFactionAs>siteFaction</storeFactionAs>
+                    <sitePartsTags>
+                        <li><tag>BanditCamp</tag></li>
+                    </sitePartsTags>
+                    <mustBeHostileToFactionOf>$asker</mustBeHostileToFactionOf>
+                </li>
+
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <faction>$siteFaction</faction>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+
+                <li Class="QuestNode_GetSiteThreatPoints">
+                    <storeAs>sitePoints</storeAs>
+                    <sitePartsParams>$sitePartsParams</sitePartsParams>
+                </li>
+
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GetDefaultRewardValueFromPoints</def>
+                    <parms>
+                        <points>$sitePoints</points>
+                    </parms>
+                </li>
+
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                </li>
+
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+
+                <li Class="QuestNode_Letter">
+                    <label TKey="LetterLabelMagesGuildOutpost">Mages Guild Commission</label>
+                    <text TKey="LetterTextMagesGuildOutpost">[asker_nameDef] has commissioned clearance of a Guild research site through the chapter house in [hostFaction_name]. Check the quest log for details.</text>
+                    <letterDef>PositiveEvent</letterDef>
+                </li>
+
+                <li Class="QuestNode_End">
+                    <inSignal>guildFaction.BecameHostileToPlayer</inSignal>
+                    <outcome>Fail</outcome>
+                    <sendStandardLetter>true</sendStandardLetter>
+                </li>
+
+                <li Class="QuestNode_WorldObjectTimeout">
+                    <worldObject>$site</worldObject>
+                    <isQuestTimeout>true</isQuestTimeout>
+                    <delayTicks>$(randInt(8,14) * 60000)</delayTicks>
+                    <inSignalDisable>site.MapGenerated</inSignalDisable>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelMagesCommissionExpired">Commission Expired: [resolvedQuestName]</label>
+                                <text TKey="LetterTextMagesCommissionExpired">The Mages Guild has contracted other parties to handle the matter. The commission is no longer available.</text>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Fail</outcome>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <li Class="QuestNode_Signal">
+                    <inSignal>site.AllEnemiesDefeated</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_GiveRewards">
+                                <parms>
+                                    <allowGoodwill>true</allowGoodwill>
+                                    <allowRoyalFavor>false</allowRoyalFavor>
+                                    <rewardValue>$(rewardValue * 1.3)</rewardValue>
+                                </parms>
+                            </li>
+                            <li Class="ESCP.Guilds.QuestNode_GuildReputation">
+                                <guild>MagesGuild</guild>
+                                <amount>10</amount>
+                                <rewardPool>ESCP_ThingSetMaker_MagesGuildReward</rewardPool>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <li Class="QuestNode_End">
+                    <inSignal>site.AllEnemiesDefeated</inSignal>
+                    <outcome>Success</outcome>
+                    <sendStandardLetter>true</sendStandardLetter>
+                </li>
+
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End" />
+                </li>
+
+            </nodes>
+        </root>
+    </QuestScriptDef>
+
+
+    <QuestScriptDef>
+        <defName>ESCP_Quest_MagesGuild_TomeRecovery</defName>
+        <rootSelectionWeight>0.9</rootSelectionWeight>
+        <rootMinPoints>150</rootMinPoints>
+        <expireDaysRange>10~18</expireDaysRange>
+
+        <questNameRules>
+            <rulesStrings>
+                <li>questName->Mages Guild: [tomeLabel]</li>
+                <li>tomeLabel->Restricted Tome Recovery</li>
+                <li>tomeLabel->[archiveLabel] Retrieval</li>
+                <li>archiveLabel->Archive Text</li>
+                <li>archiveLabel->Stolen Volume</li>
+                <li>archiveLabel->Reliquary Document</li>
+            </rulesStrings>
+        </questNameRules>
+
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription->[asker_nameDef], Archmage of the Mages Guild, has issued an urgent retrieval commission. A restricted archive tome was taken during a raid on a Guild reliquary. The perpetrators are believed to have it at their current base of operations.\n\nThe Guild has no interest in punitive justice. The tome is what matters. [asker_label] is prepared to pay handsomely for its safe return. The stash at the site is described as: [itemStashContents].\n\nFiled through the chapter house in [hostFaction_name].</li>
+            </rulesStrings>
+        </questDescriptionRules>
+
+        <root Class="QuestNode_Sequence">
+            <nodes>
+
+                <li Class="QuestNode_SubScript">
+                    <def>Util_RandomizePointsChallengeRating</def>
+                    <parms>
+                        <pointsFactorTwoStar>1.3</pointsFactorTwoStar>
+                        <pointsFactorThreeStar>1.6</pointsFactorThreeStar>
+                    </parms>
+                </li>
+
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GetDefaultRewardValueFromPoints</def>
+                </li>
+
+                <li Class="QuestNode_SubScript">
+                    <def>Util_AdjustPointsForDistantFight</def>
+                </li>
+
+                <li Class="QuestNode_GetMap">
+                    <canBeSpace>false</canBeSpace>
+                </li>
+
+                <li Class="ESCP.Guilds.QuestNode_GetGuildFactionLeader">
+                    <factionDefName>ESCP_Faction_MagesGuild</factionDefName>
+                    <storeLeaderAs>asker</storeLeaderAs>
+                    <storeFactionAs>guildFaction</storeFactionAs>
+                </li>
+
+                <li Class="ESCP.Guilds.QuestNode_GetGuildBranchFaction">
+                    <guild>MagesGuild</guild>
+                    <storeAs>hostFaction</storeAs>
+                    <maxTechLevel>Medieval</maxTechLevel>
+                </li>
+
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>true</preferCloserTiles>
+                </li>
+
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <storeFactionAs>siteFaction</storeFactionAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>ItemStash</tag>
+                        </li>
+                        <li>
+                            <tag>ItemStashQuestThreat</tag>
+                            <chance>0.85</chance>
+                        </li>
+                    </sitePartsTags>
+                </li>
+
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <faction>$siteFaction</faction>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                </li>
+
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+
+                <li Class="QuestNode_Letter">
+                    <label TKey="LetterLabelMagesTomeRecovery">Mages Guild: Tome Recovery</label>
+                    <text TKey="LetterTextMagesTomeRecovery">The Mages Guild has commissioned retrieval of a stolen archive tome. The chapter house in [hostFaction_name] has marked the thieves' last known location on the map.</text>
+                    <letterDef>PositiveEvent</letterDef>
+                </li>
+
+                <li Class="QuestNode_WorldObjectTimeout">
+                    <worldObject>$site</worldObject>
+                    <isQuestTimeout>true</isQuestTimeout>
+                    <delayTicks>$(randInt(14, 24) * 60000)</delayTicks>
+                    <inSignalDisable>site.MapGenerated</inSignalDisable>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelTomeLost">Tome Lost: [resolvedQuestName]</label>
+                                <text TKey="LetterTextTomeLost">The Mages Guild has concluded the tome cannot be recovered through this avenue. The commission has been withdrawn.</text>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Fail</outcome>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <li Class="QuestNode_AddItemsReward">
+                    <items>$generatedItemStashThings</items>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <generateQuestParts>false</generateQuestParts>
+                </li>
+
+                <li Class="QuestNode_Signal">
+                    <inSignal>site.MapGenerated</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_GiveRewards">
+                                <parms>
+                                    <allowGoodwill>true</allowGoodwill>
+                                    <allowRoyalFavor>false</allowRoyalFavor>
+                                    <rewardValue>$(rewardValue * 0.4)</rewardValue>
+                                </parms>
+                            </li>
+                            <li Class="ESCP.Guilds.QuestNode_GuildReputation">
+                                <guild>MagesGuild</guild>
+                                <amount>8</amount>
+                                <rewardPool>ESCP_ThingSetMaker_MagesGuildReward</rewardPool>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End" />
+                </li>
+
+            </nodes>
+        </root>
+    </QuestScriptDef>
+
+
+    <QuestScriptDef>
+        <defName>ESCP_Quest_MagesGuild_ScholarLoan</defName>
+        <rootSelectionWeight>0.7</rootSelectionWeight>
+        <rootMinPoints>0</rootMinPoints>
+        <expireDaysRange>3~6</expireDaysRange>
+        <canGiveRoyalFavor>false</canGiveRoyalFavor>
+
+        <questNameRules>
+            <rulesStrings>
+                <li>questName->Mages Guild: [loanLabel]</li>
+                <li>loanLabel->Temporary Scholar Secondment</li>
+                <li>loanLabel->[researchLabel] Request</li>
+                <li>researchLabel->Researcher</li>
+                <li>researchLabel->Scholar</li>
+                <li>researchLabel->Intellectual</li>
+            </rulesStrings>
+        </questNameRules>
+
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription->[asker_nameDef], Archmage of the Mages Guild, is making an unusual request. The Guild is working against a deadline on a sensitive research project and needs a skilled researcher for a temporary secondment.\n\nThe Guild is asking to borrow one of your colonists with sufficient Intellectual skill for [loanDuration_duration]. They will be well treated and returned in good health when the period has elapsed.\n\nIf you agree, the Guild will pay [rewardValue] silver on safe return. Request forwarded through the chapter house in [hostFaction_name].</li>
+            </rulesStrings>
+        </questDescriptionRules>
+
+        <root Class="QuestNode_Sequence">
+            <nodes>
+
+                <li Class="QuestNode_GetMap">
+                    <canBeSpace>false</canBeSpace>
+                </li>
+
+                <li Class="ESCP.Guilds.QuestNode_GetGuildFactionLeader">
+                    <factionDefName>ESCP_Faction_MagesGuild</factionDefName>
+                    <storeLeaderAs>asker</storeLeaderAs>
+                    <storeFactionAs>guildFaction</storeFactionAs>
+                </li>
+
+                <li Class="ESCP.Guilds.QuestNode_GetGuildBranchFaction">
+                    <guild>MagesGuild</guild>
+                    <storeAs>hostFaction</storeAs>
+                    <maxTechLevel>Medieval</maxTechLevel>
+                </li>
+
+                <li Class="ESCP.Guilds.QuestNode_GetColonistWithSkill">
+                    <skill>Intellectual</skill>
+                    <minLevel>6</minLevel>
+                    <storeAs>loanedPawn</storeAs>
+                </li>
+
+                <li Class="QuestNode_Set">
+                    <name>loanDuration</name>
+                    <value>$(randInt(15, 25) * 60000)</value>
+                </li>
+
+                <li Class="QuestNode_Set">
+                    <name>rewardValue</name>
+                    <value>$(randInt(600, 1000))</value>
+                </li>
+
+                <li Class="QuestNode_Letter">
+                    <label TKey="LetterLabelScholarLoan">Mages Guild: Scholar Requested</label>
+                    <text TKey="LetterTextScholarLoan">[asker_nameDef] has requested that [loanedPawn_definite] serve a temporary secondment with the Mages Guild. Duration: [loanDuration_duration]. The Guild will pay on return.</text>
+                    <letterDef>PositiveEvent</letterDef>
+                    <lookTargets>$loanedPawn</lookTargets>
+                </li>
+
+                <li Class="QuestNode_Signal">
+                    <inSignal>$inSignal</inSignal>
+                    <node Class="QuestNode_PawnsArrive">
+                        <pawns>$loanedPawn</pawns>
+                        <joinPlayer>false</joinPlayer>
+                        <arrivalMode>EdgeWalkIn</arrivalMode>
+                    </node>
+                </li>
+
+                <li Class="QuestNode_Signal">
+                    <inSignal>loanedPawn.Killed</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelScholarDied">Scholar Lost</label>
+                                <text TKey="LetterTextScholarDied">[loanedPawn_nameDef] has died while on secondment with the Mages Guild. This will permanently damage your standing with the Guild.</text>
+                                <letterDef>Death</letterDef>
+                            </li>
+                            <li Class="ESCP.Guilds.QuestNode_GuildReputation">
+                                <guild>MagesGuild</guild>
+                                <amount>-20</amount>
+                                <rewardPool>ESCP_ThingSetMaker_MagesGuildReward</rewardPool>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Fail</outcome>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <li Class="QuestNode_Delay">
+                    <delayTicks>$loanDuration</delayTicks>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_PawnsArrive">
+                                <pawns>$loanedPawn</pawns>
+                                <joinPlayer>true</joinPlayer>
+                                <arrivalMode>EdgeWalkIn</arrivalMode>
+                            </li>
+                            <li Class="QuestNode_GiveRewards">
+                                <parms>
+                                    <allowGoodwill>false</allowGoodwill>
+                                    <allowRoyalFavor>false</allowRoyalFavor>
+                                    <rewardValue>$rewardValue</rewardValue>
+                                </parms>
+                            </li>
+                            <li Class="ESCP.Guilds.QuestNode_GuildReputation">
+                                <guild>MagesGuild</guild>
+                                <amount>12</amount>
+                                <rewardPool>ESCP_ThingSetMaker_MagesGuildReward</rewardPool>
+                            </li>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelScholarReturned">Scholar Returned</label>
+                                <text TKey="LetterTextScholarReturned">[loanedPawn_nameDef] has completed their secondment with the Mages Guild and returned. The Guild has transferred their fee.</text>
+                                <letterDef>PositiveEvent</letterDef>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Success</outcome>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+            </nodes>
+        </root>
+    </QuestScriptDef>
+
+</Defs>

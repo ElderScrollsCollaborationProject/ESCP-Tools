@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+        <defName>ESCP_Currencies</defName>
+        <label>currencies</label>
+        <parent>Manufactured</parent>
+        <iconPath>Things/Item/Currencies/ESCP_Septim/ESCP_Septim_a</iconPath>
+        <resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+
+</Defs>

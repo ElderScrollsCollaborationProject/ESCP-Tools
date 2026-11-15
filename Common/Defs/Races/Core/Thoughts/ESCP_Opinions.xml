@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThoughtDef Name="ESCP_Opinion_Base" Abstract="True">
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>ESCP_RaceTools.ThoughtWorker_UniversalBackstoryOpinion</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+    </ThoughtDef>
+
+    <ThoughtDef Name="ESCP_Opinion_Negative" ParentName="ESCP_Opinion_Base" Abstract="True">
+        <nullifyingTraits>
+            <li>Kind</li>
+        </nullifyingTraits>
+    </ThoughtDef>
+
+    <ThoughtDef ParentName="ESCP_Opinion_Base">
+        <defName>ESCP_Opinion_SharedOath</defName>
+        <workerClass>ESCP_RaceTools.ThoughtWorker_UniversalBackstoryOpinion_Shared</workerClass>
+        <modExtensions>
+            <li Class="ESCP_RaceTools.ThoughtDefProperties">
+                <sharedBackstoryCategories>
+                    <li>ESCP_Backstory_Imperial_Legion</li>
+                    <li>ESCP_Backstory_Imperial_Blades</li>
+                    <li>ESCP_Backstory_Stormcloak_Military</li>
+                    <li>ESCP_Backstory_Greybeard_Monk</li>
+                    <li>ESCP_Backstory_FightersGuild_Fighter</li>
+                    <li>ESCP_Backstory_MagesGuild_Scholar</li>
+                    <li>ESCP_Backstory_ThievesGuild_Thief</li>
+                    <li>ESCP_Backstory_DarkBrotherhood_Assassin</li>
+                    <li>ESCP_Backstory_Redguard_Ansei</li>
+                </sharedBackstoryCategories>
+            </li>
+        </modExtensions>
+        <stages>
+            <li>
+                <label>sworn to the same order</label>
+                <baseOpinionOffset>10</baseOpinionOffset>
+            </li>
+        </stages>
+        <nullifyingTraits>
+            <li>Psychopath</li>
+        </nullifyingTraits>
+    </ThoughtDef>
+
+    <ThoughtDef ParentName="ESCP_Opinion_Negative">
+        <defName>ESCP_Opinion_CivilWar</defName>
+        <workerClass>ESCP_RaceTools.ThoughtWorker_UniversalBackstoryOpinion_SharedUnqiue</workerClass>
+        <modExtensions>
+            <li Class="ESCP_RaceTools.ThoughtDefProperties">
+                <sharedBackstoryCategories>
+                    <li>ESCP_Backstory_Imperial_Legion</li>
+                    <li>ESCP_Backstory_Stormcloak_Military</li>
+                </sharedBackstoryCategories>
+            </li>
+        </modExtensions>
+        <stages>
+            <li>
+                <label>other side of the civil war</label>
+                <baseOpinionOffset>-10</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef ParentName="ESCP_Opinion_Negative">
+        <defName>ESCP_Opinion_PyandoneaSummerset</defName>
+        <modExtensions>
+            <li Class="ESCP_RaceTools.ThoughtDefProperties">
+                <backstoryCategoryA>ESCP_Backstory_Maormer_Military</backstoryCategoryA>
+                <backstoryCategoryB>ESCP_Backstory_Altmer_Military</backstoryCategoryB>
+            </li>
+        </modExtensions>
+        <stages>
+            <li>
+                <label>Pyandonea and Summerset</label>
+                <baseOpinionOffset>-10</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef ParentName="ESCP_Opinion_Negative">
+        <defName>ESCP_Opinion_BladesThalmor</defName>
+        <modExtensions>
+            <li Class="ESCP_RaceTools.ThoughtDefProperties">
+                <backstoryCategoryA>ESCP_Backstory_Imperial_Blades</backstoryCategoryA>
+                <backstoryCategoryB>ESCP_Backstory_Altmer_Military</backstoryCategoryB>
+            </li>
+        </modExtensions>
+        <stages>
+            <li>
+                <label>Blades and Thalmor</label>
+                <baseOpinionOffset>-10</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

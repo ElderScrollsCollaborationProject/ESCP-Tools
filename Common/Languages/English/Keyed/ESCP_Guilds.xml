@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+    <ESCP_RequestFightersGuildContract>Request Fighters Guild contract</ESCP_RequestFightersGuildContract>
+    <ESCP_RequestMagesGuildCommission>Request Mages Guild commission</ESCP_RequestMagesGuildCommission>
+    <ESCP_GuildQuestUnavailable>The {0} has no contracts available right now.</ESCP_GuildQuestUnavailable>
+
+    <ESCP_GuildRewardArrived>A guild courier has delivered your payment.</ESCP_GuildRewardArrived>
+    <ESCP_RequestThievesGuildJob>Contact the Thieves Guild</ESCP_RequestThievesGuildJob>
+    <ESCP_RequestDarkBrotherhoodContract>Perform the Black Sacrament</ESCP_RequestDarkBrotherhoodContract>
+
+    <ESCP_RelicCacheLabel>relic cache</ESCP_RelicCacheLabel>
+</LanguageData>

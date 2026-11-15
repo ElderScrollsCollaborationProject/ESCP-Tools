@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<BackstoryDef Name="ESCP_GenericBackstoryAdulthood_Base" Abstract="True">
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>ESCP_GenericBackstory_AdulthoodMedieval</li>
+		</spawnCategories>
+	</BackstoryDef>
+	
+	<BackstoryDef Name="ESCP_GenericBackstoryAdulthood_MageBase" Abstract="True">
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>ESCP_GenericBackstory_AdulthoodMage</li>
+		</spawnCategories>
+		<modExtensions>
+			<li Class="ESCP_RaceTools_Biotech.BackstoryExtension">
+				<commonality>15</commonality>
+				<forcedTraitsChance>
+					<li>
+						<trait>PsychicSensitivity</trait>
+						<degree>2</degree>
+						<chance>25</chance>
+					</li>
+					<li>
+						<trait>PsychicSensitivity</trait>
+						<degree>1</degree>
+						<chance>100</chance>
+					</li>
+				</forcedTraitsChance>
+			</li>
+		</modExtensions>
+	</BackstoryDef>
+	
+	<BackstoryDef Name="ESCP_GenericBackstoryAdulthood_SlaverBase" Abstract="True">
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>ESCP_GenericBackstory_AdulthoodSlaver</li>
+		</spawnCategories>
+		<modExtensions>
+			<li Class="ESCP_RaceTools_Biotech.BackstoryExtension">
+				<forcedTraitsChance>
+					<li>
+						<trait>ESCP_Slaver</trait>
+						<chance>100</chance>
+					</li>
+				</forcedTraitsChance>
+			</li>
+		</modExtensions>
+	</BackstoryDef>
+	
+	<BackstoryDef Name="ESCP_GenericBackstoryAdulthood_HighClassBase" Abstract="True">
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>ESCP_GenericBackstory_AdulthoodHighClass</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+	<BackstoryDef Name="ESCP_GenericBackstoryAdulthood_ImperialFactionBase" Abstract="True">
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>ESCP_GenericBackstory_AdulthoodImperialFaction</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef ParentName="ESCP_GenericBackstoryAdulthood_ImperialFactionBase" Name="ESCP_GenericBackstoryAdulthood_FightersGuildBase" Abstract="True">
+		<spawnCategories>
+			<li>ESCP_GenericBackstory_AdulthoodFightersGuild</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef ParentName="ESCP_GenericBackstoryAdulthood_ImperialFactionBase" Name="ESCP_GenericBackstoryAdulthood_MagesGuildBase" Abstract="True">
+		<spawnCategories>
+			<li>ESCP_GenericBackstory_AdulthoodMagesGuild</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef ParentName="ESCP_GenericBackstoryAdulthood_ImperialFactionBase" Name="ESCP_GenericBackstoryAdulthood_ThievesGuildBase" Abstract="True">
+		<spawnCategories>
+			<li>ESCP_GenericBackstory_AdulthoodThievesGuild</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef ParentName="ESCP_GenericBackstoryAdulthood_ImperialFactionBase" Name="ESCP_GenericBackstoryAdulthood_ImperialLegionBase" Abstract="True">
+		<spawnCategories>
+			<li>ESCP_GenericBackstory_AdulthoodImperialLegion</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef ParentName="ESCP_GenericBackstoryAdulthood_ImperialFactionBase" Name="ESCP_GenericBackstoryAdulthood_ImperialCultBase" Abstract="True">
+		<spawnCategories>
+			<li>ESCP_GenericBackstory_AdulthoodImperialCult</li>
+		</spawnCategories>
+	</BackstoryDef>
+	<BackstoryDef ParentName="ESCP_GenericBackstoryAdulthood_ImperialFactionBase" Name="ESCP_GenericBackstoryAdulthood_ImperialArchaeologicalSocietyBase" Abstract="True">
+		<spawnCategories>
+			<li>ESCP_GenericBackstory_AdulthoodImperialArchaeologicalSociety</li>
+		</spawnCategories>
+	</BackstoryDef>
+</Defs>

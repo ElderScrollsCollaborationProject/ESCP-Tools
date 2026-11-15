@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<GeneDef ParentName="GeneEarsBase">
+		<defName>ESCP_Gene_MerEars</defName>
+		<label>mer ears</label>
+		<description>Carriers of this gene have the long, pointed ears of the mer.</description>
+		<iconPath>UI/Icons/Genes/Gene_EarPig</iconPath>
+		<canGenerateInGeneSet>false</canGenerateInGeneSet>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>ESCP_RaceTools_Biotech.PawnRenderNodeWorker_MerRightEar</workerClass>
+				<texPath>Things/Pawn/Humanlike/ESCP_GenericMer/Ear/RightEar</texPath>
+				<colorType>Skin</colorType>
+				<parentTagDef>Head</parentTagDef>
+				<useSkinShader>true</useSkinShader>
+				<useRottenColor>true</useRottenColor>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<drawData>
+					<defaultData>
+						<layer>70</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>-2</layer>
+					</dataNorth>
+					<dataSouth>
+						<offset>(-0.08, 0, 0)</offset>
+						<layer>49</layer>
+					</dataSouth>
+				</drawData>
+			</li>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>ESCP_RaceTools_Biotech.PawnRenderNodeWorker_MerLeftEar</workerClass>
+				<texPath>Things/Pawn/Humanlike/ESCP_GenericMer/Ear/LeftEar</texPath>
+				<colorType>Skin</colorType>
+				<parentTagDef>Head</parentTagDef>
+				<useSkinShader>true</useSkinShader>
+				<useRottenColor>true</useRottenColor>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<drawData>
+					<defaultData>
+						<layer>70</layer>
+					</defaultData>
+					<dataNorth>
+						<layer>-2</layer>
+					</dataNorth>
+					<dataSouth>
+						<offset>(0.08, 0, 0)</offset>
+						<layer>49</layer>
+					</dataSouth>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+	<GeneDef ParentName="ESCP_GeneBase">
+		<defName>ESCP_Gene_MerFrame</defName>
+		<label>mer frame</label>
+		<description>Carriers of this gene have the slight frame and psychic sensitivity of the mer, and have children far less often.</description>
+		<iconPath>UI/Icons/Genes/Gene_Furskin</iconPath>
+		<displayCategory>ESCP_InheritedRacialBonus</displayCategory>
+		<displayOrderInCategory>100</displayOrderInCategory>
+		<statOffsets>
+			<PsychicSensitivity>0.2</PsychicSensitivity>
+		</statOffsets>
+		<marketValueFactor>1.09</marketValueFactor>
+		<statFactors>
+			<IncomingDamageFactor>1.25</IncomingDamageFactor>
+			<Fertility>0.5</Fertility>
+		</statFactors>
+		<biostatMet>0</biostatMet>
+		<selectionWeight>0</selectionWeight>
+	</GeneDef>
+	<GeneDef ParentName="ESCP_GeneBase">
+		<defName>ESCP_Gene_MerLongevity</defName>
+		<label>mer longevity</label>
+		<description>Carriers of this gene can expect to live around three hundred years.</description>
+		<iconPath>UI/Icons/Genes/Gene_Furskin</iconPath>
+		<displayCategory>ESCP_InheritedRacialBonus</displayCategory>
+		<displayOrderInCategory>101</displayOrderInCategory>
+		<statFactors>
+			<LifespanFactor>3.75</LifespanFactor>
+		</statFactors>
+		<modExtensions>
+			<li Class="ESCP_RaceTools_Biotech.GeneExtension_Longevity">
+				<immuneToAge>true</immuneToAge>
+				<adultAgeCurve>
+					<points>
+						<li>(18,0)</li>
+						<li>(18.01,100)</li>
+						<li>(50,100)</li>
+						<li>(80,30)</li>
+						<li>(100,18)</li>
+						<li>(150,10)</li>
+						<li>(200,3)</li>
+						<li>(300,0)</li>
+					</points>
+				</adultAgeCurve>
+				<maleFertilityAgeFactor>
+					<points>
+						<li>(14,0)</li>
+						<li>(18,1)</li>
+						<li>(100,1)</li>
+						<li>(150,0)</li>
+					</points>
+				</maleFertilityAgeFactor>
+				<femaleFertilityAgeFactor>
+					<points>
+						<li>(14,0)</li>
+						<li>(20,1)</li>
+						<li>(28,1)</li>
+						<li>(135,0.5)</li>
+						<li>(140,0.1)</li>
+						<li>(145,0.02)</li>
+						<li>(150,0)</li>
+					</points>
+				</femaleFertilityAgeFactor>
+			</li>
+		</modExtensions>
+		<biostatMet>0</biostatMet>
+		<selectionWeight>0</selectionWeight>
+	</GeneDef>
+	<GeneDef ParentName="ESCP_GeneBase">
+		<defName>ESCP_Gene_MerHead_Mer</defName>
+		<label>standard mer head</label>
+		<description>Carriers of this gene have the face of a standard mer.</description>
+		<iconPath>UI/Icons/Genes/Gene_Furskin</iconPath>
+		<displayCategory>ESCP_InheritedRacialBonus</displayCategory>
+		<displayOrderInCategory>102</displayOrderInCategory>
+		<exclusionTags>
+			<li>Head</li>
+		</exclusionTags>
+		<forcedHeadTypes>
+			<li>ESCP_HeadMer_Female_Average_Normal</li>
+			<li>ESCP_HeadMer_Female_Average_Pointy</li>
+			<li>ESCP_HeadMer_Female_Average_Wide</li>
+			<li>ESCP_HeadMer_Female_Narrow_Normal</li>
+			<li>ESCP_HeadMer_Female_Narrow_Pointy</li>
+			<li>ESCP_HeadMer_Female_Narrow_Wide</li>
+			<li>ESCP_HeadMer_Male_Average_Normal</li>
+			<li>ESCP_HeadMer_Male_Average_Pointy</li>
+			<li>ESCP_HeadMer_Male_Average_Wide</li>
+			<li>ESCP_HeadMer_Male_Narrow_Normal</li>
+			<li>ESCP_HeadMer_Male_Narrow_Pointy</li>
+			<li>ESCP_HeadMer_Male_Narrow_Wide</li>
+		</forcedHeadTypes>
+		<biostatMet>0</biostatMet>
+		<selectionWeight>0</selectionWeight>
+	</GeneDef>
+	<GeneDef ParentName="ESCP_GeneBase">
+		<defName>ESCP_Gene_MerHead_ColouredEyes</defName>
+		<label>mer with colored eyes head</label>
+		<description>Carriers of this gene have the face of a mer with colored eyes.</description>
+		<iconPath>UI/Icons/Genes/Gene_Furskin</iconPath>
+		<displayCategory>ESCP_InheritedRacialBonus</displayCategory>
+		<displayOrderInCategory>103</displayOrderInCategory>
+		<exclusionTags>
+			<li>Head</li>
+		</exclusionTags>
+		<forcedHeadTypes>
+			<li>ESCP_HeadMerColouredEyes_Female_Average_Normal</li>
+			<li>ESCP_HeadMerColouredEyes_Female_Average_Pointy</li>
+			<li>ESCP_HeadMerColouredEyes_Female_Average_Wide</li>
+			<li>ESCP_HeadMerColouredEyes_Female_Narrow_Normal</li>
+			<li>ESCP_HeadMerColouredEyes_Female_Narrow_Pointy</li>
+			<li>ESCP_HeadMerColouredEyes_Female_Narrow_Wide</li>
+			<li>ESCP_HeadMerColouredEyes_Male_Average_Normal</li>
+			<li>ESCP_HeadMerColouredEyes_Male_Average_Pointy</li>
+			<li>ESCP_HeadMerColouredEyes_Male_Average_Wide</li>
+			<li>ESCP_HeadMerColouredEyes_Male_Narrow_Normal</li>
+			<li>ESCP_HeadMerColouredEyes_Male_Narrow_Pointy</li>
+			<li>ESCP_HeadMerColouredEyes_Male_Narrow_Wide</li>
+		</forcedHeadTypes>
+		<biostatMet>0</biostatMet>
+		<selectionWeight>0</selectionWeight>
+	</GeneDef>
+	<GeneDef ParentName="ESCP_GeneBase">
+		<defName>ESCP_Gene_MerHead_Scaled</defName>
+		<label>scaled mer head</label>
+		<description>Carriers of this gene have the face of a scaled mer.</description>
+		<iconPath>UI/Icons/Genes/Gene_Furskin</iconPath>
+		<displayCategory>ESCP_InheritedRacialBonus</displayCategory>
+		<displayOrderInCategory>104</displayOrderInCategory>
+		<exclusionTags>
+			<li>Head</li>
+		</exclusionTags>
+		<forcedHeadTypes>
+			<li>ESCP_HeadMerScaled_Female_Average_Normal</li>
+			<li>ESCP_HeadMerScaled_Female_Average_Pointy</li>
+			<li>ESCP_HeadMerScaled_Female_Average_Wide</li>
+			<li>ESCP_HeadMerScaled_Female_Narrow_Normal</li>
+			<li>ESCP_HeadMerScaled_Female_Narrow_Pointy</li>
+			<li>ESCP_HeadMerScaled_Female_Narrow_Wide</li>
+			<li>ESCP_HeadMerScaled_Male_Average_Normal</li>
+			<li>ESCP_HeadMerScaled_Male_Average_Pointy</li>
+			<li>ESCP_HeadMerScaled_Male_Average_Wide</li>
+			<li>ESCP_HeadMerScaled_Male_Narrow_Normal</li>
+			<li>ESCP_HeadMerScaled_Male_Narrow_Pointy</li>
+			<li>ESCP_HeadMerScaled_Male_Narrow_Wide</li>
+		</forcedHeadTypes>
+		<biostatMet>0</biostatMet>
+		<selectionWeight>0</selectionWeight>
+	</GeneDef>
+	<GeneDef ParentName="ESCP_GeneBase">
+		<defName>ESCP_Gene_MerHead_ScaledColouredEyes</defName>
+		<label>scaled mer with colored eyes head</label>
+		<description>Carriers of this gene have the face of a scaled mer with colored eyes.</description>
+		<iconPath>UI/Icons/Genes/Gene_Furskin</iconPath>
+		<displayCategory>ESCP_InheritedRacialBonus</displayCategory>
+		<displayOrderInCategory>105</displayOrderInCategory>
+		<exclusionTags>
+			<li>Head</li>
+		</exclusionTags>
+		<forcedHeadTypes>
+			<li>ESCP_HeadMerScaledColouredEyes_Female_Average_Normal</li>
+			<li>ESCP_HeadMerScaledColouredEyes_Female_Average_Pointy</li>
+			<li>ESCP_HeadMerScaledColouredEyes_Female_Average_Wide</li>
+			<li>ESCP_HeadMerScaledColouredEyes_Female_Narrow_Normal</li>
+			<li>ESCP_HeadMerScaledColouredEyes_Female_Narrow_Pointy</li>
+			<li>ESCP_HeadMerScaledColouredEyes_Female_Narrow_Wide</li>
+			<li>ESCP_HeadMerScaledColouredEyes_Male_Average_Normal</li>
+			<li>ESCP_HeadMerScaledColouredEyes_Male_Average_Pointy</li>
+			<li>ESCP_HeadMerScaledColouredEyes_Male_Average_Wide</li>
+			<li>ESCP_HeadMerScaledColouredEyes_Male_Narrow_Normal</li>
+			<li>ESCP_HeadMerScaledColouredEyes_Male_Narrow_Pointy</li>
+			<li>ESCP_HeadMerScaledColouredEyes_Male_Narrow_Wide</li>
+		</forcedHeadTypes>
+		<biostatMet>0</biostatMet>
+		<selectionWeight>0</selectionWeight>
+	</GeneDef>
+	<GeneDef ParentName="ESCP_GeneBase">
+		<defName>ESCP_Gene_MerHead_WideFace</defName>
+		<label>wide-faced mer head</label>
+		<description>Carriers of this gene have the face of a wide-faced mer.</description>
+		<iconPath>UI/Icons/Genes/Gene_Furskin</iconPath>
+		<displayCategory>ESCP_InheritedRacialBonus</displayCategory>
+		<displayOrderInCategory>106</displayOrderInCategory>
+		<exclusionTags>
+			<li>Head</li>
+		</exclusionTags>
+		<forcedHeadTypes>
+			<li>ESCP_HeadMerWideFace_Female_Average_Normal</li>
+			<li>ESCP_HeadMerWideFace_Female_Average_Pointy</li>
+			<li>ESCP_HeadMerWideFace_Female_Average_Wide</li>
+			<li>ESCP_HeadMerWideFace_Female_Narrow_Normal</li>
+			<li>ESCP_HeadMerWideFace_Female_Narrow_Pointy</li>
+			<li>ESCP_HeadMerWideFace_Female_Narrow_Wide</li>
+			<li>ESCP_HeadMerWideFace_Male_Average_Normal</li>
+			<li>ESCP_HeadMerWideFace_Male_Average_Pointy</li>
+			<li>ESCP_HeadMerWideFace_Male_Average_Wide</li>
+			<li>ESCP_HeadMerWideFace_Male_Narrow_Normal</li>
+			<li>ESCP_HeadMerWideFace_Male_Narrow_Pointy</li>
+			<li>ESCP_HeadMerWideFace_Male_Narrow_Wide</li>
+		</forcedHeadTypes>
+		<biostatMet>0</biostatMet>
+		<selectionWeight>0</selectionWeight>
+	</GeneDef>
+</Defs>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <RecipeDef Name="ESCP_BullionRecipeBase" Abstract="True">
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <recipeUsers>
+            <li>ESCP_Smelter</li>
+            <li>ElectricSmelter</li>
+            <li>ESCP_Forge</li>
+        </recipeUsers>
+        <researchPrerequisite>ESCP_Research_Smelting</researchPrerequisite>
+    </RecipeDef>
+
+    <RecipeDef ParentName="ESCP_BullionRecipeBase">
+        <defName>ESCP_Cast_Gold_Ingot</defName>
+        <label>cast gold ingot</label>
+        <description>Melt down loose gold and cast it into a single ingot.</description>
+        <jobString>Casting gold.</jobString>
+        <workAmount>600</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Gold</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <ESCP_Resource_Gold_Ingot>1</ESCP_Resource_Gold_Ingot>
+        </products>
+    </RecipeDef>
+
+    <RecipeDef ParentName="ESCP_BullionRecipeBase">
+        <defName>ESCP_Cast_Silver_Ingot</defName>
+        <label>cast silver ingot</label>
+        <description>Melt down loose silver and cast it into a single ingot.</description>
+        <jobString>Casting silver.</jobString>
+        <workAmount>600</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Silver</li>
+                    </thingDefs>
+                </filter>
+                <count>50</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Silver</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <ESCP_Resource_Silver_Ingot>1</ESCP_Resource_Silver_Ingot>
+        </products>
+    </RecipeDef>
+
+    <RecipeDef ParentName="ESCP_BullionRecipeBase">
+        <defName>ESCP_Melt_Gold_Ingot</defName>
+        <label>melt gold ingot</label>
+        <description>Melt a gold ingot back down into loose gold.</description>
+        <jobString>Melting gold.</jobString>
+        <workAmount>400</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ESCP_Resource_Gold_Ingot</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>ESCP_Resource_Gold_Ingot</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <Gold>20</Gold>
+        </products>
+    </RecipeDef>
+
+    <RecipeDef ParentName="ESCP_BullionRecipeBase">
+        <defName>ESCP_Melt_Silver_Ingot</defName>
+        <label>melt silver ingot</label>
+        <description>Melt a silver ingot back down into loose silver.</description>
+        <jobString>Melting silver.</jobString>
+        <workAmount>400</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ESCP_Resource_Silver_Ingot</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>ESCP_Resource_Silver_Ingot</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <Silver>50</Silver>
+        </products>
+    </RecipeDef>
+
+</Defs>

@@ -1,0 +1,28 @@
+﻿using RimWorld;
+using Verse;
+
+namespace ESCP_RaceTools
+{
+    class HediffComp_UntameOnEnd : HediffComp
+    {
+		public HediffCompProperties_UntameOnEnd Props => (HediffCompProperties_UntameOnEnd)props;
+
+        public override void CompPostPostRemoved()
+        {
+			if(parent.pawn != null && !parent.pawn.Dead)
+            {
+				Pawn pawn = parent.pawn;
+                if (Props.untame)
+                {
+					pawn.SetFaction(null, null);
+					Pawn_Ownership ownership = pawn.ownership;
+                    if (ownership != null)
+					{
+						ownership.UnclaimAll();
+					}
+				}
+				Messages.Message("MessageAnimalReturnedWildReleased".Translate(pawn.LabelShort, pawn), pawn, MessageTypeDefOf.NeutralEvent, true);
+			}
+		}
+    }
+}

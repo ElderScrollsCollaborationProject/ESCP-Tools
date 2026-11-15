@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- A hediff that heals wounds over time. It stops while the pawn is burning. -->
+
+    <HediffDef>
+        <defName>ESCP_Example_Trollsblood</defName>
+        <label>trollsblood</label>
+        <description>Wounds are closing faster than they should.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <maxSeverity>1</maxSeverity>
+        <comps>
+            <li Class="ESCP_Trolls.HediffCompProperties_Regeneration">
+                <Ticks>100</Ticks>
+                <BaseNumber>3</BaseNumber>
+                <Tend>0.2</Tend>
+                <Severity>0.5</Severity>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- A drink that heals right away, using the ingestible's quality. -->
+
+    <ThingDef ParentName="DrugPillBase">
+        <defName>ESCP_Example_Elixir</defName>
+        <label>elixir of trollsblood</label>
+        <description>A bitter draught that closes wounds at once.</description>
+        <graphicData>
+            <texPath>Things/Item/Drug/Penoxycyline</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>40</MarketValue>
+            <Mass>0.1</Mass>
+        </statBases>
+        <techLevel>Medieval</techLevel>
+        <ingestible>
+            <drugCategory>Medical</drugCategory>
+            <outcomeDoers>
+                <li Class="ESCP_Trolls.IngestionOutcomeDoer_Regeneration" />
+            </outcomeDoers>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Drug">
+                <listOrder>1000</listOrder>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--
+    On any animal's race ThingDef, inside <modExtensions>:
+
+    Regenerates on its own:
+        <comps>
+            <li Class="ESCP_Trolls.CompProperties_Regeneration">
+                <Ticks>100</Ticks>
+                <BaseNumber>5</BaseNumber>
+            </li>
+        </comps>
+
+    Drops extra items when butchered:
+        <li Class="ESCP_Trolls.RaceProperties">
+            <scaleExtraButcher>true</scaleExtraButcher>
+            <extraButcherItems>
+                <li>Steel</li>
+            </extraButcherItems>
+        </li>
+
+    Only spawns wild on maps with these features:
+        <li Class="ESCP_Trolls.BiomeFeatureRequirements">
+            <requireRiver>true</requireRiver>
+            <requireCaves>true</requireCaves>
+        </li>
+    -->
+
+</Defs>

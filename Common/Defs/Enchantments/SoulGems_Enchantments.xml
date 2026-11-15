@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ESCP.Core.Enchantments.EnchantmentDef>
+        <defName>ESCP_Enchantment_SoulTrap</defName>
+        <label>soul trap</label>
+        <description>Marks the soul of whatever it wounds, so that a nearby gem can take it on death.</description>
+        <adjective>Soul-Trapping</adjective>
+        <workerClass>ESCP.Core.Enchantments.EnchantmentWorker_Hediff</workerClass>
+        <magnitude>1</magnitude>
+        <hediff>ESCP_Hediff_SoulTrap</hediff>
+    </ESCP.Core.Enchantments.EnchantmentDef>
+
+</Defs>

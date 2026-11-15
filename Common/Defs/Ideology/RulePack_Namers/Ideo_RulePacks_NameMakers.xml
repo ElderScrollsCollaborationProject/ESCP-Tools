@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_LeaderTitleMaker_Imperial</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_leaderTitle->Primate</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_NamerIdeo_Imperial</defName>
+        <include>
+            <li>GlobalUtility</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>hyphenPrefix->Alessian</li>
+                <li>hyphenPrefix->Akatosh</li>
+                <li>hyphenPrefix->Septim</li>
+                <li>hyphenPrefix->Ruby</li>
+                <li>r_ideoName->Eight Divines</li>
+                <li>r_ideoName->Faith of the Eight</li>
+                <li>r_ideoName->The Imperial Cult</li>
+                <li>r_ideoName->Imperial Creed</li>
+                <li>r_ideoName->Way of the Divines</li>
+                <li>r_ideoName->Order of the Eight</li>
+                <li>r_ideoName->Covenant of the Divines</li>
+                <li>r_ideoName->Imperial Faith</li>
+                <li>r_ideoName->Temple of the Divines</li>
+                <li>r_ideoName->People of the Eight</li>
+                <li>r_ideoAdjective->Imperial</li>
+                <li>r_ideoAdjective->Divine</li>
+                <li>r_memberName->Cultist</li>
+                <li>r_memberName->Devotee</li>
+                <li>r_memberName->Pilgrim</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_NamerDeity_EightDivines</defName>
+        <include>
+            <li>GlobalUtility</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>r_deityName->Akatosh</li>
+                <li>r_deityName->Arkay</li>
+                <li>r_deityName->Dibella</li>
+                <li>r_deityName->Julianos</li>
+                <li>r_deityName->Kynareth</li>
+                <li>r_deityName->Mara</li>
+                <li>r_deityName->Stendarr</li>
+                <li>r_deityName->Zenithar</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_NamerDeity_NineDivines</defName>
+        <include>
+            <li>GlobalUtility</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>r_deityName->Akatosh</li>
+                <li>r_deityName->Arkay</li>
+                <li>r_deityName->Dibella</li>
+                <li>r_deityName->Julianos</li>
+                <li>r_deityName->Kynareth</li>
+                <li>r_deityName->Mara</li>
+                <li>r_deityName->Stendarr</li>
+                <li>r_deityName->Zenithar</li>
+                <li>r_deityName->Talos</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_DeityTypeMaker_EightDivines</defName>
+        <include>
+            <li>GlobalUtility</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>r_deityType->Dragon God of Time</li>
+                <li>r_deityType->God of the Cycle of Life and Death</li>
+                <li>r_deityType->Goddess of Beauty and Love</li>
+                <li>r_deityType->God of Wisdom and Logic</li>
+                <li>r_deityType->Goddess of the Heavens and Wind</li>
+                <li>r_deityType->Goddess of Love and Compassion</li>
+                <li>r_deityType->God of Mercy and Justice</li>
+                <li>r_deityType->God of Work and Commerce</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_DeityTypeMaker_NineDivines</defName>
+        <include>
+            <li>GlobalUtility</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>r_deityType->Dragon God of Time</li>
+                <li>r_deityType->God of the Cycle of Life and Death</li>
+                <li>r_deityType->Goddess of Beauty and Love</li>
+                <li>r_deityType->God of Wisdom and Logic</li>
+                <li>r_deityType->Goddess of the Heavens and Wind</li>
+                <li>r_deityType->Goddess of Love and Compassion</li>
+                <li>r_deityType->God of Mercy and Justice</li>
+                <li>r_deityType->God of Work and Commerce</li>
+                <li>r_deityType->God of Man and Governance</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_NamerFestival_EightDivines</defName>
+        <include>
+            <li>GlobalUtility</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>r_ritualName->[festivalName]</li>
+                <li>festivalName->Saturalia</li>
+                <li>festivalName->New Life Festival</li>
+                <li>festivalName->Harvest's End</li>
+                <li>festivalName->The Second Planting</li>
+                <li>festivalName->Sun's Dawn Festival</li>
+                <li>festivalName->Akatosh's Day</li>
+                <li>festivalName->Zenithar's Fair</li>
+                <li>festivalName->The Mourning of Arkay</li>
+                <li>festivalName->Dibella's Jubilee</li>
+                <li>festivalName->Kynareth's Festival</li>
+                <li>festivalName->Festival of Mara</li>
+                <li>festivalName->Stendarr's Day</li>
+                <li>festivalName->Julianos' Symposium</li>
+                <li>festivalName->The Cathedral Vigil</li>
+                <li>festivalName->The Long Frost</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_NamerFestival_NineDivines</defName>
+        <include>
+            <li>GlobalUtility</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>r_ritualName->[festivalName]</li>
+                <li>festivalName->Saturalia</li>
+                <li>festivalName->New Life Festival</li>
+                <li>festivalName->The Tibedetha</li>
+                <li>festivalName->Harvest's End</li>
+                <li>festivalName->The Second Planting</li>
+                <li>festivalName->Sun's Dawn Festival</li>
+                <li>festivalName->Akatosh's Day</li>
+                <li>festivalName->Zenithar's Fair</li>
+                <li>festivalName->The Mourning of Arkay</li>
+                <li>festivalName->Dibella's Jubilee</li>
+                <li>festivalName->Kynareth's Festival</li>
+                <li>festivalName->Festival of Mara</li>
+                <li>festivalName->Stendarr's Day</li>
+                <li>festivalName->Julianos' Symposium</li>
+                <li>festivalName->The Talos Remembrance</li>
+                <li>festivalName->The Long Frost</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_LeaderTitleMaker_Nord</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_leaderTitle->Jarl</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_NamerIdeo_Nord</defName>
+        <include>
+            <li>NamerIdeoGlobal</li>
+            <li>GlobalUtility</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>hyphenPrefix->Kyne</li>
+                <li>hyphenPrefix->Shor</li>
+                <li>hyphenPrefix->Ysgramor</li>
+                <li>hyphenPrefix->Storm</li>
+                <li>r_ideoName->Old Ways of Skyrim</li>
+                <li>r_ideoName->Sons of Skyrim</li>
+                <li>r_ideoName->The Nordic Faith</li>
+                <li>r_ideoName->Traditions of the Hold</li>
+                <li>r_ideoName->Way of Shor</li>
+                <li>r_ideoName->The Ancient Creed</li>
+                <li>r_ideoName->Oath of the Nord</li>
+                <li>r_ideoName->The Old Blood</li>
+                <li>r_ideoName->Path of Sovngarde</li>
+                <li>r_ideoName->The Atmoran Covenant</li>
+                <li>r_ideoAdjective->Nordic</li>
+                <li>r_ideoAdjective->Ancient</li>
+                <li>r_memberName->Shield-Brother</li>
+                <li>r_memberName->Sworn Warrior</li>
+                <li>r_memberName->Holdsman</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_NamerDeity_Nord</defName>
+        <include>
+            <li>GlobalUtility</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>r_deityName->Shor</li>
+                <li>r_deityName->Kyne</li>
+                <li>r_deityName->Tsun</li>
+                <li>r_deityName->Stuhn</li>
+                <li>r_deityName->Jhunal</li>
+                <li>r_deityName->Orkey</li>
+                <li>r_deityName->Mauloch</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_DeityTypeMaker_Nord</defName>
+        <include>
+            <li>GlobalUtility</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>r_deityType->lord of the dead and Sovngarde</li>
+                <li>r_deityType->mother of the sky and wind</li>
+                <li>r_deityType->shield-thane of Shor</li>
+                <li>r_deityType->precursor of mercy and protection</li>
+                <li>r_deityType->god of runes and hermetic order</li>
+                <li>r_deityType->god of mockery and entropy</li>
+                <li>r_deityType->god of war and the hunt</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_NamerFestival_Nord</defName>
+        <include>
+            <li>GlobalUtility</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>r_ritualName->[festivalName]</li>
+                <li>festivalName->Feast of Shor</li>
+                <li>festivalName->The Great Hunt</li>
+                <li>festivalName->Mead Days</li>
+                <li>festivalName->Sovngarde Rites</li>
+                <li>festivalName->Shield-Breaking</li>
+                <li>festivalName->Rally of the Holds</li>
+                <li>festivalName->The Long Night</li>
+                <li>festivalName->Kyne's Blessing</li>
+                <li>festivalName->First Frost</li>
+                <li>festivalName->The Hearth Feast</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_LeaderTitleMaker_Skaal</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_leaderTitle->Village Chief</li>
+                <li>r_leaderTitle->Shaman</li>
+                <li>r_leaderTitle->Elder</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_NamerIdeo_Skaal</defName>
+        <include>
+            <li>GlobalUtility</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>hyphenPrefix->Skaal</li>
+                <li>hyphenPrefix->Greenstone</li>
+                <li>hyphenPrefix->Wind</li>
+                <li>hyphenPrefix->Tree</li>
+                <li>r_ideoName->[ideoName]</li>
+                <li>ideoName->The All-Maker's Path</li>
+                <li>ideoName->Village of the Old Ways</li>
+                <li>ideoName->Children of the All-Maker</li>
+                <li>ideoName->The Ancient Balance</li>
+                <li>ideoName->Guardians of Solstheim</li>
+                <li>ideoName->The Eternal Cycle</li>
+                <li>ideoName->The All-Maker's Trust</li>
+                <li>ideoName->The Old Rites</li>
+                <li>r_ideoAdjective->Ancient</li>
+                <li>r_ideoAdjective->Skaal</li>
+                <li>r_memberName->Keeper</li>
+                <li>r_memberName->Elder</li>
+                <li>r_memberName->Initiate</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_NamerDeity_Skaal</defName>
+        <include>
+            <li>GlobalUtility</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>r_deityName->[deityName]</li>
+                <li>deityName->the All-Maker</li>
+                <li>deityName->the Creator</li>
+                <li>deityName->the Shaper</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_DeityTypeMaker_Skaal</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_deityType->creator</li>
+                <li>r_deityType->sky-father</li>
+                <li>r_deityType->world-shaper</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_NamerFestival_Skaal</defName>
+        <include>
+            <li>GlobalUtility</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>r_ritualName->[festivalName]</li>
+                <li>festivalName->The Rite of the All-Maker</li>
+                <li>festivalName->Solstheim's Balance</li>
+                <li>festivalName->First Hunt of the Season</li>
+                <li>festivalName->The Long Watch</li>
+                <li>festivalName->Shaman's Vigil</li>
+                <li>festivalName->The Great Sharing</li>
+                <li>festivalName->Night of the All-Maker's Stars</li>
+                <li>festivalName->The Renewal Feast</li>
+                <li>festivalName->Circle of the Elders</li>
+                <li>festivalName->The Hunter's Blessing</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_LeaderTitleMaker_Breton</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_leaderTitle->High King</li>
+                <li>r_leaderTitle->King</li>
+                <li>r_leaderTitle->Duke</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_NamerIdeo_Breton</defName>
+        <include>
+            <li>GlobalUtility</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>hyphenPrefix->Direnni</li>
+                <li>hyphenPrefix->Mana</li>
+                <li>hyphenPrefix->Stendarr</li>
+                <li>hyphenPrefix->Rose</li>
+                <li>r_ideoName->Eight Divines</li>
+                <li>r_ideoName->Faith of the Eight</li>
+                <li>r_ideoName->The Breton Creed</li>
+                <li>r_ideoName->Way of the Divines</li>
+                <li>r_ideoName->Order of the Eight</li>
+                <li>r_ideoName->High Rock Faith</li>
+                <li>r_ideoName->Covenant of the Eight</li>
+                <li>r_ideoName->The Cathedral Creed</li>
+                <li>r_ideoName->Teachings of the Eight</li>
+                <li>r_ideoName->The Merchant's Faith</li>
+                <li>r_ideoAdjective->Breton</li>
+                <li>r_ideoAdjective->Divine</li>
+                <li>r_memberName->Devotee</li>
+                <li>r_memberName->Pilgrim</li>
+                <li>r_memberName->Faithful</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_LeaderTitleMaker_Redguard</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_leaderTitle->Crown Prince</li>
+                <li>r_leaderTitle->High King</li>
+                <li>r_leaderTitle->Tribune</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_NamerIdeo_Redguard</defName>
+        <include>
+            <li>GlobalUtility</li>
+        </include>
+        <rulePack>
+            <rulesStrings>
+                <li>hyphenPrefix->Yokudan</li>
+                <li>hyphenPrefix->Onsi</li>
+                <li>hyphenPrefix->Sword</li>
+                <li>hyphenPrefix->Satakal</li>
+                <li>r_ideoName->Yokudan Ways</li>
+                <li>r_ideoName->Path of Tall Papa</li>
+                <li>r_ideoName->The Far Shore Faith</li>
+                <li>r_ideoName->Way of Tu'whacca</li>
+                <li>r_ideoName->The Sword-Singer's Creed</li>
+                <li>r_ideoName->Leki's Covenant</li>
+                <li>r_ideoName->The Ancient Ways</li>
+                <li>r_ideoName->HoonDing's Path</li>
+                <li>r_ideoName->Faith of Satakal</li>
+                <li>r_ideoName->The Desert Creed</li>
+                <li>r_ideoAdjective->Yokudan</li>
+                <li>r_ideoAdjective->Hammerfell</li>
+                <li>r_ideoAdjective->Desert</li>
+                <li>r_memberName->Sword-Singer</li>
+                <li>r_memberName->Devotee</li>
+                <li>r_memberName->Faithful</li>
+                <li>r_memberName->Pilgrim</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_NamerDeity_Yokudan</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_deityName->Ruptga</li>
+                <li>r_deityName->Tu'whacca</li>
+                <li>r_deityName->HoonDing</li>
+                <li>r_deityName->Leki</li>
+                <li>r_deityName->Morwha</li>
+                <li>r_deityName->Zeht</li>
+                <li>r_deityName->Onsi</li>
+                <li>r_deityName->Satakal</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_DeityTypeMaker_Yokudan</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_deityType->God of the Far Shores and Souls</li>
+                <li>r_deityType->God of Endurance and Perseverance</li>
+                <li>r_deityType->The Make Way God</li>
+                <li>r_deityType->Goddess of the Straight and Sure Blade</li>
+                <li>r_deityType->Goddess of Fertility and Love</li>
+                <li>r_deityType->God of Agriculture and the Land</li>
+                <li>r_deityType->God of Knives and Warriors</li>
+                <li>r_deityType->The World-Eating Serpent</li>
+                <li>r_deityType->God of the Desert</li>
+                <li>r_deityType->Patron of the Sword-Singers</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_NamerFestival_Yokudan</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_ritualName->[festivalName]</li>
+                <li>festivalName->Feast of Tu'whacca</li>
+                <li>festivalName->The Crossing Rites</li>
+                <li>festivalName->Day of the Blade</li>
+                <li>festivalName->Leki's Tournament</li>
+                <li>festivalName->The Far Shore Remembrance</li>
+                <li>festivalName->The HoonDing Vigil</li>
+                <li>festivalName->Morwha's Harvest</li>
+                <li>festivalName->The Satakal Watch</li>
+                <li>festivalName->Tall Papa's Day</li>
+                <li>festivalName->Feast of the Crossed Blades</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+</Defs>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+    <SitePartDef>
+        <defName>ESCP_Site_CaravanRescue</defName>
+        <label>ambushed caravan</label>
+        <description>A guild caravan under attack by bandits.</description>
+        <workerClass>SitePartWorker_Outpost</workerClass>
+        <siteTexture>World/WorldObjects/DefaultSettlement</siteTexture>
+        <forceExitAndRemoveMapCountdownDurationDays>6</forceExitAndRemoveMapCountdownDurationDays>
+        <requiresFaction>true</requiresFaction>
+        <wantsThreatPoints>true</wantsThreatPoints>
+        <tags>
+            <li>ESCP_Site_CaravanRescue</li>
+        </tags>
+    </SitePartDef>
+
+    <GenStepDef>
+        <defName>ESCP_Site_CaravanRescue_Outpost</defName>
+        <linkWithSite>ESCP_Site_CaravanRescue</linkWithSite>
+        <order>450</order>
+        <genStep Class="GenStep_Outpost"/>
+    </GenStepDef>
+
+    <GenStepDef>
+        <defName>ESCP_Site_CaravanRescue_OutpostPower</defName>
+        <linkWithSite>ESCP_Site_CaravanRescue</linkWithSite>
+        <order>451</order>
+        <genStep Class="GenStep_Power"/>
+    </GenStepDef>
+
+</Defs>

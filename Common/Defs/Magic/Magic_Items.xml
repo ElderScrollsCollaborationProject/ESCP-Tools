@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef Name="ESCP_SpellTomeBase" ParentName="ResourceBase" Abstract="True">
+        <graphicData>
+            <texPath>Things/Item/Book/Novel/Novel</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.8</drawSize>
+        </graphicData>
+        <stackLimit>1</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <statBases>
+            <MaxHitPoints>60</MaxHitPoints>
+            <Mass>0.5</Mass>
+            <Flammability>1</Flammability>
+        </statBases>
+        <thingCategories>
+            <li>ESCP_SpellTomes</li>
+        </thingCategories>
+        <tradeTags>
+            <li>ESCP_SpellTome</li>
+        </tradeTags>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SpellTomeBase">
+        <defName>ESCP_Tome_Firebolt</defName>
+        <label>spell tome: firebolt</label>
+        <description>A Destruction text with the working for firebolt written out in full. Studying it teaches the spell and ruins the book, since the words burn out as they are learned.
+
+A spitting bolt of flame. It rarely kills on its own, but it will set a man's cloak alight, and that tends to change his plans.</description>
+        <graphicData>
+            <texPath>Things/Item/Spell_Tomes/ESCP_Destruction_Spell_Tome</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>270</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_SpellTome">
+                <spell>ESCP_Spell_Firebolt</spell>
+                <minIntellectual>3</minIntellectual>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SpellTomeBase">
+        <defName>ESCP_Tome_IceSpike</defName>
+        <label>spell tome: ice spike</label>
+        <description>A Destruction text with the working for ice spike written out in full. Studying it teaches the spell and ruins the book, since the words burn out as they are learned.
+
+A lance of hard ice that punches through and leaves the limbs slow with cold.</description>
+        <graphicData>
+            <texPath>Things/Item/Spell_Tomes/ESCP_Destruction_Spell_Tome</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>390</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_SpellTome">
+                <spell>ESCP_Spell_IceSpike</spell>
+                <minIntellectual>6</minIntellectual>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SpellTomeBase">
+        <defName>ESCP_Tome_Fireball</defName>
+        <label>spell tome: fireball</label>
+        <description>A Destruction text with the working for fireball written out in full. Studying it teaches the spell and ruins the book, since the words burn out as they are learned.
+
+Throw too hard and you will take your own eyebrows off. Bursts on impact and burns everything nearby.</description>
+        <graphicData>
+            <texPath>Things/Item/Spell_Tomes/ESCP_Destruction_Spell_Tome</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>550</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_SpellTome">
+                <spell>ESCP_Spell_Fireball</spell>
+                <minIntellectual>10</minIntellectual>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SpellTomeBase">
+        <defName>ESCP_Tome_Healing</defName>
+        <label>spell tome: healing</label>
+        <description>A Restoration text with the working for healing written out in full. Studying it teaches the spell and ruins the book, since the words burn out as they are learned.
+
+The first spell every Temple novice learns. Knits small wounds closed on the caster or anyone close by.</description>
+        <graphicData>
+            <texPath>Things/Item/Spell_Tomes/ESCP_Restoration_Spell_Tome</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>270</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_SpellTome">
+                <spell>ESCP_Spell_Healing</spell>
+                <minIntellectual>3</minIntellectual>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SpellTomeBase">
+        <defName>ESCP_Tome_CloseWounds</defName>
+        <label>spell tome: close wounds</label>
+        <description>A Restoration text with the working for close wounds written out in full. Studying it teaches the spell and ruins the book, since the words burn out as they are learned.
+
+A slow, careful working that closes wounds a field surgeon would give up on.</description>
+        <graphicData>
+            <texPath>Things/Item/Spell_Tomes/ESCP_Restoration_Spell_Tome</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>470</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_SpellTome">
+                <spell>ESCP_Spell_CloseWounds</spell>
+                <minIntellectual>8</minIntellectual>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SpellTomeBase">
+        <defName>ESCP_Tome_Ward</defName>
+        <label>spell tome: steadfast ward</label>
+        <description>A Restoration text with the working for steadfast ward written out in full. Studying it teaches the spell and ruins the book, since the words burn out as they are learned.
+
+Holds a shimmering barrier around the target for a short while. Blows land, but they land softer.</description>
+        <graphicData>
+            <texPath>Things/Item/Spell_Tomes/ESCP_Restoration_Spell_Tome</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>390</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_SpellTome">
+                <spell>ESCP_Spell_Ward</spell>
+                <minIntellectual>6</minIntellectual>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SpellTomeBase">
+        <defName>ESCP_Tome_Oakflesh</defName>
+        <label>spell tome: oakflesh</label>
+        <description>A Alteration text with the working for oakflesh written out in full. Studying it teaches the spell and ruins the book, since the words burn out as they are learned.
+
+Toughens the skin until it turns a blade like old bark. Lasts about an hour, and itches the whole time.</description>
+        <graphicData>
+            <texPath>Things/Item/Spell_Tomes/ESCP_Alteration_Spell_Tome</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>270</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_SpellTome">
+                <spell>ESCP_Spell_Oakflesh</spell>
+                <minIntellectual>3</minIntellectual>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SpellTomeBase">
+        <defName>ESCP_Tome_Telekinesis</defName>
+        <label>spell tome: telekinesis</label>
+        <description>A Alteration text with the working for telekinesis written out in full. Studying it teaches the spell and ruins the book, since the words burn out as they are learned.
+
+Plucks the weapon straight out of an enemy's hand and drops it at their feet.</description>
+        <graphicData>
+            <texPath>Things/Item/Spell_Tomes/ESCP_Alteration_Spell_Tome</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>390</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_SpellTome">
+                <spell>ESCP_Spell_Telekinesis</spell>
+                <minIntellectual>6</minIntellectual>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SpellTomeBase">
+        <defName>ESCP_Tome_Paralyze</defName>
+        <label>spell tome: paralyze</label>
+        <description>A Alteration text with the working for paralyze written out in full. Studying it teaches the spell and ruins the book, since the words burn out as they are learned.
+
+Locks every muscle in the target's body. They stay aware for all of it, which is the unpleasant part.</description>
+        <graphicData>
+            <texPath>Things/Item/Spell_Tomes/ESCP_Alteration_Spell_Tome</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>550</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_SpellTome">
+                <spell>ESCP_Spell_Paralyze</spell>
+                <minIntellectual>10</minIntellectual>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SpellTomeBase">
+        <defName>ESCP_Tome_Calm</defName>
+        <label>spell tome: calm</label>
+        <description>A Illusion text with the working for calm written out in full. Studying it teaches the spell and ruins the book, since the words burn out as they are learned.
+
+Takes the anger out of a mind for a moment. Breaks most frenzies and leaves the target standing there confused.</description>
+        <graphicData>
+            <texPath>Things/Item/Spell_Tomes/ESCP_Illusion_Spell_Tome</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>270</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_SpellTome">
+                <spell>ESCP_Spell_Calm</spell>
+                <minIntellectual>3</minIntellectual>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SpellTomeBase">
+        <defName>ESCP_Tome_Fear</defName>
+        <label>spell tome: fear</label>
+        <description>A Illusion text with the working for fear written out in full. Studying it teaches the spell and ruins the book, since the words burn out as they are learned.
+
+Convinces the target that whatever is coming for them is far worse than whatever you are.</description>
+        <graphicData>
+            <texPath>Things/Item/Spell_Tomes/ESCP_Illusion_Spell_Tome</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>390</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_SpellTome">
+                <spell>ESCP_Spell_Fear</spell>
+                <minIntellectual>6</minIntellectual>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SpellTomeBase">
+        <defName>ESCP_Tome_Invisibility</defName>
+        <label>spell tome: invisibility</label>
+        <description>A Illusion text with the working for invisibility written out in full. Studying it teaches the spell and ruins the book, since the words burn out as they are learned.
+
+Bends the eye around the caster. The Thieves Guild pays well for anyone who can teach it.</description>
+        <graphicData>
+            <texPath>Things/Item/Spell_Tomes/ESCP_Illusion_Spell_Tome</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>550</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_SpellTome">
+                <spell>ESCP_Spell_Invisibility</spell>
+                <minIntellectual>10</minIntellectual>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SpellTomeBase">
+        <defName>ESCP_Tome_ConjureWolf</defName>
+        <label>spell tome: conjure familiar</label>
+        <description>A Conjuration text with the working for conjure familiar written out in full. Studying it teaches the spell and ruins the book, since the words burn out as they are learned.
+
+Calls a spectral wolf to the chosen spot. It fights for about a minute, then goes back to wherever it came from.</description>
+        <graphicData>
+            <texPath>Things/Item/Spell_Tomes/ESCP_Conjuration_Spell_Tome</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>270</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_SpellTome">
+                <spell>ESCP_Spell_ConjureWolf</spell>
+                <minIntellectual>3</minIntellectual>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SpellTomeBase">
+        <defName>ESCP_Tome_SoulTrap</defName>
+        <label>spell tome: soul trap</label>
+        <description>A Conjuration text with the working for soul trap written out in full. Studying it teaches the spell and ruins the book, since the words burn out as they are learned.
+
+Marks a creature's soul for the next minute. If it dies in that time, the soul goes into the smallest empty gem nearby that can hold it. People need a black soul gem.</description>
+        <graphicData>
+            <texPath>Things/Item/Spell_Tomes/ESCP_Conjuration_Spell_Tome</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>350</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_SpellTome">
+                <spell>ESCP_Spell_SoulTrap</spell>
+                <minIntellectual>5</minIntellectual>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SpellTomeBase">
+        <defName>ESCP_Tome_ConjureSpider</defName>
+        <label>spell tome: conjure frostbite spider</label>
+        <description>A Conjuration text with the working for conjure frostbite spider written out in full. Studying it teaches the spell and ruins the book, since the words burn out as they are learned.
+
+Tears a spider the size of a cart out of Oblivion and points it at your problems.</description>
+        <graphicData>
+            <texPath>Things/Item/Spell_Tomes/ESCP_Conjuration_Spell_Tome</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>550</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_SpellTome">
+                <spell>ESCP_Spell_ConjureSpider</spell>
+                <minIntellectual>10</minIntellectual>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

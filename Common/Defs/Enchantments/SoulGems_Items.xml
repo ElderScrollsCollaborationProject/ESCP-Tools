@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="ESCP_EnchantScrollBase">
+        <defName>ESCP_EnchantScroll_SoulTrap</defName>
+        <label>scroll of soul trap</label>
+        <description>Enchanters argue over whether this one is ethical, then go on using it. Fixes the soul trap effect onto the weapon in the reader's hand.</description>
+        <comps>
+            <li Class="ESCP.Core.Enchantments.CompProperties_EnchantmentScroll">
+                <enchantment>ESCP_Enchantment_SoulTrap</enchantment>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef Name="ESCP_SoulGemBase" ParentName="ResourceBase" Abstract="True">
+        <stackLimit>20</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <statBases>
+            <MaxHitPoints>30</MaxHitPoints>
+            <Mass>0.1</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <thingCategories>
+            <li>ESCP_SoulGems</li>
+        </thingCategories>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SoulGemBase">
+        <defName>ESCP_SoulGem_Petty</defName>
+        <label>petty soul gem</label>
+        <description>An empty petty soul gem. Soul trap a creature of the right size before it dies and this will hold the soul.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/Silver</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>40</MarketValue>
+        </statBases>
+        <tradeTags>
+            <li>ESCP_SoulGem</li>
+        </tradeTags>
+        <comps>
+            <li Class="ESCP.Core.Enchantments.CompProperties_SoulGem">
+                <tier>0</tier>
+                <black>false</black>
+                <filledDef>ESCP_SoulGem_Petty_Filled</filledDef>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SoulGemBase">
+        <defName>ESCP_SoulGem_Petty_Filled</defName>
+        <label>filled petty soul gem</label>
+        <description>A petty soul gem with a captured soul inside. Spend it to put 25 charges back into an enchanted weapon.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/Gold</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>80</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="ESCP.Core.Enchantments.CompProperties_SoulGem">
+                <tier>0</tier>
+                <black>false</black>
+                <charges>25</charges>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SoulGemBase">
+        <defName>ESCP_SoulGem_Lesser</defName>
+        <label>lesser soul gem</label>
+        <description>An empty lesser soul gem. Soul trap a creature of the right size before it dies and this will hold the soul.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/Silver</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>80</MarketValue>
+        </statBases>
+        <tradeTags>
+            <li>ESCP_SoulGem</li>
+        </tradeTags>
+        <comps>
+            <li Class="ESCP.Core.Enchantments.CompProperties_SoulGem">
+                <tier>1</tier>
+                <black>false</black>
+                <filledDef>ESCP_SoulGem_Lesser_Filled</filledDef>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SoulGemBase">
+        <defName>ESCP_SoulGem_Lesser_Filled</defName>
+        <label>filled lesser soul gem</label>
+        <description>A lesser soul gem with a captured soul inside. Spend it to put 50 charges back into an enchanted weapon.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/Gold</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>160</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="ESCP.Core.Enchantments.CompProperties_SoulGem">
+                <tier>1</tier>
+                <black>false</black>
+                <charges>50</charges>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SoulGemBase">
+        <defName>ESCP_SoulGem_Common</defName>
+        <label>common soul gem</label>
+        <description>An empty common soul gem. Soul trap a creature of the right size before it dies and this will hold the soul.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/Silver</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>160</MarketValue>
+        </statBases>
+        <tradeTags>
+            <li>ESCP_SoulGem</li>
+        </tradeTags>
+        <comps>
+            <li Class="ESCP.Core.Enchantments.CompProperties_SoulGem">
+                <tier>2</tier>
+                <black>false</black>
+                <filledDef>ESCP_SoulGem_Common_Filled</filledDef>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SoulGemBase">
+        <defName>ESCP_SoulGem_Common_Filled</defName>
+        <label>filled common soul gem</label>
+        <description>A common soul gem with a captured soul inside. Spend it to put 100 charges back into an enchanted weapon.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/Gold</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>320</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="ESCP.Core.Enchantments.CompProperties_SoulGem">
+                <tier>2</tier>
+                <black>false</black>
+                <charges>100</charges>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SoulGemBase">
+        <defName>ESCP_SoulGem_Greater</defName>
+        <label>greater soul gem</label>
+        <description>An empty greater soul gem. Soul trap a creature of the right size before it dies and this will hold the soul.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/Silver</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>300</MarketValue>
+        </statBases>
+        <tradeTags>
+            <li>ESCP_SoulGem</li>
+        </tradeTags>
+        <comps>
+            <li Class="ESCP.Core.Enchantments.CompProperties_SoulGem">
+                <tier>3</tier>
+                <black>false</black>
+                <filledDef>ESCP_SoulGem_Greater_Filled</filledDef>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SoulGemBase">
+        <defName>ESCP_SoulGem_Greater_Filled</defName>
+        <label>filled greater soul gem</label>
+        <description>A greater soul gem with a captured soul inside. Spend it to put 150 charges back into an enchanted weapon.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/Gold</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>600</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="ESCP.Core.Enchantments.CompProperties_SoulGem">
+                <tier>3</tier>
+                <black>false</black>
+                <charges>150</charges>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SoulGemBase">
+        <defName>ESCP_SoulGem_Grand</defName>
+        <label>grand soul gem</label>
+        <description>An empty grand soul gem. Soul trap a creature of the right size before it dies and this will hold the soul.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/Silver</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>600</MarketValue>
+        </statBases>
+        <tradeTags>
+            <li>ESCP_SoulGem</li>
+        </tradeTags>
+        <comps>
+            <li Class="ESCP.Core.Enchantments.CompProperties_SoulGem">
+                <tier>4</tier>
+                <black>false</black>
+                <filledDef>ESCP_SoulGem_Grand_Filled</filledDef>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SoulGemBase">
+        <defName>ESCP_SoulGem_Grand_Filled</defName>
+        <label>filled grand soul gem</label>
+        <description>A grand soul gem with a captured soul inside. Spend it to put 200 charges back into an enchanted weapon.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/Gold</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>1200</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="ESCP.Core.Enchantments.CompProperties_SoulGem">
+                <tier>4</tier>
+                <black>false</black>
+                <charges>200</charges>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SoulGemBase">
+        <defName>ESCP_SoulGem_Black</defName>
+        <label>black soul gem</label>
+        <description>An empty black soul gem. The only kind that can hold the soul of a person, and most holds will hang you for owning one.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/Silver</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>800</MarketValue>
+        </statBases>
+        <tradeTags>
+            <li>ESCP_SoulGem</li>
+        </tradeTags>
+        <comps>
+            <li Class="ESCP.Core.Enchantments.CompProperties_SoulGem">
+                <tier>4</tier>
+                <black>true</black>
+                <filledDef>ESCP_SoulGem_Black_Filled</filledDef>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_SoulGemBase">
+        <defName>ESCP_SoulGem_Black_Filled</defName>
+        <label>filled black soul gem</label>
+        <description>A black soul gem with a human soul inside. It is warm to the touch, and nobody likes to hold it for long. Spend it to put 200 charges back into an enchanted weapon.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/Gold</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>1600</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="ESCP.Core.Enchantments.CompProperties_SoulGem">
+                <tier>4</tier>
+                <black>true</black>
+                <charges>200</charges>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

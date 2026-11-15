@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <QuestScriptDef>
+        <defName>ESCP_Quest_ThievesGuild_HeistContract</defName>
+        <rootSelectionWeight>1.0</rootSelectionWeight>
+        <rootMinPoints>200</rootMinPoints>
+        <expireDaysRange>10~16</expireDaysRange>
+        <canGiveRoyalFavor>false</canGiveRoyalFavor>
+
+        <questNameRules>
+            <rulesStrings>
+                <li>questName->Thieves Guild: [jobLabel]</li>
+                <li>jobLabel->Warehouse Heist</li>
+                <li>jobLabel->[targetLabel] Job</li>
+                <li>jobLabel->[targetLabel] Contract</li>
+                <li>targetLabel->Merchant Cache</li>
+                <li>targetLabel->Guarded Depot</li>
+                <li>targetLabel->Estate Vault</li>
+            </rulesStrings>
+        </questNameRules>
+
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription->[asker_nameDef], Guildmaster of the Thieves Guild, has sent word through the usual channels. A cache of goods, [itemStashContents], is being held by guards at a location the Guild has marked on the map. The goods are not theirs. The Guild has an interested buyer.\n\nThe job is to get in, take what is there, and leave. The Guild does not sanction killing on a job like this. The guards are to be left alive. Bodies draw attention. The contract is void if anyone dies.\n\nWord came through the contact in [hostFaction_name].</li>
+            </rulesStrings>
+        </questDescriptionRules>
+
+        <root Class="QuestNode_Sequence">
+            <nodes>
+
+                <li Class="QuestNode_SubScript">
+                    <def>Util_RandomizePointsChallengeRating</def>
+                    <parms>
+                        <pointsFactorTwoStar>1.3</pointsFactorTwoStar>
+                        <pointsFactorThreeStar>1.6</pointsFactorThreeStar>
+                    </parms>
+                </li>
+
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GetDefaultRewardValueFromPoints</def>
+                </li>
+
+                <li Class="QuestNode_SubScript">
+                    <def>Util_AdjustPointsForDistantFight</def>
+                </li>
+
+                <li Class="QuestNode_GetMap">
+                    <canBeSpace>false</canBeSpace>
+                </li>
+
+                <li Class="ESCP.Guilds.QuestNode_GetGuildFactionLeader">
+                    <factionDefName>ESCP_Faction_ThievesGuild</factionDefName>
+                    <storeLeaderAs>asker</storeLeaderAs>
+                    <storeFactionAs>guildFaction</storeFactionAs>
+                </li>
+
+                <li Class="ESCP.Guilds.QuestNode_GetGuildBranchFaction">
+                    <guild>ThievesGuild</guild>
+                    <storeAs>hostFaction</storeAs>
+                    <maxTechLevel>Medieval</maxTechLevel>
+                </li>
+
+                <li Class="QuestNode_GetSiteTile">
+                    <storeAs>siteTile</storeAs>
+                    <preferCloserTiles>true</preferCloserTiles>
+                </li>
+
+                <li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+                    <storeAs>sitePartDefs</storeAs>
+                    <storeFactionAs>siteFaction</storeFactionAs>
+                    <sitePartsTags>
+                        <li>
+                            <tag>ItemStash</tag>
+                        </li>
+                        <li>
+                            <tag>ItemStashQuestThreat</tag>
+                            <chance>0.9</chance>
+                        </li>
+                    </sitePartsTags>
+                </li>
+
+                <li Class="QuestNode_GetDefaultSitePartsParams">
+                    <tile>$siteTile</tile>
+                    <faction>$siteFaction</faction>
+                    <sitePartDefs>$sitePartDefs</sitePartDefs>
+                    <storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+                </li>
+
+                <li Class="QuestNode_SubScript">
+                    <def>Util_GenerateSite</def>
+                </li>
+
+                <li Class="QuestNode_SpawnWorldObjects">
+                    <worldObjects>$site</worldObjects>
+                </li>
+
+                <li Class="QuestNode_Letter">
+                    <label TKey="LetterLabelThievesGuildHeist">Thieves Guild: Heist Contract</label>
+                    <text TKey="LetterTextThievesGuildHeist">[asker_nameDef] has flagged a cache site through the contact in [hostFaction_name]. The goods are marked on the map. Check the quest log.</text>
+                    <letterDef>PositiveEvent</letterDef>
+                </li>
+
+                <li Class="QuestNode_End">
+                    <inSignal>guildFaction.BecameHostileToPlayer</inSignal>
+                    <outcome>Fail</outcome>
+                    <sendStandardLetter>true</sendStandardLetter>
+                </li>
+
+                <li Class="QuestNode_WorldObjectTimeout">
+                    <worldObject>$site</worldObject>
+                    <isQuestTimeout>true</isQuestTimeout>
+                    <delayTicks>$(randInt(8,14) * 60000)</delayTicks>
+                    <inSignalDisable>site.MapGenerated</inSignalDisable>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelThievesHeistExpired">Job Pulled: [resolvedQuestName]</label>
+                                <text TKey="LetterTextThievesHeistExpired">The Thieves Guild has moved on. The cache is no longer available.</text>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Fail</outcome>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <li Class="QuestNode_AddItemsReward">
+                    <items>$generatedItemStashThings</items>
+                    <inSignalChoiceUsed>site.MapGenerated</inSignalChoiceUsed>
+                    <generateQuestParts>false</generateQuestParts>
+                </li>
+
+                <li Class="QuestNode_Signal">
+                    <inSignal>site.MapGenerated</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelThievesHeistOnSite">Thieves Guild: Cache Reached</label>
+                                <text TKey="LetterTextThievesHeistOnSite">Your people have reached the cache. Take what is marked and leave. The Guild's payment will follow in two days, provided no one at the site dies.</text>
+                                <letterDef>PositiveEvent</letterDef>
+                            </li>
+                            <li Class="QuestNode_Delay">
+                                <delayTicks>$(2 * 60000)</delayTicks>
+                                <inSignalDisable>site.AllEnemiesDefeated</inSignalDisable>
+                                <node Class="QuestNode_Sequence">
+                                    <nodes>
+                                        <li Class="QuestNode_GiveRewards">
+                                            <parms>
+                                                <allowGoodwill>true</allowGoodwill>
+                                                <allowRoyalFavor>false</allowRoyalFavor>
+                                                <rewardValue>$(rewardValue * 0.35)</rewardValue>
+                                            </parms>
+                                        </li>
+                                        <li Class="ESCP.Guilds.QuestNode_GuildReputation">
+                                            <guild>ThievesGuild</guild>
+                                            <amount>8</amount>
+                                            <rewardPool>ESCP_ThingSetMaker_ThievesGuildReward</rewardPool>
+                                        </li>
+                                        <li Class="QuestNode_Letter">
+                                            <label TKey="LetterLabelThievesHeistPaid">Thieves Guild: Payment Received</label>
+                                            <text TKey="LetterTextThievesHeistPaid">The Guild's cut has been arranged through the usual channels. The job is closed.</text>
+                                            <letterDef>PositiveEvent</letterDef>
+                                        </li>
+                                        <li Class="QuestNode_End">
+                                            <outcome>Success</outcome>
+                                        </li>
+                                    </nodes>
+                                </node>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <li Class="QuestNode_Signal">
+                    <inSignal>site.AllEnemiesDefeated</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelThievesHeistViolation">Guild Rule Broken</label>
+                                <text TKey="LetterTextThievesHeistViolation">The guards at the cache site are dead. The Thieves Guild does not sanction killing on a job like this. The contract is void and your standing with the Guild has suffered.</text>
+                                <letterDef>NegativeEvent</letterDef>
+                            </li>
+                            <li Class="ESCP.Guilds.QuestNode_GuildReputation">
+                                <guild>ThievesGuild</guild>
+                                <amount>-20</amount>
+                                <rewardPool>ESCP_ThingSetMaker_ThievesGuildReward</rewardPool>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Fail</outcome>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <li Class="QuestNode_NoWorldObject">
+                    <worldObject>$site</worldObject>
+                    <node Class="QuestNode_End" />
+                </li>
+
+            </nodes>
+        </root>
+    </QuestScriptDef>
+
+    <QuestScriptDef>
+        <defName>ESCP_Quest_ThievesGuild_SmugglingRun</defName>
+        <rootSelectionWeight>0.8</rootSelectionWeight>
+        <rootMinPoints>150</rootMinPoints>
+        <expireDaysRange>2~4</expireDaysRange>
+
+        <questNameRules>
+            <rulesStrings>
+                <li>questName->Thieves Guild: [runLabel]</li>
+                <li>runLabel->Fence Transit</li>
+                <li>runLabel->Goods in Transit</li>
+                <li>runLabel->Quiet Passage</li>
+            </rulesStrings>
+        </questNameRules>
+
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription->[asker_nameDef], Guildmaster of the Thieves Guild, needs a stopover for a fence who is moving goods through the region and would prefer not to pass through a checkpoint. [fence_pronoun] needs a quiet place to hold for [stayDuration_duration], then [fence_pronoun] is on [fence_possessive] way.\n\nNo questions about the goods. Compensation for the hospitality will be left when [fence_pronoun] departs. If [fence_pronoun] does not depart unharmed, the Guild considers the arrangement broken.\n\nWord came through the contact in [hostFaction_name]. The fence will arrive on acceptance.</li>
+            </rulesStrings>
+        </questDescriptionRules>
+
+        <root Class="QuestNode_Sequence">
+            <nodes>
+
+                <li Class="QuestNode_GetMap">
+                    <canBeSpace>false</canBeSpace>
+                </li>
+
+                <li Class="ESCP.Guilds.QuestNode_GetGuildFactionLeader">
+                    <factionDefName>ESCP_Faction_ThievesGuild</factionDefName>
+                    <storeLeaderAs>asker</storeLeaderAs>
+                    <storeFactionAs>guildFaction</storeFactionAs>
+                </li>
+
+                <li Class="ESCP.Guilds.QuestNode_GetGuildBranchFaction">
+                    <guild>ThievesGuild</guild>
+                    <storeAs>hostFaction</storeAs>
+                    <maxTechLevel>Medieval</maxTechLevel>
+                </li>
+
+                <li Class="QuestNode_Set">
+                    <name>stayDuration</name>
+                    <value>$(randInt(4, 7) * 60000)</value>
+                </li>
+
+                <li Class="QuestNode_GeneratePawn">
+                    <storeAs>fence</storeAs>
+                    <kindDef>ESCP_Pawnkind_ThievesGuild_Fence</kindDef>
+                    <faction>$guildFaction</faction>
+                </li>
+
+                <li Class="QuestNode_Letter">
+                    <label TKey="LetterLabelThievesSmugglingRun">Thieves Guild: Fence in Transit</label>
+                    <text TKey="LetterTextThievesSmugglingRun">[asker_nameDef] needs a fence to shelter at [map_definite] for [stayDuration_duration]. Keep [fence_nameDef] safe and the Guild will pay on departure.</text>
+                    <letterDef>PositiveEvent</letterDef>
+                </li>
+
+                <li Class="QuestNode_Signal">
+                    <inSignal>$inSignal</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_PawnsArrive">
+                                <pawns>$fence</pawns>
+                                <joinPlayer>false</joinPlayer>
+                                <arrivalMode>EdgeWalkIn</arrivalMode>
+                            </li>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelFenceArrived">Fence Arrived</label>
+                                <text TKey="LetterTextFenceArrived">[fence_nameDef] has arrived and will keep a low profile until [fence_pronoun] can move on.</text>
+                                <letterDef>PositiveEvent</letterDef>
+                            </li>
+                            <li Class="QuestNode_Delay">
+                                <delayTicks>$stayDuration</delayTicks>
+                                <node Class="QuestNode_Sequence">
+                                    <nodes>
+                                        <li Class="QuestNode_GiveRewards">
+                                            <parms>
+                                                <allowGoodwill>true</allowGoodwill>
+                                                <allowRoyalFavor>false</allowRoyalFavor>
+                                                <rewardValue>$(points * 1.1)</rewardValue>
+                                            </parms>
+                                        </li>
+                                        <li Class="ESCP.Guilds.QuestNode_GuildReputation">
+                                            <guild>ThievesGuild</guild>
+                                            <amount>10</amount>
+                                            <rewardPool>ESCP_ThingSetMaker_ThievesGuildReward</rewardPool>
+                                        </li>
+                                        <li Class="QuestNode_Letter">
+                                            <label TKey="LetterLabelFenceDeparts">Fence Departs</label>
+                                            <text TKey="LetterTextFenceDeparts">[fence_nameDef] is moving on. Payment has been left as agreed.</text>
+                                            <letterDef>PositiveEvent</letterDef>
+                                        </li>
+                                        <li Class="QuestNode_End">
+                                            <outcome>Success</outcome>
+                                        </li>
+                                    </nodes>
+                                </node>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <li Class="QuestNode_Signal">
+                    <inSignal>fence.Killed</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelFenceKilled">Fence Killed</label>
+                                <text TKey="LetterTextFenceKilled">[fence_nameDef] is dead. The Guild will not forget this.</text>
+                                <letterDef>NegativeEvent</letterDef>
+                            </li>
+                            <li Class="ESCP.Guilds.QuestNode_GuildReputation">
+                                <guild>ThievesGuild</guild>
+                                <amount>-20</amount>
+                                <rewardPool>ESCP_ThingSetMaker_ThievesGuildReward</rewardPool>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Fail</outcome>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+            </nodes>
+        </root>
+    </QuestScriptDef>
+
+</Defs>

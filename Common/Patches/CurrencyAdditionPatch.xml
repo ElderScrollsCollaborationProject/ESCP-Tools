@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <xpath>Defs/FactionDef[not(modExtensions/li[@Class="ESCP.Currencies.CurrencyReplacement"])]</xpath>
+        <value>
+            <li Class="ESCP.Currencies.CurrencyReplacement">
+                <currency>ESCP_Currency_Septims</currency>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <xpath>Defs/TraderKindDef[orbital="true" and not(modExtensions/li[@Class="ESCP.Currencies.CurrencyReplacement"])]</xpath>
+        <value>
+            <li Class="ESCP.Currencies.CurrencyReplacement">
+                <currency>ESCP_Currency_Septims</currency>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ScenarioDef/scenario/parts/li[thingDef="Silver"]/thingDef</xpath>
+        <value>
+            <thingDef>ESCP_Currency_Septims</thingDef>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Silver"]/statBases</xpath>
+        <value>
+            <RoyalFavorValue>0.0015</RoyalFavorValue>
+        </value>
+    </Operation>
+
+</Patch>

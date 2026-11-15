@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <HediffDef>
+        <defName>ESCP_Hediff_SoulTrap</defName>
+        <label>soul trapped</label>
+        <description>This creature's soul has been marked. If it dies soon, a soul gem nearby will take the soul.</description>
+        <hediffClass>ESCP.Core.Enchantments.Hediff_SoulTrap</hediffClass>
+        <defaultLabelColor>(0.75, 0.55, 1)</defaultLabelColor>
+        <isBad>true</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>3600</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+        </comps>
+    </HediffDef>
+
+</Defs>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Imperials">
+        <defName>ESCP_Character_Alessia</defName>
+        <pawnKind>ESCP_Unique_Pawnkind_Emperor</pawnKind>
+        <faction>ESCP_Faction_Imperial</faction>
+        <eras>
+            <li>1</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Imperial</xenotype>
+        <roles>
+            <li Class="ESCP.Core.CharacterRole_FactionLeader">
+                <seniority>1500</seniority>
+            </li>
+        </roles>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Alessia</firstName>
+                <nickname>the Slave Queen</nickname>
+                <gender>Female</gender>
+                <age>34</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(70, 45, 30)</hairColor>
+                <hairDef>Long</hairDef>
+                <headTypeDef>Female_AverageNormal</headTypeDef>
+                <bodyTypeDef>Female</bodyTypeDef>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Imperials">
+        <defName>ESCP_Character_TiberSeptim</defName>
+        <pawnKind>ESCP_Unique_Pawnkind_Emperor</pawnKind>
+        <faction>ESCP_Faction_Imperial</faction>
+        <eras>
+            <li>2</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Imperial</xenotype>
+        <roles>
+            <li Class="ESCP.Core.CharacterRole_FactionLeader">
+                <seniority>1500</seniority>
+            </li>
+        </roles>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Tiber</firstName>
+                <lastName>Septim</lastName>
+                <nickname>the Dragonborn</nickname>
+                <gender>Male</gender>
+                <age>56</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(120, 100, 80)</hairColor>
+                <hairDef>ShortCut</hairDef>
+                <beardDef>Full</beardDef>
+                <headTypeDef>Male_AverageNormal</headTypeDef>
+                <bodyTypeDef>Male</bodyTypeDef>
+            </li>
+            <li Class="ESCP.Core.CharacterTraitsDefinition">
+                <traits>
+                    <li>
+                        <key>Tough</key>
+                        <value>0</value>
+                    </li>
+                </traits>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Imperials">
+        <defName>ESCP_Character_TitusMede</defName>
+        <pawnKind>ESCP_Unique_Pawnkind_Emperor</pawnKind>
+        <faction>ESCP_Faction_Imperial</faction>
+        <eras>
+            <li>4</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Imperial</xenotype>
+        <roles>
+            <li Class="ESCP.Core.CharacterRole_FactionLeader">
+                <seniority>1500</seniority>
+            </li>
+        </roles>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Titus</firstName>
+                <lastName>Mede II</lastName>
+                <nickname>the Emperor</nickname>
+                <gender>Male</gender>
+                <age>66</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(150, 150, 150)</hairColor>
+                <hairDef>ShortCut</hairDef>
+                <beardDef>Full</beardDef>
+                <headTypeDef>Male_AverageNormal</headTypeDef>
+                <bodyTypeDef>Male</bodyTypeDef>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Imperials">
+        <defName>ESCP_Character_MartinSeptim</defName>
+        <pawnKind>ESCP_Pawnkind_Imperial_Mage</pawnKind>
+        <faction>ESCP_Faction_Imperial</faction>
+        <eras>
+            <li>3</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Imperial</xenotype>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Martin</firstName>
+                <lastName>Septim</lastName>
+                <nickname>Brother Martin</nickname>
+                <gender>Male</gender>
+                <age>36</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(90, 60, 40)</hairColor>
+                <hairDef>ShortCut</hairDef>
+                <beardDef>Stubble</beardDef>
+                <headTypeDef>Male_AverageNormal</headTypeDef>
+                <bodyTypeDef>Male</bodyTypeDef>
+            </li>
+            <li Class="ESCP.Core.CharacterTraitsDefinition">
+                <traits>
+                    <li>
+                        <key>Kind</key>
+                        <value>0</value>
+                    </li>
+                </traits>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Altmer,Rick.ESCP.Imperials">
+        <defName>ESCP_Character_Ocato</defName>
+        <pawnKind>ESCP_Pawnkind_Imperial_Noble</pawnKind>
+        <faction>ESCP_Faction_Imperial</faction>
+        <eras>
+            <li>3</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Altmer</xenotype>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Ocato</firstName>
+                <nickname>the High Chancellor</nickname>
+                <gender>Male</gender>
+                <age>180</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(220, 200, 140)</hairColor>
+                <hairDef>Decent</hairDef>
+                <headTypeDef>ESCP_HeadMer_Male_Narrow_Normal</headTypeDef>
+                <bodyTypeDef>Thin</bodyTypeDef>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Bretons,Rick.ESCP.Imperials">
+        <defName>ESCP_Character_Jauffre</defName>
+        <pawnKind>ESCP_Pawnkind_Imperial_Blade</pawnKind>
+        <faction>ESCP_Faction_Imperial</faction>
+        <eras>
+            <li>3</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Breton</xenotype>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Jauffre</firstName>
+                <nickname>Grandmaster of the Blades</nickname>
+                <gender>Male</gender>
+                <age>66</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(170, 170, 170)</hairColor>
+                <hairDef>ShortCut</hairDef>
+                <beardDef>Full</beardDef>
+                <headTypeDef>Male_AverageNormal</headTypeDef>
+                <bodyTypeDef>Male</bodyTypeDef>
+            </li>
+            <li Class="ESCP.Core.CharacterTraitsDefinition">
+                <traits>
+                    <li>
+                        <key>Tough</key>
+                        <value>0</value>
+                    </li>
+                </traits>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Imperials">
+        <defName>ESCP_Character_Tullius</defName>
+        <pawnKind>ESCP_Pawnkind_Imperial_Legate</pawnKind>
+        <faction>ESCP_Faction_Imperial</faction>
+        <eras>
+            <li>4</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Imperial</xenotype>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Tullius</firstName>
+                <nickname>the General</nickname>
+                <gender>Male</gender>
+                <age>60</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(160, 160, 160)</hairColor>
+                <hairDef>ShortCut</hairDef>
+                <beardDef>NoBeard</beardDef>
+                <headTypeDef>Male_AverageNormal</headTypeDef>
+                <bodyTypeDef>Male</bodyTypeDef>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Imperials,Rick.ESCP.Nords">
+        <defName>ESCP_Character_Rikke</defName>
+        <pawnKind>ESCP_Pawnkind_Imperial_Legate</pawnKind>
+        <faction>ESCP_Faction_Imperial</faction>
+        <eras>
+            <li>4</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Nord</xenotype>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Rikke</firstName>
+                <nickname>the Legate</nickname>
+                <gender>Female</gender>
+                <age>45</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(170, 140, 90)</hairColor>
+                <hairDef>BriefPonytail</hairDef>
+                <headTypeDef>Female_AverageNormal</headTypeDef>
+                <bodyTypeDef>Female</bodyTypeDef>
+            </li>
+            <li Class="ESCP.Core.CharacterTraitsDefinition">
+                <traits>
+                    <li>
+                        <key>Tough</key>
+                        <value>0</value>
+                    </li>
+                </traits>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+    <ESCP.Core.CharacterDef MayRequire="Rick.ESCP.Imperials,Rick.ESCP.Nords">
+        <defName>ESCP_Character_Hadvar</defName>
+        <pawnKind>ESCP_Pawnkind_Imperial_Legionnaire</pawnKind>
+        <faction>ESCP_Faction_Imperial</faction>
+        <eras>
+            <li>4</li>
+        </eras>
+        <xenotype>ESCP_Xenotype_Nord</xenotype>
+        <definitions>
+            <li Class="ESCP.Core.CharacterStoryDefinition">
+                <firstName>Hadvar</firstName>
+                <gender>Male</gender>
+                <age>32</age>
+            </li>
+            <li Class="ESCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(140, 100, 60)</hairColor>
+                <hairDef>ShortCut</hairDef>
+                <beardDef>Stubble</beardDef>
+                <headTypeDef>Male_AverageNormal</headTypeDef>
+                <bodyTypeDef>Male</bodyTypeDef>
+            </li>
+        </definitions>
+    </ESCP.Core.CharacterDef>
+
+</Defs>

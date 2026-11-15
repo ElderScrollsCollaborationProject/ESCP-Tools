@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <MemeDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_Meme_OldWays</defName>
+        <label>Old Ways of Skyrim</label>
+        <description>Our people hold fast to the ancient traditions of Skyrim: honor in battle, loyalty to the hold, and reverence for the old gods who shaped the world before the elves sought to unmake it. Shor made us, Kyne guides our arrows, and Tsun guards the gates of Sovngarde. We do not forget what we are.</description>
+        <iconPath>UI/Structures/ESCP_OriginDivinesEight</iconPath>
+        <groupDef>Misc</groupDef>
+        <impact>2</impact>
+        <randomizationSelectionWeightFactor>0</randomizationSelectionWeightFactor>
+        <hiddenInChooseMemes>true</hiddenInChooseMemes>
+        <requireOne>
+            <li><li>Cannibalism_Abhorrent</li></li>
+            <li>
+                <li>Charity_Worthwhile</li>
+                <li>Charity_Essential</li>
+            </li>
+            <li><li>NutrientPasteEating_DontMind</li></li>
+            <li><li>Raiding_Respected</li></li>
+            <li>
+                <li>Slavery_Acceptable</li>
+                <li>Slavery_Disapproved</li>
+            </li>
+            <li>
+                <li>Execution_RespectedIfGuilty</li>
+                <li>Execution_DontCare</li>
+            </li>
+            <li><li>Research_Normal</li></li>
+            <li><li>DrugUse_MedicalOrSocial</li></li>
+        </requireOne>
+    </MemeDef>
+
+    <MemeDef MayRequire="Ludeon.RimWorld.Ideology">
+        <defName>ESCP_Meme_AllMaker</defName>
+        <label>All-Maker's Path</label>
+        <description>Our people follow the All-Maker, the eternal creator who shaped this world and all things within it. We are its stewards, placed here to guard the balance between creation and destruction. The gifts of flesh, earth, water, and sky belong to the All-Maker and are entrusted to us. We do not take more than we need, we do not waste what is given, and we honor the cycle of life and death that the All-Maker set in motion before memory began.</description>
+        <iconPath>UI/Structures/ESCP_OriginDivinesEight</iconPath>
+        <groupDef>Misc</groupDef>
+        <impact>2</impact>
+        <randomizationSelectionWeightFactor>0</randomizationSelectionWeightFactor>
+        <hiddenInChooseMemes>true</hiddenInChooseMemes>
+        <requireOne>
+            <li><li>Cannibalism_Abhorrent</li></li>
+            <li><li>Charity_Essential</li></li>
+            <li><li>NutrientPasteEating_DontMind</li></li>
+            <li><li>Slavery_Disapproved</li></li>
+            <li><li>Execution_HorribleIfInnocent</li></li>
+            <li><li>Research_Normal</li></li>
+            <li><li>DrugUse_MedicalOnly</li></li>
+        </requireOne>
+    </MemeDef>
+
+</Defs>

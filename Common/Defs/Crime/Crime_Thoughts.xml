@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThoughtDef>
+        <defName>ESCP_Thought_ServedTime</defName>
+        <durationDays>8</durationDays>
+        <stackLimit>1</stackLimit>
+        <stages>
+            <li>
+                <label>served time in a hold jail</label>
+                <description>Cold stone, bad food, and a guard who liked his job. I'm glad to be home.</description>
+                <baseMoodEffect>-8</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

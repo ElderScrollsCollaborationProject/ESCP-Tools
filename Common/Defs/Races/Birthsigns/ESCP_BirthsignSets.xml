@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ESCP_Birthsigns.BirthsignSetDef ParentName="ESCP_Birthsigns_Base">
+		<defName>ESCP_BirthsignSet_Passive</defName>
+		<label>Birthsigns (passive)</label>
+		<description>Birthsigns tied to the month of birth, with stat bonuses and no abilities.</description>
+		<birthsignHediffs>
+			<li>
+				<li>ESCP_Birthsign_TheLord_Passive</li>
+				<li>ESCP_Birthsign_TheMage</li>
+				<li>ESCP_Birthsign_TheShadow_Passive</li>
+			</li>
+			<li>
+				<li>ESCP_Birthsign_TheSteed</li>
+				<li>ESCP_Birthsign_TheApprentice</li>
+				<li>ESCP_Birthsign_TheWarrior</li>
+			</li>
+			<li>
+				<li>ESCP_Birthsign_TheLady</li>
+				<li>ESCP_Birthsign_TheTower_Passive</li>
+				<li>ESCP_Birthsign_TheAtronach</li>
+			</li>
+			<li>
+				<li>ESCP_Birthsign_TheThief</li>
+				<li>ESCP_Birthsign_TheRitual_Passive</li>
+				<li>ESCP_Birthsign_TheLover_Passive</li>
+			</li>
+		</birthsignHediffs>
+		<additionalSigns>
+			<li>ESCP_Birthsign_TheSerpent_Passive</li>
+		</additionalSigns>
+		<hasBirthsign_DefaultChance>1</hasBirthsign_DefaultChance>
+	</ESCP_Birthsigns.BirthsignSetDef>
+
+	<ESCP_Birthsigns.BirthsignSetDef ParentName="ESCP_Birthsigns_Base">
+		<defName>ESCP_BirthsignSet_Abilities</defName>
+		<label>Birthsigns (abilities)</label>
+		<description>Birthsigns tied to the month of birth, with powers from Morrowind adapted for RimWorld.</description>
+		<birthsignHediffs>
+			<li>
+				<li>ESCP_Birthsign_TheLord</li>
+				<li>ESCP_Birthsign_TheMage</li>
+				<li>ESCP_Birthsign_TheShadow</li>
+			</li>
+			<li>
+				<li>ESCP_Birthsign_TheSteed</li>
+				<li>ESCP_Birthsign_TheApprentice</li>
+				<li>ESCP_Birthsign_TheWarrior</li>
+			</li>
+			<li>
+				<li>ESCP_Birthsign_TheLady</li>
+				<li>ESCP_Birthsign_TheTower</li>
+				<li>ESCP_Birthsign_TheAtronach</li>
+			</li>
+			<li>
+				<li>ESCP_Birthsign_TheThief</li>
+				<li>ESCP_Birthsign_TheRitual</li>
+				<li>ESCP_Birthsign_TheLover</li>
+			</li>
+		</birthsignHediffs>
+		<additionalSigns>
+			<li>ESCP_Birthsign_TheSerpent</li>
+		</additionalSigns>
+	</ESCP_Birthsigns.BirthsignSetDef>
+
+</Defs>

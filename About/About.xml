@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+
+    <packageId>Rick.ESCP.Core.Tools</packageId>
+    <author>Rick, SirMashedPotato, Theo, ChubbyGummyBear, pphhyy</author>
+    <name>ESCP - Tools</name>
+    <description>The Elder Scrolls Collaboration Project Presents: ESCP Tools! The core mod of the ESCP. Also carries the race framework, birthsigns and racial abilities from ESCP Race Tools by SirMashedPotato, Theo and ChubbyGummyBear, including MorrowRim Leather Thoughts by Razza. Race Tools no longer needs to be installed. Also carries reusable code from ESCP Trolls, Spriggan, Skyshards and Necromantic Thralls, with examples in the Examples folder.</description>
+    <url>https://github.com/ElderScrollsCollaborationProject</url>
+    <supportedVersions>
+        <li>1.6</li>
+        <li>1.7</li>
+    </supportedVersions>
+    <modDependencies>
+        <li>
+            <packageId>ludeon.rimworld.royalty</packageId>
+            <displayName>Royalty</displayName>
+        </li>
+        <li>
+            <packageId>ludeon.rimworld.ideology</packageId>
+            <displayName>Ideology</displayName>
+        </li>
+        <li>
+            <packageId>ludeon.rimworld.biotech</packageId>
+            <displayName>Biotech</displayName>
+        </li>
+        <li>
+            <packageId>brrainz.harmony</packageId>
+            <displayName>Harmony</displayName>
+            <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+            <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2009463077</steamWorkshopUrl>
+        </li>
+    </modDependencies>
+    <loadAfter>
+        <li>Ludeon.RimWorld</li>
+        <li>Ludeon.RimWorld.Royalty</li>
+        <li>Ludeon.RimWorld.Ideology</li>
+        <li>Ludeon.RimWorld.Biotech</li>
+        <li>Ludeon.RimWorld.Anomaly</li>
+        <li>Ludeon.RimWorld.Odyssey</li>
+        <li>brrainz.harmony</li>
+    </loadAfter>
+    <incompatibleWith>
+        <li>ESCP.RaceTools</li>
+    </incompatibleWith>
+
+</ModMetaData>

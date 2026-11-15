@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <JobDef>
+        <defName>ESCP_Job_StudyTome</defName>
+        <driverClass>ESCP.Core.Magic.JobDriver_StudyTome</driverClass>
+        <reportString>studying TargetA.</reportString>
+    </JobDef>
+
+</Defs>

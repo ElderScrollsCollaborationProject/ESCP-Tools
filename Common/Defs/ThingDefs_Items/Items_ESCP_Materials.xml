@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ESCP_Currency_Septims</defName>
+        <label>Septim</label>
+        <description>The gold coin of the Septim Empire, minted in Cyrodiil and accepted across all of Tamriel. One face bears the Imperial Dragon symbol; the other the likeness of the Emperor. No other currency carries the same weight of authority across the continent. A Septim will buy you a meal in Skyrim, a blade in Hammerfell, and a favor in High Rock with equal ease.</description>
+        <graphicData>
+            <texPath>Things/Item/Currencies/ESCP_Septim</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <resourceReadoutPriority>First</resourceReadoutPriority>
+        <soundInteract>Silver_Drop</soundInteract>
+        <soundDrop>Silver_Drop</soundDrop>
+        <useHitPoints>false</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <resourceReadoutAlwaysShow>true</resourceReadoutAlwaysShow>
+        <statBases>
+            <RoyalFavorValue>0.004</RoyalFavorValue>
+            <MarketValue>1</MarketValue>
+            <Mass>0.008</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <thingCategories>
+            <li>ESCP_Currencies</li>
+        </thingCategories>
+        <stackLimit>500</stackLimit>
+        <smallVolume>true</smallVolume>
+        <allowedArchonexusCount>1000</allowedArchonexusCount>
+        <possessionCount>40</possessionCount>
+    </ThingDef>
+
+</Defs>

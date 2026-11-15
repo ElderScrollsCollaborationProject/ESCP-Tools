@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef Name="ESCP_StandingStoneBase" ParentName="BuildingBase" Abstract="True">
+        <size>(2,2)</size>
+        <rotatable>false</rotatable>
+        <graphicData>
+            <graphicClass>Graphic_Random</graphicClass>
+            <texPath>Things/Building/Art/SculptureLarge</texPath>
+            <drawSize>(3,3)</drawSize>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <pathCost>50</pathCost>
+        <fillPercent>0.5</fillPercent>
+        <designationCategory>Misc</designationCategory>
+        <stuffCategories>
+            <li>Stony</li>
+        </stuffCategories>
+        <costStuffCount>150</costStuffCount>
+        <statBases>
+            <MaxHitPoints>400</MaxHitPoints>
+            <WorkToBuild>6000</WorkToBuild>
+            <Flammability>0</Flammability>
+            <Beauty>6</Beauty>
+        </statBases>
+        <building>
+            <isInert>true</isInert>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_StandingStoneBase">
+        <defName>ESCP_StandingStone_Apprentice</defName>
+        <label>Apprentice Stone</label>
+        <description>A standing stone carved with the sign of the Apprentice. Anyone who lays a hand on it takes its blessing and gives up any other. Learn quickly and draw magicka back faster, at the cost of a weaker body.</description>
+        <comps>
+            <li Class="ESCP.Core.StandingStones.CompProperties_StandingStone">
+                <blessing>ESCP_Hediff_Stone_Apprentice</blessing>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_StandingStoneBase">
+        <defName>ESCP_StandingStone_Atronach</defName>
+        <label>Atronach Stone</label>
+        <description>A standing stone carved with the sign of the Atronach. Anyone who lays a hand on it takes its blessing and gives up any other. A much deeper well of magicka that refills more slowly.</description>
+        <comps>
+            <li Class="ESCP.Core.StandingStones.CompProperties_StandingStone">
+                <blessing>ESCP_Hediff_Stone_Atronach</blessing>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_StandingStoneBase">
+        <defName>ESCP_StandingStone_Lady</defName>
+        <label>Lady Stone</label>
+        <description>A standing stone carved with the sign of the Lady. Anyone who lays a hand on it takes its blessing and gives up any other. Wounds close faster and illness passes sooner.</description>
+        <comps>
+            <li Class="ESCP.Core.StandingStones.CompProperties_StandingStone">
+                <blessing>ESCP_Hediff_Stone_Lady</blessing>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_StandingStoneBase">
+        <defName>ESCP_StandingStone_Lord</defName>
+        <label>Lord Stone</label>
+        <description>A standing stone carved with the sign of the Lord. Anyone who lays a hand on it takes its blessing and gives up any other. Hardens the skin against blades and blows.</description>
+        <comps>
+            <li Class="ESCP.Core.StandingStones.CompProperties_StandingStone">
+                <blessing>ESCP_Hediff_Stone_Lord</blessing>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_StandingStoneBase">
+        <defName>ESCP_StandingStone_Lover</defName>
+        <label>Lover Stone</label>
+        <description>A standing stone carved with the sign of the Lover. Anyone who lays a hand on it takes its blessing and gives up any other. Everything goes a little easier: work, study, and talking to people.</description>
+        <comps>
+            <li Class="ESCP.Core.StandingStones.CompProperties_StandingStone">
+                <blessing>ESCP_Hediff_Stone_Lover</blessing>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_StandingStoneBase">
+        <defName>ESCP_StandingStone_Mage</defName>
+        <label>Mage Stone</label>
+        <description>A standing stone carved with the sign of the Mage. Anyone who lays a hand on it takes its blessing and gives up any other. More magicka to work with, and faster study.</description>
+        <comps>
+            <li Class="ESCP.Core.StandingStones.CompProperties_StandingStone">
+                <blessing>ESCP_Hediff_Stone_Mage</blessing>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_StandingStoneBase">
+        <defName>ESCP_StandingStone_Ritual</defName>
+        <label>Ritual Stone</label>
+        <description>A standing stone carved with the sign of the Ritual. Anyone who lays a hand on it takes its blessing and gives up any other. A steadier mind. People under this stone rarely break.</description>
+        <comps>
+            <li Class="ESCP.Core.StandingStones.CompProperties_StandingStone">
+                <blessing>ESCP_Hediff_Stone_Ritual</blessing>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_StandingStoneBase">
+        <defName>ESCP_StandingStone_Serpent</defName>
+        <label>Serpent Stone</label>
+        <description>A standing stone carved with the sign of the Serpent. Anyone who lays a hand on it takes its blessing and gives up any other. Quick hands in a fight, and poison doesn't bite as hard.</description>
+        <comps>
+            <li Class="ESCP.Core.StandingStones.CompProperties_StandingStone">
+                <blessing>ESCP_Hediff_Stone_Serpent</blessing>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_StandingStoneBase">
+        <defName>ESCP_StandingStone_Shadow</defName>
+        <label>Shadow Stone</label>
+        <description>A standing stone carved with the sign of the Shadow. Anyone who lays a hand on it takes its blessing and gives up any other. Harder to pin down in melee, and quiet on the feet.</description>
+        <comps>
+            <li Class="ESCP.Core.StandingStones.CompProperties_StandingStone">
+                <blessing>ESCP_Hediff_Stone_Shadow</blessing>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_StandingStoneBase">
+        <defName>ESCP_StandingStone_Steed</defName>
+        <label>Steed Stone</label>
+        <description>A standing stone carved with the sign of the Steed. Anyone who lays a hand on it takes its blessing and gives up any other. Run faster and carry more.</description>
+        <comps>
+            <li Class="ESCP.Core.StandingStones.CompProperties_StandingStone">
+                <blessing>ESCP_Hediff_Stone_Steed</blessing>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_StandingStoneBase">
+        <defName>ESCP_StandingStone_Thief</defName>
+        <label>Thief Stone</label>
+        <description>A standing stone carved with the sign of the Thief. Anyone who lays a hand on it takes its blessing and gives up any other. Light fingers and a better eye for a bargain.</description>
+        <comps>
+            <li Class="ESCP.Core.StandingStones.CompProperties_StandingStone">
+                <blessing>ESCP_Hediff_Stone_Thief</blessing>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_StandingStoneBase">
+        <defName>ESCP_StandingStone_Tower</defName>
+        <label>Tower Stone</label>
+        <description>A standing stone carved with the sign of the Tower. Anyone who lays a hand on it takes its blessing and gives up any other. Sharper eyes and a mind for how things are built.</description>
+        <comps>
+            <li Class="ESCP.Core.StandingStones.CompProperties_StandingStone">
+                <blessing>ESCP_Hediff_Stone_Tower</blessing>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="ESCP_StandingStoneBase">
+        <defName>ESCP_StandingStone_Warrior</defName>
+        <label>Warrior Stone</label>
+        <description>A standing stone carved with the sign of the Warrior. Anyone who lays a hand on it takes its blessing and gives up any other. Hits land more often, and pain doesn't slow you as much.</description>
+        <comps>
+            <li Class="ESCP.Core.StandingStones.CompProperties_StandingStone">
+                <blessing>ESCP_Hediff_Stone_Warrior</blessing>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

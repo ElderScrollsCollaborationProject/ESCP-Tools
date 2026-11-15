@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <ESCP_StorytellerJoin_Label>Knight at the gate: {PAWN_nameDef}</ESCP_StorytellerJoin_Label>
+    <ESCP_StorytellerJoin_Text>A lone knight has walked up to your gate and announced himself as {PAWN_nameDef}, sovereign of Anvil. No such emperor exists, and he has no guards, no retinue and no crown. He has decided your colony is a loyal province and would like to stay and inspect it in person.\n\nHe seems sincere. He also seems to know how to use that sword.</ESCP_StorytellerJoin_Text>
+
+</LanguageData>

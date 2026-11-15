@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <ESCP_Magicka>Magicka</ESCP_Magicka>
+    <ESCP_MagickaDesc>Spent when casting spells. Refills slowly on its own.</ESCP_MagickaDesc>
+    <ESCP_MagickaCost>Costs {0} magicka</ESCP_MagickaCost>
+    <ESCP_NotEnoughMagicka>{0} needs {1} magicka for this.</ESCP_NotEnoughMagicka>
+    <ESCP_Tome_Inspect>Teaches {0}. Requires Intellectual {1}.</ESCP_Tome_Inspect>
+    <ESCP_Tome_Study>Study {0}</ESCP_Tome_Study>
+    <ESCP_Tome_AlreadyKnown>already knows this spell</ESCP_Tome_AlreadyKnown>
+    <ESCP_Tome_TooHard>needs Intellectual {0}</ESCP_Tome_TooHard>
+    <ESCP_Tome_Learned>{0} has learned {1}.</ESCP_Tome_Learned>
+
+    <ESCP_Enchantment_Charges>Charges: {0} / {1}</ESCP_Enchantment_Charges>
+    <ESCP_Enchantment_Drained>Out of charge. A filled soul gem will restore it.</ESCP_Enchantment_Drained>
+    <ESCP_SoulGem_Recharge>Recharge equipped weapon</ESCP_SoulGem_Recharge>
+    <ESCP_SoulGem_NoEnchantedWeapon>no enchanted weapon equipped</ESCP_SoulGem_NoEnchantedWeapon>
+    <ESCP_SoulGem_FullyCharged>weapon is fully charged</ESCP_SoulGem_FullyCharged>
+    <ESCP_SoulGem_Recharged>{0} recharged {1}.</ESCP_SoulGem_Recharged>
+    <ESCP_SoulGem_NoGem>The soul of {0} slipped away. There was no empty gem nearby that could hold it.</ESCP_SoulGem_NoGem>
+    <ESCP_SoulGem_Captured>The soul of {0} was drawn into a {1}.</ESCP_SoulGem_Captured>
+
+    <ESCP_Alert_Bounty_Label>Bounty on your people</ESCP_Alert_Bounty_Label>
+    <ESCP_Alert_Bounty_Desc>These factions want your people for crimes against them:
+
+{0}
+
+A bounty of 200 or more stops them from trading with you and will eventually bring guards to your door. You can clear a bounty by sending a caravan with silver to one of their settlements.</ESCP_Alert_Bounty_Desc>
+    <ESCP_Crime_DemandTitle>Guards at the gate</ESCP_Crime_DemandTitle>
+    <ESCP_Crime_Demand>A party of {0} guards has come to your gate. "You've committed crimes against us. Pay {1} silver, or send someone back with us to serve the sentence."</ESCP_Crime_Demand>
+    <ESCP_Crime_OptionPay>Pay the fine ({0} silver)</ESCP_Crime_OptionPay>
+    <ESCP_Crime_NeedSilver>needs {0} silver</ESCP_Crime_NeedSilver>
+    <ESCP_Crime_OptionJail>Send {0} to jail ({1})</ESCP_Crime_OptionJail>
+    <ESCP_Crime_OptionResist>Refuse and fight</ESCP_Crime_OptionResist>
+    <ESCP_Crime_Paid>You paid {0} silver and your bounty with {1} is cleared.</ESCP_Crime_Paid>
+    <ESCP_Crime_Jailed>{0} was taken to jail by {1} and will be released in {2}.</ESCP_Crime_Jailed>
+    <ESCP_Crime_Released>{0} has served their sentence and been sent home.</ESCP_Crime_Released>
+    <ESCP_Crime_Witnessed>Someone talked. {0} has put a bounty of {1} on your people.</ESCP_Crime_Witnessed>
+    <ESCP_Crime_PayCommand>Pay bounty ({0} silver)</ESCP_Crime_PayCommand>
+    <ESCP_Crime_PayCommandDesc>Pay off your bounty with {0} using silver carried by this caravan.</ESCP_Crime_PayCommandDesc>
+
+    <ESCP_Stone_Touch>Take the sign of {0}</ESCP_Stone_Touch>
+    <ESCP_Stone_AlreadyBlessed>already holds this blessing</ESCP_Stone_AlreadyBlessed>
+    <ESCP_Stone_Blessed>{0} now carries the {1}.</ESCP_Stone_Blessed>
+
+</LanguageData>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- A building a pawn can use once. It rolls a random skill and raises it, then disappears. -->
+
+    <ThingDef ParentName="BuildingBase">
+        <defName>ESCP_Example_Skyshard</defName>
+        <label>skyshard</label>
+        <description>A fragment of Aetherius. Whoever touches it learns something, and it crumbles afterward.</description>
+        <graphicData>
+            <texPath>Things/Item/Special/MechSerumHealer</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <pathCost>30</pathCost>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Flammability>0</Flammability>
+        </statBases>
+        <building>
+            <deconstructible>false</deconstructible>
+            <claimable>false</claimable>
+        </building>
+        <comps>
+            <li Class="CompProperties_Usable">
+                <useJob>UseItem</useJob>
+                <useLabel>Use {0_label}</useLabel>
+                <showUseGizmo>true</showUseGizmo>
+            </li>
+            <li Class="ESCP_Skyshards.CompProperties_UseEffectSkyshard" />
+            <li Class="CompProperties_UseEffectDestroySelf" />
+        </comps>
+    </ThingDef>
+
+</Defs>

@@ -1,0 +1,105 @@
+using RimWorld.Planet;
+using Verse.AI.Group;
+
+namespace ESCP.Core.RadiantQuests;
+
+public class QuestPart_SpawnRaiders : QuestPart
+{
+    public string inSignal;
+
+    public List<Pawn> pawns;
+
+    public int mapTile;
+    public bool spawnOnEdge;
+
+    public IntVec3 cell = IntVec3.Invalid;
+    public int radius = 20;
+
+    private bool spawned;
+    private MapParent mapParent;
+    public override IEnumerable<GlobalTargetInfo> QuestLookTargets
+    {
+        get
+        {
+            foreach (GlobalTargetInfo questLookTarget in base.QuestLookTargets)
+            {
+                yield return questLookTarget;
+            }
+
+        }
+    }
+
+    public override void Notify_QuestSignalReceived(Signal signal)
+    {
+        mapParent = Find.World.worldObjects.MapParentAt(mapTile);
+        base.Notify_QuestSignalReceived(signal);
+        if (!(signal.tag == inSignal) || mapParent?.Map == null || pawns.NullOrEmpty())
+        {
+            return;
+        }
+
+        IntVec3 location = cell.IsValid ? cell : (spawnOnEdge ? default : mapParent.Map.Center);
+        if (spawnOnEdge && !cell.IsValid)
+        {
+            TryFindWalkInSpot(mapParent.Map, out location);
+        }
+        foreach (Pawn pawn in pawns)
+        {
+            if (!RCellFinder.TryFindRandomCellNearWith(location, (IntVec3 c) => c.Standable(mapParent.Map), mapParent.Map, out var result, radius))
+            {
+                break;
+            }
+            GenSpawn.Spawn(pawn, result, mapParent.Map);
+        }
+        Lord lord = LordMaker.MakeNewLord(pawns[0].Faction, new LordJob_AssaultColony(pawns[0].Faction, true, true, true, true, true, true, true), mapParent.Map, pawns);
+
+        spawned = true;
+
+    }
+
+    public override bool QuestPartReserves(Pawn p)
+    {
+        return pawns != null && pawns.Contains(p);
+    }
+
+    public override void ExposeData()
+    {
+        base.ExposeData();
+        Scribe_Values.Look(ref inSignal, "inSignal");
+        Scribe_Values.Look(ref spawned, "spawned", defaultValue: false);
+        Scribe_Collections.Look(ref pawns, "pawns", LookMode.Reference);
+        Scribe_References.Look(ref mapParent, "mapParent");
+        Scribe_Values.Look(ref cell, "cell");
+        Scribe_Values.Look(ref mapTile, "mapTile");
+        Scribe_Values.Look(ref spawnOnEdge, "spawnOnEdge");
+        Scribe_Values.Look(ref radius, "radius", 20);
+
+    }
+        
+    private bool TryFindWalkInSpot(Map map, out IntVec3 spawnSpot)
+    {
+        if (CellFinder.TryFindRandomEdgeCellWith((IntVec3 c) => !c.Fogged(map) && map.reachability.CanReachColony(c), map, CellFinder.EdgeRoadChance_Neutral, out spawnSpot))
+        {
+            return true;
+        }
+        if (CellFinder.TryFindRandomEdgeCellWith((IntVec3 c) => !c.Fogged(map), map, CellFinder.EdgeRoadChance_Neutral, out spawnSpot))
+        {
+            return true;
+        }
+        if (CellFinder.TryFindRandomEdgeCellWith((IntVec3 c) => true, map, CellFinder.EdgeRoadChance_Neutral, out spawnSpot))
+        {
+            return true;
+        }
+        return false;
+    }
+    public override void AssignDebugData()
+    {
+        base.AssignDebugData();
+        inSignal = "DebugSignal" + Rand.Int;
+        if (Find.AnyPlayerHomeMap != null)
+        {
+            mapParent = Find.RandomPlayerHomeMap.Parent;
+            pawns = new List<Pawn>() { PawnGenerator.GeneratePawn(PawnKindDefOf.Beggar)};
+        }
+    }
+}

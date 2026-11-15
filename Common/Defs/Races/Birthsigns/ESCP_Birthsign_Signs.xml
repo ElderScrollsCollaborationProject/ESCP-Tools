@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<HediffDef ParentName="ESCP_BirthsignBase">
+		<defName>ESCP_Birthsign_TheRitual</defName>
+		<label>birthsign (The Ritual)</label>
+		<description>Those born under the sign of The Ritual are said to be blessed by Mara. They are able to instantly restore their health once per day, and can make insectoids flee in terror.\n\n&lt;color=#E5E54C&gt;Blessed Word&lt;/color&gt;\nOnce a day, make an insectoid flee in terror for 30 seconds.\n\n&lt;color=#E5E54C&gt;Mara's Gift&lt;/color&gt;\nOnce every 15 days, instantly heal up to 100 points of damage across random wounds.</description>
+		<descriptionShort>Those born under the sign of The Ritual are said to be blessed by Mara. They are able to instantly restore their health once per day, and can make insectoids flee in terror.</descriptionShort>
+		<descriptionHyperlinks>
+			<AbilityDef>ESCP_BirthsignAbility_BlessedWord</AbilityDef>
+			<AbilityDef>ESCP_BirthsignAbility_MarasGift</AbilityDef>
+		</descriptionHyperlinks>
+		<comps>
+			<li Class="HediffCompProperties_GiveAbility">
+				<abilityDefs>
+					<li>ESCP_BirthsignAbility_BlessedWord</li>
+					<li>ESCP_BirthsignAbility_MarasGift</li>
+				</abilityDefs>
+			</li>
+		</comps>
+	</HediffDef>
+	<HediffDef ParentName="ESCP_BirthsignBase">
+		<defName>ESCP_Birthsign_TheLover</defName>
+		<label>birthsign (The Lover)</label>
+		<description>Those born under the sign of The Lover are both nimble and accurate, and are able to leave other pawns paralyzed.\n\n&lt;color=#E5E54C&gt;Mooncalf&lt;/color&gt;\nMelee hit chance is increased by 2.5 points.\nMelee dodge chance is increased by 2.5 points.\nShooting accuracy is increased by 2.5 points.\n\n&lt;color=#E5E54C&gt;Lover's Kiss&lt;/color&gt;\nOnce every 15 days, stun a target for a lengthy amount of time, fatiguing self slightly in the process.</description>
+		<descriptionShort>Those born under the sign of The Lover are both nimble and accurate, and are able to leave other pawns paralyzed.</descriptionShort>
+		<descriptionHyperlinks>
+			<AbilityDef>ESCP_BirthsignAbility_LoversKiss</AbilityDef>
+		</descriptionHyperlinks>
+		<stages>
+			<li>
+				<statOffsets>
+					<MeleeHitChance>2.5</MeleeHitChance>
+					<MeleeDodgeChance>2.5</MeleeDodgeChance>
+					<ShootingAccuracyPawn>2.5</ShootingAccuracyPawn>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_GiveAbility">
+				<abilityDef>ESCP_BirthsignAbility_LoversKiss</abilityDef>
+			</li>
+		</comps>
+	</HediffDef>
+	<HediffDef ParentName="ESCP_BirthsignBase">
+		<defName>ESCP_Birthsign_TheLord</defName>
+		<label>birthsign (The Lord)</label>
+		<description>Those born under the sign of The Lord are able to quickly restore health, but are highly susceptible to flame.\n\n&lt;color=#E5E54C&gt;Blood of the North&lt;/color&gt;\nOnce a day, increase the casters wound healing rate for 30 seconds.\n\n&lt;color=#E5E54C&gt;Trollkin&lt;/color&gt;\nFlammability is increased by 100%.</description>
+		<descriptionShort>Those born under the sign of The Lord are able to quickly restore health, but are highly susceptible to flame.</descriptionShort>
+		<descriptionHyperlinks>
+			<AbilityDef>ESCP_BirthsignAbility_BloodOfTheNorth</AbilityDef>
+		</descriptionHyperlinks>
+		<stages>
+			<li>
+				<statOffsets>
+					<Flammability>1</Flammability>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_GiveAbility">
+				<abilityDef>ESCP_BirthsignAbility_BloodOfTheNorth</abilityDef>
+			</li>
+		</comps>
+	</HediffDef>
+	<HediffDef ParentName="ESCP_BirthsignBase">
+		<defName>ESCP_Birthsign_TheMage</defName>
+		<label>birthsign (The Mage)</label>
+		<description>Those born under the sign of The Mage are adept at utilizing psycasts, though they are often easily distracted, and tend to be somewhat arrogant.\n\n&lt;color=#E5E54C&gt;Fay&lt;/color&gt;\nMaximum neural heat limit is increased by 50% of the pawns Intellectual skill.</description>
+		<descriptionShort>Those born under the sign of The Mage are adept at utilizing psycasts, though they are often easily distracted, and tend to be somewhat arrogant.</descriptionShort>
+		<comps>
+			<li Class="ESCP_Birthsigns_Abilities.HediffCompProperties_ScaledStatOffset" MayRequire="Ludeon.RimWorld.Royalty">
+				<skillDef>Intellectual</skillDef>
+				<statDef>PsychicEntropyMax</statDef>
+				<factor>0.5</factor>
+			</li>
+		</comps>
+	</HediffDef>
+	<HediffDef ParentName="ESCP_BirthsignBase">
+		<defName>ESCP_Birthsign_TheShadow</defName>
+		<label>birthsign (The Shadow)</label>
+		<description>Those born under the sign of The Shadow are able to blend into their surroundings at a moment's notice.\n\n&lt;color=#E5E54C&gt;Moonshadow&lt;/color&gt;\nOnce every 15 days, turn the caster completely invisible for 60 seconds.</description>
+		<descriptionShort>Those born under the sign of The Shadow are able to blend into their surroundings at a moment's notice.</descriptionShort>
+		<descriptionHyperlinks>
+			<AbilityDef>ESCP_BirthsignAbility_Moonshadow</AbilityDef>
+		</descriptionHyperlinks>
+		<comps>
+			<li Class="HediffCompProperties_GiveAbility">
+				<abilityDef>ESCP_BirthsignAbility_Moonshadow</abilityDef>
+			</li>
+		</comps>
+	</HediffDef>
+	<HediffDef ParentName="ESCP_BirthsignBase">
+		<defName>ESCP_Birthsign_TheSteed</defName>
+		<label>birthsign (The Steed)</label>
+		<description>Those born under the sign of The Steed are masters of moving from one place to the other, though they tend to become restless easily.\n\n&lt;color=#E5E54C&gt;Charioteer&lt;/color&gt;\nThe moving capacity is increased by 25%.</description>
+		<descriptionShort>Those born under the sign of The Steed are masters of moving from one place to the other, though they tend to become restless easily.</descriptionShort>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef ParentName="ESCP_BirthsignBase">
+		<defName>ESCP_Birthsign_TheApprentice</defName>
+		<label>birthsign (The Apprentice)</label>
+		<description>Those born under the sign of The Apprentice are highly skilled at utilizing psycasts. Though this is usually a double-edged sword, as they often have an increased sensitivity to psychic energy.\n\n&lt;color=#E5E54C&gt;Elfborn&lt;/color&gt;\nMaximum neural heat limit is increased by 150% of the pawns Intellectual skill.\nPsychic sensitivity is increased by 50%, this bonus does not increase maximum neural heat.</description>
+		<descriptionShort>Those born under the sign of The Apprentice are highly skilled at utilizing psycasts. Though this is usually a double-edged sword, as they often have an increased sensitivity to psychic energy.</descriptionShort>
+		<stages>
+			<li>
+				<statOffsets>
+					<PsychicSensitivity>0.5</PsychicSensitivity>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="ESCP_Birthsigns_Abilities.HediffCompProperties_ScaledStatOffset" MayRequire="Ludeon.RimWorld.Royalty">
+				<skillDef>Intellectual</skillDef>
+				<statDef>PsychicEntropyMax</statDef>
+				<factor>1.5</factor>
+			</li>
+		</comps>
+	</HediffDef>
+	<HediffDef ParentName="ESCP_BirthsignBase">
+		<defName>ESCP_Birthsign_TheWarrior</defName>
+		<label>birthsign (The Warrior)</label>
+		<description>Those born under the sign of The Warrior are naturally gifted with melee weapons, and are able to hit even the most nimble of targets.\n\n&lt;color=#E5E54C&gt;Warwyrd&lt;/color&gt;\nMelee hit chance is increased by 10 points.</description>
+		<descriptionShort>Those born under the sign of The Warrior are naturally gifted with melee weapons, and are able to hit even the most nimble of targets.</descriptionShort>
+		<descriptionHyperlinks>
+		</descriptionHyperlinks>
+		<stages>
+			<li>
+				<statOffsets>
+					<MeleeHitChance>10</MeleeHitChance>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef ParentName="ESCP_BirthsignBase">
+		<defName>ESCP_Birthsign_TheLady</defName>
+		<label>birthsign (The Lady)</label>
+		<description>Those born under the sign of The Lady are said to be some of the most caring and tolerant. They can solve many situations with words alone, and are tireless in their quest to help others.\n\n&lt;color=#E5E54C&gt;Lady's Favor&lt;/color&gt;\nNegotiation ability is increased by 25%.\nTrade prices are improved by 25%.\nSocial impact is increased by 25%.\n\n&lt;color=#E5E54C&gt;Lady's Grace&lt;/color&gt;\nFatigue gain is decreased by 25%.</description>
+		<descriptionShort>Those born under the sign of The Lady are said to be some of the most caring and tolerant. They can solve many situations with words alone, and are tireless in their quest to help others.</descriptionShort>
+		<descriptionHyperlinks>
+		</descriptionHyperlinks>
+		<stages>
+			<li>
+				<restFallFactor>0.75</restFallFactor>
+				<statOffsets>
+					<NegotiationAbility>0.25</NegotiationAbility>
+					<TradePriceImprovement>0.25</TradePriceImprovement>
+					<SocialImpact>0.25</SocialImpact>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef ParentName="ESCP_BirthsignBase">
+		<defName>ESCP_Birthsign_TheTower</defName>
+		<label>birthsign (The Tower)</label>
+		<description>Those born under the sign of The Tower are able to discover valuable items where others would not even consider looking.\n\n&lt;color=#E5E54C&gt;Tower Key&lt;/color&gt;\nOnce every 15 days, discover the location of an item stash.</description>
+		<descriptionShort>Those born under the sign of The Tower are able to discover valuable items where others would not even consider looking.</descriptionShort>
+		<descriptionHyperlinks>
+			<AbilityDef>ESCP_BirthsignAbility_TowerKey</AbilityDef>
+		</descriptionHyperlinks>
+		<comps>
+			<li Class="HediffCompProperties_GiveAbility">
+				<abilityDef>ESCP_BirthsignAbility_TowerKey</abilityDef>
+			</li>
+		</comps>
+	</HediffDef>
+	<HediffDef ParentName="ESCP_BirthsignBase">
+		<defName>ESCP_Birthsign_TheAtronach</defName>
+		<label>birthsign (The Atronach)</label>
+		<description>Those born under the sign of The Atronach are among the most dangerous of psycasters, though they are unable to dissipate neural heat on their own.\n\n&lt;color=#E5E54C&gt;Wormburn&lt;/color&gt;\nMaximum neural heat limit is increased by 200% of the pawns Intellectual skill.\nReduces neural heat by 50% of damage taken.\nCompletely unable to dissipate neural heat over time.</description>
+		<descriptionShort>Those born under the sign of The Atronach are among the most dangerous of psycasters, though they are unable to dissipate neural heat on their own.</descriptionShort>
+		<stages>
+			<li>
+				<statFactors>
+					<PsychicEntropyRecoveryRate MayRequire="Ludeon.RimWorld.Royalty">0</PsychicEntropyRecoveryRate>
+				</statFactors>
+			</li>
+		</stages>
+		<comps>
+			<li Class="ESCP_Birthsigns_Abilities.HediffCompProperties_ScaledStatOffset" MayRequire="Ludeon.RimWorld.Royalty">
+				<skillDef>Intellectual</skillDef>
+				<statDef>PsychicEntropyMax</statDef>
+				<factor>2</factor>
+			</li>
+			<li Class="ESCP_Birthsigns_Abilities.HediffCompProperties_DissipateNeuralHeat" MayRequire="Ludeon.RimWorld.Royalty">
+				<chance>1</chance>
+				<factor>0.5</factor>
+			</li>
+		</comps>
+	</HediffDef>
+	<HediffDef ParentName="ESCP_BirthsignBase">
+		<defName>ESCP_Birthsign_TheThief</defName>
+		<label>birthsign (The Thief)</label>
+		<description>Those born under the sign of The Thief are prone to taking risks, though seem to never fall victim to the dangers those risks impose. Many believe these individuals to be cursed, that their luck will eventually fail at the worst time.\n\n&lt;color=#E5E54C&gt;Akaviri Danger Sense&lt;/color&gt;\nMelee dodge chance is increased by 10 points.\nTrap spring chance is decreased by 10%.</description>
+		<descriptionShort>Those born under the sign of The Thief are prone to taking risks, though seem to never fall victim to the dangers those risks impose. Many believe these individuals to be cursed, that their luck will eventually fail at the worst time.</descriptionShort>
+		<descriptionHyperlinks>
+		</descriptionHyperlinks>
+		<stages>
+			<li>
+				<statOffsets>
+					<MeleeDodgeChance>10</MeleeDodgeChance>
+					<PawnTrapSpringChance>-0.1</PawnTrapSpringChance>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef ParentName="ESCP_BirthsignBase">
+		<defName>ESCP_Birthsign_TheSerpent</defName>
+		<label>birthsign (The Serpent)</label>
+		<description>Those born under the wandering sign of The Serpent seemingly have nothing in common. Some believe they are blessed, others that they are cursed.\n\n&lt;color=#E5E54C&gt;Star Curse&lt;/color&gt;\nOnce a day, inflict a deadly poison on a target, causing constant toxic buildup for 30 seconds. The caster is also poisoned, causing constant toxic buildup for 10 seconds.</description>
+		<descriptionShort>Those born under the wandering sign of The Serpent seemingly have nothing in common. Some believe they are blessed, others that they are cursed.</descriptionShort>
+		<descriptionHyperlinks>
+			<AbilityDef>ESCP_BirthsignAbility_StarCurse</AbilityDef>
+			<HediffDef>ESCP_Birthsign_StarCurse</HediffDef>
+		</descriptionHyperlinks>
+		<comps>
+			<li Class="HediffCompProperties_GiveAbility">
+				<abilityDef>ESCP_BirthsignAbility_StarCurse</abilityDef>
+			</li>
+		</comps>
+	</HediffDef>
+</Defs>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ResearchProjectDef>
+        <defName>ESCP_Research_Bonemold</defName>
+        <label>bonemold</label>
+        <description>Learn to grind bone and chitin and bind them with resin into bonemold, the light and durable armoring material of Morrowind. Bonemold can be made at a butcher table or a crafting spot.</description>
+        <baseCost>300</baseCost>
+        <techLevel>Medieval</techLevel>
+        <researchViewX>0.00</researchViewX>
+        <researchViewY>1.00</researchViewY>
+        <tab>ESCP_Research</tab>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>ESCP_Research_Smelting</defName>
+        <label>Tamrielic smelting</label>
+        <description>Learn to build a smelter and work the ores of Tamriel, from common iron and copper to ebony, malachite and adamantium.</description>
+        <baseCost>600</baseCost>
+        <techLevel>Medieval</techLevel>
+        <researchViewX>0.00</researchViewX>
+        <researchViewY>0.00</researchViewY>
+        <tab>ESCP_Research</tab>
+        <prerequisites>
+            <li>Smithing</li>
+        </prerequisites>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>ESCP_Research_Alloys</defName>
+        <label>alloying</label>
+        <description>Learn to blend metals the way Tamriel's smiths do: iron with corundum for steel, copper with tin for bronze and copper with zinc for brass.</description>
+        <baseCost>800</baseCost>
+        <techLevel>Medieval</techLevel>
+        <researchViewX>1.00</researchViewX>
+        <researchViewY>0.00</researchViewY>
+        <tab>ESCP_Research</tab>
+        <prerequisites>
+            <li>ESCP_Research_Smelting</li>
+        </prerequisites>
+    </ResearchProjectDef>
+
+</Defs>

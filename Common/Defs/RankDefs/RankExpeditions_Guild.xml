@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingSetMakerDef>
+        <defName>ESCP_GuildExpeditionLootMaker</defName>
+        <root Class="ThingSetMaker_MarketValue">
+            <fixedParams>
+                <filter>
+                    <thingDefs>
+                        <li>ESCP_Currency_Septims</li>
+                        <li>MedicineHerbal</li>
+                        <li>ESCP_EnchantScroll_Fiery</li>
+                    </thingDefs>
+                </filter>
+            </fixedParams>
+        </root>
+    </ThingSetMakerDef>
+
+    <ESCP.Ranks.RankExpeditionDef>
+        <defName>ESCP_Expedition_Guild_Novice</defName>
+        <label>guild errand</label>
+        <description>A short trip on guild business, close enough to home to come back from.</description>
+        <durationDays>2~4</durationDays>
+        <xpReward>
+            <Melee>600</Melee>
+            <Social>300</Social>
+        </xpReward>
+        <lootMaker>ESCP_GuildExpeditionLootMaker</lootMaker>
+        <lootMarketValueRange>60~200</lootMarketValueRange>
+        <failureChance>0.05</failureChance>
+        <returnFlavorKeys>
+            <li>ESCP_Expedition_Return_Errand</li>
+        </returnFlavorKeys>
+    </ESCP.Ranks.RankExpeditionDef>
+
+    <ESCP.Ranks.RankExpeditionDef>
+        <defName>ESCP_Expedition_Guild_Veteran</defName>
+        <label>long guild contract</label>
+        <description>Weeks away on serious work for the guild, with real danger and real pay.</description>
+        <durationDays>5~9</durationDays>
+        <xpReward>
+            <Melee>1500</Melee>
+            <Intellectual>700</Intellectual>
+        </xpReward>
+        <lootMaker>ESCP_GuildExpeditionLootMaker</lootMaker>
+        <lootMarketValueRange>300~700</lootMarketValueRange>
+        <failureChance>0.12</failureChance>
+        <returnFlavorKeys>
+            <li>ESCP_Expedition_Return_Contract</li>
+        </returnFlavorKeys>
+    </ESCP.Ranks.RankExpeditionDef>
+
+</Defs>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <GoodwillSituationDef Name="ESCP_GoodwillSituation_FactionTag" Abstract="True">
+        <workerClass>ESCP_RaceTools.GoodWillWorker_UniversalFactionTagCompatibility</workerClass>
+    </GoodwillSituationDef>
+
+    <GoodwillSituationDef Name="ESCP_GoodwillSituation_Precept" Abstract="True">
+        <workerClass>ESCP_RaceTools.GoodWillWorker_PreceptAndFactionTagCompatibility</workerClass>
+    </GoodwillSituationDef>
+
+    <GoodwillSituationDef ParentName="ESCP_GoodwillSituation_FactionTag">
+        <defName>ESCP_Goodwill_AldmeriKinship</defName>
+        <label>Aldmeri Dominion</label>
+        <naturalGoodwillOffset>10</naturalGoodwillOffset>
+        <modExtensions>
+            <li Class="ESCP_RaceTools.FactionGoodwillProperties">
+                <FactionTagA>ESCP_Aldmeri</FactionTagA>
+                <FactionTagB>ESCP_Aldmeri</FactionTagB>
+            </li>
+        </modExtensions>
+    </GoodwillSituationDef>
+
+    <GoodwillSituationDef ParentName="ESCP_GoodwillSituation_FactionTag">
+        <defName>ESCP_Goodwill_TalosBan</defName>
+        <label>Talos worship</label>
+        <naturalGoodwillOffset>-25</naturalGoodwillOffset>
+        <modExtensions>
+            <li Class="ESCP_RaceTools.FactionGoodwillProperties">
+                <FactionTagA>ESCP_Thalmor</FactionTagA>
+                <FactionTagB>ESCP_TalosWorship</FactionTagB>
+            </li>
+        </modExtensions>
+    </GoodwillSituationDef>
+
+    <GoodwillSituationDef ParentName="ESCP_GoodwillSituation_FactionTag">
+        <defName>ESCP_Goodwill_CivilWar</defName>
+        <label>Skyrim civil war</label>
+        <naturalGoodwillOffset>-15</naturalGoodwillOffset>
+        <modExtensions>
+            <li Class="ESCP_RaceTools.FactionGoodwillProperties">
+                <FactionTagA>ESCP_TalosWorship</FactionTagA>
+                <FactionTagB>ESCP_Empire</FactionTagB>
+            </li>
+        </modExtensions>
+    </GoodwillSituationDef>
+
+    <GoodwillSituationDef ParentName="ESCP_GoodwillSituation_FactionTag">
+        <defName>ESCP_Goodwill_GreatHouseKinship</defName>
+        <label>Great House kinship</label>
+        <naturalGoodwillOffset>10</naturalGoodwillOffset>
+        <modExtensions>
+            <li Class="ESCP_RaceTools.FactionGoodwillProperties">
+                <FactionTagA>ESCP_GreatHouse</FactionTagA>
+                <FactionTagB>ESCP_GreatHouse</FactionTagB>
+            </li>
+        </modExtensions>
+    </GoodwillSituationDef>
+
+    <GoodwillSituationDef ParentName="ESCP_GoodwillSituation_FactionTag">
+        <defName>ESCP_Goodwill_CrownsForebears</defName>
+        <label>Crowns and Forebears</label>
+        <naturalGoodwillOffset>-15</naturalGoodwillOffset>
+        <modExtensions>
+            <li Class="ESCP_RaceTools.FactionGoodwillProperties">
+                <FactionTagA>ESCP_Crowns</FactionTagA>
+                <FactionTagB>ESCP_Forebears</FactionTagB>
+            </li>
+        </modExtensions>
+    </GoodwillSituationDef>
+
+    <GoodwillSituationDef ParentName="ESCP_GoodwillSituation_Precept">
+        <defName>ESCP_Goodwill_MoonSugarProhibited</defName>
+        <label>forbids moon sugar</label>
+        <naturalGoodwillOffset>-10</naturalGoodwillOffset>
+        <modExtensions>
+            <li Class="ESCP_RaceTools.FactionGoodwillProperties">
+                <FactionTagA>ESCP_MoonSugar</FactionTagA>
+                <preceptDef>DrugUse_Prohibited</preceptDef>
+            </li>
+        </modExtensions>
+    </GoodwillSituationDef>
+
+    <GoodwillSituationDef>
+        <defName>ESCP_Goodwill_GreenPact</defName>
+        <label>breaks the Green Pact</label>
+        <workerClass>ESCP_RaceTools.GoodWillWorker_UniversalFactionTagCompatibility_Inverted</workerClass>
+        <naturalGoodwillOffset>-5</naturalGoodwillOffset>
+        <modExtensions>
+            <li Class="ESCP_RaceTools.FactionGoodwillProperties">
+                <FactionTagA>ESCP_GreenPact</FactionTagA>
+                <preceptDef>TreeCutting_Prohibited</preceptDef>
+            </li>
+        </modExtensions>
+    </GoodwillSituationDef>
+
+</Defs>

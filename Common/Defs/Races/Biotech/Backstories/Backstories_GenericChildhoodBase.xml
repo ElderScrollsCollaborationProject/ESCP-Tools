@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<BackstoryDef Name="ESCP_GenericBackstoryChildhood_Base" Abstract="True">
+		<slot>Childhood</slot>
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<spawnCategories>
+			<li>ESCP_GenericBackstory_ChildhoodMedieval</li>
+		</spawnCategories>
+	</BackstoryDef>
+	
+	<BackstoryDef Name="ESCP_GenericBackstoryChildhood_TribalBase" Abstract="True">
+		<slot>Childhood</slot>
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<spawnCategories>
+			<li>ESCP_GenericBackstory_ChildhoodTribal</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+	<BackstoryDef Name="ESCP_GenericBackstoryChildhood_HighClassBase" Abstract="True">
+		<slot>Childhood</slot>
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<spawnCategories>
+			<li>ESCP_GenericBackstory_ChildhoodHighClass</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+	<BackstoryDef Name="ESCP_GenericBackstoryChildhood_ImperialFactionBase" Abstract="True">
+		<slot>Childhood</slot>
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<spawnCategories>
+			<li>ESCP_GenericBackstory_ChildhoodImperialFaction</li>
+		</spawnCategories>
+	</BackstoryDef>
+</Defs>

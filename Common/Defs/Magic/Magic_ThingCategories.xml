@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingCategoryDef>
+        <defName>ESCP_SpellTomes</defName>
+        <label>spell tomes</label>
+        <parent>Items</parent>
+    </ThingCategoryDef>
+
+</Defs>

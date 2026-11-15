@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <WorldObjectDef>
+        <defName>ESCP_Patrol</defName>
+        <label>patrol</label>
+        <description>Soldiers on the road, keeping watch over their faction's lands.</description>
+        <worldObjectClass>ESCP.Patrols.WorldObject_Patrol</worldObjectClass>
+        <texture>World/WorldObjects/Caravan</texture>
+        <useDynamicDrawer>true</useDynamicDrawer>
+        <expandingIcon>true</expandingIcon>
+        <expandingIconTexture>World/WorldObjects/Expanding/Caravan</expandingIconTexture>
+        <expandingIconPriority>90</expandingIconPriority>
+        <canHaveFaction>true</canHaveFaction>
+    </WorldObjectDef>
+
+</Defs>

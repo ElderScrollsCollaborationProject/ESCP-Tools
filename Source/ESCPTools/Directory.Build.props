@@ -1,0 +1,8 @@
+<Project>
+
+  <PropertyGroup>
+    <RimVersion Condition="'$(RimVersion)' == ''">1.6</RimVersion>
+    <BaseIntermediateOutputPath>obj\$(RimVersion)\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+
+</Project>
