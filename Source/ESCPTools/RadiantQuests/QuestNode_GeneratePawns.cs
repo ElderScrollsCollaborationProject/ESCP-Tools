@@ -1,4 +1,5 @@
 using RimWorld.QuestGen;
+using UnityEngine;
 
 namespace ESCP.Core.RadiantQuests;
 
@@ -28,23 +29,29 @@ public class QuestNode_GeneratePawns : QuestNode
     private void SetVars(Slate slate)
     {
         Faction settlementFaction = faction.GetValue(slate);
-        float points = slate.Get<int>("points", 100);
-        pointsToUse.TryGetValue(slate, out string pointsString);
-        float.TryParse(pointsString, out points);
-            
+        float points = slate.Get("points", 100f);
+        if (pointsToUse.TryGetValue(slate, out string pointsString) && float.TryParse(pointsString, out float parsed))
+            points = parsed;
+
         PawnGroupKindDef pawnGroup = DefDatabase<PawnGroupKindDef>.GetNamed(pawnGroupKind.GetValue(slate), false);
-        if(pawnGroup == null || !settlementFaction.def.pawnGroupMakers.Any(c => c.kindDef.defName == pawnGroup.defName))
-        {
+        if (pawnGroup == null || !settlementFaction.def.pawnGroupMakers.Any(c => c.kindDef == pawnGroup))
             pawnGroup = PawnGroupKindDefOf.Combat;
+        if (settlementFaction.def.pawnGroupMakers.NullOrEmpty() || !settlementFaction.def.pawnGroupMakers.Any(c => c.kindDef == pawnGroup))
+        {
+            slate.Set(storeAs.GetValue(slate), new List<Pawn>());
+            return;
         }
         List<Pawn> Pawns = PawnGroupMakerUtility.GeneratePawns(new PawnGroupMakerParms
         {
-            groupKind = pawnGroup != null ? pawnGroup : PawnGroupKindDefOf.Peaceful,
-            points = points,
+            groupKind = pawnGroup,
+            points = Mathf.Max(points, settlementFaction.def.MinPointsToGeneratePawnGroup(pawnGroup)),
             faction = settlementFaction
         }).ToList();
         foreach (Pawn pawn in Pawns)
-            Find.WorldPawns.PassToWorld(pawn, RimWorld.Planet.PawnDiscardDecideMode.KeepForever);
+        {
+            if (!Find.WorldPawns.Contains(pawn))
+                Find.WorldPawns.PassToWorld(pawn, RimWorld.Planet.PawnDiscardDecideMode.KeepForever);
+        }
         slate.Set(storeAs.GetValue(slate), Pawns);
     }
 }

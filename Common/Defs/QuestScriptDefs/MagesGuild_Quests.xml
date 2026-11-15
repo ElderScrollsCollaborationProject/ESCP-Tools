@@ -136,7 +136,7 @@
                                 <parms>
                                     <allowGoodwill>true</allowGoodwill>
                                     <allowRoyalFavor>false</allowRoyalFavor>
-                                    <rewardValue>$(rewardValue * 1.3)</rewardValue>
+                                    <rewardValue>$($rewardValue * 1.3)</rewardValue>
                                 </parms>
                             </li>
                             <li Class="ESCP.Guilds.QuestNode_GuildReputation">
@@ -294,7 +294,7 @@
                                 <parms>
                                     <allowGoodwill>true</allowGoodwill>
                                     <allowRoyalFavor>false</allowRoyalFavor>
-                                    <rewardValue>$(rewardValue * 0.4)</rewardValue>
+                                    <rewardValue>$($rewardValue * 0.4)</rewardValue>
                                 </parms>
                             </li>
                             <li Class="ESCP.Guilds.QuestNode_GuildReputation">
