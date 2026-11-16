@@ -76,7 +76,7 @@
 
     <TerrainDef Abstract="True" ParentName="FloorBase" Name="ESCP_ChitinTileBase">
         <label>chitin tiles</label>
-        <description>Chitin plates roughly assembled to form a flooring. Takes a rather long time to place. Not the worst looking floor. Can be dyed a number of colours based on various invertebrates.</description>
+        <description>Chitin plates roughly assembled to form a flooring. Takes a rather long time to place. It can be dyed in several colors using pigments from various insects.</description>
         <texturePath>Things/Terrain/Surfaces/ESCP_ChitinFloor</texturePath>
         <edgeType>Hard</edgeType>
         <renderPrecedence>220</renderPrecedence>
@@ -210,7 +210,7 @@
 
     <TerrainDef Abstract="True" ParentName="FloorBase" Name="ESCP_PolishedChitinTileBase">
         <label>polished chitin tiles</label>
-        <description>Chitin plates meticulously assembled to form a flooring, and then polished to perfection. Takes a very long time to place, but is well worth the effort. Can be dyed a number of colours based on various invertebrates.</description>
+        <description>Chitin plates fitted together and polished to a hard shine. It takes a long time to lay. It can be dyed in several colors using pigments from various insects.</description>
         <texturePath>Things/Terrain/Surfaces/ESCP_ChitinFloorPolished</texturePath>
         <edgeType>Hard</edgeType>
         <renderPrecedence>220</renderPrecedence>
