@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <QuestScriptDef>
+    <QuestScriptDef MayRequire="Rick.ESCP.MagesGuild">
         <defName>ESCP_Quest_MagesGuild_OutpostRecovery</defName>
         <rootSelectionWeight>1.0</rootSelectionWeight>
         <rootMinPoints>250</rootMinPoints>
@@ -164,7 +164,7 @@
     </QuestScriptDef>
 
 
-    <QuestScriptDef>
+    <QuestScriptDef MayRequire="Rick.ESCP.MagesGuild">
         <defName>ESCP_Quest_MagesGuild_TomeRecovery</defName>
         <rootSelectionWeight>0.9</rootSelectionWeight>
         <rootMinPoints>150</rootMinPoints>
@@ -316,7 +316,7 @@
     </QuestScriptDef>
 
 
-    <QuestScriptDef>
+    <QuestScriptDef MayRequire="Rick.ESCP.MagesGuild">
         <defName>ESCP_Quest_MagesGuild_ScholarLoan</defName>
         <rootSelectionWeight>0.7</rootSelectionWeight>
         <rootMinPoints>0</rootMinPoints>

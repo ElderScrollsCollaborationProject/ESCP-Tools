@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <QuestScriptDef>
+    <QuestScriptDef MayRequire="Rick.ESCP.FightersGuild">
         <defName>ESCP_Quest_FightersGuild_CaravanRescue</defName>
         <rootSelectionWeight>1.0</rootSelectionWeight>
         <rootMinPoints>35</rootMinPoints>

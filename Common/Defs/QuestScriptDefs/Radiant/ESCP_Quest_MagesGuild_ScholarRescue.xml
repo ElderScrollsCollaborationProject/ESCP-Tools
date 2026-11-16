@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <QuestScriptDef>
+    <QuestScriptDef MayRequire="Rick.ESCP.MagesGuild">
         <defName>ESCP_Quest_MagesGuild_ScholarRescue</defName>
         <rootSelectionWeight>1.0</rootSelectionWeight>
         <rootMinPoints>50</rootMinPoints>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <QuestScriptDef>
+    <QuestScriptDef MayRequire="Rick.ESCP.FightersGuild">
         <defName>ESCP_Quest_FightersGuild_BountyContract</defName>
         <rootSelectionWeight>1.0</rootSelectionWeight>
         <rootMinPoints>300</rootMinPoints>
@@ -166,7 +166,7 @@
     </QuestScriptDef>
 
 
-    <QuestScriptDef>
+    <QuestScriptDef MayRequire="Rick.ESCP.FightersGuild">
         <defName>ESCP_Quest_FightersGuild_EscortContract</defName>
         <rootSelectionWeight>0.8</rootSelectionWeight>
         <rootMinPoints>200</rootMinPoints>
@@ -327,7 +327,7 @@
     </QuestScriptDef>
 
 
-    <QuestScriptDef>
+    <QuestScriptDef MayRequire="Rick.ESCP.FightersGuild">
         <defName>ESCP_Quest_FightersGuild_CacheRecovery</defName>
         <rootSelectionWeight>0.9</rootSelectionWeight>
         <rootMinPoints>150</rootMinPoints>

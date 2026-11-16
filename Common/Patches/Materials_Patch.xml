@@ -16,20 +16,4 @@
         </value>
     </Operation>
 
-    <Operation Class="PatchOperationAdd">
-        <xpath>/Defs/TraderKindDef[starts-with(defName, "ESCP_")]/stockGenerators</xpath>
-        <value>
-            <li Class="StockGenerator_Category">
-                <categoryDef>ESCP_Resources_Raw</categoryDef>
-                <thingDefCountRange>2~4</thingDefCountRange>
-                <totalPriceRange>150~500</totalPriceRange>
-            </li>
-            <li Class="StockGenerator_Tag">
-                <tradeTag>ESCP_ElementalSalts</tradeTag>
-                <thingDefCountRange>1~2</thingDefCountRange>
-                <countRange>4~12</countRange>
-            </li>
-        </value>
-    </Operation>
-
 </Patch>

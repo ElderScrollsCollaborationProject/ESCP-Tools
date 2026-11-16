@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-    <QuestScriptDef>
+    <QuestScriptDef MayRequire="Rick.ESCP.FightersGuild">
         <defName>ESCP_Quest_FightersGuild_HoldTheVillage</defName>
         <rootSelectionWeight>1.0</rootSelectionWeight>
         <rootMinPoints>50</rootMinPoints>

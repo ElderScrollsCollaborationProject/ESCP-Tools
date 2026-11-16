@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <QuestScriptDef>
+    <QuestScriptDef MayRequire="Rick.ESCP.DarkBrotherhood">
         <defName>ESCP_Quest_DarkBrotherhood_AssassinationContract</defName>
         <rootSelectionWeight>1.0</rootSelectionWeight>
         <rootMinPoints>300</rootMinPoints>
@@ -163,7 +163,7 @@
         </root>
     </QuestScriptDef>
 
-    <QuestScriptDef>
+    <QuestScriptDef MayRequire="Rick.ESCP.DarkBrotherhood">
         <defName>ESCP_Quest_DarkBrotherhood_EliminationOrder</defName>
         <rootSelectionWeight>0.7</rootSelectionWeight>
         <rootMinPoints>200</rootMinPoints>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <QuestScriptDef>
+    <QuestScriptDef MayRequire="Rick.ESCP.ThievesGuild">
         <defName>ESCP_Quest_ThievesGuild_HeistContract</defName>
         <rootSelectionWeight>1.0</rootSelectionWeight>
         <rootMinPoints>200</rootMinPoints>
@@ -202,7 +202,7 @@
         </root>
     </QuestScriptDef>
 
-    <QuestScriptDef>
+    <QuestScriptDef MayRequire="Rick.ESCP.ThievesGuild">
         <defName>ESCP_Quest_ThievesGuild_SmugglingRun</defName>
         <rootSelectionWeight>0.8</rootSelectionWeight>
         <rootMinPoints>150</rootMinPoints>

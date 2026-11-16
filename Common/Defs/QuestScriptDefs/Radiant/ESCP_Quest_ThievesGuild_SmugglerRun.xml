@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <QuestScriptDef>
+    <QuestScriptDef MayRequire="Rick.ESCP.ThievesGuild">
         <defName>ESCP_Quest_ThievesGuild_SmugglerRun</defName>
         <rootSelectionWeight>1.0</rootSelectionWeight>
         <rootMinPoints>50</rootMinPoints>

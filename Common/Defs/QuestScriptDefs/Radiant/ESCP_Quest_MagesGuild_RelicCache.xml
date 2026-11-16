@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <QuestScriptDef>
+    <QuestScriptDef MayRequire="Rick.ESCP.MagesGuild">
         <defName>ESCP_Quest_MagesGuild_RelicCache</defName>
         <rootSelectionWeight>0.9</rootSelectionWeight>
         <rootMinPoints>200</rootMinPoints>
