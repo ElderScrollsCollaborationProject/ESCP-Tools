@@ -61,11 +61,27 @@ public static class RankTrackUtility
         if (candidate.maxHolders > 0 && HolderCount(candidate) >= candidate.maxHolders)
             return false;
 
+        if (HasBlockingHediff(pawn, candidate) != null)
+            return false;
+
         return true;
     }
 
     private static readonly Dictionary<RankTierDef, int> holderCounts = new Dictionary<RankTierDef, int>();
     private static int holderCountTick = -1;
+
+    public static Hediff HasBlockingHediff(Pawn pawn, RankTierDef tier)
+    {
+        if (tier.blockedByHediffs.NullOrEmpty() || pawn.health == null)
+            return null;
+        List<Hediff> hediffs = pawn.health.hediffSet.hediffs;
+        for (int i = 0; i < hediffs.Count; i++)
+        {
+            if (tier.blockedByHediffs.Contains(hediffs[i].def))
+                return hediffs[i];
+        }
+        return null;
+    }
 
     public static bool QuestCompleted(QuestScriptDef def)
     {
@@ -295,6 +311,9 @@ public static class RankTrackUtility
 
         if (newTier.grantHediff != null && pawn.health != null && !pawn.health.hediffSet.HasHediff(newTier.grantHediff))
             pawn.health.AddHediff(newTier.grantHediff);
+
+        if (newTier.permanentHediff != null && pawn.health != null && !pawn.health.hediffSet.HasHediff(newTier.permanentHediff))
+            pawn.health.AddHediff(newTier.permanentHediff);
 
         SyncVanillaRank(pawn, data, newTier);
 

@@ -752,6 +752,12 @@ public class MainTabWindow_RankRoster : MainTabWindow
                 RankTrackUtility.QuestCompleted(option.requiredQuest));
         }
 
+        if (!option.blockedByHediffs.NullOrEmpty())
+        {
+            Hediff blocking = RankTrackUtility.HasBlockingHediff(selectedPawn, option);
+            allMet &= DrawRequirementLine(viewRect, ref curY, "ESCP_Rank_Req_NotHediff".Translate((blocking?.def ?? option.blockedByHediffs[0]).label), blocking == null);
+        }
+
         if (option.maxHolders > 0)
         {
             int holders = RankTrackUtility.HolderCount(option);

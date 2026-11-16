@@ -116,6 +116,7 @@
     <ESCP_TrainingNotEnoughFunds>Not enough coin to pay for training.</ESCP_TrainingNotEnoughFunds>
     <ESCP_Rank_Req_GuildReputation>Guild reputation: {0} / {1}</ESCP_Rank_Req_GuildReputation>
     <ESCP_Rank_Req_Holders>Places taken: {0} / {1}</ESCP_Rank_Req_Holders>
+    <ESCP_Rank_Req_NotHediff>Must not have: {0}</ESCP_Rank_Req_NotHediff>
     <ESCP_Settings_Tab_Options>World</ESCP_Settings_Tab_Options>
     <ESCP_Settings_Tab_Enlistment>Enlistment</ESCP_Settings_Tab_Enlistment>
     <ESCP_Settings_Tab_Races>Races</ESCP_Settings_Tab_Races>

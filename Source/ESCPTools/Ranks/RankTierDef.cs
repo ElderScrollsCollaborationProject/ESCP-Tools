@@ -16,6 +16,8 @@ public class RankTierDef : Def
     public int maxHolders;
     public List<PawnKindDef> holderKinds;
     public HediffDef grantHediff;
+    public HediffDef permanentHediff;
+    public List<HediffDef> blockedByHediffs;
     public List<SkillGain> trainingXpPerHour;
     public RankExpeditionDef expedition;
     public RoyalTitleDef correspondingRoyalTitle;
