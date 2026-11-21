@@ -30,6 +30,11 @@ namespace ESCP_NecromanticThralls
             base.CompExposeData();
             Scribe_Values.Look(ref extraThrallLimit, "ESCP_NecromanticThralls_ExtraLimit");
             Scribe_Collections.Look(ref thrallsList, "ESCP_NecromanticThralls", LookMode.Reference);
+            if (Scribe.mode == LoadSaveMode.PostLoadInit)
+            {
+                thrallsList ??= new List<Pawn>();
+                thrallsList.RemoveAll(p => p == null);
+            }
         }
 
         public int ThrallCount()
@@ -83,9 +88,14 @@ namespace ESCP_NecromanticThralls
 
         public void KillThralls()
         {
-            while (thrallsList.Count() > 0)
+            List<Pawn> thralls = new List<Pawn>(thrallsList);
+            thrallsList.Clear();
+            foreach (Pawn thrall in thralls)
             {
-                thrallsList[0].Kill(null);
+                if (thrall != null && !thrall.Dead)
+                {
+                    thrall.Kill(null);
+                }
             }
         }
 
@@ -122,7 +132,7 @@ namespace ESCP_NecromanticThralls
         {
             base.CompPostTick(ref severityAdjustment);
 
-            if (parent.pawn.Downed && ESCP_NecromanticThralls_ModSettings.ThrallDeathOnDown)
+            if (thrallsList.Count > 0 && parent.pawn.Downed && ESCP_NecromanticThralls_ModSettings.ThrallDeathOnDown)
             {
                 KillThralls();
             }

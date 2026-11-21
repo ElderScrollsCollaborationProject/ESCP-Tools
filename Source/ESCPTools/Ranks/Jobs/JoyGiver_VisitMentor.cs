@@ -8,7 +8,7 @@ public class JoyGiver_VisitMentor : JoyGiver
 
     public override bool CanBeGivenTo(Pawn pawn)
     {
-        if (!base.CanBeGivenTo(pawn))
+        if (RankJobDefOf.ESCP_Option_NoRankTraining.Enabled || !base.CanBeGivenTo(pawn))
             return false;
 
         PawnRankData data = Current.Game.GetComponent<GameComponent_PawnRanks>()?.GetRankData(pawn);

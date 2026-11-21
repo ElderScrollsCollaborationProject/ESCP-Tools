@@ -33,6 +33,15 @@ public static class ApparelUtility_HasPartsToWear_Patch
     }
 }
 
+[HarmonyPatch(typeof(PreceptComp_Apparel), "GiveApparelToPawn")]
+public static class PreceptComp_Apparel_GiveApparelToPawn_Patch
+{
+    public static bool Prefix(Pawn pawn, Precept_Apparel precept)
+    {
+        return ApparelUtility.HasPartsToWear(pawn, precept.apparelDef);
+    }
+}
+
 [HarmonyPatch(typeof(ResearchProjectDef), nameof(ResearchProjectDef.CanStartNow), MethodType.Getter)]
 public static class ResearchProjectDef_CanStartNow_Patch
 {

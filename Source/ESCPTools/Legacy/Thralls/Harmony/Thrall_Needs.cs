@@ -15,11 +15,8 @@ namespace ESCP_NecromanticThralls
         {
             if (ESCP_NecromanticThralls_ModSettings.ThrallDisableNeeds && ThrallUtility.PawnIsThrall(___pawn))
             {
-                if (__instance.def.defName != "TM_Mana" && __instance.def.defName != "TM_Stamina")
-                {
-                    __result = true;
-                    return false;
-                }
+                __result = true;
+                return false;
             }
             return true;
         }
@@ -35,11 +32,8 @@ namespace ESCP_NecromanticThralls
         {
             if (ESCP_NecromanticThralls_ModSettings.ThrallDisableNeeds && ThrallUtility.PawnIsThrall(___pawn))
             {
-                if (__instance.def.defName != "TM_Mana" && __instance.def.defName != "TM_Stamina")
-                {
-                    __result = false;
-                    return false;
-                }
+                __result = false;
+                return false;
             }
             return true;
         }
@@ -55,11 +49,8 @@ namespace ESCP_NecromanticThralls
         {
             if (ESCP_NecromanticThralls_ModSettings.ThrallDisableNeeds && ThrallUtility.PawnIsThrall(___pawn))
             {
-                if (__instance.def.defName != "TM_Mana" && __instance.def.defName != "TM_Stamina")
-                {
-                    __result = __instance.MaxLevel;
-                    return false;
-                }
+                __result = __instance.MaxLevel;
+                return false;
             }
             return true;
         }
@@ -75,11 +66,8 @@ namespace ESCP_NecromanticThralls
         {
             if (ESCP_NecromanticThralls_ModSettings.ThrallDisableNeeds && ThrallUtility.PawnIsThrall(___pawn))
             {
-                if (__instance.def.defName != "TM_Mana" && __instance.def.defName != "TM_Stamina")
-                {
-                    __result = __instance.MaxLevel;
-                    return false;
-                }
+                __result = __instance.MaxLevel;
+                return false;
             }
             return true;
         }

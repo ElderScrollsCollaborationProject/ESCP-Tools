@@ -14,6 +14,8 @@ public static class RankJobDefOf
     public static JobDef ESCP_Job_PunishmentDetail;
     public static JobDef ESCP_Job_FormUp;
 
+    public static Core.ModOptionDef ESCP_Option_NoRankTraining;
+
     static RankJobDefOf()
     {
         DefOfHelper.EnsureInitializedInCtor(typeof(RankJobDefOf));

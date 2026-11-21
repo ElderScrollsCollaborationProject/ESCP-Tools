@@ -17,6 +17,9 @@ namespace ESCP.Sload
         public static ThingDef ESCP_Thing_ThrassianMiasma;
         [MayRequire("Rick.ESCP.Sloads")]
         public static HediffDef ESCP_Hediff_ThrassianPlague;
+        [MayRequireIdeology]
+        [MayRequire("Rick.ESCP.Sloads")]
+        public static PreceptDef ESCP_SloadThrassianImmunity_Immune;
 
         static SloadDefOf()
         {
@@ -55,18 +58,13 @@ namespace ESCP.Sload
             return count;
         }
 
-        public static bool HasPrecept(Pawn pawn, string preceptDefName)
-        {
-            return pawn.Ideo != null && pawn.Ideo.PreceptsListForReading.Any(p => p.def.defName == preceptDefName);
-        }
-
         public static bool CanCatchPlague(Pawn pawn)
         {
             if (!pawn.RaceProps.IsFlesh || ThrallUtility.PawnIsThrall(pawn))
                 return false;
             if (ESCP_RaceTools.RaceProperties.Get(pawn.def)?.thrassianPlagueImmune == true)
                 return false;
-            return !HasPrecept(pawn, "ESCP_SloadThrassianImmunity_Immune");
+            return pawn.Ideo == null || !pawn.Ideo.HasPrecept(SloadDefOf.ESCP_SloadThrassianImmunity_Immune);
         }
 
         public static void Infect(Pawn pawn, float severity)
@@ -190,7 +188,7 @@ namespace ESCP.Sload
             if (!base.CanFireNowSub(parms))
                 return false;
             Ideo ideo = Faction.OfPlayer.ideos?.PrimaryIdeo;
-            if (ideo != null && ideo.PreceptsListForReading.Any(p => p.def.defName == "ESCP_SloadThrassianImmunity_Immune"))
+            if (ideo != null && ideo.HasPrecept(SloadDefOf.ESCP_SloadThrassianImmunity_Immune))
                 return false;
             return Find.FactionManager.AllFactionsListForReading.Any(f => SloadUtility.IsSloadFaction(f) && f.HostileTo(Faction.OfPlayer));
         }

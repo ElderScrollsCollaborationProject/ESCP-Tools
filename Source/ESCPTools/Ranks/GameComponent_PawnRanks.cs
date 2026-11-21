@@ -267,7 +267,7 @@ public class GameComponent_PawnRanks : GameComponent
         if (Scribe.mode == LoadSaveMode.Saving)
             ranks.RemoveAll(entry => entry.Key == null || entry.Key.Discarded || entry.Key.Dead && entry.Key.Corpse == null);
 
-        Scribe_Collections.Look(ref ranks, "ranks", LookMode.Reference, LookMode.Deep, ref rankKeys, ref rankValues);
+        Scribe_Collections.Look(ref ranks, "ranks", LookMode.Reference, LookMode.Deep, ref rankKeys, ref rankValues, false);
 
         if (Scribe.mode == LoadSaveMode.LoadingVars && ranks == null)
             ranks = new Dictionary<Pawn, PawnRankData>();

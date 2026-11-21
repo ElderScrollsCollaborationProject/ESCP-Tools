@@ -79,7 +79,7 @@ namespace ESCP_NecromanticThralls
 			ticks++;
 			if (ticks >= 1000)
 			{
-				if (Pawn.Faction == null || Pawn.Faction != Faction.OfPlayer || Master.Destroyed || Master.Dead || master.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ESCP_NecromanticThralls_ThrallStorage) == null)
+				if (Pawn.Faction != Faction.OfPlayer || master == null || master.Destroyed || master.Dead || MasterStorage == null)
 				{
 					Pawn.Kill(null);
 				}
@@ -87,17 +87,17 @@ namespace ESCP_NecromanticThralls
 			}
 		}
 
+		private HediffComp_ThrallStorage MasterStorage => master?.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ESCP_NecromanticThralls_ThrallStorage).TryGetComp<HediffComp_ThrallStorage>();
+
 		public override void CompPostPostRemoved()
 		{
-			if (master != null)
-			{
-				master.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.ESCP_NecromanticThralls_ThrallStorage).TryGetComp<HediffComp_ThrallStorage>().RemoveThrall(Pawn);
-			}
+			MasterStorage?.RemoveThrall(Pawn);
 			base.CompPostPostRemoved();
 		}
 
 		public override void Notify_PawnDied(DamageInfo? dinfo, Hediff culprit = null)
 		{
+			MasterStorage?.RemoveThrall(Pawn);
             if (ESCP_NecromanticThralls_ModSettings.ThrallRotOnDeath)
             {
 				Corpse corpse = parent.pawn.Corpse;

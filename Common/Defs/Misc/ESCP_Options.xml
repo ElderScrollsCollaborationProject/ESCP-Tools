@@ -16,6 +16,13 @@
     </ESCP.Core.ModOptionDef>
 
     <ESCP.Core.ModOptionDef>
+        <defName>ESCP_Option_NoRankTraining</defName>
+        <label>no mentor training</label>
+        <description>Ranked pawns won't stop what they're doing to train with their mentor or visit them in their free time. Drills and study sessions you order still work.</description>
+        <defaultValue>true</defaultValue>
+    </ESCP.Core.ModOptionDef>
+
+    <ESCP.Core.ModOptionDef>
         <defName>ESCP_Option_FactionPatrols</defName>
         <label>faction patrols</label>
         <description>Soldiers from Tamriel's factions travel the roads between their settlements and can be seen on the world map. A hostile patrol that meets one of your caravans attacks it, and now and then a patrol's route takes it straight through your colony. Turning this off removes the patrols already on the road.</description>
